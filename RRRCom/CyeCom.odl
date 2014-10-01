@@ -1,0 +1,207 @@
+// CyeCom.odl : type library source for OLE Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (CyeCom.tlb) that will become a resource in
+// CyeCom.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+#include "RRRDispID.h"
+#include "hlp\cyecom.hh"
+
+[ uuid(1BB9C510-657F-11D0-8465-CA281D000000), version(1.0),
+  helpstring("CyeCom OLE Control module"), control, helpfile("CyeCom.hlp")]
+library CyeCOMLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CRRRComCtrl
+
+	[ uuid(1BB9C511-657F-11D0-8465-CA281D000000),
+	  helpstring("Dispatch interface for CyeCom Control"), hidden ]
+	dispinterface _DCyeCom
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CRRRComCtrl)
+			//}}AFX_ODL_PROP
+			[id(RRRCTL_VERSION), helpstring("Returns the control's version"), helpcontext(Version_Property)] BSTR Version;
+			[id(RRRCTL_X), helpstring("Robot's X position"), helpcontext(X_Property)] long X;
+			[id(RRRCTL_Y), helpstring("Robot's Y position"), helpcontext(Y_Property)] long Y;
+			[id(RRRCTL_HEADING), helpstring("Robot's heading"), helpcontext(Heading_Property)] double Heading;
+			[id(RRRCTL_ROBOTADDRESS), helpstring("Returns/sets number robot address.")] short RobotAddress;
+			[id(RRRCTL_RADIOLEVEL), helpstring("Current radio level"), helpcontext(RadioLevel_Property)] float RadioLevel;
+			[id(RRRCTL_BATTERYLEVEL), helpstring("Robot's battery voltage"), helpcontext(BatteryLevel_Property)] float BatteryLevel;
+			[id(RRRCTL_RESPONSETIMEOUT), helpstring("Returns/sets the PC's communication response timeout"), helpcontext(ResponseTimeout_Property)] long ResponseTimeout;
+			[id(RRRCTL_RETRYLIMIT), helpstring("Returns/sets the PC's communication retry limit"), helpcontext(RetryLimit_Property)] long RetryLimit;
+			[id(RRRCTL_COMMSTATE), helpstring("Returns the PC's comm state"), helpcontext(CommState_Property)] short CommState;
+			[id(RRRCTL_RIGHTCURRENT), helpstring(""), helpcontext(RightCurrent_Property)] float RightCurrent;
+			[id(RRRCTL_LEFTCURRENT), helpstring(""), helpcontext(LeftCurrent_Property)] float LeftCurrent;
+			[id(RRRCTL_LEFTVELOCITY), helpstring("Robot's left wheel velocity"), helpcontext(LeftVelocity_Property)] short LeftVelocity;
+			[id(RRRCTL_RIGHTVELOCITY), helpstring("Robot's right wheel velocity"), helpcontext(RightVelocity_Property)] short RightVelocity;
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CRRRComCtrl)
+			//}}AFX_ODL_METHOD
+			[id(RRRCTL_SETHEADINGCORRECTIONFACTOR), helpstring("Sets the robot's heading correction factor."), helpcontext(SetHeadingCorrectionFactor_Method)] void SetHeadingCorrectionFactor(short HeadingCorrectionFactor);
+			[id(RRRCTL_SETFLIPHANDLE), helpstring("Sets the robot's flip handle value."), helpcontext(SetFlipHandle_Method)] void SetFlipHandle(BOOL FlipHandle);
+#ifdef CYE_DEBUG
+			[id(RRRCTL_SETMAXPWM)] void SetMaxPWM(short MaxPWM);
+#endif
+			[id(RRRCTL_TURNTO), helpstring("Makes the robot turn to a given heading with a given speed"), helpcontext(TurnTo_Method)] void TurnTo(double Heading, short Speed);
+			[id(RRRCTL_SETPWM), helpstring("Sets the pwm at each of the robot's wheels"), helpcontext(SetPWM_Method)] void SetPWM(short RightPWM, short LeftPWM);
+			[id(RRRCTL_STOP), helpstring("Stops the robot"), helpcontext(Stop_Method)] void Stop();
+			[id(RRRCTL_PAUSE), helpstring("Pauses the robot"), helpcontext(Pause_Method)] void Pause();
+			[id(RRRCTL_RESUME), helpstring("Makes the robot go after it has been paused"), helpcontext(Resume_Method)] void Resume();
+#ifdef CYE_DEBUG
+			[id(RRRCTL_SENDP1)] void SendP1(long P1);
+			[id(RRRCTL_SENDP2)] void SendP2(long P2);
+			[id(RRRCTL_SENDP3)] void SendP3(long P3);
+			[id(RRRCTL_SENDP4)] void SendP4(long P4);
+#endif
+			[id(RRRCTL_SETBUZZERFREQUENCY), helpstring("Sets the robot's buzzer frequency"), helpcontext(SetBuzzerFrequency_Method)] void SetBuzzerFrequency(short BuzzerFrequency);
+			[id(RRRCTL_SETBUZZERON), helpstring("Turns on or off the buzzer"), helpcontext(SetBuzzerOn_Method)] void SetBuzzerOn(BOOL BuzzerOn);
+			[id(RRRCTL_FOLLOWPATH), helpstring("Makes the robot follow a downloaded path at a given speed"), helpcontext(FollowPath_Method)] void FollowPath(short Speed);
+			[id(RRRCTL_SETHANDLELENGTH), helpstring("Sets the robot's handle length"), helpcontext(SetHandleLength_Method)] void SetHandleLength(short HandleLength);
+			[id(RRRCTL_SETMOTORCONTROLCONSTANTS), helpstring("Sets the constants that control how the robot moves"), helpcontext(SetMotorControlConstants_Method)] void SetMotorControlConstants(short Kp, short Ki, short Kd, short Kb, short Kpwm);
+			[id(RRRCTL_MOVECURVE), helpstring("Makes the robot move to a given heading in a curve with a given diameter"), helpcontext(MoveCurve_Method)] void MoveCurve(double Heading, short Speed, short Diameter);
+			[id(RRRCTL_MOVESTRAIGHT), helpstring("Makes the robot move in a straight line with a given speed"), helpcontext(MoveStraight_Method)] void MoveStraight(short Speed, double Heading);
+			[id(RRRCTL_SETMAXSPEED), helpstring("Sets the robot's maximum allowable speed"), helpcontext(SetMaxSpeed_Method)] void SetMaxSpeed(short MaxSpeed);
+			[id(RRRCTL_SETWHEELVELOCITIES), helpstring("Sets the velocity at each of the robot's wheels"), helpcontext(SetWheelVelocities_Method)] void SetWheelVelocities(short RightVelocity, short LeftVelocity);
+#ifdef CYE_DEBUG
+			[id(RRRCTL_PURGERINGBUFFER)] void PurgeRingBuffer();
+#endif
+			[id(RRRCTL_SETOBSTACLESENSITIVITY), helpstring("Sets the robot's obstacle sensitivity"), helpcontext(SetObstacleSensitivity_Method)] void SetObstacleSensitivity(short Sensitivity);
+			[id(RRRCTL_MOVETO), helpstring("Makes the robot move to a given position at a given speed"), helpcontext(MoveTo_Method)] void MoveTo(double x, double y, short Speed);
+			[id(RRRCTL_SETPOSITION), helpstring("Sets the robot's position"), helpcontext(SetPosition_Method)] void SetPosition(long x, long y);
+#ifdef CYE_DEBUG
+			[id(RRRCTL_SENDPOSITIONDESTINATION)] void SendPositionDestination(double x, double y);
+#endif
+			[id(RRRCTL_LOADPATHSEGMENT), helpstring("Downloads a path segment to the robot"), helpcontext(LoadPathSegment_Method)] void LoadPathSegment(BOOL PurgeOld, IDispatch* PathObject);
+#ifdef CYE_DEBUG
+			[id(RRRCTL_SENDP5)] void SendP5(long P5);
+			[id(RRRCTL_SENDP6)] void SendP6(long P6);
+			[id(RRRCTL_SENDP7)] void SendP7(long P7);
+			[id(RRRCTL_SENDP8)] void SendP8(long P8);
+#endif
+			[id(RRRCTL_MOVEDIRECTION), helpstring("Makes the robot move in a given direction with a given speed"), helpcontext(MoveDirection_Method)] void MoveDirection(short Speed, double Heading);
+#ifdef CYE_DEBUG
+			[id(RRRCTL_SENDINFORMATIONTOTRANSMIT)] void SendInformationToTransmit(long Mask);
+#endif
+			[id(RRRCTL_REQUESTSTATE), helpstring("Requests the robot's state"), helpcontext(RequestState_Method)] void RequestState();
+			[id(RRRCTL_POWERDOWN), helpstring("Turns off the robot's power"), helpcontext(PowerDown_Method)] void PowerDown();
+			[id(RRRCTL_SENDMESSAGE), helpstring("Sends a message string to the robot"), helpcontext(SendMessage_Method)] void SendMessage(VARIANT MsgData);
+			[id(RRRCTL_GETCOMMPORT), helpstring("Gets the comm port being used"), helpcontext(GetCommPort_Method)] BSTR GetCommPort();
+			[id(RRRCTL_SETCOMMPORT), helpstring("Sets the comm port being used"), helpcontext(SetCommPort_Method)] void SetCommPort(BSTR NewPort);
+			[id(RRRCTL_SQUARETOWALL), helpstring(""), helpcontext(SquareToWall_Method)] void SquareToWall(double Heading, float TravelTime, long SlipperySurface);
+			[id(RRRCTL_SETFEELINGMOTOR), helpstring(""), helpcontext(SetFeelingMotor_Method)] void SetFeelingMotor(short Motor);
+			[id(RRRCTL_CORNERCALIBRATE), helpstring(""), helpcontext(CornerCalibrate_Method)] void CornerCalibrate(long X, long Y, double HO, short FeelWheel, float TravelTime, BOOL SlipperySurface);
+			[id(RRRCTL_FINDHOMEBASE), helpstring(""), helpcontext(FindHomeBase_Method)] void FindHomeBase(double CornerHeading, double WallHeading, long HomeBaseLocationX, long HomeBaseLocationY, BOOL NeedToGetInFrontOfHomeBase);
+			[id(RRRCTL_SETHEADINGDESTINATION), helpstring(""), helpcontext(SetHeadingDestination_Method)] void SetHeadingDestination(double Heading, short Speed, short MotorEnable);
+			[id(RRRCTL_SETENABLEOBSTACLEBOUNCE), helpstring(""), helpcontext(SetEnableObstacleBounce_Method)] void SetEnableObstacleBounce(BOOL Enable);
+			[id(RRRCTL_SETRAMDATA), helpstring(""), helpcontext(SetRAMData_Method)] void SetRAMData(long Address, VARIANT Data);
+			[id(RRRCTL_SETROBOTONSECONDS), helpstring(""), helpcontext(SetRobotOnSeconds_Method)] void SetRobotOnSeconds(long Seconds);
+			[id(RRRCTL_SETINTERMITTENTBEEP), helpstring(""), helpcontext(SetIntermittentBeep_Method)] void SetIntermittentBeep(BOOL On);
+			[id(RRRCTL_ADDTOPOSITION), helpstring(""), helpcontext(AddToPosition_Method)] void AddToPosition(double DeltaX, double DeltaY);
+			[id(RRRCTL_ADDTOHEADING), helpstring(""), helpcontext(AddToHeading_Method)] void AddToHeading(double Delta);
+			[id(RRRCTL_SETEXTERNALOUTPUT), helpstring(""), helpcontext(SetExternalOutput_Method)] void SetExternalOutput(BOOL On);
+			[id(RRRCTL_REQUESTEXTERNALINPUT), helpstring(""), helpcontext(RequestExternalInput_Method)] void RequestExternalInput();
+
+			[id(DISPID_ABOUTBOX), helpstring("Shows the control's about box")] void AboutBox();
+	};
+
+	//  Event dispatch interface for CRRRComCtrl
+
+	[ uuid(1BB9C512-657F-11D0-8465-CA281D000000),
+	  helpstring("Event interface for CyeCom Control") ]
+	dispinterface _DCyeComEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CRRRComCtrl)
+			//}}AFX_ODL_EVENT
+			[id(RRRCTL_RADIOLEVELCHANGE), helpstring("Indicates the level of radio contact has changed"), helpcontext(RadioLevelChange_Event)] void RadioLevelChange(float RadioLevel);
+			[id(RRRCTL_BATTERYLOW), helpstring("Indicates the battery level has reached a critically low level"), helpcontext(BatteryLow_Event)] void BatteryLow();
+#ifdef CYE_DEBUG
+			[id(RRRCTL_POSITIONCHANGE)] void PositionChange(long X, long Y, long Heading);
+#endif
+			[id(RRRCTL_OBSTACLEDETECTED), helpstring("Indicates the robot has encountered an obstacle"), helpcontext(ObstacleDetected_Event)] void ObstacleDetected(short RightWheel, short LeftWheel);
+			[id(RRRCTL_NUDGEDETECTED), helpstring("Indicates the robot has been nudged"), helpcontext(NudgeDetected_Event)] void NudgeDetected(BOOL RightWheel, BOOL LeftWheel);
+#ifdef CYE_DEBUG
+			[id(RRRCTL_VELOCITYCHANGE)] void VelocityChange(short RightWheel, short LeftWheel);
+			[id(RRRCTL_ACCELERATIONCHANGE)] void AccelerationChange(short RightWheel, short LeftWheel);
+			[id(RRRCTL_ENCODERUPDATE)] void EncoderUpdate(long RightWheel, long LeftWheel);
+			[id(RRRCTL_ANALOGUPDATE)] void AnalogUpdate(short RightWheel, short LeftWheel, short BatteryAD);
+			[id(RRRCTL_PWMUPDATE)] void PWMUpdate(short RightWheel, short LeftWheel);
+			[id(RRRCTL_RINGBUFFERDUMP)] void RingBufferDump(long Value);
+#endif
+			[id(RRRCTL_NEWPATHSEGMENTREQUEST), helpstring("Indicates the robot can accept another path segment"), helpcontext(NewPathSegmentRequest_Event)] void NewPathSegmentRequest();
+			[id(RRRCTL_ROBOTERROR), helpstring("Indicates the robot has generated an error"), helpcontext(RobotError_Event)] void RobotError(long Error);
+			[id(RRRCTL_ONHOMEBASE), helpstring("Indicates the robot has come on or off the home base"), helpcontext(OnHomeBase_Event)] void OnHomeBase(short OnHomeBase);
+			[id(RRRCTL_ROBOTSTATUSCHANGE), helpstring("Indicates the robot's position, velocity, motor current or battery voltage has changed"), helpcontext(RobotStatusChange_Event)] void RobotStatusChange(long X, long Y, double Heading, short RightVelocity, short LeftVelocity, float RightCurrent, float LeftCurrent, float BatteryVoltage);
+			[id(RRRCTL_BATTERYCHARGINGSTATECHANGE), helpstring("Indicates the robot's battery charging state has changed"), helpcontext(BatteryChargingStateChange_Event)] void BatteryChargingStateChange(short State);
+			[id(RRRCTL_UNKNOWNMESSAGE), helpstring("Indicates the robot has sent an unknown message"), helpcontext(UnknownMessage_Event)] void UnknownMessage(VARIANT Buffer);
+			[id(RRRCTL_COMMSTATECHANGE), helpstring("Indicates the PC's comm state has changed"), helpcontext(CommStateChange_Event)] void CommStateChange(short NewState);
+			[id(RRRCTL_TASKRESULT), helpstring(""), helpcontext(TaskResult_Event)] void TaskResult(short Result, long X, long Y, double Heading);
+			[id(RRRCTL_SOFTWAREREVNUMBER), helpstring(""), helpcontext(SoftwareRevNumber_Event)] void SoftwareRevNumber(long RevNumber);
+			[id(RRRCTL_ROBOTON), helpstring(""), helpcontext(RobotOn_Event)] void RobotOn();
+			[id(RRRCTL_ROBOTONTIME), helpstring(""), helpcontext(RobotOnTime_Event)] void RobotOnTime(float SecondsOn);
+			[id(RRRCTL_EXTERNALINPUT), helpstring(""), helpcontext(ExternalInput_Event)] void ExternalInput(float Voltage);
+			[id(RRRCTL_MICROPHONEVOLUME), helpstring("")] void MicrophoneVolume(short Volume);
+	};
+
+	//  Class information for CRRRComCtrl
+
+	[ uuid(1BB9C513-657F-11D0-8465-CA281D000000),
+	  helpstring("CyeCom Control"), control, helpcontext(CyeCom_Control) ]
+	coclass CyeCom
+	{
+		[default] dispinterface _DCyeCom;
+		[default, source] dispinterface _DCyeComEvents;
+	};
+
+
+
+	//  Primary dispatch interface for CyePath
+	
+	[ uuid(723BB6A6-8075-11D1-BCC1-444553540000) ]
+	dispinterface ICyePath
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(RRRPath)
+			//}}AFX_ODL_PROP
+			[id(RRRPTH_NUMPOINTS), helpstring(""), helpcontext(NumPoints_Property)] short NumPoints;
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(RRRPath)
+			//}}AFX_ODL_METHOD
+			[id(RRRPTH_X), propget, helpstring(""), helpcontext(CyePath_X_Property)] double x(short Index);
+			[id(RRRPTH_X), propput] void x(short Index, double newValue);
+			[id(RRRPTH_Y), propget, helpstring(""), helpcontext(CyePath_Y_Property)] double y(short Index);
+			[id(RRRPTH_Y), propput] void y(short Index, double newValue);
+
+	};
+
+	//  Class information for CyePath
+
+	[ uuid(723BB6A7-8075-11D1-BCC1-444553540000), helpcontext(CyePath_Object)]
+	coclass Path
+	{
+		[default] dispinterface ICyePath;
+	};
+
+	//{{AFX_APPEND_ODL}}
+};

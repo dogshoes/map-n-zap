@@ -1,0 +1,784 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "FlowZapResource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "FlowZapResource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_BEEP                CURSOR  DISCARDABLE     "res\\cBeep.cur"
+IDC_BRANCH              CURSOR  DISCARDABLE     "res\\cBranch.cur"
+IDC_CAL                 CURSOR  DISCARDABLE     "res\\cCal.cur"
+IDC_GOTO                CURSOR  DISCARDABLE     "res\\cGoto.cur"
+IDC_MOVE                CURSOR  DISCARDABLE     "res\\cMove.cur"
+IDC_REPEAT              CURSOR  DISCARDABLE     "res\\cRepeat.cur"
+IDC_SUB                 CURSOR  DISCARDABLE     "res\\cSub.cur"
+IDC_VACUUM              CURSOR  DISCARDABLE     "res\\cVac.cur"
+IDC_WAIT_CURSOR         CURSOR  DISCARDABLE     "res\\cWait.cur"
+IDC_MOTION              CURSOR  DISCARDABLE     "res\\cMotion.cur"
+IDC_PATH                CURSOR  DISCARDABLE     "res\\path.cur"
+IDC_EXTERNAL_OUTPUT     CURSOR  DISCARDABLE     "res\\external output.cur"
+IDC_GRAB                CURSOR  DISCARDABLE     "res\\grab.cur"
+IDC_STOP                CURSOR  DISCARDABLE     "res\\cStop.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_BEEP DIALOG DISCARDABLE  0, 0, 190, 35
+STYLE WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         14419,IDC_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,6,
+                    7,21,20
+    CONTROL         "",IDC_BBORDER,"Static",SS_BLACKFRAME,0,0,190,35
+    CONTROL         "",IDC_EBORDER,"Static",SS_ETCHEDFRAME | NOT WS_VISIBLE,
+                    0,0,190,35
+    CONTROL         "Slider1",IDC_TONE_SLIDER,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,34,19,87,12
+    LTEXT           "Beep",IDC_TEXT1,34,7,25,8
+    LTEXT           "130.6 hz",IDC_FREQUENCY,126,20,34,8
+    LTEXT           "low C for",IDC_BEEP_TONE,59,7,38,8
+    COMBOBOX        IDC_BEEP_LENGTH,99,5,55,69,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         14430,IDC_IMAGE_DISABLED,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE | NOT WS_VISIBLE,6,7,21,20
+END
+
+IDD_BRANCH DIALOG DISCARDABLE  0, 0, 190, 48
+STYLE DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_CONDITION,49,5,57,69,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_TIME,59,21,20,12,ES_AUTOHSCROLL | ES_NUMBER
+    COMBOBOX        IDC_TIME_LENGTH,84,21,41,74,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_BBORDER,"Static",SS_BLACKFRAME,0,2,190,47
+    CONTROL         "",IDC_EBORDER,"Static",SS_ETCHEDFRAME | NOT WS_VISIBLE,
+                    0,0,190,47
+    CONTROL         14420,IDC_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,6,
+                    14,21,20
+    LTEXT           "If",IDC_TEXT1,35,7,9,8
+    LTEXT           "within",IDC_TEXT2,35,24,25,8
+    LTEXT           "then do...",IDC_TEXT3,131,25,36,8
+    CONTROL         14431,IDC_DISABLED_IMAGE,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE | NOT WS_VISIBLE,6,14,21,20
+    LTEXT           " ...otherwise, do the next task",IDC_TEXT4,37,36,104,8
+    COMBOBOX        IDC_WAIT_FOR_INPUT,109,5,38,62,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_WAIT_TRIGGER_LEVEL,149,5,19,14,ES_AUTOHSCROLL
+    LTEXT           "V",IDC_WAIT_TRIGGER_UNITS,173,8,8,8
+END
+
+IDD_CAL DIALOG DISCARDABLE  0, 0, 190, 25
+STYLE WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         14416,IDC_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,5,
+                    3,21,20
+    CONTROL         "",IDC_EBORDER,"Static",SS_ETCHEDFRAME | NOT WS_VISIBLE,
+                    0,0,190,25
+    CONTROL         "",IDC_BBORDER,"Static",SS_BLACKFRAME,0,0,190,25
+    LTEXT           "Check In at",IDC_TEXT,35,9,40,8
+    COMBOBOX        IDC_CZONES,75,7,106,75,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         14427,IDC_DISABLED_IMAGE,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE | NOT WS_VISIBLE,5,3,21,20
+END
+
+IDD_EXECUTE DIALOG DISCARDABLE  0, 0, 139, 31
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "FlowZAP!!!"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "PLAY",IDB_PLAY_START,4,3,75,25,BS_ICON | WS_GROUP
+    PUSHBUTTON      "Cancel",IDB_PLAY_STOP,109,3,25,25,BS_ICON | WS_DISABLED
+    PUSHBUTTON      "Cancel",IDB_PLAY_PAUSE,81,3,25,25,BS_ICON
+END
+
+IDD_ERROR1 DIALOG DISCARDABLE  0, 0, 219, 87
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,57,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,162,57,50,14
+    LTEXT           "You have chosen to delete an item that is part of a conditional loop.  The loop will now point to the item before the one you are deleting.  Please click cancel if you do not wish to delete this item.",
+                    IDC_STATIC,7,13,205,35
+END
+
+IDD_FLOWZAP DIALOGEX 0, 0, 278, 414
+STYLE DS_CONTEXTHELP | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | 
+    WS_CAPTION | WS_VSCROLL | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Zap [Untitled -1]"
+MENU IDR_MENU1
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_BORDER,"Static",SS_ETCHEDFRAME | NOT WS_VISIBLE,0,
+                    39,252,91,WS_EX_TRANSPARENT
+END
+
+IDD_GOTO DIALOG DISCARDABLE  0, 0, 190, 35
+STYLE WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_LABEL,65,4,113,60,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Slider1",IDC_SPEED,"msctls_trackbar32",TBS_TOP | 
+                    TBS_NOTICKS | WS_TABSTOP,49,19,88,13
+    CONTROL         14418,IDC_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,5,
+                    7,21,20
+    CONTROL         "",IDC_BBORDER,"Static",SS_BLACKFRAME,0,1,189,33
+    CONTROL         "",IDC_EBORDER,"Static",SS_ETCHEDFRAME | NOT WS_VISIBLE,
+                    0,1,189,33
+    LTEXT           "Go to",IDC_TEXT1,35,6,18,8
+    CONTROL         14429,IDC_DISABLED_IMAGE,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE | NOT WS_VISIBLE,5,7,21,20
+    LTEXT           "at",IDC_TEXT2,35,21,9,9
+    RTEXT           "80% Speed",IDC_TEXT3,137,21,41,8
+END
+
+IDD_PALLETTE DIALOG DISCARDABLE  0, 0, 190, 62
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_BORDER,"Static",SS_ETCHEDFRAME,0,0,189,60
+    CONTROL         "HOTPOINT",IDC_BUT_HOT_POINT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,41,9,21,20
+    CONTROL         "CALIBRATE",IDC_BUT_CALIBRATE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,67,9,21,20
+    CONTROL         "EXTERNALOUTPUT",IDC_BUT_EXTERNAL_OUTPUT,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,35,34,21,20
+    CONTROL         "VACUUM",IDC_BUT_VACUUM,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,125,9,21,20
+    CONTROL         "MOTION",IDC_BUT_MOTION,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,158,9,21,20
+    CONTROL         "PATH",IDC_BUT_PATH,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    99,9,21,20
+    CONTROL         "WAIT",IDC_BUT_WAIT,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    10,9,21,20
+    CONTROL         "BEEP",IDC_BUT_BEEP,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    10,34,21,20
+    CONTROL         "STOP",IDC_BUT_STOP,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    158,34,21,20
+    CONTROL         "BRANCH",IDC_BUT_BRANCH,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,99,34,21,20
+    CONTROL         "REPEAT",IDC_BUT_REPEAT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,125,34,21,20
+    CONTROL         "SUB",IDC_BUT_SUBROUTINE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,67,34,21,20
+END
+
+IDD_PREFERENCES DIALOGEX 0, 45, 242, 119
+STYLE DS_SYSMODAL | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_THICKFRAME
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Zap Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Reload last project on launch",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,24,17,117,14
+    CONTROL         "Always launch Zap in condensed view",IDC_CHECK2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,24,42,159,14
+    CONTROL         "Turn Sounds On",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,24,67,95,14
+    DEFPUSHBUTTON   "OK",IDOK,128,98,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,186,98,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,7,13,228,77
+END
+
+IDD_REPEAT DIALOG DISCARDABLE  0, 0, 190, 26
+STYLE WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Repeat last",IDC_TEXT1,35,9,57,8
+    LTEXT           "tasks",IDC_STEPS,96,9,20,8
+    RTEXT           "5",IDC_NUM_STEPS,82,8,10,8
+    EDITTEXT        IDC_NUM_REPEATS,117,7,17,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         14422,IDC_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,6,
+                    3,21,20
+    CONTROL         "",IDC_BORDER,"Static",SS_ETCHEDFRAME,0,0,190,26
+    LTEXT           "more times",IDC_TEXT2,138,9,42,8
+    CONTROL         14433,IDC_IMAGE_DISABLED,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE | NOT WS_VISIBLE,6,3,21,20
+END
+
+IDD_START DIALOG DISCARDABLE  0, 0, 190, 28
+STYLE WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         14438,IDC_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,
+                    0,157,28
+    CONTROL         "",IDC_BORDER,"Static",SS_ETCHEDFRAME,0,0,190,28
+END
+
+IDD_STOP DIALOG DISCARDABLE  0, 0, 190, 26
+STYLE WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         14424,IDC_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,6,
+                    3,21,20
+    LTEXT           "Stop Program",IDC_TEXT1,35,9,57,8
+    CONTROL         "",IDC_BBORDER,"Static",SS_BLACKFRAME,0,1,190,25
+    CONTROL         "",IDC_EBORDER,"Static",SS_ETCHEDFRAME | NOT WS_VISIBLE,
+                    0,1,190,25
+    CONTROL         14435,IDC_IMAGE_DISABLED,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE | NOT WS_VISIBLE,6,3,21,20
+END
+
+IDD_SUB_PROGRAM DIALOG DISCARDABLE  0, 0, 190, 26
+STYLE WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         14414,IDI_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE | 
+                    WS_TABSTOP,6,3,21,20
+    CONTROL         "",IDC_EBORDER,"Static",SS_ETCHEDFRAME | NOT WS_VISIBLE,
+                    0,1,190,25
+    CONTROL         "",IDC_BBORDER,"Static",SS_BLACKFRAME,0,1,190,25
+    LTEXT           "Run",IDC_TEXT,36,9,21,8
+    PUSHBUTTON      "choose program...",IDC_CHOOSEPROGRAM,63,6,116,14,
+                    BS_LEFT
+    CONTROL         14436,IDC_IMAGE_DISABLED,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE | NOT WS_VISIBLE,6,3,21,20
+END
+
+IDD_VACUUM DIALOG DISCARDABLE  0, 0, 190, 26
+STYLE WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_BBORDER,"Static",SS_BLACKFRAME,0,1,190,25
+    CONTROL         "",IDC_EBORDER,"Static",SS_ETCHEDFRAME | NOT WS_VISIBLE,
+                    0,1,190,25
+    CONTROL         14425,IDC_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,6,
+                    3,21,20
+    COMBOBOX        IDC_PATCHLIST,66,7,113,85,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Vacuum",IDC_TEXT,36,9,28,8
+    CONTROL         14426,IDC_IMAGE_DISABLED,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE | NOT WS_VISIBLE,6,3,21,20
+END
+
+IDD_WAIT DIALOGEX 0, 0, 190, 25
+STYLE WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_WAIT_CONDITION,30,7,48,76,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_WAIT_HOUR,82,7,14,12,0,WS_EX_RIGHT
+    EDITTEXT        IDC_WAIT_MIN,98,7,14,12,ES_NUMBER
+    COMBOBOX        IDC_TIME_VAR,122,7,34,76,CBS_DROPDOWNLIST | NOT 
+                    WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    CONTROL         14417,IDC_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,6,
+                    3,21,20
+    COMBOBOX        IDC_AM_PM,127,7,28,76,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_BBORDER,"Static",SS_BLACKFRAME,0,1,190,24
+    CONTROL         "",IDC_EBORDER,"Static",SS_ETCHEDFRAME | NOT WS_VISIBLE,
+                    0,0,190,25
+    CONTROL         14428,IDC_IMAGE_DISABLED,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE | NOT WS_VISIBLE,6,3,21,20
+    COMBOBOX        IDC_TIME_LENGTH,81,7,31,279,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Spin1",IDC_CHANGE_TIME,"msctls_updown32",UDS_ARROWKEYS,
+                    114,7,11,13
+    COMBOBOX        IDC_WAIT_INPUT,113,7,39,57,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_INPUT_TRIGGER,159,6,16,14,ES_AUTOHSCROLL
+    LTEXT           "V",IDC_TRIGGER_UNITS,179,9,8,8
+END
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_TOOLS DIALOG DISCARDABLE  0, 0, 152, 31
+STYLE WS_CHILD | WS_VISIBLE | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Open",IDC_OPENFILE,53,6,45,18,NOT WS_VISIBLE | NOT 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "New",IDC_NEWFILE,3,6,45,18,NOT WS_VISIBLE
+    PUSHBUTTON      "Exit",IDC_EXITFLOWZAP,103,6,45,18,NOT WS_VISIBLE
+END
+
+IDD_MOTION DIALOG DISCARDABLE  0, 0, 190, 35
+STYLE WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_ROTATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,36,6,
+                    8,8
+    COMBOBOX        IDC_DEGREES,80,4,35,150,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "",IDC_MOTION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,35,
+                    21,8,8
+    COMBOBOX        IDC_DIRECTION,59,19,50,47,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_DISTANCE,112,19,17,12,ES_AUTOHSCROLL | ES_NUMBER
+    COMBOBOX        IDC_UNITS,132,19,36,47,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         14423,IDC_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,5,
+                    7,21,20
+    CONTROL         14434,IDC_IMAGE_DISABLED,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE | NOT WS_VISIBLE,5,7,21,20
+    CONTROL         "",IDC_EBORDER,"Static",SS_ETCHEDFRAME,0,0,190,35
+    CONTROL         "",IDC_BBORDER,"Static",SS_BLACKFRAME,0,0,190,35
+    LTEXT           "Rotate to",IDC_TEXT_ROTATE,47,6,31,8
+    LTEXT           "o'clock",IDC_TEXT_OCLOCK,121,6,28,8
+    LTEXT           "Go",IDC_TEXT_GO,47,21,10,10
+END
+
+IDD_PATH DIALOG DISCARDABLE  0, 0, 190, 35
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         14421,IDC_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,5,
+                    7,21,20
+    LTEXT           "Follow Path",IDC_TEXT1,35,6,38,8
+    COMBOBOX        IDC_PATH_LIST,82,4,96,81,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "at",IDC_TEXT2,35,21,9,8
+    CONTROL         "Slider1",IDC_SPEED_SLIDER,"msctls_trackbar32",TBS_TOP | 
+                    TBS_NOTICKS | WS_TABSTOP,43,19,90,12
+    RTEXT           "80% speed",IDC_SPEED,131,21,45,8
+    CONTROL         14432,IDC_IMAGE_DISABLED,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE | NOT WS_VISIBLE,5,7,21,20
+    CONTROL         "",IDC_BORDER_BLACK,"Static",SS_BLACKFRAME,0,0,190,35
+    CONTROL         "",IDC_BORDER_ETCHED,"Static",SS_ETCHEDFRAME | NOT 
+                    WS_VISIBLE,0,0,190,35
+END
+
+IDD_EXTERNAL_OUTPUT DIALOG DISCARDABLE  0, 0, 190, 25
+STYLE WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Turn External Output",IDC_TXT_EXTERNAL_OUTPUT,34,9,73,8
+    COMBOBOX        IDC_COM_EXTERNAL_OUTPUT,107,7,37,62,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         14439,IDC_IMAGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,5,
+                    3,21,20
+    CONTROL         14440,IDC_IMAGE_DISABLED,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE | NOT WS_VISIBLE,5,3,21,20
+    CONTROL         "",IDC_BBORDER,"Static",SS_BLACKFRAME,57,0,20,20
+    CONTROL         "",IDC_EBORDER,"Static",SS_ETCHEDFRAME | NOT WS_VISIBLE,
+                    89,1,20,20
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_BEEP, DIALOG
+    BEGIN
+        VERTGUIDE, 15
+        VERTGUIDE, 34
+        HORZGUIDE, 11
+    END
+
+    IDD_BRANCH, DIALOG
+    BEGIN
+        VERTGUIDE, 15
+        VERTGUIDE, 35
+    END
+
+    IDD_CAL, DIALOG
+    BEGIN
+        VERTGUIDE, 15
+        VERTGUIDE, 35
+        HORZGUIDE, 13
+    END
+
+    IDD_EXECUTE, DIALOG
+    BEGIN
+        VERTGUIDE, 4
+        VERTGUIDE, 79
+        VERTGUIDE, 81
+        VERTGUIDE, 106
+        VERTGUIDE, 109
+        VERTGUIDE, 134
+        TOPMARGIN, 3
+        HORZGUIDE, 28
+    END
+
+    IDD_ERROR1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        VERTGUIDE, 198
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+        HORZGUIDE, 64
+    END
+
+    IDD_FLOWZAP, DIALOG
+    BEGIN
+        RIGHTMARGIN, 252
+        VERTGUIDE, 29
+        VERTGUIDE, 58
+        VERTGUIDE, 86
+        VERTGUIDE, 115
+        VERTGUIDE, 145
+        VERTGUIDE, 174
+        VERTGUIDE, 203
+        VERTGUIDE, 232
+        VERTGUIDE, 261
+        BOTTOMMARGIN, 407
+        HORZGUIDE, 17
+        HORZGUIDE, 131
+    END
+
+    IDD_GOTO, DIALOG
+    BEGIN
+        VERTGUIDE, 15
+        VERTGUIDE, 35
+        HORZGUIDE, 10
+        HORZGUIDE, 25
+    END
+
+    IDD_PALLETTE, DIALOG
+    BEGIN
+        VERTGUIDE, 10
+        VERTGUIDE, 179
+        BOTTOMMARGIN, 61
+        HORZGUIDE, 9
+        HORZGUIDE, 34
+    END
+
+    IDD_REPEAT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 180
+        VERTGUIDE, 15
+        VERTGUIDE, 35
+    END
+
+    IDD_START, DIALOG
+    BEGIN
+        RIGHTMARGIN, 180
+    END
+
+    IDD_STOP, DIALOG
+    BEGIN
+        RIGHTMARGIN, 180
+        VERTGUIDE, 16
+        VERTGUIDE, 35
+        HORZGUIDE, 13
+    END
+
+    IDD_SUB_PROGRAM, DIALOG
+    BEGIN
+        VERTGUIDE, 15
+        VERTGUIDE, 30
+        HORZGUIDE, 13
+    END
+
+    IDD_VACUUM, DIALOG
+    BEGIN
+        VERTGUIDE, 15
+        VERTGUIDE, 30
+        HORZGUIDE, 13
+    END
+
+    IDD_WAIT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 180
+        VERTGUIDE, 15
+        VERTGUIDE, 30
+        HORZGUIDE, 13
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_TOOLS, DIALOG
+    BEGIN
+        VERTGUIDE, 25
+        VERTGUIDE, 75
+        VERTGUIDE, 125
+        HORZGUIDE, 15
+    END
+
+    IDD_MOTION, DIALOG
+    BEGIN
+        VERTGUIDE, 15
+        VERTGUIDE, 35
+    END
+
+    IDD_PATH, DIALOG
+    BEGIN
+        VERTGUIDE, 35
+        HORZGUIDE, 10
+        HORZGUIDE, 25
+    END
+
+    IDD_EXTERNAL_OUTPUT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 172
+        VERTGUIDE, 15
+        VERTGUIDE, 34
+        HORZGUIDE, 13
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_REPEAT              ICON    DISCARDABLE     "res\\RepeatEnabled.ico"
+IDI_BEEP                ICON    DISCARDABLE     "res\\BeepEnabled.ico"
+IDI_BEEP_BW             ICON    DISCARDABLE     "res\\BeepBW.ico"
+IDI_BEEP_DISABLED       ICON    DISCARDABLE     "res\\BeepDisabled.ico"
+IDI_BRANCH              ICON    DISCARDABLE     "res\\BranchEnabled.ico"
+IDI_BRANCH_BW           ICON    DISCARDABLE     "res\\BranchBW.ico"
+IDI_BRANCH_DISABLED     ICON    DISCARDABLE     "res\\BranchDisabled.ico"
+IDI_CAL                 ICON    DISCARDABLE     "res\\CalEnabled.ico"
+IDI_CAL_BW              ICON    DISCARDABLE     "res\\cal_bw.ico"
+IDI_CAL_DISABLED        ICON    DISCARDABLE     "res\\CalDisabled.ico"
+IDI_GOTO                ICON    DISCARDABLE     "res\\GotoEnabled.ico"
+IDI_GOTO_BW             ICON    DISCARDABLE     "res\\goto_bw.ico"
+IDI_GOTO_DISABLED       ICON    DISCARDABLE     "res\\GotoDisabled.ico"
+IDI_PATH                ICON    DISCARDABLE     "res\\PathEnabled.ico"
+IDI_PATH_DISABLED       ICON    DISCARDABLE     "res\\path_dis.ico"
+IDI_REPEAT_BW           ICON    DISCARDABLE     "res\\RepeatBW.ico"
+IDI_REPEAT_DISABLED     ICON    DISCARDABLE     "res\\RepeatDisabled.ico"
+IDI_START               ICON    DISCARDABLE     "res\\Start.ico"
+IDI_STOP                ICON    DISCARDABLE     "res\\Stop.ico"
+IDI_STOP_BW             ICON    DISCARDABLE     "res\\stop_bw.ico"
+IDI_STOP_DISABLED       ICON    DISCARDABLE     "res\\StopDisabled.ico"
+IDI_SUB                 ICON    DISCARDABLE     "res\\SubEnabled.ico"
+IDI_SUB_BW              ICON    DISCARDABLE     "res\\SubBW.ico"
+IDI_SUB_DISABLED        ICON    DISCARDABLE     "res\\SubDisabled.ico"
+IDI_VACUUM              ICON    DISCARDABLE     "res\\VacuumEnabled.ico"
+IDI_VACUUM_BW           ICON    DISCARDABLE     "res\\vacuum_b.ico"
+IDI_VACUUM_DISABLED     ICON    DISCARDABLE     "res\\VacuumDisabled.ico"
+IDI_WAIT                ICON    DISCARDABLE     "res\\WaitEnabled.ico"
+IDI_WAIT_BW             ICON    DISCARDABLE     "res\\wait_bw.ico"
+IDI_WAIT_DISABLED       ICON    DISCARDABLE     "res\\WaitDisabled.ico"
+IDI_MOTION_DISABLED     ICON    DISCARDABLE     "res\\MotionDisabled.ico"
+IDI_MOTION              ICON    DISCARDABLE     "res\\motion.ico"
+IDI_MOTION_BW           ICON    DISCARDABLE     "res\\MotionBW.ico"
+IDI_EXTERNAL_OUTPUT     ICON    DISCARDABLE     "res\\external_output.ico"
+IDI_EXTERNAL_OUTPUT_DISABLED ICON    DISCARDABLE     "res\\external output disabled.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open\tCtrl+O",               ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "&Exit\tCtrl+Q",               ID_FILE_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Preferences",                ID_EDIT_PREFERENCES
+    END
+    POPUP "View"
+    BEGIN
+        MENUITEM "&Condensed\tCtrl+C",          ID_VIEW_CONDENSED
+        MENUITEM "&Expanded",                   ID_VIEW_EXPANDED, CHECKED
+    END
+    POPUP "&Task", GRAYED
+    BEGIN
+        MENUITEM "&Delete\tCtrl+Shift+X",       ID_INSTRUCTION_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "&Enable\tCtrl+Shift+E",       ID_INSTRUCTION_ENABLE
+        MENUITEM "Di&sable\tCtrl+Shift+D",      ID_INSTRUCTION_DISABLE
+        MENUITEM SEPARATOR
+        MENUITEM "&Set Pointer\tCtrl+Shift+S",  ID_INSTRUCTION_SET_CUE
+    END
+END
+
+IDR_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "POPUP"
+    BEGIN
+        POPUP "Instruction"
+        BEGIN
+            MENUITEM "Delete",                      ID_POPUP_DELETE
+            MENUITEM SEPARATOR
+            MENUITEM "Enable",                      ID_POPUP_ENABLE
+            MENUITEM "Disable",                     ID_POPUP_DISABLE
+        END
+        MENUITEM SEPARATOR
+        POPUP "After this Task Insert"
+        BEGIN
+            MENUITEM "Wait...",                     ID_INSERT_WAIT
+            MENUITEM "Hot Point...",                ID_INSERT_GOTO
+            MENUITEM "Check Point...",              ID_INSERT_CALIBRATE
+            MENUITEM "Line Path...",                ID_INSERT_FOLLOWPATH
+            MENUITEM "Vacuum Path...",              ID_INSERT_VACUUM
+            MENUITEM "Motion..",                    ID_INSERT_MOTION
+            MENUITEM "Beep...",                     ID_INSERT_SING
+            MENUITEM "External Output...",          ID_INSERT_EXTERNAL_OUTPUT
+
+            MENUITEM "Execute...",                  ID_INSERT_EXECUTE
+            MENUITEM "Branch...",                   ID_INSERT_IF
+            MENUITEM "Repeat...",                   ID_INSERT_REPEAT
+            MENUITEM "Stop...",                     ID_INSERT_STOP
+        END
+    END
+END
+
+IDR_POPUP2 MENU DISCARDABLE 
+BEGIN
+    POPUP "POPUP"
+    BEGIN
+        MENUITEM "New",                         ID_POPUP_NEW
+        MENUITEM "Open",                        ID_POPUP_OPEN
+        MENUITEM "Close",                       ID_POPUP_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "Save",                        ID_POPUP_SAVE
+        MENUITEM "Save As...",                  ID_POPUP_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_POPUP_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_EXTERNAL_OUTPUT DLGINIT
+BEGIN
+    IDC_COM_EXTERNAL_OUTPUT, 0x403, 1, 0
+"\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SUB_ENABLED         BITMAP  DISCARDABLE     "res\\FZbracket.bmp"
+IDB_CHECKPOINT_ENABLED  BITMAP  DISCARDABLE     "res\\FZcheck.bmp"
+IDB_WAIT_ENABLED        BITMAP  DISCARDABLE     "res\\FZclock.bmp"
+IDB_HOTPOINT_ENABLED    BITMAP  DISCARDABLE     "res\\FZhotspot.bmp"
+IDB_BEEP_ENABLED        BITMAP  DISCARDABLE     "res\\FZmusic.bmp"
+IDB_BRANCH_ENABLED      BITMAP  DISCARDABLE     "res\\FZnudge.bmp"
+IDB_PATH_ENABLED        BITMAP  DISCARDABLE     "res\\FZpath.bmp"
+IDB_REPEAT_ENABLED      BITMAP  DISCARDABLE     "res\\FZrepeat.bmp"
+IDB_MOTION_ENABLED      BITMAP  DISCARDABLE     "res\\FZrot+go.bmp"
+IDB_STOP_ENABLED        BITMAP  DISCARDABLE     "res\\FZstop.bmp"
+IDB_VACUUM_ENABLED      BITMAP  DISCARDABLE     "res\\FZvac.bmp"
+IDB_VACUUM_DISABLED     BITMAP  DISCARDABLE     "res\\vacuum_d.bmp"
+IDB_CHECKPOINT_DISABLED BITMAP  DISCARDABLE     "res\\checkpoi.bmp"
+IDB_WAIT_DISABLED       BITMAP  DISCARDABLE     "res\\wait_dis.bmp"
+IDB_HOTPOINT_DISABLED   BITMAP  DISCARDABLE     "res\\hotpoint.bmp"
+IDB_BEEP_DISABLED       BITMAP  DISCARDABLE     "res\\beep_dis.bmp"
+IDB_BRANCH_DISABLED     BITMAP  DISCARDABLE     "res\\branch_d.bmp"
+IDB_PATH_DISABLED       BITMAP  DISCARDABLE     "res\\path_dis.bmp"
+IDB_REPEAT_DISABLED     BITMAP  DISCARDABLE     "res\\repeat_d.bmp"
+IDB_MOTION_DISABLED     BITMAP  DISCARDABLE     "res\\motion_d.bmp"
+IDB_STOP_DISABLED       BITMAP  DISCARDABLE     "res\\stop_dis.bmp"
+IDB_SUB_DISABLED        BITMAP  DISCARDABLE     "res\\sub_disa.bmp"
+IDB_START               BITMAP  DISCARDABLE     "res\\FZ_start_.bmp"
+IDB_ONOFF_ENABLED       BITMAP  DISCARDABLE     "res\\FZon_off.bmp"
+IDB_ONOFF_DISABLED      BITMAP  DISCARDABLE     "res\\onoff_di.bmp"
+IDB_ZAP                 BITMAP  DISCARDABLE     "res\\zapIDbar.bmp"
+HOTPOINTU               BITMAP  DISCARDABLE     "res\\FZhotpoint.bmp"
+CALIBRATEU              BITMAP  DISCARDABLE     "res\\calibrateu.bmp"
+VACUUMU                 BITMAP  DISCARDABLE     "res\\vacuumu.bmp"
+EXTERNALOUTPUTU         BITMAP  DISCARDABLE     "res\\externalu.bmp"
+PATHU                   BITMAP  DISCARDABLE     "res\\pathu.bmp"
+MOTIONU                 BITMAP  DISCARDABLE     "res\\motionu.bmp"
+WAITU                   BITMAP  DISCARDABLE     "res\\waitu.bmp"
+BEEPU                   BITMAP  DISCARDABLE     "res\\beepu.bmp"
+BRANCHU                 BITMAP  DISCARDABLE     "res\\branchu.bmp"
+REPEATU                 BITMAP  DISCARDABLE     "res\\repeatu.bmp"
+SUBU                    BITMAP  DISCARDABLE     "res\\subu.bmp"
+STOPU                   BITMAP  DISCARDABLE     "res\\stopu.bmp"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

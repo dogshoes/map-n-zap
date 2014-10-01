@@ -1,0 +1,4 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by RobotWorld.rc
+//
+#define HIDC_STATIC                     0x8142ffff    // IDD_PROP_FLOOR

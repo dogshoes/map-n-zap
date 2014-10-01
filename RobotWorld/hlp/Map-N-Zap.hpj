@@ -1,0 +1,137 @@
+/**********************************************************************
+   Map-N-Zap v2.x. Interface to the CYE Personal Robot
+   Copyright (C) 2000, Probotics, Inc. 
+ 
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the GNU General Public License
+   as published by the Free Software Foundation; either version 2
+   of the License, or (at your option) any later version.
+ 
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   General Public License for more details.Furthermore, this source code
+   is distributed without any promise, implied or explicit, of 
+   support from Probotics, Inc.
+ 
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  
+   02111-1307, USA.
+ 
+   Probotics, Inc
+   http://www.personalrobots.com
+   700 River Ave #223
+   Pittsburgh, PA 15212
+   USA
+ **********************************************************************/
+ ; This file is maintained by HCW. Do not modify this file directly.
+ 
+ [OPTIONS]
+ COMPRESS=12 Hall Zeck
+ ERRORLOG=D:\RugRat\Code\Visual C++ 4.0\RobotWorld\hlp\map-n-zap.err
+ LCID=0x409 0x0 0x0 ; English (United States)
+ REPORT=Yes
+ CONTENTS=main_index
+ TITLE=Map-N-Zap Application Help
+ CNT=Map-N-Zap.cnt
+ DEFFONT=Univers,10,0
+ BMROOT=.
+ BMROOT=..
+ HLP=Map-N-Zap.HLP
+ 
+ [FILES]
+ AfxPrint.rtf
+ AfxCore.rtf
+ RobotWorld.rtf
+ FlowZap.rtf
+ howto.rtf
+ 
+ [ALIAS]
+ HIDR_MAINFRAME = main_index
+ HIDD_ABOUTBOX = HID_APP_ABOUT
+ HID_HT_SIZE = HID_SC_SIZE
+ HID_HT_HSCROLL = scrollbars
+ HID_HT_VSCROLL = scrollbars
+ HID_HT_MINBUTTON = HID_SC_MINIMIZE
+ HID_HT_MAXBUTTON = HID_SC_MAXIMIZE
+ AFX_HIDP_INVALID_FILENAME         = AFX_HIDP_default
+ AFX_HIDP_FAILED_TO_OPEN_DOC       = AFX_HIDP_default
+ AFX_HIDP_FAILED_TO_SAVE_DOC       = AFX_HIDP_default
+ AFX_HIDP_ASK_TO_SAVE              = AFX_HIDP_default
+ AFX_HIDP_FAILED_TO_CREATE_DOC     = AFX_HIDP_default
+ AFX_HIDP_FILE_TOO_LARGE           = AFX_HIDP_default
+ AFX_HIDP_FAILED_TO_START_PRINT    = AFX_HIDP_default
+ AFX_HIDP_FAILED_TO_LAUNCH_HELP    = AFX_HIDP_default
+ AFX_HIDP_INTERNAL_FAILURE         = AFX_HIDP_default
+ AFX_HIDP_COMMAND_FAILURE          = AFX_HIDP_default
+ AFX_HIDP_PARSE_INT                = AFX_HIDP_default
+ AFX_HIDP_PARSE_REAL               = AFX_HIDP_default
+ AFX_HIDP_PARSE_INT_RANGE          = AFX_HIDP_default
+ AFX_HIDP_PARSE_REAL_RANGE         = AFX_HIDP_default
+ AFX_HIDP_PARSE_STRING_SIZE        = AFX_HIDP_default
+ AFX_HIDP_FAILED_INVALID_FORMAT    = AFX_HIDP_default
+ AFX_HIDP_FAILED_INVALID_PATH      = AFX_HIDP_default
+ AFX_HIDP_FAILED_DISK_FULL         = AFX_HIDP_default
+ AFX_HIDP_FAILED_ACCESS_READ       = AFX_HIDP_default
+ AFX_HIDP_FAILED_ACCESS_WRITE      = AFX_HIDP_default
+ AFX_HIDP_FAILED_IO_ERROR_READ     = AFX_HIDP_default
+ AFX_HIDP_FAILED_IO_ERROR_WRITE    = AFX_HIDP_default
+ AFX_HIDP_STATIC_OBJECT            = AFX_HIDP_default
+ AFX_HIDP_FAILED_TO_CONNECT        = AFX_HIDP_default
+ AFX_HIDP_SERVER_BUSY              = AFX_HIDP_default
+ AFX_HIDP_BAD_VERB                 = AFX_HIDP_default
+ AFX_HIDP_FAILED_MEMORY_ALLOC      = AFX_HIDP_default
+ AFX_HIDP_FAILED_TO_NOTIFY         = AFX_HIDP_default
+ AFX_HIDP_FAILED_TO_LAUNCH         = AFX_HIDP_default
+ AFX_HIDP_ASK_TO_UPDATE            = AFX_HIDP_default
+ AFX_HIDP_FAILED_TO_UPDATE         = AFX_HIDP_default
+ AFX_HIDP_FAILED_TO_REGISTER       = AFX_HIDP_default
+ AFX_HIDP_FAILED_TO_AUTO_REGISTER  = AFX_HIDP_default
+ 
+ [MAP]
+ #include <afxhelp.hm>
+ #include <RobotWorld.hm>
+ 
+ [WINDOWS]
+ myWnd="Map-N-Zap Help",(248,151,666,543),28932,,(r2989810),f7
+ howTo="",(652,101,359,599),20740,(r14876671),(r12632256),f3
+ main="Man-N-Zap Help",(185,175,521,615),27904,,(r8454143),f6
+ Zap="",(18,10,600,435),20740,,(r16744576),f6
+ [CONFIG]
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExInitialize',`')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExAbout',`')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExWatermark',`SSS')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExWatermarkNonScroll',`SSS')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExShowNavPane',`S')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExShowSeeAlso',`S')
+ RoboHelpExInitialize()
+ ChangeButtonBinding(`btn_topics',"RoboHelpExShowNavPane(`toggle')")
+ RoboHelpExShowNavPane(`show')
+ [CONFIG-myWnd]
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExInitialize',`')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExAbout',`')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExWatermark',`SSS')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExWatermarkNonScroll',`SSS')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExShowNavPane',`S')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExShowSeeAlso',`S')
+ RoboHelpExInitialize()
+ ChangeButtonBinding(`btn_topics',"RoboHelpExShowNavPane(`toggle')")
+ [CONFIG-howTo]
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExInitialize',`')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExAbout',`')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExWatermark',`SSS')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExWatermarkNonScroll',`SSS')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExShowNavPane',`S')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExShowSeeAlso',`S')
+ RoboHelpExInitialize()
+ ChangeButtonBinding(`btn_topics',"RoboHelpExShowNavPane(`toggle')")
+ [CONFIG-Zap]
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExInitialize',`')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExAbout',`')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExWatermark',`SSS')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExWatermarkNonScroll',`SSS')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExShowNavPane',`S')
+ RegisterRoutine(`RoboEx32.dll',`RoboHelpExShowSeeAlso',`S')
+ RoboHelpExInitialize()
+ ChangeButtonBinding(`btn_topics',"RoboHelpExShowNavPane(`toggle')")

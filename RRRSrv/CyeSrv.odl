@@ -1,0 +1,107 @@
+// CyeSrv.odl : type library source for CyeSrv.exe
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (CyeSrv.tlb).
+
+[ uuid(F300B091-6343-11D0-8461-707D42000000), version(1.0) ]
+library CyeSrv
+{
+	importlib("stdole32.tlb");
+	
+	//  Primary dispatch interface for CRRRSrvDoc
+	
+	[ uuid(F300B092-6343-11D0-8461-707D42000000) ]
+	dispinterface ICyeSrv
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CRRRSrvDoc)
+			[id(1)] long ResponseTimeout;
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CRRRSrvDoc)
+			[id(2)] BSTR ServerVersion();
+			[id(3)] long Connect(long wHnd, short NodeAddress, BSTR ControlName);
+			[id(4)] short Disconnect(long ConnectId);
+			[id(5)] long RegisterSimClient(long SimWHandle);
+			[id(6)] void SetMotorVelocities(short M0Velocity, short M1Velocity);
+			[id(7)] void SetRobotHeadingCorrectionFactor(short Correction);
+			[id(8)] void FlipHandle(BOOL Value);
+			[id(9)] void SetMaxPWM(short MaxPWM);
+			[id(10)] void StopMotors();
+			[id(11)] void SetMotorsPWM(short M0PWM, short M1PWM);
+			[id(12)] void MoveTo(long X, long Y);
+			[id(13)] void MoveToRelative(long X, long Y);
+			[id(14)] void ResetPosition(long X, long Y, long H);
+			[id(15)] void Stop();
+			[id(16)] void Pause();
+			[id(17)] void Resume();
+			[id(18)] short GetRadioStatus(short rNum);
+			[id(19)] void SetRadioStatus(short rNum, short nNewValue);
+			[id(20)] short GetRobotStatus(short rNum);
+			[id(21)] void SendP1(long P1);
+			[id(22)] void SendP2(long P2);
+			[id(23)] void SendP3(long P3);
+			[id(24)] void SendP4(long P4);
+			[id(25)] void SendBuzzerFrequency(short BuzzerFrequency);
+			[id(26)] void SendBuzzerOn(BOOL BuzzerOn);
+			[id(27)] void SendFollowPath(short FollowPath);
+			[id(28)] void SendHandleLength(short HandleLength);
+			[id(29)] void SendMotorControlConstants(short Kp, short Ki, short Kd, short Kb, short Kpwm);
+			[id(30)] void SendTurn(double Heading, short Velocity, short Diameter);
+			[id(31)] void SendStraightVelocity(short Velocity, double Heading);
+			[id(32)] void SendMaxSpeed(short MaxSpeed);
+			[id(33)] void SendHeading(double Heading);
+			[id(34)] void SendMotorVelocities(short M0Velocity, short M1Velocity, short Priority);
+			[id(35)] void PurgeRingBuffer();
+			[id(36)] void SendPosition(double X, double Y);
+			[id(37)] void SendPositionDestination(double X, double Y);
+			[id(38)] void ExecutePath(BOOL PurgeOld, IDispatch* PathObject);
+			[id(39)] void SetRobotStatus(short rNum, short nNewValue);
+			[id(40)] void SendSensitiveObstacleDetection(short Sensitive);
+			[id(41)] void SendP5(long P5);
+			[id(42)] void SendP6(long P6);
+			[id(43)] void SendP7(long P7);
+			[id(44)] void SendP8(long P8);
+			[id(45)] void SendVelocityDirection(short Velocity, double Heading, short Priority);
+			[id(46)] void SetRobotDestinationHeading(double Heading, short Velocity);
+			[id(47)] void SendPositionVelocityDestination(double X, double Y, short Velocity, short Priority);
+			[id(48)] void SendInformationToTransmit(long Mask);
+			[id(49)] void SendRequestState();
+			[id(50)] void PowerDown();
+			[id(51)] void SendMessage(VARIANT MsgData);
+			[id(52)] long GetRetryLimit();
+			[id(53)] void SetRetryLimit(long NewLimit);
+			[id(54)] BSTR GetPort();
+			[id(55)] void SetPort(BSTR NewPort);
+			[id(56)] void SquareToWall(double Heading, float TravelTime, BOOL SlipperySurface);
+			[id(57)] void SetFeelingMotor(short Motor);
+			[id(58)] void CornerCalibrate(long X, long Y, double HO, short FeelWheel, float TravelTime, BOOL SlipperySurface);
+			[id(59)] void FindHomeBase(double CornerHeading, double WallHeading, long HomeBaseLocationX, long HomeBaseLocationY, BOOL NeedToGetInFrontOfHomeBase);
+			[id(60)] void SetHeadingDestination(double Heading, short Speed, short MotorEnable);
+			[id(61)] void SetEnableObstacleBounce(BOOL Enable);
+			[id(62)] void SetRAMData(long Address, VARIANT Data);
+			[id(63)] void SetRobotOnSeconds(long Seconds);
+			[id(64)] void SetIntermittentBeep(BOOL On);
+			[id(65)] void AddToPosition(double DeltaX, double DeltaY);
+			[id(66)] void AddToHeading(double Delta);
+			[id(67)] void SetExternalOutput(BOOL On);
+			[id(68)] void RequestEX2Value();
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CRRRSrvDoc
+	
+	[ uuid(F300B090-6343-11D0-8461-707D42000000) ]
+	coclass Document
+	{
+		[default] dispinterface ICyeSrv;
+	};
+
+	//{{AFX_APPEND_ODL}}
+};

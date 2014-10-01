@@ -1,0 +1,51 @@
+[OPTIONS]
+CONTENTS=main_index
+TITLE=CyeCOM Control Help
+
+COMPRESS=0
+OLDKEYPHRASE=NO
+REPORT=NO
+OPTCDROM=0
+ERRORLOG=D:\RugRat\Code\Visual C++ 4.0\RRRCom\hlp\cyecom.err
+[FILES]
+CyeCom.rtf
+
+[BITMAPS]
+; miscellaneous
+Bullet.bmp
+
+[ALIAS]
+HIDD_ABOUTBOX_CYECOM = HID_APP_ABOUT_CYECOM
+
+[MAP]
+#include <CyeCOM.hm>
+#include <CyeCom.hh>
+[CONFIG]
+RegisterRoutine(`Inetwh32.dll',`INETWH_Initialize',`')
+RegisterRoutine(`Inetwh32.dll',`Internet',`S')
+RegisterRoutine(`Inetwh32.dll',`Inet',`S')
+INETWH_Initialize()
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExInitialize',`')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExAbout',`')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExWatermark',`SSS')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExWatermarkNonScroll',`SSS')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExShowNavPane',`S')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExShowSeeAlso',`S')
+RoboHelpExInitialize()
+ChangeButtonBinding(`btn_topics',"RoboHelpExShowNavPane(`toggle')")
+RoboHelpExShowNavPane(`show')
+[WINDOWS]
+Window=,(583,102,409,870),21248,(255,255,224),(255,255,224),f2
+[CONFIG-Window]
+RegisterRoutine(`Inetwh32.dll',`INETWH_Initialize',`')
+RegisterRoutine(`Inetwh32.dll',`Internet',`S')
+RegisterRoutine(`Inetwh32.dll',`Inet',`S')
+INETWH_Initialize()
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExInitialize',`')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExAbout',`')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExWatermark',`SSS')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExWatermarkNonScroll',`SSS')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExShowNavPane',`S')
+RegisterRoutine(`RoboEx32.dll',`RoboHelpExShowSeeAlso',`S')
+RoboHelpExInitialize()
+ChangeButtonBinding(`btn_topics',"RoboHelpExShowNavPane(`toggle')")

@@ -1,0 +1,39 @@
+// RobotWorld.odl : type library source for RobotWorld.exe
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (RobotWorld.tlb).
+
+[ uuid(6D1CD100-E9F8-11CF-A7FE-FF3FAF3C334B), version(1.0) ]
+library RobotWorld
+{
+	importlib("stdole32.tlb");
+	
+	//  Primary dispatch interface for CRobotWorldDoc
+	
+	[ uuid(6D1CD101-E9F8-11CF-A7FE-FF3FAF3C334B) ]
+	dispinterface IRobotW
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CRobotWorldDoc)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CRobotWorldDoc)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CRobotWorldDoc
+	
+	[ uuid(DDC1CEE0-E92D-11CF-A7FE-FF3FAF3C334B) ]
+	coclass Document
+	{
+		[default] dispinterface IRobotW;
+	};
+
+	//{{AFX_APPEND_ODL}}
+};

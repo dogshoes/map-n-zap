@@ -1,0 +1,80 @@
+:Base RobotWorld.hlp>myWnd
+1 Opening, Creating and Saving Documents
+2 Opening  a Document=HID_FILE_OPEN
+2 Creating  a New Document=HID_FILE_OPEN
+2 Saving  a Document=HID_FILE_SAVE
+2 Exiting Robot World=HID_APP_EXIT
+1 RobotWorld Toolbars
+1 Navigating the Robot
+2 An Overview of the Robot Navigation=HID_NAVIGATIONOVERVIEW
+2 Using a Mouse
+3 Navigating with a Mouse=HID_MOUSENAVIGATION
+3 Mouse Controls Dialog Box=HIDD_MOUSE_CONTROLS
+2 Using a Joystick
+3 Navigating with  Joystick=HID_JOYSTICKNAVIGATION
+3 Joystick Controls Dialog Box=HIDD_JOYSTICKCONTROL
+3 Coordinate Systems
+4 World Coordinate System=HID_WORLD_COORDINATE
+4 Robot Coordinate System=HID_ROBOT_COORDINATE
+2 Autonomous Navigation
+3 Autonomouly Navigating Home=HID_GOHOME
+1 Screen and Apperance
+2 Centering the Robot on the Screen=HID_CENTERROBOT
+2 Showing and Hiding HotPoints=HID_VIEW_POSITION_SPOTS
+2 Zooming the window
+3 Zoom 100=HID_ZOOM100
+3 Zoom 200=HID_ZOOM200
+3 Zoom 400=HID_ZOOM400
+1 Robot World Elements
+2 Bases
+3 Setting Up the Home Base Charging Unit=HID_HOMESETUP
+2 Vacuum Paths
+3 An Introduction to Vacuum Paths=HID_VPOVERVIEW>myWnd
+3 Adding a Vacuum Path=HID_VACUUM>myWnd
+3 Deleting a Vacuum Path=HID_VPDELETE>myWnd
+3 Moving a Vacuum Path=HID_VPMOVE>myWnd
+3 Resizing a Vacuum Path=HID_VPRESIZE>myWnd
+3 Vacuum Path Properties=HID_VPRENAME
+2 HotPoints
+3 An Introduction to HotPoints=HID_LABELOVERVIEW
+3 Adding a HotPoint Patch=HID_PLACELABEL>myWnd
+3 Auto navigating to a HotPoint=HID_LABELBUTTONS
+3 Deleting a HotPoint=HID_LABELDELETE>myWnd
+3 Moving a HotPoint=HID_LABELMOVE>myWnd
+3 Showing / hiding HotPoints=HID_VIEW_POSITION_SPOTS>myWnd
+2 SafeZones
+3.An Introduction to SafeZones=HID_HPOVERVIEW>myWnd
+3 Adding a SafeZones=HID_HPOVERVIEW>myWnd
+3 Deleting a SafeZones=HID_HPOVERVIEW>myWnd
+3 Moving a SafeZones=HID_HPOVERVIEW>myWnd
+3 Resizing a SafeZone=HID_HPOVERVIEW>myWnd
+3 Showing / hiding SafeZones=HID_VIEW_REDZONES
+1 FlowZap tool
+2 Showing the FlowZap window=HID_VIEW_FLOWZAP>flowzap
+2 Overview=HID_FLOWZAP_OVERVIEW>flowzap
+2 View
+3 Switching to Condensed View=HID_FLOWZAP_CONDENSED>flowzap
+3 Switching to Expanded View=HID_FLOWZAP_EXPANDED>flowzap
+2 Editing
+3 Editing Files=HID_FLOWZAP_EDIT
+3 Adding a Task to the list=HID_FLOWZAP_INSERT>flowzap
+3 Deleting a Task from the list=HID_FLOWZAP_DELETE>flowzap
+3 Changing the position of a task in the list=HID_FLOWZAP_MOVINGTASKS>flowzap
+3 Disabaling a Task=HID_FLOWZAP_DISABLE>flowzap
+3 Enabaling a Task=HID_FLOWZAP_ENABLE>flowzap
+2 Task types
+3 Calibration Task Overview=HID_FLOWZAP_CALIBRATE>flowzap
+3 Conditional Task Overview=HID_FLOWZAP_CONDITIONAL>flowzap
+3 Goto HotPoint Task Overview=HID_FLOWZAP_GOTO>flowzap
+3 Motion Task Overview=HID_FLOWZAP_MOTION>flowzap
+3 Repeat Task Overview=HID_FLOWZAP_REPEAT>flowzap
+3 Sing Task Overview=HID_FLOWZAP_SING>flowzap
+3 Stop Execution Task Overview=HID_FLOWZAP_STOP>flowzap
+3 Sub Program Task Overview=HID_FLOWZAP_SUB>flowzap
+3 Vacuum Task Overview=HID_FLOWZAP_VACUUM>flowzap
+3 Wait Task Overview=HID_FLOWZAP_WAIT>flowzap
+2 Executing Files
+3 Program Execution Pointer
+4 Program Execution Pointer Overview=HID_FLOWZAP_PROGRAMPOINTER>flowzap
+4 Setting the Program Execution Pointer=HID_FLOWZAP_SET_POINTER>flowzap
+3 Executing a Task List=HID_FLOWZAP_EXECUTEPROGRAM>flowzap

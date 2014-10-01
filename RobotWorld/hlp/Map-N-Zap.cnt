@@ -1,0 +1,166 @@
+:Base Map-N-Zap.hlp>myWnd
+1 Managing Map Files
+2 Opening an existing map=HID_FILE_OPEN
+2 Creating a new map=HID_FILE_NEW
+2 Saving a Map=HID_FILE_SAVE
+2 Exiting Map-N-Zap=HID_APP_EXIT
+1 Map-N-Zap Toolbars
+2 Map Objects=HIDR_MAP_TOOLS
+2 Zap Controls=HIDW_FLOWZAP_CONTROL
+2 Robot Controls
+3 Robot Controls=HIDR_ROBOT_TOOLS
+3 Navigate Robot Tool=HID_MMDEFAULT>myWnd
+3 Resetting the Robot's Position=HID_MMMOVE_ROBOT>myWnd
+3 Searching an Area=HID_SEARCHAREA>myWnd
+3 Centering the Robot on the Screen=HID_CENTERROBOT>myWnd
+2 Drawing Tools
+3 Drawing Tools=HIDW_DRAWING_TOOLS
+3 Clear Area Pen=HID_DRAW_PEN_CLEAR
+3 Unknown Area Pen=HID_DRAW_PEN_UNKNOWN
+3 Obstacle Area Pen=HID_DRAW_PEN_OBSTACLE
+3 Small Pen Width=HID_DRAW_PEN_WIDTH1
+3 Medium Pen Width=HID_DRAW_PEN_WIDTH2
+3 Large Pen Width=HID_DRAW_PEN_WIDTH3
+2 Robot Status
+3 Robot Status=HIDW_ROBOTSTATUS
+3 Battery Level Indicator=HID_EDT_BATTERY_LEVEL>myWnd
+3 Radio Strength Indicator=HID_EDT_RADIO_LEVEL>myWnd
+1 Navigating the Robot
+2 An Overview of the Robot Navigation=HID_NAVIGATIONOVERVIEW
+2 Deduced Reckoning=HID_DEDRECKONING>myWnd
+2 Navigating with a Mouse=HID_MOUSENAVIGATION
+2 Navigating with a Joystick
+3 Navigating with Joystick=HID_JOYSTICKNAVIGATION
+3 Joystick Controls Dialog Box=HIDD_JOYSTICKCONTROL
+3 Coordinate Systems
+4 World Coordinate System=HID_WORLD_COORDINATE
+4 Robot Coordinate System=HID_ROBOT_COORDINATE
+2 Auto-Navigation
+3 Auto-Navigation Overview=HID_AUTO_NAVIGATION
+3 Autonomously Search an Area=HID_SEARCHAREA
+3 Auto-Navigating to the Home Base=HID_GOHOME
+3 Emergency Stop Dialog=HIDD_ESTOP
+1 Screen and Appearance
+2 Centering the Robot on the Screen=HID_CENTERROBOT
+2 Zooming the window
+3 Zoom 100=HID_ZOOM100
+3 Zoom 200=HID_ZOOM200
+3 Zoom 400=HID_ZOOM400
+1 The Probability Grid
+2 Probability Grid Overview=HID_PROBABILITY_GRID
+2 Manually Editing the Probability Grid
+3 Overview=HID_EDIT_MANUAL
+3 Changing the Pen Style=HID_DRAW_PEN_STYLE
+3 Changing the Pen Size=HID_DRAW_PEN_SIZE
+3 Drawing Lines on the Map=HID_DRAW_LINE
+3 Drawing Freehand on the Map=HID_DRAW_FREEHAND
+3 Drawing Rectangles on the Map=HID_DRAW_RECTANGLE
+1 Map Objects
+2 CheckPoints
+3 An Introduction to CheckPoints=HID_CALIBRATIONOVERVIEW
+3 Setting Up the Home Base Charging Unit=HID_HOMESETUP
+3 Create a Checkpoint=HID_CREATECALIBRATIONWALL
+3 Verify Position at a CheckPoint=HID_CALIBRATING
+3 Check-in Results Dialog Box=HIDD_CALIBRATION_SUCCESSFUL
+3 Renaming a CheckPoint=HID_CHECKPOINT_RENAME
+3 Deleting a CheckPoint=HID_CHECKPOINT_DELETE
+2 Vacuum Paths
+3 An Introduction to Vacuum Paths=HID_VPOVERVIEW>myWnd
+3 Adding a Vacuum Path=HID_VACUUM>myWnd
+3 Executing a VacuumPath=HID_VPBUTTONS
+3 Deleting a Vacuum Path=HID_VPDELETE>myWnd
+3 Moving a Vacuum Path=HID_VPMOVE>myWnd
+3 Resizing a Vacuum Path=HID_VPRESIZE>myWnd
+3 Changing Vacuum Path Properties=HID_VPRENAME
+3 Showing / Hiding Vacuum Paths=HID_VIEW_VACUUM_PATCHES
+2 HotPoints
+3 An Introduction to HotPoints=HID_LABELOVERVIEW
+3 Placing a HotPoint=HID_PLACELABEL>myWnd
+3 Auto navigating to a HotPoint=HID_LABELBUTTONS
+3 Deleting a HotPoint=HID_LABELDELETE>myWnd
+3 Moving a HotPoint=HID_LABELMOVE>myWnd
+3 Renaming a HotPoint=HID_LABELRENAME
+3 Showing / hiding HotPoints=HID_VIEW_POSITION_SPOTS>myWnd
+2 Line Paths
+3 An Introduction to Line Paths=HID_LPOVERVIEW
+3 Placing a Line Path=HID_LINE_PATH
+3 Executing a Line Path=HID_LPBUTTONS
+3 Deleting a Line Path=HID_LPDELETE
+3 Moving a Line Path=HID_LPMOVE
+3 Reshaping a Line Path=HID_LPRESIZE
+3 Renaming a Line Path=HID_LPRENAME
+3 Showing / hiding Line Paths=HID_VIEW_LINE_PATHS
+3 Line Path Properties=HIDD_EDIT_LINE_PATH
+2 DangerZones
+3 An Introduction to DangerZones=HID_SZOVERVIEW
+3 Adding a DangerZone=HID_BLOCKAREA
+3 Deleting a DangerZone=HID_SZDELETE
+3 Moving a DangerZone=HID_SZMOVE>myWnd
+3 Resizing a DangerZone=HID_SZRESIZE>myWnd
+3 Showing / Hiding DangerZones=HID_VIEW_REDZONES
+2 Start and Finish Lines
+3 An Introduction to Start and Finish Lines=HID_FINISH_LINE_OVERVIEW
+3 Adding a Finish Line=HID_MM_PLACE_FINISH_LINE
+3 Adding a Start Line=HID_MM_PLACE_START_LINE
+3 Stopping a Finish Line=HID_FINISH_LINE_BUTTONS
+3 Moving a Finish Line=HID_FINISH_LINE_MOVE
+3 Moving a Start Line=HID_START_LINE_MOVE
+3 Deleting a Finish Line=HID_FINISH_LINE_DELETE
+3 Deleting a Start Line=HID_START_LINE_DELETE
+2 Editing Map Objects
+3 Relocating / Resizing Map Objects=HID_MMMOVE
+3 Deleting Map Objects=HID_MMERASE
+3 Renaming Map Objects=HID_RENAME>myWnd
+1 Zap tool
+2 Overview=HID_ZAP_OVERVIEW>Zap
+2 Showing the Zap Window=HID_VIEW_FLOWZAP>Zap
+2 Managing Zap Files
+3 Opening a Zap File=HID_ZAP_FILE_OPEN>Zap
+3 Creating a new Zap File=HID_ZAP_FILE_NEW>Zap
+3 Saving a Zap File=HID_ZAP_FILE_SAVE>Zap
+3 Exiting Zap=HID_ZAP_APP_EXIT>Zap
+2 View
+3 Switching to Condensed View=HID_ZAP_CONDENSED>Zap
+3 Switching to Expanded View=HID_ZAP_EXPANDED>Zap
+2 Editing Zap Files
+3 Editing Files=HID_ZAP_EDIT>Zap
+3 Inserting a New Task=HID_ZAP_INSERT>Zap
+3 Deleting a Task from the list=HID_ZAP_DELETE>Zap
+3 Changing the position of a task in the list=HID_ZAP_MOVINGTASKS>Zap
+3 Disabaling a Task=HID_ZAP_DISABLE>Zap
+3 Enabaling a Task=HID_ZAP_ENABLE>Zap
+2 Task types
+3 Check In Task Overview=HID_ZAP_CALIBRATE>Zap
+3 External Output Task Overview=HID_ZAP_EXTERNAL>Zap
+3 Conditioned Execution Task Overview=HID_ZAP_CONDITIONAL>Zap
+3 Goto HotPoint Task Overview=HID_ZAP_GOTO>Zap
+3 line path task overview=HID_ZAP_LINE_PATH>Zap
+3 Motion Task Overview=HID_ZAP_MOTION>Zap
+3 Repeat Task Overview=HID_ZAP_REPEAT>Zap
+3 Sing Task Overview=HID_ZAP_SING>Zap
+3 Stop Execution Task Overview=HID_ZAP_STOP>Zap
+3 Sub Program Task Overview=HID_ZAP_SUB>Zap
+3 Vacuum Task Overview=HID_ZAP_VACUUM>Zap
+3 Wait Task Overview=HID_ZAP_WAIT>Zap
+2 Executing Files
+3 Executing a Zap File=HID_ZAP_EXECUTEPROGRAM>Zap
+3 Program Execution Pointer
+4 Program Execution Pointer Overview=HID_ZAP_PROGRAMPOINTER>Zap
+4 Setting the Program Execution Pointer=HID_ZAP_SET_POINTER>Zap
+1 View Menu
+2 View Settings commnad=HID_VIEW_SETTINGS>myWnd
+2 View Instrument Panel command=HID_VIEW_INSTRUMENT_PANEL>myWnd
+2 Map Objects
+3 View Map Objects=HID_VIEW_MAP_OBJECTS
+3 View Labels Command=HID_VIEW_LABELS>myWnd
+2 Toolbars
+3 View Drawing Tools Toolbar command=HID_VIEW_DRAWING_TOOLS>myWnd
+3 View Map Tools Toolbar command=HID_VIEW_MAP_OBJECTS_TOOLBAR>myWnd
+3 View Robot Controls Toolbar command=HID_VIEW_ROBOTCONTROLS>myWnd
+3 View Map Tools Toolbar command=HID_VIEW_MAP_OBJECTS_TOOLBAR>myWnd
+3 View Robot Status Toolbar command=HID_VIEW_ROBOTSTATUS>myWnd
+1 Laygo
+2 Overview
+2 Showing Laygo
+2 Resetting Laygo
+3 Disabaling Laygo

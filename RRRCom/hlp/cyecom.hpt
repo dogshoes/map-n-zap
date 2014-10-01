@@ -1,0 +1,84 @@
+RoboHelp Topic Export file
+23|LeftCurrent_Property|LeftCurrent Property
+23|RightCurrent_Property|RightCurrent Property
+23|CommState_Property|CommState Property
+23|RetryLimit_Property|RetryLimit Property
+23|ResponseTimeout_Property|ResponseTimeout Property
+23|BatteryLevel_Property|BatteryLevel Property
+23|RadioLevel_Property|RadioLevel Property
+23|Heading_Property|Heading Property
+23|Y_Property|Y Property
+23|X_Property|X Property
+23|Version_Property|Version Property
+23|HID_APP_ABOUT_CYECOM|About CyeCom.ocx
+23|AFX_HIDP_default|AFX_HIDP_default
+23|HID_HT_NOWHERE|HID_HT_NOWHERE
+23|main_index|Help Index
+23|MoveCurve_Method|MoveCurve Method
+23|SetMotorControlConstants_Method|SetMotorControlConstants Method
+23|SetHandleLength_Method|SetHandleLength Method
+23|FollowPath_Method|FollowPath Method
+23|SetBuzzerOn_Method|SetBuzzerOn Method
+23|SetBuzzerFrequency_Method|SetBuzzerFrequency Method
+23|Resume_Method|Resume Method
+23|Pause_Method|Pause Method
+23|Stop_Method|Stop Method
+23|SetPWM_Method|SetPWM Method
+23|TurnTo_Method|TurnTo Method
+23|SetFlipHandle_Method|SetFlipHandle Method
+23|SetHeadingCorrectionFactor_Method|SetHeadingCorrectionFactor Method
+23|NumRobots_Property|NumRobots Property
+23|LeftVelocity_Property|LeftVelocity Property
+23|RightVelocity_Property|RightVelocity Property
+23|CornerCalibrate_Method|CornerCalibrate Method
+23|SetFeelingMotor_Method|SetFeelingMotor Method
+23|SquareToWall_Method|SquareToWall Method
+23|SetCommPort_Method|SetCommPort Method
+23|GetCommPort_Method|GetCommPort Method
+23|SendMessage_Method|SendMessage Method
+23|PowerDown_Method|PowerDown Method
+23|RequestState_Method|RequestState Method
+23|MoveDirection_Method|MoveDirection Method
+23|LoadPathSegment_Method|LoadPathSegment Method
+23|SetPosition_Method|SetPosition Method
+23|MoveTo_Method|MoveTo Method
+23|SetObstacleSensitivity_Method|SetObstacleSensitivity Method
+23|SetWheelVelocities_Method|SetWheelVelocities Method
+23|SetMaxSpeed_Method|SetMaxSpeed Method
+23|MoveStraight_Method|MoveStraight Method
+23|NewPathSegmentRequest_Event|NewPathSegmentRequest Event
+23|NudgeDetected_Event|NudgeDetected Event
+23|ObstacleDetected_Event|ObstacleDetected Event
+23|BatteryLow_Event|BatteryLow Event
+23|RadioLevelChange_Event|RadioLevelChange Event
+23|RequestExternalInput_Method|RequestExternalInput Method
+23|Robot_Header|Robot Header
+23|SetExternalOutput_Method|SetExternalOutput Method
+23|AddToHeading_Method|AddToHeading Method
+23|AddToPosition_Method|AddToPosition Method
+23|SetIntermittentBeep_Method|SetIntermittentBeep Method
+23|SetRobotOnSeconds_Method|SetRobotOnSeconds Method
+23|SetRAMData_Method|SetRAMData Method
+23|SetEnableObstacleBounce_Method|SetEnableObstacleBounce Method
+23|SetHeadingDestination_Method|SetHeadingDestination Method
+23|FindHomeBase_Method|FindHomeBase Method
+23|CyeCom_Control|CyeCom Control
+23|CyePath_Object|CyePath Object
+23|CyePath_Y_Property|CyePath Y Property
+23|CyePath_X_Property|CyePath X Property
+23|NumPoints_Property|CyePath NumPoints Property
+23|ExternalInput_Event|ExternalInput Event
+23|RobotOnTime_Event|RobotOnTime Event
+23|RobotOn_Event|RobotOn Event
+23|SoftwareRevNumber_Event|SoftwareRevNumber Event
+23|TaskResult_Event|TaskResult Event
+23|CommStateChange_Event|CommStateChange Event
+23|UnknownMessage_Event|UnknownMessage Event
+23|BatteryChargingStateChange_Event|BatteryChargingStateChange Event
+23|RobotStatusChange_Event|RobotStatusChange Event
+23|OnHomeBase_Event|OnHomeBase Event
+23|RobotError_Event|RobotError Event
+23|Check_Points|Check Points
+23|CyeCom_Test|CyeCom Test
+23|Paths|Paths
+23|Robot_Coordinates|Robot Coordinates

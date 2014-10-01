@@ -1,0 +1,2411 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "RobotWorld Resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "RobotWorld Resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "RobotWorld Resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\RobotWorld.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#include "".\\FlowZap\\FlowZap.rc""   //Flow Zap resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\RobotWorld.ico"
+IDR_ROBOTWTYPE          ICON    DISCARDABLE     "res\\RobotWorldDoc.ico"
+IDI_BATTERY_LOW         ICON    DISCARDABLE     "res\\battery_low.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\MainFrmTbr.bmp"
+IDR_ROBOTCONTROL        BITMAP  DISCARDABLE     "res\\RobotControlTbr.bmp"
+IDB_REDZONE             BITMAP  DISCARDABLE     "res\\RedZone.bmp"
+IDB_CALIBRATIONZONE     BITMAP  DISCARDABLE     "res\\CalZone.bmp"
+IDB_ARROW1              BITMAP  DISCARDABLE     "res\\arrow_s.bmp"
+IDB_ARROW2              BITMAP  DISCARDABLE     "res\\arrow_m.bmp"
+IDB_ARROW3              BITMAP  DISCARDABLE     "res\\arrow_l.bmp"
+IDB_JOYSTICK_ORIENTATION1 BITMAP  DISCARDABLE     "res\\joystick1.bmp"
+IDB_JOYSTICK_ORIENTATION2 BITMAP  DISCARDABLE     "res\\joystick2.bmp"
+IDB_JOYSTICK_ORIENTATION3 BITMAP  DISCARDABLE     "res\\joystick3.bmp"
+IDB_JOYSTICK_ORIENTATION4 BITMAP  DISCARDABLE     "res\\joystick4.bmp"
+IDB_POSITION_LABEL3     BITMAP  DISCARDABLE     "res\\position label3.bmp"
+IDB_POSITION_LABEL2     BITMAP  DISCARDABLE     "res\\position label2.bmp"
+IDB_POSITION_LABEL1     BITMAP  DISCARDABLE     "res\\position label1.bmp"
+IDB_ROBOT_BITMAP300     BITMAP  DISCARDABLE     "res\\300tn.BMP"
+IDB_ROBOT_BITMAP011     BITMAP  DISCARDABLE     "res\\011tn.BMP"
+IDB_ROBOT_BITMAP022     BITMAP  DISCARDABLE     "res\\022tn.BMP"
+IDB_ROBOT_BITMAP033     BITMAP  DISCARDABLE     "res\\033tn.BMP"
+IDB_ROBOT_BITMAP044     BITMAP  DISCARDABLE     "res\\044tn.BMP"
+IDB_ROBOT_BITMAP200     BITMAP  DISCARDABLE     "res\\200tn.BMP"
+IDB_ROBOT_BITMAP000     BITMAP  DISCARDABLE     "res\\000tn.bmp"
+IDB_BATTERY_CHARGING    BITMAP  DISCARDABLE     "res\\battery charging.bmp"
+IDB_BATTERY_CHARGED     BITMAP  DISCARDABLE     "res\\battery charged.bmp"
+IDB_BATTERY_NOT_CHARGING BITMAP  DISCARDABLE     "res\\battery not charging.bmp"
+ESTOPU                  BITMAP  DISCARDABLE     "res\\EStop.bmp"
+ESTOPD                  BITMAP  DISCARDABLE     "res\\EStopD.bmp"
+IDB_PRACTICE_TOOLBAR    BITMAP  DISCARDABLE     "res\\practice toolbar.bmp"
+IDR_ROBOT_TOOLS         BITMAP  DISCARDABLE     "res\\robot tools.bmp"
+IDR_MAP_TOOLS           BITMAP  DISCARDABLE     "res\\map_tools.bmp"
+IDB_ROBOT_STATUS_NOT_CHARGING BITMAP  DISCARDABLE     "res\\robot_status_not_charging.bmp"
+IDB_ROBOT_STATUS_CHARGING BITMAP  DISCARDABLE     "res\\robot_status_charging.bmp"
+IDB_ROBOT_STATUS_CHARGED BITMAP  DISCARDABLE     "res\\robot_status_charged.bmp"
+IDB_SPEEDBALL           BITMAP  DISCARDABLE     "res\\speedball.bmp"
+IDB_FZ_EXECUTE_BACKGROUND BITMAP  DISCARDABLE     "res\\fz_execute.bmp"
+IDB_FZ_STOP_ENABLED     BITMAP  DISCARDABLE     "res\\Stop Enabled.bmp"
+IDB_FZ_PLAY_ENABLED     BITMAP  DISCARDABLE     "res\\Play Enabled.bmp"
+IDB_FZ_PAUSE_ENABLED    BITMAP  DISCARDABLE     "res\\Pause Enabled.bmp"
+IDB_FZ_STOP_DISABLED    BITMAP  DISCARDABLE     "res\\fzStop Disabled.bmp"
+IDB_FZ_PLAY_DISABLED    BITMAP  DISCARDABLE     "res\\fzPlay Disabled.bmp"
+IDB_FZ_PAUSE_DISABLED   BITMAP  DISCARDABLE     "res\\Pause Disabled.bmp"
+IDB_FZ_SHOW_FZ_ENABLED  BITMAP  DISCARDABLE     "res\\fzShowFZ Enabled.bmp"
+IDB_FZ_SHOW_FZ_DISABLED BITMAP  DISCARDABLE     "res\\fzShowFZ Disabled.bmp"
+IDB_DRAW_FREEHAND       BITMAP  DISCARDABLE     "res\\draw freehand.bmp"
+IDB_DRAW_PENS_INACTIVE  BITMAP  DISCARDABLE     "res\\inactivepens.bmp"
+IDB_DRAW_LINE           BITMAP  DISCARDABLE     "res\\draw line.bmp"
+IDB_DRAW_RECTANGLE      BITMAP  DISCARDABLE     "res\\draw rectgle.bmp"
+IDB_DRAW_WIDTHS_INACTIVE BITMAP  DISCARDABLE     "res\\inactivelines.bmp"
+IDB_DRAW_PEN_CLEAR_ACTIVE BITMAP  DISCARDABLE     "res\\ClearPenActive.bmp"
+IDB_DRAW_PEN_OBSTACLE_ACTIVE BITMAP  DISCARDABLE     "res\\ObstaclePenActive.bmp"
+IDB_DRAW_PEN_UNKNOWN_ACTIVE BITMAP  DISCARDABLE     "res\\UnknownPenActive.bmp"
+IDB_DRAW_WIDTH_SMALL_ACTIVE BITMAP  DISCARDABLE     "res\\SmallLineActive.bmp"
+IDB_DRAW_WIDTH_MEDIUM_ACTIVE BITMAP  DISCARDABLE     "res\\MediumLineActive.bmp"
+IDB_DRAW_WIDTH_LARGE_ACTIVE BITMAP  DISCARDABLE     "res\\LargeLineActive.bmp"
+IDB_DRAW_WIDTH_XLARGE_ACTIVE BITMAP  DISCARDABLE     "res\\XLargeLineActive.bmp"
+IDB_MAP_BAR             BITMAP  DISCARDABLE     "res\\mapIDbar.bmp"
+IDB_VELOCITY_TORQUE     BITMAP  DISCARDABLE     "res\\velocity_torque.bmp"
+IDB_FZ_STOP_PUSHED      BITMAP  DISCARDABLE     "res\\Stop Pushed.bmp"
+IDB_FZ_PLAY_PUSHED      BITMAP  DISCARDABLE     "res\\Play Pushed.bmp"
+IDB_FZ_PAUSE_PUSHED     BITMAP  DISCARDABLE     "res\\Pause Pushed.bmp"
+IDB_FZ_SHOW_FZ_PUSHED   BITMAP  DISCARDABLE     "res\\fzShowFZ Pushed.bmp"
+IDB_SPLASH              BITMAP  DISCARDABLE     "res\\splash.bmp"
+IDB_SMALL_GREY_ARROW    BITMAP  DISCARDABLE     "res\\small grey arrow.bmp"
+IDB_LARGE_GREY_ARROW    BITMAP  DISCARDABLE     "res\\large grey arrow.bmp"
+IDB_MEDIUM_BLACK_ARROW  BITMAP  DISCARDABLE     "res\\medium black arrow.bmp"
+IDB_MEDIUM_GREY_ARROW   BITMAP  DISCARDABLE     "res\\medium grey arrow.bmp"
+IDB_SMALL_BLACK_ARROW   BITMAP  DISCARDABLE     "res\\small black arrow.bmp"
+IDB_LARGE_BLACK_ARROW   BITMAP  DISCARDABLE     "res\\large black arrow.bmp"
+IDB_POSITION_LABEL35    BITMAP  DISCARDABLE     "res\\position label35.bmp"
+IDB_POSITION_LABEL11    BITMAP  DISCARDABLE     "res\\position label11.bmp"
+IDB_POSITION_LABEL12    BITMAP  DISCARDABLE     "res\\position label12.bmp"
+IDB_POSITION_LABEL13    BITMAP  DISCARDABLE     "res\\position label13.bmp"
+IDB_POSITION_LABEL14    BITMAP  DISCARDABLE     "res\\position label14.bmp"
+IDB_POSITION_LABEL15    BITMAP  DISCARDABLE     "res\\position label15.bmp"
+IDB_POSITION_LABEL20    BITMAP  DISCARDABLE     "res\\position label20.bmp"
+IDB_POSITION_LABEL21    BITMAP  DISCARDABLE     "res\\position label21.bmp"
+IDB_POSITION_LABEL22    BITMAP  DISCARDABLE     "res\\position label22.bmp"
+IDB_POSITION_LABEL23    BITMAP  DISCARDABLE     "res\\position label23.bmp"
+IDB_POSITION_LABEL24    BITMAP  DISCARDABLE     "res\\position label24.bmp"
+IDB_POSITION_LABEL10    BITMAP  DISCARDABLE     "res\\position label10.bmp"
+IDB_POSITION_LABEL33    BITMAP  DISCARDABLE     "res\\position label33.bmp"
+IDB_POSITION_LABEL30    BITMAP  DISCARDABLE     "res\\position label30.bmp"
+IDB_POSITION_LABEL31    BITMAP  DISCARDABLE     "res\\position label31.bmp"
+IDB_POSITION_LABEL32    BITMAP  DISCARDABLE     "res\\position label32.bmp"
+IDB_POSITION_LABEL25    BITMAP  DISCARDABLE     "res\\position label25.bmp"
+IDB_POSITION_LABEL34    BITMAP  DISCARDABLE     "res\\position label34.bmp"
+IDB_FINISH_LINE37       BITMAP  DISCARDABLE     "res\\finish line37.bmp"
+IDB_FINISH_LINE10       BITMAP  DISCARDABLE     "res\\finish line10.bmp"
+IDB_FINISH_LINE11       BITMAP  DISCARDABLE     "res\\finish line11.bmp"
+IDB_FINISH_LINE12       BITMAP  DISCARDABLE     "res\\finish line12.bmp"
+IDB_FINISH_LINE13       BITMAP  DISCARDABLE     "res\\finish line13.bmp"
+IDB_FINISH_LINE14       BITMAP  DISCARDABLE     "res\\finish line14.bmp"
+IDB_FINISH_LINE15       BITMAP  DISCARDABLE     "res\\finish line15.bmp"
+IDB_FINISH_LINE16       BITMAP  DISCARDABLE     "res\\finish line16.bmp"
+IDB_FINISH_LINE17       BITMAP  DISCARDABLE     "res\\finish line17.bmp"
+IDB_FINISH_LINE2        BITMAP  DISCARDABLE     "res\\finish line2.bmp"
+IDB_FINISH_LINE20       BITMAP  DISCARDABLE     "res\\finish line20.bmp"
+IDB_FINISH_LINE21       BITMAP  DISCARDABLE     "res\\finish line21.bmp"
+IDB_FINISH_LINE22       BITMAP  DISCARDABLE     "res\\finish line22.bmp"
+IDB_FINISH_LINE36       BITMAP  DISCARDABLE     "res\\finish line36.bmp"
+IDB_FINISH_LINE23       BITMAP  DISCARDABLE     "res\\finish line23.bmp"
+IDB_FINISH_LINE24       BITMAP  DISCARDABLE     "res\\finish line24.bmp"
+IDB_FINISH_LINE25       BITMAP  DISCARDABLE     "res\\finish line25.bmp"
+IDB_FINISH_LINE26       BITMAP  DISCARDABLE     "res\\finish line26.bmp"
+IDB_FINISH_LINE27       BITMAP  DISCARDABLE     "res\\finish line27.bmp"
+IDB_FINISH_LINE3        BITMAP  DISCARDABLE     "res\\finish line3.bmp"
+IDB_FINISH_LINE30       BITMAP  DISCARDABLE     "res\\finish line30.bmp"
+IDB_FINISH_LINE31       BITMAP  DISCARDABLE     "res\\finish line31.bmp"
+IDB_FINISH_LINE32       BITMAP  DISCARDABLE     "res\\finish line32.bmp"
+IDB_FINISH_LINE33       BITMAP  DISCARDABLE     "res\\finish line33.bmp"
+IDB_FINISH_LINE34       BITMAP  DISCARDABLE     "res\\finish line34.bmp"
+IDB_FINISH_LINE35       BITMAP  DISCARDABLE     "res\\finish line35.bmp"
+IDB_FINISH_LINE1        BITMAP  DISCARDABLE     "res\\finish line1.bmp"
+IDB_TIMER_TOP           BITMAP  DISCARDABLE     "res\\timer top.bmp"
+IDB_TIMER_LEFT          BITMAP  DISCARDABLE     "res\\timer left.bmp"
+IDB_TIMER_RIGHT         BITMAP  DISCARDABLE     "res\\timer right.bmp"
+IDB_TIMER_BOTTOM        BITMAP  DISCARDABLE     "res\\timer bottom.bmp"
+IDB_START_LINE3         BITMAP  DISCARDABLE     "res\\start line3.bmp"
+IDB_START_LINE2         BITMAP  DISCARDABLE     "res\\start line2.bmp"
+IDB_START_LINE1         BITMAP  DISCARDABLE     "res\\start line1.bmp"
+IDR_DRAWING_TOOLS       BITMAP  DISCARDABLE     "res\\drawing_.bmp"
+IDB_LAYGO_DEFAULT       BITMAP  DISCARDABLE     "res\\LaygoDefault.bmp"
+IDB_ROBOT_BITMAP_CHROME BITMAP  DISCARDABLE     "res\\Chrometn.bmp"
+IDR_ROBOT_EXTERNALS     BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+IDB_ROBOT_EXTERNALS_OFF BITMAP  DISCARDABLE     "res\\RobotExternalsOff.bmp"
+IDB_ROBOT_EXTERNALS_ON  BITMAP  DISCARDABLE     "res\\RobotExternalsOn.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+    BUTTON      ID_CONTEXT_HELP
+END
+
+IDR_ROBOTCONTROL TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_GOHOME
+    SEPARATOR
+    BUTTON      ID_CREATECALIBRATIONWALL
+    BUTTON      ID_CREATECALIBRATIONDOORWAY
+    BUTTON      ID_CALIBRATESURFACE
+    SEPARATOR
+    BUTTON      ID_STOP
+    SEPARATOR
+    BUTTON      ID_VACUUM
+    BUTTON      ID_BLOCKAREA
+    BUTTON      ID_PLACELABEL
+    SEPARATOR
+    BUTTON      ID_MMERASE
+    BUTTON      ID_MMDEFAULT
+    BUTTON      ID_MMMOVE
+    SEPARATOR
+    BUTTON      ID_MM_BLOCK_GRID
+    BUTTON      ID_MM_CLEAR_GRID
+    BUTTON      ID_MM_UNKNOWN_GRID
+    SEPARATOR
+    BUTTON      ID_MM_PLACE_FINISH_LINE
+    BUTTON      ID_POWER_OFF
+    BUTTON      ID_LINE_PATH
+    BUTTON      ID_LOAD_TOOLBARS
+    BUTTON      ID_SAVE_TOOLBARS
+END
+
+IDR_ROBOT_TOOLS TOOLBAR DISCARDABLE  35, 18
+BEGIN
+    BUTTON      ID_MMDEFAULT
+    BUTTON      ID_MMMOVE_ROBOT
+    BUTTON      ID_CENTERROBOT
+    BUTTON      ID_SEARCHAREA
+    BUTTON      ID_SHOW_VIDEO_BUTTON
+END
+
+IDR_MAP_TOOLS TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_PLACELABEL
+    BUTTON      ID_CREATECALIBRATIONWALL
+    SEPARATOR
+    BUTTON      ID_LINE_PATH
+    BUTTON      ID_VACUUM
+    SEPARATOR
+    BUTTON      ID_BLOCKAREA
+    SEPARATOR
+    BUTTON      ID_MM_PLACE_START_LINE
+    BUTTON      ID_MM_PLACE_FINISH_LINE
+    SEPARATOR
+    BUTTON      ID_MMMOVE
+    BUTTON      ID_MMERASE
+END
+
+IDR_DRAWING_TOOLS TOOLBAR DISCARDABLE  28, 16
+BEGIN
+    BUTTON      ID_DRAW_LINE
+    BUTTON      ID_DRAW_FREEHAND
+    BUTTON      ID_DRAW_RECTANGLE
+    SEPARATOR
+    BUTTON      ID_DRAW_PEN_OBSTACLE
+    BUTTON      ID_DRAW_PEN_UNKNOWN
+    BUTTON      ID_DRAW_PEN_CLEAR
+    SEPARATOR
+    BUTTON      ID_DRAW_PEN_WIDTH1
+    BUTTON      ID_DRAW_PEN_WIDTH2
+    BUTTON      ID_DRAW_PEN_WIDTH3
+END
+
+IDR_ROBOT_EXTERNALS TOOLBAR DISCARDABLE  17, 16
+BEGIN
+    BUTTON      ID_EXTERNAL_OUTPUT_ON
+    BUTTON      ID_EXTERNAL_OUTPUT_OFF
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Delete",                      ID_EDIT_DELETE
+        MENUITEM "Properties",                  ID_EDIT_PROPERTIES
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Instrument Panel",            ID_VIEW_INSTRUMENT_PANEL
+        POPUP "Toolbars"
+        BEGIN
+            MENUITEM "Standard &Toolbar",           ID_VIEW_TOOLBAR
+            MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+            MENUITEM "Robot Controls",              ID_VIEW_ROBOTCONTROLS
+            MENUITEM "Robot Status",                ID_VIEW_ROBOTSTATUS
+            MENUITEM "Drawing Tools",               ID_VIEW_DRAWING_TOOLS
+            MENUITEM "Zap Controls ",               ID_VIEW_ZAP_CONTROLS
+            MENUITEM "Map Objects",                 ID_VIEW_MAP_OBJECTS_TOOLBAR
+
+        END
+        POPUP "Map Objects"
+        BEGIN
+            MENUITEM "Labels",                      ID_VIEW_LABELS
+            MENUITEM "HotPoints",                   ID_VIEW_POSITION_SPOTS
+            MENUITEM "Danger Zones",                ID_VIEW_REDZONES
+            MENUITEM "Vacuum Paths",                ID_VIEW_VACUUM_PATCHES
+            MENUITEM "Line Paths",                  ID_VIEW_LINE_PATHS
+            MENUITEM "Ruler Grid",                  ID_VIEW_RULER_GRID
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Settings",                    ID_VIEW_SETTINGS
+        MENUITEM SEPARATOR
+        MENUITEM "Add Robot",                   ID_VIEW_ADD_ROBOT
+        MENUITEM "Add Homebase",                ID_VIEW_ADD_HOMEBASE
+        MENUITEM SEPARATOR
+        MENUITEM "CyePersona",                  ID_VIEW_CYE_PERSONA
+    END
+    POPUP "Zoom"
+    BEGIN
+        MENUITEM "100",                         ID_ZOOM100
+        MENUITEM "200",                         ID_ZOOM200
+        MENUITEM "400",                         ID_ZOOM400
+    END
+    MENUITEM "Zap",                         ID_VIEW_FLOWZAP
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About Map-N-Zap",            ID_APP_ABOUT
+        MENUITEM SEPARATOR
+        POPUP "Laygo"
+        BEGIN
+            MENUITEM "Reset LAYGo",                 ID_HELP_RESETLAYGO
+            MENUITEM "Disable LAYGo",               ID_HELP_DISABLELAYGO
+            MENUITEM "Show Welcome Tip",            ID_HELP_LAYGO_SHOW_WELCOME_TIP
+
+            MENUITEM "Show Robot Color Tip",        ID_HELP_LAYGO_SHOW_ROBOT_COLOR_TIP
+
+            MENUITEM "Show Radio Pod Search Tip",   ID_HELP_LAYGO_SHOW_COM_PORT_SEARCH_TIP
+
+            MENUITEM "Show Set up Home Base Tip",   ID_HELP_LAYGO_SHOW_CREATE_HOMEBASE_TIP
+
+            MENUITEM "Show Navigating Robot Tip",   ID_HELP_LAYGO_SHOW_NAVIGATE_TIP
+
+            MENUITEM "Show Occupancy Grid Tip",     ID_HELP_LAYGO_SHOW_OCCUPANCY_GRID_TIP
+
+            MENUITEM "Show Position Uncertainty Tip", 
+                                                    ID_HELP_LAYGO_SHOW_POSITION_UNCERTAINTY_TIP
+
+            MENUITEM "Show Check Point Tip",        ID_HELP_LAYGO_SHOW_CHECKPOINT_TIP
+
+            MENUITEM "Show Additional Checkpoints Tip", 
+                                                    ID_HELP_LAYGO_SHOW_ADDITIONAL_CHECKPOINT_TIP
+
+            MENUITEM "Show Hot Points Tip",         ID_HELP_LAYGO_SHOW_HOTPOINT_TIP
+
+            MENUITEM "Show Vacuum Paths Tip",       ID_HELP_LAYGO_SHOW_VACUUMPATHS_TIP
+
+            MENUITEM "Show Danger Zones Tip",       ID_HELP_LAYGO_SHOW_DANGER_ZONES_TIP
+
+            MENUITEM "Show Zap Tip",                ID_HELP_LAYGO_SHOW_FLOWZAP_TIP
+
+        END
+        POPUP "Samples"
+        BEGIN
+            MENUITEM "CyeServe",                    ID_HELP_SAMPLES_CYESERVE
+            MENUITEM "CyeTruck",                    ID_HELP_SAMPLES_CYETRUCK
+            MENUITEM "CyePup",                      ID_HELP_SAMPLES_CYEPUP
+            MENUITEM "CyeClock",                    ID_HELP_SAMPLES_CYECLOCK
+            , GRAYED
+            MENUITEM "CyePost",                     ID_HELP_SAMPLES_CYEPOST
+            MENUITEM "CyeGuide",                    ID_HELP_SAMPLES_CYEGUIDE
+            MENUITEM "CyePatrol",                   ID_HELP_SAMPLES_CYEPATROL
+            , GRAYED
+        END
+    END
+END
+
+CG_IDR_POPUP_ROBOT_WORLD_VIEW MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "Cu&t",                        ID_EDIT_CUT
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM "&Paste",                      ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Properties",                  ID_EDIT_PROPERTIES
+        MENUITEM "Delete",                      ID_EDIT_DELETE
+        MENUITEM "Adjust Checkpoint",           ID_ADJUST_CHECKPOINT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "M",            ID_VIEW_MOTORCONTROLS,  VIRTKEY, SHIFT, CONTROL, ALT, 
+                                                    NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "T",            ID_VIEW_TEST_ROBOT,     VIRTKEY, SHIFT, CONTROL, ALT, 
+                                                    NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_DOWN,        ID_ROBOT_BACK,          VIRTKEY, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_LEFT,        ID_ROBOT_ROTATE_LEFT,   VIRTKEY, NOINVERT
+    VK_RIGHT,       ID_ROBOT_ROTATE_RIGHT,  VIRTKEY, NOINVERT
+    VK_UP,          ID_ROBOT_FORWARD,       VIRTKEY, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 217, 78
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Map-N-Zap"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Map-N-Zap Version 2.1",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright © 2000",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,32,14,WS_GROUP
+    LTEXT           "Robot Software Rev Number",IDC_EDT_ROBOT_SOFTWARE_REV,
+                    39,39,154,8
+    LTEXT           "Robot Run Time",IDC_EDT_ROBOT_RUN_TIME,39,48,153,8
+    LTEXT           "Contact us at www.personalrobots.com",IDC_STATIC,39,63,
+                    124,8
+END
+
+IDW_ROBOTSTATUS DIALOG DISCARDABLE  0, 0, 236, 21
+STYLE WS_CHILD | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        ID_EDT_BATTERY_LEVEL,77,4,16,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        ID_EDT_RADIO_LEVEL,125,4,17,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+END
+
+IDD_LABELNAME DIALOG DISCARDABLE  0, 0, 219, 54
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Please type the HotPoint's name"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDTLABELNAME,69,20,85,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,162,11,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,162,28,50,14
+    RTEXT           "HotPoint Name:",IDC_STATIC,7,23,57,8
+END
+
+IDD_MOTORCONTROLS DIALOG DISCARDABLE  0, 0, 698, 431
+STYLE WS_POPUP | WS_CAPTION | WS_VSCROLL | WS_HSCROLL | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "Motor Controls"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDT_START_X,471,34,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_START_Y,519,34,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_END_X,567,34,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_END_Y,613,34,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_ITERATIONS,471,66,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_REPEAT,519,66,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDTM0PWM,10,25,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDTM1PWM,60,25,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set PWM",IDC_BUTSETPWM,10,43,39,14
+    PUSHBUTTON      "Stop Motors",IDC_BUTSTOPMOTORS,60,43,44,14
+    EDITTEXT        IDC_EDTM0SPEED,10,92,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDTM1SPEED,60,92,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set V",IDC_BUTSETSPEED,10,110,40,14
+    PUSHBUTTON      "Stop Motors",IDC_BUTSTOPMOTORS2,60,110,40,14
+    EDITTEXT        IDC_EDTMAXSPEED,60,135,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "Set Max Spd",IDC_BUTSETMAXSPEED,10,135,50,14
+    EDITTEXT        IDC_EDTHEADING,60,176,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set Head",IDC_BUTSETHEADING,10,176,43,14
+    EDITTEXT        IDC_EDTCURRENTHEADING,60,202,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "Show Head",IDC_BUTSHOWHEADING,10,202,44,14
+    PUSHBUTTON      "Do 360",IDC_BUTDO360,10,220,40,14
+    EDITTEXT        IDC_EDTM1VELMEAS,60,263,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDTM0VELMEAS,10,263,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDTM1ACCELERATION,60,288,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDTM0ACCELERATION,10,288,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDTM1AD,60,312,40,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDTM0AD,10,312,40,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDTTOTALENCODERTICKS,119,25,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDTKHEADERR,165,25,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "Floor Calibration",IDC_BUTCALIBRATEHEADING,119,43,54,14
+    PUSHBUTTON      "Send Default Correction",IDC_BUTSENDDEFAULTCORRECTION,
+                    119,60,80,14
+    PUSHBUTTON      "Reset Position",IDC_BUTRESETPOSITION,186,43,55,14
+    PUSHBUTTON      "Calibrate On Closest Surface",IDC_BUTCALIBRATE,116,110,
+                    99,14
+    PUSHBUTTON      "Create Doorway",IDC_BUTCREATEDOORWAY,173,128,60,14
+    PUSHBUTTON      "Create Wall",IDC_BUTCREATEWALL,119,128,46,14
+    EDITTEXT        IDC_EDTOBSTACLE,119,311,78,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Flip Handle",IDC_CHKFLIPHANDLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,119,273,51,10
+    PUSHBUTTON      "Button1",IDC_BUTTON1,455,382,50,14
+    LTEXT           "Obstacle",IDC_STATIC,119,303,49,8
+    LTEXT           "M0 Pwm",IDC_STATIC,10,17,40,8
+    LTEXT           "M1 Pwm",IDC_STATIC,60,17,31,8
+    GROUPBOX        "Motors PWM",IDC_STATIC,4,5,105,65
+    LTEXT           "Head radian",IDC_STATIC,60,168,38,8
+    GROUPBOX        "Heading",IDC_STATIC,4,159,108,82
+    GROUPBOX        "Speed Controls",IDC_STATIC,4,73,105,83
+    LTEXT           "M0 Velocity Set",IDC_STATIC,10,84,40,8
+    LTEXT           "M1 Velocity Set",IDC_STATIC,60,84,48,8
+    LTEXT           "Total Ticks",IDC_STATIC,119,17,40,8
+    GROUPBOX        "Calibration",IDC_STATIC,112,5,171,142
+    LTEXT           "Heading Ticks",IDC_STATIC,60,194,45,8
+    LTEXT           "KHeadError",IDC_STATIC,165,17,43,8
+    LTEXT           "Max Speed",IDC_STATIC,60,127,36,8
+    LTEXT           "M0 Velocity",IDC_STATIC,10,255,43,8
+    LTEXT           "M1 Velocity",IDC_STATIC,60,255,43,8
+    LTEXT           "M0 Accel",IDC_STATIC,10,280,43,8
+    LTEXT           "M1 Accel",IDC_STATIC,60,280,43,8
+    LTEXT           "M0 AD",IDC_STATIC,10,304,43,8
+    LTEXT           "M1 AD",IDC_STATIC,60,304,43,8
+    GROUPBOX        "Motor Measurements",IDC_STATIC,4,240,109,182
+    CONTROL         "Record Information",IDC_CHKRECORDINFO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,407,73,10
+    EDITTEXT        IDC_EDTM0PWMMEAS,10,337,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDTM1PWMMEAS,60,337,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "M0 Pwm",IDC_STATIC,10,329,43,8
+    LTEXT           "M1 Pwm",IDC_STATIC,60,329,43,8
+    EDITTEXT        IDC_EDTSTRAIGHTHEADING,172,234,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set Head",IDC_BUTSETSTRAIGHTHEADING,126,234,40,14
+    LTEXT           "Head radian",IDC_STATIC,172,226,38,8
+    GROUPBOX        "Go Straight",IDC_STATIC,119,217,123,36
+    PUSHBUTTON      "Purge Ring Buff",IDC_BUTPURGERINGBUFFER,178,256,61,14
+    CONTROL         "High Sensitivity",IDC_RADOBSHIGHSENS,"Button",
+                    BS_AUTORADIOBUTTON,119,371,62,10
+    CONTROL         "Medium Sensitivity",IDC_RADOBSMEDSENS,"Button",
+                    BS_AUTORADIOBUTTON,119,386,72,10
+    CONTROL         "Low Sensitivity",IDC_RADOBSLOWSENS,"Button",
+                    BS_AUTORADIOBUTTON,119,396,60,10
+    CONTROL         "None",IDC_RADOBSNONE,"Button",BS_AUTORADIOBUTTON,119,
+                    406,33,10
+    PUSHBUTTON      "Reset Position",IDC_BUTRESETPOSITION2,55,220,54,14
+    PUSHBUTTON      "Show Position",IDC_BUTSHOWPOSITION,119,162,53,14
+    EDITTEXT        IDC_EDTX,191,155,40,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDTH,191,191,40,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "X",IDC_STATIC,179,155,8,8
+    LTEXT           "Y",IDC_STATIC,178,173,8,8
+    LTEXT           "H",IDC_STATIC,179,191,8,8
+    EDITTEXT        IDC_EDTY,191,173,40,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "Position",IDC_STATIC,112,148,172,60
+    EDITTEXT        IDC_EDTM0ENCODER,235,164,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDTM1ENCODER,235,188,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "M0 Encoder",IDC_STATIC,235,155,37,8
+    LTEXT           "M1 Encoder",IDC_STATIC,235,179,37,8
+    PUSHBUTTON      "Reset Position",IDC_BUTRESETPOSITION3,118,182,53,14
+    PUSHBUTTON      "Send 0 Correction",IDC_BUTNOCORRECTION,203,58,65,14
+    EDITTEXT        IDC_EDTKP,384,26,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDTKI,384,50,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDTKD,384,74,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDTKB,384,98,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDTKPWM,384,122,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Kp",IDC_STATIC,384,18,9,8
+    LTEXT           "Ki",IDC_STATIC,384,42,8,8
+    LTEXT           "Kd",IDC_STATIC,384,66,9,8
+    LTEXT           "Kb",IDC_STATIC,384,90,9,8
+    LTEXT           "KPwm",IDC_STATIC,384,114,20,8
+    GROUPBOX        "Motion Control Constants",IDC_STATIC,373,5,81,230
+    PUSHBUTTON      "Send Data",IDC_BUTSENDMOTORCONTROLCONSTANTS,384,202,50,
+                    14
+    PUSHBUTTON      "SendDefaults",IDC_BUTSENDMOTOCONDEFAULTS,384,218,53,14
+    EDITTEXT        IDC_EDTHANDLELENGTH,384,154,40,14,ES_AUTOHSCROLL
+    LTEXT           "Handle Length",IDC_STATIC,384,140,45,8
+    PUSHBUTTON      "Follow Path",IDC_BUTFOLLOWPATH,384,181,50,14
+    GROUPBOX        "Obstacles",IDC_STATIC,114,288,91,131
+    EDITTEXT        IDC_EDTBUZZERFREQUENCY,222,315,40,14,ES_AUTOHSCROLL
+    LTEXT           "Buzzer Frequency (Hz)",IDC_STATIC,216,304,68,8
+    PUSHBUTTON      "Send Buzzer",IDC_BUTSENDBUZZER,222,333,50,14
+    GROUPBOX        "Buzzer Stuff",IDC_STATIC,213,294,76,63
+    LTEXT           "Battery AD",IDC_STATIC,10,357,43,8
+    EDITTEXT        IDC_EDT_BATTERY_AD,10,365,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDT_M0OBST,119,337,37,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_M1OBST,165,337,36,14,ES_AUTOHSCROLL
+    LTEXT           "M0 Obst",IDC_STATIC,119,329,28,8
+    LTEXT           "M1 Obst",IDC_STATIC,165,329,28,8
+    EDITTEXT        IDC_EDT_PARM1,303,263,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_PARM2,303,288,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_PARM3,303,312,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_PARM4,303,337,40,14,ES_AUTOHSCROLL
+    LTEXT           "P1",IDC_STATIC,303,255,10,8
+    LTEXT           "P2",IDC_STATIC,303,280,10,8
+    LTEXT           "P3",IDC_STATIC,303,304,10,8
+    LTEXT           "P4",IDC_STATIC,303,329,10,8
+    GROUPBOX        "Changeable Parameters",IDC_STATIC,295,247,136,107
+    PUSHBUTTON      "Set",IDC_BUT_SET,401,288,24,14
+    PUSHBUTTON      "Default",IDC_BUT_PARM_DEFAULT,403,312,26,14
+    EDITTEXT        IDC_EDT_CORRECTION,119,78,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Send Correction",IDC_BUT_SEND_CORRECTION,165,78,56,14
+    PUSHBUTTON      "Write Probability Grid",IDC_BUT_WRITE_PROB_GRID,471,141,
+                    79,14
+    PUSHBUTTON      "Find Path",IDC_BUT_FIND_PATH,565,66,50,14
+    LTEXT           "X",IDC_STATIC,475,26,8,8
+    LTEXT           "Y",IDC_STATIC,521,26,8,8
+    LTEXT           "X",IDC_STATIC,567,26,8,8
+    LTEXT           "Y",IDC_STATIC,613,26,8,8
+    LTEXT           "Iterations",IDC_STATIC,471,58,28,8
+    LTEXT           "Repeat",IDC_STATIC,519,58,24,8
+    GROUPBOX        "Start",IDC_STATIC,467,15,98,39
+    GROUPBOX        "End",IDC_STATIC,563,15,98,39
+    GROUPBOX        "Path Creation",IDC_STATIC,459,5,210,132
+    EDITTEXT        IDC_EDT_MIN_FOUND,471,90,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_AVG_FOUND,519,90,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_START_DIST,565,90,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_END_DIST,471,118,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_FREE_DIST,519,118,40,14,ES_AUTOHSCROLL
+    LTEXT           "Min Found",IDC_STATIC,471,82,34,8
+    LTEXT           "Avg Found",IDC_STATIC,519,82,36,8
+    LTEXT           "Free Dist",IDC_STATIC,519,108,29,8
+    LTEXT           "Start Dist",IDC_STATIC,565,82,30,8
+    LTEXT           "End Dist",IDC_STATIC,471,108,28,8
+    CONTROL         "Stop Path",IDC_CHK_STOP_PATH,"Button",BS_AUTOCHECKBOX | 
+                    NOT WS_VISIBLE | WS_TABSTOP,565,119,47,10
+    EDITTEXT        IDC_EDT_FIND_CAL_ZONE_X,471,190,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_FIND_CAL_ZONE_Y,521,190,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Find Calibration Zone",IDC_BUT_FIND_CAL_ZONE,471,210,80,
+                    14
+    LTEXT           "X",IDC_STATIC,471,181,8,8
+    LTEXT           "Y",IDC_STATIC,521,181,8,8
+    PUSHBUTTON      "Button2",IDOK,386,358,50,14
+    PUSHBUTTON      "Go",IDC_BUT_SET_VELOCITY_DIRECTION,226,385,50,14
+    EDITTEXT        IDC_EDT_VELOCITY_DIRECTION_HEADING,284,375,40,14,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_VELOCITY_DIRECTION_VELOCITY,284,401,40,14,
+                    ES_AUTOHSCROLL
+    LTEXT           "Heading",IDC_STATIC,284,365,28,8
+    LTEXT           "Velocity",IDC_STATIC,284,393,26,8
+    PUSHBUTTON      "Calib. Wall",IDC_BUT_CREATE_CAL_WALL,455,274,50,14
+    PUSHBUTTON      "Calib. Corner",IDC_BUT_CREATE_CAL_CORNER,511,249,50,14
+    PUSHBUTTON      "Calib. Doorway",IDC_BUT_CREATE_CAL_DOOR,455,249,50,14
+    PUSHBUTTON      "Test Motors",IDC_BUT_TEST_MOTORS,449,351,50,14
+    CONTROL         "Send Position",IDC_CHK_SEND_POSITION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,300,129,59,10
+    CONTROL         "Send Velocities",IDC_CHK_SEND_VELOCITIES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,300,153,65,10
+    CONTROL         "Send AD",IDC_CHK_SEND_AD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,300,177,45,10
+    CONTROL         "Send Accel",IDC_CHK_SEND_ACCEL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,300,201,53,10
+    PUSHBUTTON      "Send Values",IDC_BUT_SEND_VALUES,304,222,50,14
+    GROUPBOX        "Static",IDC_STATIC,294,103,72,142
+    PUSHBUTTON      "ON",IDC_BUT_ON,269,343,20,13
+    EDITTEXT        IDC_EDT_PARM5,351,263,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_PARM6,351,288,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_PARM7,351,312,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_PARM8,351,337,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_PATH_BUFFER,623,72,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Path Buff (in)",IDC_STATIC,623,62,42,8
+    PUSHBUTTON      "Set Buffer",IDC_BUT_SET_PATH_BUFFER,623,88,37,14
+    GROUPBOX        "",IDC_STATIC,619,54,48,53
+    GROUPBOX        "Analog Input",IDC_STATIC,291,5,75,58
+    PUSHBUTTON      "Request Analog",IDC_BUT_REQUEST_ANALOG_INPUT,297,17,64,
+                    12
+    LTEXT           "Analog Value",IDC_STATIC,303,33,46,10
+    EDITTEXT        IDC_ANALOG_INPUT,304,43,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    CONTROL         "Robot Animation",IDC_CHK_ROBOT_ANIMATION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,297,92,68,10
+    EDITTEXT        IDC_EDT_OUTPUT,345,385,80,28,ES_AUTOHSCROLL
+    LTEXT           "Microphone Volume",IDC_STATIC,295,67,64,8
+    EDITTEXT        IDC_EDT_MICROPHONE_VOLUME,305,78,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+END
+
+IDD_CALIBRATESURFACE DIALOG DISCARDABLE  0, 0, 187, 102
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Calibrate a Surface"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Calibrate a Surface",IDOK,59,44,69,14
+    PUSHBUTTON      "Cancel",IDCANCEL,68,68,50,14
+    CTEXT           "Drag the robot to the center of a calibration wall",
+                    IDC_STATIC,18,19,150,8
+    CTEXT           "Then push the ""Calibrate Surface"" button below.",
+                    IDC_STATIC,12,31,163,8
+END
+
+IDD_CREATECALIBRATIONWALL1 DIALOGEX 0, 0, 187, 314
+STYLE DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Create Check Point"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Wall has a corner",IDC_CHK_CORNER_CALIBRATION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,191,71,10
+    CONTROL         "",IDC_RAD_LEFT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED | WS_GROUP,19,244,8,8
+    CONTROL         "",IDC_RAD_RIGHT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,67,244,8,8
+    DEFPUSHBUTTON   "OK",IDOK,36,293,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,100,293,50,14
+    LTEXT           "Drag the robot so it's facing the",IDC_STATIC,7,7,173,9
+    LTEXT           "middle of a 3' section of wall.",IDC_STATIC,7,18,173,9
+    CONTROL         "",IDC_FRM_BITMAP,"Static",SS_BLACKFRAME,13,219,70,61
+    LTEXT           "If the wall has a corner, check the ""Wall has a corner""",
+                    IDC_STATIC,7,60,173,8
+    LTEXT           "box, and select the radio button in the direction of",
+                    IDC_STATIC,7,71,173,8
+    LTEXT           "the corner.  Then press OK",IDC_STATIC,7,81,173,8
+    LTEXT           "Corner Direction",IDC_STATIC,13,206,52,8
+    LTEXT           "Then check the box corresponding to the floor",
+                    IDC_STATIC,7,31,173,8
+    LTEXT           "surface where the check point is being created.",
+                    IDC_STATIC,7,41,173,8
+    CONTROL         "Wood/Tile",IDC_WOOD_FLOOR,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,14,142,50,10
+    CONTROL         "Normal Carpet",IDC_THIN_CARPET_FLOOR,"Button",
+                    BS_AUTORADIOBUTTON,14,153,61,10
+    CONTROL         "Thick Carpet",IDC_THICK_CARPET_FLOOR,"Button",
+                    BS_AUTORADIOBUTTON,14,163,57,10
+    GROUPBOX        "Floor Surface Type",IDC_STATIC,7,129,90,48
+    LTEXT           "Check Point Name",IDC_STATIC,19,103,71,8
+    EDITTEXT        IDC_NAME,95,100,72,14,ES_AUTOHSCROLL
+    SCROLLBAR       IDC_SCR_CORNER_SIZE,98,222,62,11,WS_DISABLED
+    LTEXT           "Clearance Distance",IDC_STATIC,98,206,63,8
+    EDITTEXT        IDC_EDT_CORNER_SIZE,98,238,27,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "inches",IDC_STATIC,132,241,22,8
+END
+
+IDD_ESTOP DIALOG DISCARDABLE  0, 0, 114, 106
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "EStop",IDC_ESTOP,"Button",BS_OWNERDRAW | WS_TABSTOP,7,7,
+                    100,92
+END
+
+IDD_POSITIONERROR DIALOG DISCARDABLE  0, 0, 187, 97
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Position Error"
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_RELOCATEROBOT DIALOG DISCARDABLE  0, 0, 210, 53
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Orient the Robot Icon"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDTROBOTHEADING,119,32,24,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    DEFPUSHBUTTON   "OK",IDOK,153,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,153,24,50,14
+    SCROLLBAR       IDC_SCRROBOTHEADING,70,18,73,11
+    LTEXT           "Robot Icon Heading",IDC_STATIC,70,7,68,8
+    RTEXT           "Degrees",IDC_STATIC,77,35,38,8
+END
+
+IDD_CREATEVACUUMPATCH DIALOG DISCARDABLE  0, 0, 336, 308
+STYLE WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Vacuum Path Creation"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDT_NAME,23,74,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,142,282,50,14
+    CONTROL         "Top, Right",IDC_RADTOPRGT,"Button",BS_AUTORADIOBUTTON | 
+                    BS_LEFTTEXT | BS_RIGHT,193,103,58,10
+    CONTROL         "Right, Bottom",IDC_RADRGTBOT,"Button",
+                    BS_AUTORADIOBUTTON,257,246,80,10
+    CONTROL         "Bottom, Left",IDC_RADBOTLFT,"Button",BS_AUTORADIOBUTTON,
+                    85,263,62,10
+    CONTROL         "Left, Top",IDC_RADLFTTOP,"Button",BS_AUTORADIOBUTTON | 
+                    BS_LEFTTEXT | BS_RIGHT,26,121,52,10
+    CONTROL         "Left, Bottom",IDC_RADLFTBOT,"Button",BS_AUTORADIOBUTTON | 
+                    BS_LEFTTEXT | BS_RIGHT,12,246,66,10
+    CONTROL         "Bottom, Right",IDC_RADBOTRGT,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | BS_RIGHT,179,263,72,
+                    10
+    CONTROL         "Top, Left",IDC_RADTOPLFT,"Button",BS_AUTORADIOBUTTON,85,
+                    103,51,10
+    CONTROL         "Right, Top",IDC_RADRGTTOP,"Button",BS_AUTORADIOBUTTON,
+                    257,121,59,10
+    CTEXT           "Please choose the corner where the robot will start the vacuum path, and enter how wide a vacuuming path should be.",
+                    IDC_STATIC,57,18,219,16
+    GROUPBOX        "",IDC_STATIC,54,7,227,34
+    EDITTEXT        IDC_EDTPATHWIDTH,95,74,40,14,ES_AUTOHSCROLL
+    LTEXT           "Vacuuming Path Width (inches)",IDC_STATIC,95,44,49,27
+    LTEXT           "Turn Diameter (inches)",IDC_STATIC,167,52,54,19
+    EDITTEXT        IDC_EDTTURNDIAMETER,167,74,40,14,ES_AUTOHSCROLL
+    LTEXT           "Path Name",IDC_STATIC,23,63,65,8
+    CONTROL         "",IDC_VACUUM_PATCH_BOUNDS,"Static",SS_BLACKFRAME,83,116,
+                    169,143
+    EDITTEXT        IDC_EDT_VACUUMING_SPEED,239,75,40,14,ES_AUTOHSCROLL
+    LTEXT           "Vacuuming Speed (inches / second)",IDC_STATIC,239,54,73,
+                    17
+END
+
+IDD_JOYSTICKCONTROL DIALOGEX 0, 0, 137, 146
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Joystick"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Slider2",IDC_SLI_JOYSTICKRESPONSIVENESS,
+                    "msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP | 
+                    TBS_ENABLESELRANGE | WS_BORDER | WS_TABSTOP,13,81,31,19
+    LTEXT           "Joystick Responsiveness",IDC_STATIC,13,70,97,8
+    CONTROL         "Slider2",IDC_SLI_TURNGAIN,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_TOP | TBS_ENABLESELRANGE | WS_BORDER | 
+                    WS_TABSTOP,13,114,100,19
+    GROUPBOX        "Coordinate System",IDC_STATIC,7,20,89,31
+    GROUPBOX        "Control Type",IDC_STATIC,-3,258,71,30,NOT WS_VISIBLE
+    LTEXT           "Turn Gain",IDC_STATIC,13,103,62,8
+    PUSHBUTTON      "Defaults",IDC_BUT_SET_DEFAULTS,57,84,50,14
+    CONTROL         176,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE | 
+                    SS_SUNKEN | NOT WS_VISIBLE,-23,221,19,18,
+                    WS_EX_TRANSPARENT
+    CONTROL         177,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN | NOT 
+                    WS_VISIBLE,-5,221,19,18
+    CONTROL         178,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE | 
+                    SS_SUNKEN | NOT WS_VISIBLE,15,221,19,18,
+                    WS_EX_TRANSPARENT
+    CONTROL         179,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE | 
+                    SS_SUNKEN | NOT WS_VISIBLE,35,221,19,18,
+                    WS_EX_TRANSPARENT
+    GROUPBOX        "Joystick Orientation",IDC_STATIC,-31,194,150,50,NOT 
+                    WS_VISIBLE
+    SCROLLBAR       IDC_SCR_JOYSTICK_ORIENTATION,-25,205,97,11,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDT_JOYSTICK_ORIENTATION,79,210,25,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER | NOT WS_VISIBLE
+    CONTROL         "Enable Joystick Control",IDC_CHK_JOYSTICK_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | BS_NOTIFY | WS_TABSTOP,10,7,89,10
+    CONTROL         "Robot Cooordinates",IDC_RAD_JOYSTICK_ROBOT_COORDS,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,10,30,82,10
+    CONTROL         "World Coordinates",IDC_RAD_JOYSTICK_WORLD_COORDS,"Button",
+                    BS_AUTORADIOBUTTON,10,39,79,10
+    CONTROL         "Torque Control",IDC_RAD_JOYSTICK_TORQUE_CONTROL,"Button",
+                    BS_AUTORADIOBUTTON | NOT WS_VISIBLE | WS_GROUP,1,268,63,
+                    10
+    CONTROL         "Velocity Control",IDC_RAD_JOYSTICK_VELOCITY_CONTROL,
+                    "Button",BS_AUTORADIOBUTTON | NOT WS_VISIBLE | WS_GROUP,
+                    1,276,64,10
+    CONTROL         176,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE | 
+                    SS_SUNKEN | NOT WS_VISIBLE,55,221,19,18,
+                    WS_EX_TRANSPARENT
+    LTEXT           "Degrees",IDC_STATIC,79,202,33,8,NOT WS_VISIBLE
+    GROUPBOX        "Handling Characteristics",IDC_STATIC,7,58,123,83
+END
+
+IDD_ROBOTCOM DIALOG DISCARDABLE  0, 0, 186, 97
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    CONTROL         "",IDC_CYECOMCTRL1,
+                    "{1BB9C513-657F-11D0-8465-CA281D000000}",WS_TABSTOP,7,7,
+                    21,20
+END
+
+IDD_DLG_EDIT_CAL_ZONE DIALOGEX 0, 0, 152, 217
+STYLE DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Edit Check Point Properties"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDT_CALZONE_NAME,39,18,73,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,51,174,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,51,196,50,14
+    LTEXT           "Check Point Name",IDC_STATIC,45,7,60,8
+    CONTROL         "Wood/Tile",IDC_WOOD_FLOOR,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,46,52,50,10
+    CONTROL         "Normal Carpet",IDC_THIN_CARPET_FLOOR,"Button",
+                    BS_AUTORADIOBUTTON,46,63,61,10
+    CONTROL         "Thick Carpet",IDC_THICK_CARPET_FLOOR,"Button",
+                    BS_AUTORADIOBUTTON,46,73,57,10
+    GROUPBOX        "Floor Surface Type",IDC_STATIC,39,39,73,48
+    PUSHBUTTON      "Adjust Check Point",IDC_ADJUST_CHECKPOINT,33,154,83,14
+    LTEXT           "Corner Check Point Clearance Distance",IDC_STATIC,13,97,
+                    126,8
+    SCROLLBAR       IDC_SCR_CORNER_SIZE,47,109,60,11,WS_DISABLED
+    EDITTEXT        IDC_EDT_CORNER_SIZE,47,124,27,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "inches",IDC_STATIC,81,127,22,8
+END
+
+IDD_TEST_ROBOT DIALOG DISCARDABLE  0, 0, 95, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Test Robot Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Test Buzzer / Microphone",IDC_TEST_MICROPHONE,7,7,81,25,
+                    BS_MULTILINE
+    PUSHBUTTON      "Test Output / Input",IDC_TEST_INPUT,7,36,81,28,
+                    BS_MULTILINE
+    PUSHBUTTON      "OK",IDOK,7,72,81,14
+END
+
+IDD_MOUSE_CONTROLS DIALOG DISCARDABLE  0, 0, 95, 231
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Mouse Controls"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDTKP,18,28,40,14,ES_AUTOHSCROLL | ES_NUMBER | NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDTKI,18,52,40,14,ES_AUTOHSCROLL | ES_NUMBER | NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDTKD,18,76,40,14,ES_AUTOHSCROLL | ES_NUMBER | NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDTKB,18,100,40,14,ES_AUTOHSCROLL | ES_NUMBER | NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_EDTKPWM,18,124,40,14,ES_AUTOHSCROLL | ES_NUMBER | 
+                    NOT WS_VISIBLE
+    EDITTEXT        IDC_EDTHANDLELENGTH,18,150,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    PUSHBUTTON      "Set Defaults",IDC_BUTSENDMOTOCONDEFAULTS,17,188,53,14
+    LTEXT           "Kp",IDC_STATIC,18,20,65,8,NOT WS_VISIBLE
+    LTEXT           "Kb",IDC_STATIC,18,92,65,8,NOT WS_VISIBLE
+    LTEXT           "Ki",IDC_STATIC,18,44,65,8,NOT WS_VISIBLE
+    LTEXT           "Kd",IDC_STATIC,18,68,65,8,NOT WS_VISIBLE
+    GROUPBOX        "Motion Control Constants",IDC_STATIC,7,7,81,204
+    LTEXT           "KPwm",IDC_STATIC,18,116,65,8,NOT WS_VISIBLE
+    LTEXT           "Handle Length (in)",IDC_STATIC,18,142,65,8
+    CONTROL         "Flip Handle",IDC_CHKFLIPHANDLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,18,214,51,10
+END
+
+IDD_CALIBRATION_SUCCESSFUL DIALOG DISCARDABLE  0, 0, 217, 97
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Checking In Results"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,83,76,50,14
+    EDITTEXT        IDC_EDT_DX,7,35,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_DY,72,35,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_DH,137,35,40,14,ES_AUTOHSCROLL
+    LTEXT           "DX (in)",IDC_STATIC,7,23,22,8
+    LTEXT           "DY (in)",IDC_STATIC,72,25,22,8
+    LTEXT           "DHeading (Degrees)",IDC_STATIC,137,23,66,8
+    CONTROL         "Don't Show Again",IDC_CHK_DONT_SHOW_AGAIN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,57,73,10
+    LTEXT           "Checking In was successful.",IDC_STATIC,7,7,91,8
+END
+
+IDD_LAYGO DIALOG DISCARDABLE  0, 0, 321, 175
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Learn As You Go"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Show me more",IDOK,99,205,60,14,NOT WS_VISIBLE
+    PUSHBUTTON      "OK, I'm Done",IDCANCEL,44,148,65,14
+    CONTROL         "Don't show this LAYGo tip again",IDC_DONTSHOW,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,36,191,120,
+                    11
+    CONTROL         404,IDC_BMP_LAYGO_IMAGE,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE,7,7,149,133
+    CONTROL         "",IDC_INFO_VIEWER,
+                    "{3B7C8860-D78F-101B-B9B5-04021C009402}",WS_TABSTOP,161,
+                    7,153,161
+END
+
+IDD_PROP_ROBOT_COLOR DIALOG DISCARDABLE  0, 0, 139, 134
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Color"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         226,IDC_BMP000,"Static",SS_BITMAP | SS_REALSIZEIMAGE | 
+                    NOT WS_VISIBLE,4,89,40,37
+    CONTROL         221,IDC_BMP011,"Static",SS_BITMAP | SS_REALSIZEIMAGE,92,
+                    7,40,37
+    CONTROL         222,IDC_BMP022,"Static",SS_BITMAP | SS_REALSIZEIMAGE | 
+                    NOT WS_VISIBLE,92,48,40,37
+    CONTROL         223,IDC_BMP033,"Static",SS_BITMAP | SS_REALSIZEIMAGE | 
+                    NOT WS_VISIBLE,4,48,40,37
+    CONTROL         224,IDC_BMP044,"Static",SS_BITMAP | SS_REALSIZEIMAGE | 
+                    NOT WS_VISIBLE,48,89,40,37
+    CONTROL         225,IDC_BMP200,"Static",SS_BITMAP | SS_REALSIZEIMAGE,4,7,
+                    40,37
+    CONTROL         220,IDC_BMP300,"Static",SS_BITMAP | SS_REALSIZEIMAGE,48,
+                    7,40,38
+    CONTROL         408,IDC_BMP_CHROME,"Static",SS_BITMAP | SS_REALSIZEIMAGE,
+                    48,48,40,38
+    CONTROL         "",IDC_BMP08,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,92,
+                    89,40,37
+END
+
+IDD_SET_RESOLUTION DIALOG DISCARDABLE  0, 0, 177, 94
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Display Resolution"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,64,48,50,14
+    COMBOBOX        IDC_CMB_DISPLAY_RESOLUTION,31,22,115,65,CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Display Resolution",IDC_STATIC,31,14,59,8
+END
+
+IDD_ORIENT_HOMEBASE DIALOG DISCARDABLE  0, 0, 133, 158
+STYLE DS_MODALFRAME | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_RAD_0,"Button",BS_AUTORADIOBUTTON | WS_GROUP,97,
+                    77,8,8
+    CONTROL         "",IDC_RAD_90,"Button",BS_AUTORADIOBUTTON,61,51,8,8
+    CONTROL         "",IDC_RAD_180,"Button",BS_AUTORADIOBUTTON,27,77,8,8
+    CONTROL         "",IDC_RAD_270,"Button",BS_AUTORADIOBUTTON,61,102,8,8
+    DEFPUSHBUTTON   "Next",IDOK,76,137,50,14
+    LTEXT           "Please orient the robot on the screen",IDC_STATIC,7,28,
+                    117,8
+END
+
+IDD_HOMEBASE_CORNER DIALOG DISCARDABLE  0, 0, 132, 158
+STYLE DS_MODALFRAME | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_RAD_0,"Button",BS_AUTORADIOBUTTON | WS_GROUP,98,
+                    72,8,8
+    CONTROL         "",IDC_RAD_90,"Button",BS_AUTORADIOBUTTON,64,48,8,8
+    CONTROL         "",IDC_RAD_180,"Button",BS_AUTORADIOBUTTON,26,72,8,8
+    CONTROL         "",IDC_RAD_270,"Button",BS_AUTORADIOBUTTON,64,96,8,8
+    PUSHBUTTON      "Back",IDC_BUT_BACK,7,137,50,14
+    LTEXT           "Choose the corner direction",IDC_STATIC,22,33,88,8
+    PUSHBUTTON      "Next",IDC_BUT_NEXT,75,137,50,14
+END
+
+IDD_EDIT_LINE_PATH DIALOG DISCARDABLE  0, 0, 128, 46
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Line Path Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDT_LINE_PATH_NAME,7,18,48,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,71,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,71,24,50,14
+    LTEXT           "Line Path Name",IDC_STATIC,7,7,55,8
+END
+
+IDD_PROP_GENERAL DIALOG DISCARDABLE  0, 0, 130, 132
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "General"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Show Calibration Results",
+                    IDC_CHK_SHOW_CALIBRATION_RESULTS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,13,94,10
+    CONTROL         "Intermittent Beep On",IDC_CHK_INTERMITTENT_BEEP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,29,81,10
+    CONTROL         "Flip Handle",IDC_CHKFLIPHANDLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,44,51,10
+    CONTROL         "Learn Room Enabled",IDC_CHK_LEARN_ROOM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,60,83,10
+    PUSHBUTTON      "Power Off",IDC_BUT_POWER_OFF,7,111,50,14
+    CONTROL         "Animate Robot",IDC_CHK_ANIMATE_ROBOT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,76,63,10
+    CONTROL         "Enable Dancing",IDC_CHK_ENABLE_DANCING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,92,67,10
+END
+
+IDW_FLOWZAP_CONTROL DIALOG DISCARDABLE  0, 0, 128, 21
+STYLE WS_CHILD | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        ID_COM_FLOWZAP_FILE,44,4,48,53,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_BATTERY_LOW DIALOG DISCARDABLE  0, 0, 108, 42
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Battery Critical!"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,39,21,50,14
+    LTEXT           "Battery Critically Low!",IDC_STATIC,33,9,68,8
+    ICON            IDI_BATTERY_LOW,IDC_STATIC,7,11,21,20
+END
+
+IDD_ROBOT_ERROR DIALOG DISCARDABLE  0, 0, 167, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Robot Message"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,64,34,50,14,BS_CENTER
+    ICON            IDR_MAINFRAME,IDC_ICO_ERROR,7,17,21,20
+    EDITTEXT        IDC_EDT_ERROR_TEXT,39,14,19,12,ES_MULTILINE | 
+                    ES_READONLY | NOT WS_BORDER
+END
+
+IDD_CHECKING_WOOD_WITH_VACUUM DIALOG DISCARDABLE  0, 0, 186, 70
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Warning!! Vacuum attached!!"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,64,49,50,14
+    LTEXT           "Checking in on a wooden or tile floor with a vacuum",
+                    IDC_STATIC,7,14,164,8
+    LTEXT           "attached is not allowed.  This causes excessive",
+                    IDC_STATIC,7,24,151,8
+    LTEXT           "wheel wearing.  Please detach the vacuum.",IDC_STATIC,7,
+                    34,139,8
+END
+
+IDD_HOMEBASE_FLOOR_TYPE DIALOG DISCARDABLE  0, 0, 132, 158
+STYLE DS_MODALFRAME | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Back",IDOK,7,137,50,14
+    LTEXT           "Choose the home base's floor type.",IDC_STATIC,10,48,
+                    111,8
+    CONTROL         "Wood/Tile",IDC_RAD_WOOD_FLOOR,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,38,66,50,10
+    CONTROL         "Normal Carpet",IDC_RAD_THIN_CARPET_FLOOR,"Button",
+                    BS_AUTORADIOBUTTON,38,79,61,10
+    CONTROL         "Thick Carpet",IDC_RAD_THICK_CARPET_FLOOR,"Button",
+                    BS_AUTORADIOBUTTON,38,90,57,10
+    PUSHBUTTON      "Finish",IDC_BUT_CREATE_HOME_BASE,75,137,50,14
+END
+
+IDD_CREATE_CALIBRATE_ON_SLIPPERY_FLOOR DIALOG DISCARDABLE  0, 0, 186, 138
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Creating Check Points on Slippery Surfaces"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,67,117,50,14
+    LTEXT           "When creating a check point on a slippery surface",
+                    IDC_STATIC,7,48,172,8
+    LTEXT           "like wood or tile, you must make sure the wheels",
+                    IDC_STATIC,7,57,152,8
+    LTEXT           "do not slip.  To do this, press down on the robot while",
+                    IDC_STATIC,7,66,168,8
+    LTEXT           "it is moving (you don't have to do this when using.",
+                    IDC_STATIC,7,75,157,8
+    LTEXT           "After you click OK, you will have 10 seconds to go to",
+                    IDC_STATIC,7,96,167,8
+    LTEXT           "the robot before it starts creating the check point.",
+                    IDC_STATIC,7,104,156,8
+    LTEXT           "the check point.)",IDC_STATIC,7,84,54,8
+    LTEXT           "We do not recommend creating a check point on a",
+                    IDC_STATIC,7,7,162,8
+    LTEXT           "slippery surface like wood or tile.  That is because",
+                    IDC_STATIC,7,16,157,8
+    LTEXT           "while checking in the wheels will spin, causing",
+                    IDC_STATIC,7,25,146,8
+    LTEXT           "excessive wear.  However, you can do it.",IDC_STATIC,7,
+                    34,131,8
+END
+
+IDW_DRAWING_TOOLS DIALOG DISCARDABLE  0, 0, 133, 20
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Button3",ID_DRAW_RECTANGLE,39,3,16,14,BS_BITMAP
+    PUSHBUTTON      "Button4",ID_DRAW_PEN_STYLE,64,3,31,14,BS_BITMAP
+    PUSHBUTTON      "Button5",ID_DRAW_PEN_SIZE,95,3,31,14,BS_BITMAP
+    PUSHBUTTON      "Button1",ID_DRAW_LINE,7,3,16,14,BS_BITMAP | NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "Button1",ID_DRAW_FREEHAND,23,3,16,14,BS_BITMAP
+END
+
+IDD_MAP_BAR DIALOG DISCARDABLE  0, 0, 337, 20
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         303,IDC_STATIC,"Static",SS_BITMAP,4,2,330,17
+END
+
+IDD_VELOCITY_TORQUE DIALOG DISCARDABLE  0, 0, 168, 61
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+CAPTION "Velocity and Torque Display"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_LEFT_VELOCITY,33,13,24,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RIGHT_VELOCITY,111,13,24,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LEFT_TORQUE,33,32,24,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RIGHT_TORQUE,111,32,24,12,ES_AUTOHSCROLL
+END
+
+IDD_SPLASH DIALOG DISCARDABLE  0, 0, 300, 177
+STYLE WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         316,IDC_SPLASH_BMP,"Static",SS_BITMAP,0,0,300,177
+END
+
+IDD_COM_PORT_SEARCH DIALOG DISCARDABLE  0, 0, 195, 69
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Searching for the home base's COM port"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Yes",IDOK,43,48,50,14
+    PUSHBUTTON      "No",IDCANCEL,101,48,50,14
+    LTEXT           "Communications could not be established with the robot",
+                    IDC_STATIC,7,7,176,8
+    LTEXT           "using the default COM port.  Would you like the",
+                    IDC_STATIC,7,16,150,8
+    LTEXT           "application to search for the COM port the radio pod",
+                    IDC_STATIC,7,25,164,8
+    LTEXT           "is connected to?",IDC_STATIC,7,34,54,8
+END
+
+IDD_COM_PORT_SEARCH_FAILED DIALOG DISCARDABLE  0, 0, 186, 84
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Could not establish communications"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Yes",IDOK,37,63,50,14
+    PUSHBUTTON      "No",IDCANCEL,97,63,50,14
+    LTEXT           "The application could not find which COM port the",
+                    IDC_STATIC,7,7,159,8
+    LTEXT           "radio base is connected to.  Please make sure the",
+                    IDC_STATIC,7,16,158,8
+    LTEXT           "robot is turned on.  Also, try moving the radio pod",
+                    IDC_STATIC,7,25,154,8
+    LTEXT           "Try again?",IDC_STATIC,75,50,34,8
+    LTEXT           "to a better location.",IDC_STATIC,7,34,62,8
+END
+
+IDD_COM_PORT_SEARCH_STATUS DIALOG DISCARDABLE  0, 0, 138, 78
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "COM port search status"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "COM port searching",IDC_STATIC,14,49,64,8
+    EDITTEXT        IDC_EDT_COM_PORT,83,46,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Trying to establish communications",IDC_STATIC,7,14,118,
+                    10
+    LTEXT           "with the robot.",IDC_STATIC,7,26,46,8
+END
+
+IDD_PROP_FLOOR DIALOGEX 0, 0, 243, 196
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Floor"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Floor Surface",IDC_STATIC,7,7,69,47
+    CONTROL         "Wood/Tile",IDC_RAD_WOOD_FLOOR,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,14,19,50,10
+    CONTROL         "Normal Carpet",IDC_RAD_THIN_CARPET_FLOOR,"Button",
+                    BS_AUTORADIOBUTTON,14,30,61,10
+    CONTROL         "Thick Carpet",IDC_RAD_THICK_CARPET_FLOOR,"Button",
+                    BS_AUTORADIOBUTTON,14,42,57,10
+    SCROLLBAR       IDC_SCR_NORMAL_SLIP_PERCENT,14,92,73,11
+    SCROLLBAR       IDC_SCR_THICK_SLIP_PERCENT,14,127,73,11
+    GROUPBOX        "Slip Compensation",IDC_STATIC,7,62,229,127
+    PUSHBUTTON      "Defaults",IDC_BUT_SET_DEFAULTS,13,169,50,14
+    LTEXT           "Normal Carpet",IDC_STATIC,14,84,46,8
+    LTEXT           "Thick Carpet",IDC_STATIC,13,118,42,8
+    EDITTEXT        IDC_EDT_NORMAL_SLIP_PERCENT,92,91,24,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_THICK_SLIP_PERCENT,92,125,24,14,ES_AUTOHSCROLL
+    LTEXT           "%",IDC_STATIC,120,94,8,8
+    LTEXT           "%",IDC_STATIC,120,127,8,8
+    LTEXT           "<- Thinner --- Thicker ->",IDC_STATIC,13,142,75,8,0,0,
+                    HIDC_STATIC
+    PUSHBUTTON      "Help",ID_HELP,69,169,50,14
+    PUSHBUTTON      "Find Approximate Slip Compensation",
+                    IDC_BUT_FIND_SLIP_COMPENSATION,147,91,61,32,BS_MULTILINE
+    EDITTEXT        IDC_EDT_APPROX_SLIP_COMP,147,127,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    CONTROL         "EStop",IDC_ESTOP,"Button",BS_OWNERDRAW | NOT WS_VISIBLE | 
+                    WS_TABSTOP,131,71,100,92
+END
+
+IDD_CYE_SAMPLE DIALOG DISCARDABLE  0, 0, 186, 207
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Cye Samples"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,65,186,50,14
+    CONTROL         "",IDC_RTX_CYE_SAMPLE_TEXT,
+                    "{3B7C8860-D78F-101B-B9B5-04021C009402}",WS_TABSTOP,7,7,
+                    172,173
+END
+
+IDD_CREATE_HOME_ON_WOOD DIALOG DISCARDABLE  0, 0, 186, 82
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Creating a home base on wood or tile"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,68,44,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,68,62,50,14
+    LTEXT           "Before creating a home base on wood or tile, you must first lay down an area rug or mat.  This is so the robot's wheels do not slip when checking in.",
+                    IDC_STATIC,7,7,172,32
+END
+
+IDD_GRID_DISPLAY DIALOG DISCARDABLE  0, 0, 296, 290
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,239,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,239,24,50,14
+END
+
+IDD_VERSION_WARNING DIALOG DISCARDABLE  0, 0, 186, 77
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "File Version Warning"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,67,56,50,14
+    LTEXT           "Warning!! The file you are opening is from an old version of Map-N-Zap.  If you save this file, it will no longer be usable by the older version of Map-N-Zap.  You should make a copy of this file before saving again.",
+                    IDC_STATIC,7,7,172,42
+END
+
+IDD_MEASURING_CARPET_DENSITY DIALOG DISCARDABLE  0, 0, 186, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Measuring Carpet Density"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,37,71,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,91,71,50,14
+    LTEXT           "    Cye would like to measure the density of your carpet.  You can also set this value by hand.  Open the Settings dialog box in the View\\Settings menu, and go to the Floor tab.",
+                    IDC_STATIC,0,7,179,36
+    LTEXT           "    To allow Cye to measure the density of the carpet click OK.  To cancel this operation, click Cancel.",
+                    IDC_STATIC,0,46,179,20
+END
+
+IDD_EXECUTABLE_OBJECT_GENERAL_PROP DIALOG DISCARDABLE  0, 0, 135, 94
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "General Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,73,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,78,73,50,14
+    LTEXT           "Name",IDC_STA_NAME,7,7,121,8
+    EDITTEXT        IDC_EDT_NAME,9,17,63,14,ES_AUTOHSCROLL
+    LTEXT           "Number of Claps",IDC_STATIC,7,37,53,8
+    COMBOBOX        IDC_COM_NUMBER_OF_CLAPS,7,50,48,52,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_LOW_RADIO_LEVEL DIALOG DISCARDABLE  0, 0, 102, 47
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Low Radio Level"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,27,26,50,14
+    LTEXT           "Radio Level Fell Below %50",IDC_STATIC,7,14,88,8
+END
+
+IDW_ROBOT_EXTERNALS DIALOG DISCARDABLE  0, 0, 159, 21
+STYLE WS_CHILD | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDT_EXTERNAL_INPUT,40,5,34,11,ES_AUTOHSCROLL | 
+                    ES_READONLY
+END
+
+IDD_ADD_ROBOT DIALOG DISCARDABLE  0, 0, 151, 143
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Robot"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,21,122,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,79,122,50,14
+    CONTROL         225,IDC_BMP_ORANGE,"Static",SS_BITMAP | SS_REALSIZEIMAGE,
+                    7,7,40,37
+    CONTROL         220,IDC_BMP_YELLOW,"Static",SS_BITMAP | SS_REALSIZEIMAGE,
+                    55,7,40,38
+    CONTROL         408,IDC_BMP_CHROME,"Static",SS_BITMAP | SS_REALSIZEIMAGE,
+                    55,49,40,38
+    CONTROL         221,IDC_BMP_BLACK,"Static",SS_BITMAP | SS_REALSIZEIMAGE,
+                    103,7,40,37
+    COMBOBOX        IDC_COM_ROBOT_STYLE,31,102,89,44,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Robot Style",IDC_STATIC,56,92,38,8
+END
+
+IDD_ADD_HOMEBASE DIALOG DISCARDABLE  0, 0, 218, 278
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Homebase"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,27,257,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,127,257,50,14
+    CONTROL         "",IDC_RAD_LEFT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    79,209,8,8
+    CONTROL         "",IDC_RAD_RIGHT,"Button",BS_AUTORADIOBUTTON,127,209,8,8
+    CONTROL         "",IDC_FRM_BITMAP,"Static",SS_BLACKFRAME,73,185,70,61
+    LTEXT           "Corner Direction",IDC_STATIC,73,172,52,8
+    CONTROL         "Wood/Tile",IDC_WOOD_FLOOR,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,70,132,50,10
+    CONTROL         "Normal Carpet",IDC_THIN_CARPET_FLOOR,"Button",
+                    BS_AUTORADIOBUTTON,70,142,61,10
+    CONTROL         "Thick Carpet",IDC_THICK_CARPET_FLOOR,"Button",
+                    BS_AUTORADIOBUTTON,70,153,57,10
+    GROUPBOX        "Floor Surface Type",IDC_STATIC,63,118,90,48
+    EDITTEXT        IDC_EDT_ADD_HOMEBASE_INSTRUCTIONS,7,7,205,101,
+                    ES_MULTILINE | ES_READONLY
+END
+
+IDD_CYE_PERSONA DIALOG DISCARDABLE  0, 0, 112, 146
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Cye Persona"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,25,125,56,14
+    PUSHBUTTON      "ShowSong",IDC_ShowSong,25,60,56,15
+    PUSHBUTTON      "ShowMotion",IDC_ShowMotion,25,85,56,15
+    PUSHBUTTON      "ShowBehavior",IDC_ShowBehavior,25,35,56,15
+    GROUPBOX        "",IDC_STATIC,15,20,80,95
+    LTEXT           "Persona ingredients: in progress",IDC_STATIC,5,5,100,15
+END
+
+IDD_CYE_PERSONA_SONG DIALOG DISCARDABLE  0, 0, 180, 301
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Song"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,54,254,65,14
+    PUSHBUTTON      "TestTune",IDC_TestTune,14,30,65,15
+    PUSHBUTTON      "QuirkyTune1",IDC_QuirkyTune1,14,54,65,15
+    PUSHBUTTON      "QuirkyTune2",IDC_QuirkyTune2,14,78,65,15
+    PUSHBUTTON      "SadTune",IDC_SadTune,14,101,65,15
+    PUSHBUTTON      "SmoothTune",IDC_SmoothTune,14,124,65,15
+    PUSHBUTTON      "AgressiveTune1",IDC_AgressiveTune1,14,147,65,15
+    PUSHBUTTON      "AgressiveTune2",IDC_AgressiveTune2,14,171,65,15
+    PUSHBUTTON      "ContentTune1",IDC_ContentTune1,14,193,65,15
+    PUSHBUTTON      "ContentTune2",IDC_ContentTune2,14,215,65,15
+    PUSHBUTTON      "ContentTune3",IDC_ContentTune3,92,215,65,15
+    PUSHBUTTON      "BoredTune1",IDC_BoredTune1,92,30,65,15
+    PUSHBUTTON      "BoredTune2",IDC_BoredTune2,92,54,65,15
+    PUSHBUTTON      "BoredTune3",IDC_BoredTune3,92,78,65,15
+    PUSHBUTTON      "SwayTune",IDC_SwayTune,92,101,65,15
+    PUSHBUTTON      "AcknowledgeTune",IDC_AcknowledgeTune,92,124,65,15
+    PUSHBUTTON      "JitteryTune1",IDC_JitteryTune1,92,147,65,15
+    PUSHBUTTON      "JitteryTune2",IDC_JitteryTune2,92,171,65,15
+    GROUPBOX        "",IDC_STATIC,7,17,160,222
+END
+
+IDD_CYE_PERSONA_MOTION DIALOG DISCARDABLE  0, 0, 129, 226
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Motion"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,37,193,57,14
+    PUSHBUTTON      "Snake",IDC_Snake,37,36,57,15
+    PUSHBUTTON      "Meander",IDC_Meander,37,108,57,15
+    PUSHBUTTON      "LeftRight",IDC_LeftRight,37,61,57,15
+    PUSHBUTTON      "ZigZag",IDC_ZigZag,37,84,57,15
+    PUSHBUTTON      "Ramped",IDC_Ramped,37,132,57,15
+    PUSHBUTTON      "Abrupt",IDC_Abrupt,37,155,57,15
+    GROUPBOX        "",IDC_STATIC,28,23,76,162
+    LTEXT           "Gaits: 10x3 ft space required",IDC_Gaits,20,7,95,12
+END
+
+IDD_CYE_PERSONA_BEHAVIOR DIALOG DISCARDABLE  0, 0, 243, 250
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Behavior"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,84,221,52,14
+    PUSHBUTTON      "Agressive1",IDC_Agressive1,19,38,53,14
+    PUSHBUTTON      "Agressive2",IDC_Agressive2,19,60,53,14
+    PUSHBUTTON      "Quirky1",IDC_Quirky1,84,125,53,14
+    PUSHBUTTON      "Quirky2",IDC_Quirky2,19,103,53,14
+    PUSHBUTTON      "Wiggle",IDC_Wiggle,19,125,53,14
+    PUSHBUTTON      "Jittery1",IDC_Jittery1,19,81,53,15
+    PUSHBUTTON      "Jittery2",IDC_Jittery2,84,104,53,13
+    PUSHBUTTON      "Mad1",IDC_Mad1,84,38,52,14
+    PUSHBUTTON      "Impatient1",IDC_Impatient1,84,60,52,14
+    PUSHBUTTON      "Impatient2",IDC_Impatient2,84,81,52,15
+    PUSHBUTTON      "Impatient3",IDC_Impatient3,20,147,52,14
+    PUSHBUTTON      "Content1",IDC_Content1,20,169,52,14
+    PUSHBUTTON      "Content2",IDC_Content2,84,147,52,14
+    PUSHBUTTON      "Content3",IDC_Content3,84,168,52,15
+    PUSHBUTTON      "Content4",IDC_Content4,84,190,52,14
+    PUSHBUTTON      "SpinnSway",IDC_SpinnSway,167,59,53,15
+    PUSHBUTTON      "Cross",IDC_Cross,167,103,53,14
+    PUSHBUTTON      "Eight",IDC_Eight,167,82,53,14
+    PUSHBUTTON      "Spinn",IDC_Spinn,167,125,53,14
+    PUSHBUTTON      "Spiral",IDC_Spiral,167,38,53,15
+    PUSHBUTTON      "Square",IDC_Square,167,147,53,14
+    GROUPBOX        "MUST be on Home Base",IDC_STATIC,9,25,138,188
+    GROUPBOX        "5x5 ft space required",IDC_STATIC,155,23,73,189
+    PUSHBUTTON      "Nudge Me !",IDC_Nudge,167,169,53,14
+END
+
+IDD_VIDEO DIALOG DISCARDABLE  0, 0, 394, 276
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CyeCam"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Video Source",IDC_VIDEOSOURCEBUTTON,45,239,50,14
+    PUSHBUTTON      "Video Display",IDC_VIDEODISPLAYBUTTON,120,239,50,14
+    PUSHBUTTON      "Video Format",IDC_VIDEOFORMATBUTTON,199,239,50,14
+    PUSHBUTTON      "Done",IDC_VIDEODONEBUTTON,280,239,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,1,0,0
+ PRODUCTVERSION 2,1,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Probotics, Inc.\0"
+            VALUE "FileDescription", "MAPNZAP MFC Application\0"
+            VALUE "FileVersion", "2, 1, 0, 0\0"
+            VALUE "InternalName", "MAPNZAP\0"
+            VALUE "LegalCopyright", "Copyright © 2000\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "MAP-N-ZAP.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Map-N-Zap Application\0"
+            VALUE "ProductVersion", "2, 1, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_LABELNAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 47
+    END
+
+    IDD_MOTORCONTROLS, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        VERTGUIDE, 10
+        VERTGUIDE, 60
+        VERTGUIDE, 119
+        VERTGUIDE, 165
+        TOPMARGIN, 5
+        HORZGUIDE, 25
+        HORZGUIDE, 43
+        HORZGUIDE, 92
+        HORZGUIDE, 110
+        HORZGUIDE, 135
+        HORZGUIDE, 176
+        HORZGUIDE, 202
+        HORZGUIDE, 233
+        HORZGUIDE, 263
+        HORZGUIDE, 288
+        HORZGUIDE, 312
+        HORZGUIDE, 337
+        HORZGUIDE, 365
+    END
+
+    IDD_CALIBRATESURFACE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_CREATECALIBRATIONWALL1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 307
+    END
+
+    IDD_ESTOP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 107
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+
+    IDD_POSITIONERROR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_RELOCATEROBOT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 46
+    END
+
+    IDD_CREATEVACUUMPATCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 329
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 301
+    END
+
+    IDD_JOYSTICKCONTROL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_ROBOTCOM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_DLG_EDIT_CAL_ZONE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 145
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 210
+    END
+
+    IDD_TEST_ROBOT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 88
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_MOUSE_CONTROLS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 88
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 224
+    END
+
+    IDD_CALIBRATION_SUCCESSFUL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_LAYGO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 314
+        VERTGUIDE, 76
+        VERTGUIDE, 150
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 168
+        HORZGUIDE, 140
+    END
+
+    IDD_PROP_ROBOT_COLOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 132
+        VERTGUIDE, 48
+        VERTGUIDE, 92
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+        HORZGUIDE, 48
+        HORZGUIDE, 89
+    END
+
+    IDD_SET_RESOLUTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_ORIENT_HOMEBASE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 126
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_HOMEBASE_CORNER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 125
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_EDIT_LINE_PATH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 121
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_PROP_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 123
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 125
+    END
+
+    IDD_BATTERY_LOW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 101
+        TOPMARGIN, 9
+        BOTTOMMARGIN, 35
+    END
+
+    IDD_ROBOT_ERROR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 160
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CHECKING_WOOD_WITH_VACUUM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 63
+    END
+
+    IDD_HOMEBASE_FLOOR_TYPE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 125
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_CREATE_CALIBRATE_ON_SLIPPERY_FLOOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    IDW_DRAWING_TOOLS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 126
+        VERTGUIDE, 23
+        VERTGUIDE, 39
+        VERTGUIDE, 64
+        VERTGUIDE, 95
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 17
+    END
+
+    IDD_MAP_BAR, DIALOG
+    BEGIN
+        RIGHTMARGIN, 330
+        BOTTOMMARGIN, 17
+    END
+
+    IDD_COM_PORT_SEARCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 188
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 62
+    END
+
+    IDD_COM_PORT_SEARCH_FAILED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 77
+    END
+
+    IDD_COM_PORT_SEARCH_STATUS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 131
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_PROP_FLOOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_CYE_SAMPLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 200
+    END
+
+    IDD_CREATE_HOME_ON_WOOD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_GRID_DISPLAY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 283
+    END
+
+    IDD_VERSION_WARNING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_MEASURING_CARPET_DENSITY, DIALOG
+    BEGIN
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 85
+    END
+
+    IDD_EXECUTABLE_OBJECT_GENERAL_PROP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 128
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_LOW_RADIO_LEVEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 95
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 40
+    END
+
+    IDD_ADD_ROBOT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 144
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_ADD_HOMEBASE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 211
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 271
+    END
+
+    IDD_CYE_PERSONA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 107
+        VERTGUIDE, 25
+        VERTGUIDE, 81
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_CYE_PERSONA_SONG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 270
+    END
+
+    IDD_CYE_PERSONA_MOTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+    END
+
+    IDD_CYE_PERSONA_BEHAVIOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 18
+        RIGHTMARGIN, 236
+        VERTGUIDE, 72
+        VERTGUIDE, 82
+        VERTGUIDE, 136
+        VERTGUIDE, 167
+        VERTGUIDE, 220
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+    END
+
+    IDD_VIDEO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 387
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 269
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_LAYGO DLGINIT
+BEGIN
+    IDC_INFO_VIEWER, 0x37a, 197, 0
+0x0017, 0x0000, 0x0020, 0x0071, 0x0068, 0x006a, 0x0020, 0x005a, 0x0074, 
+0x0075, 0x0051, 0x0068, 0x0061, 0x003b, 0x006a, 0x0064, 0x0066, 0x006e, 
+0x005b, 0x0069, 0x0061, 0x0065, 0x0074, 0x0072, 0x0020, 0x0023, 0x0000, 
+0x0001, 0x0000, 0x001b, 0x0000, 0x0001, 0x8001, 0x0000, 0x000a, 0x0000, 
+0x001a, 0x0000, 0x0002, 0x8001, 0x0001, 0x0000, 0x2100, 0x3443, 0x0812, 
+0x0000, 0xc500, 0x0017, 0x1400, 0x001b, 0x2100, 0x3443, 0x0112, 0x0600, 
+0x3000, 0x0000, 0x0000, 0xff00, 0xffff, 0xffff, 0xffff, 0x00ff, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0500, 0x0000, 0x0080, 0x0000, 
+0x0000, 0x0100, 0x0200, 0x0100, 0x0100, 0x0200, 0x0200, 0x0000, 0x0300, 
+0xe352, 0x910b, 0xce8f, 0x9d11, 0x00e3, 0x00aa, 0xb84b, 0x0151, 0x0000, 
+0x9000, 0x4401, 0x0142, 0x0700, 0x6556, 0x6472, 0x6e61, 0x0061, "\000" 
+    0
+END
+
+IDD_CYE_SAMPLE DLGINIT
+BEGIN
+    IDC_RTX_CYE_SAMPLE_TEXT, 0x37a, 197, 0
+0x0017, 0x0000, 0x0020, 0x0071, 0x0068, 0x006a, 0x0020, 0x005a, 0x0074, 
+0x0075, 0x0051, 0x0068, 0x0061, 0x003b, 0x006a, 0x0064, 0x0066, 0x006e, 
+0x005b, 0x0069, 0x0061, 0x0065, 0x0074, 0x0072, 0x0020, 0x0023, 0x0000, 
+0x0001, 0x0000, 0x001b, 0x0000, 0x0001, 0x8001, 0x0000, 0x000a, 0x0000, 
+0x001a, 0x0000, 0x0002, 0x8001, 0x0001, 0x0000, 0x2100, 0x3443, 0x0812, 
+0x0000, 0xaa00, 0x001a, 0x0b00, 0x001d, 0x2100, 0x3443, 0x0112, 0x0600, 
+0x3000, 0x0000, 0x0000, 0xff00, 0x00ff, 0xff00, 0x01ff, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0500, 0x0000, 0x0080, 0x0000, 
+0x0000, 0x0100, 0x0200, 0x0100, 0x0100, 0x0200, 0x0200, 0x0000, 0x0300, 
+0xe352, 0x910b, 0xce8f, 0x9d11, 0x00e3, 0x00aa, 0xb84b, 0x0151, 0x0000, 
+0x9000, 0x4401, 0x0142, 0x0700, 0x6556, 0x6472, 0x6e61, 0x1261, "\004" 
+    0
+END
+
+IDD_ROBOTCOM DLGINIT
+BEGIN
+    IDC_CYECOMCTRL1, 0x376, 32, 0
+0x0000, 0x0000, 0x0000, 0x0001, 0x034f, 0x0000, 0x034f, 0x0000, 0x0000, 
+0x0000, 0x0064, 0x0000, 0x0007, 0x0000, 0x0000, 0x0031, 
+    0
+END
+
+IDD_ADD_ROBOT DLGINIT
+BEGIN
+    IDC_COM_ROBOT_STYLE, 0x403, 22, 0
+0x6f4e, 0x2074, 0x6f43, 0x6f6c, 0x2072, 0x6441, 0x7264, 0x7365, 0x6173, 
+0x6c62, 0x0065, 
+    IDC_COM_ROBOT_STYLE, 0x403, 18, 0
+0x6f43, 0x6f6c, 0x2072, 0x6441, 0x7264, 0x7365, 0x6173, 0x6c62, 0x0065, 
+
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_MMEDIT              CURSOR  DISCARDABLE     "res\\mmedit.cur"
+IDC_MMERASE             CURSOR  DISCARDABLE     "res\\mmerase.cur"
+IDC_MMPLACEVACUUMPATCH  CURSOR  DISCARDABLE     "res\\mmplacevacuum.cur"
+IDC_MM_PLACE_RED_ZONE   CURSOR  DISCARDABLE     "res\\mmplace_.cur"
+IDC_MM_HAND             CURSOR  DISCARDABLE     "res\\mm_hand.cur"
+IDC_MM_PLACE_POSTION_LABEL CURSOR  DISCARDABLE     "res\\mmPlacePositionLabel.cur"
+IDC_MM_PLACE_FINISH_LINE CURSOR  DISCARDABLE     "res\\mm_place finish line.cur"
+IDC_MM_DRAW_LINE        CURSOR  DISCARDABLE     "res\\mm_draw_line.cur"
+IDC_MM_DRAW_FREEHAND    CURSOR  DISCARDABLE     "res\\mm_draw_freehand.cur"
+IDC_MM_DRAW_RECTANGLE   CURSOR  DISCARDABLE     "res\\mm_draw_rectangle.cur"
+IDC_MM_SEARCH           CURSOR  DISCARDABLE     "res\\mm_search.cur"
+IDC_MM_MOVE_ROBOT       CURSOR  DISCARDABLE     "res\\mm_move_robot.cur"
+IDC_MM_PLACE_START_LINE CURSOR  DISCARDABLE     "res\\mm_place_start.cur"
+IDC_MM_PLACE_LINE_PATH  CURSOR  DISCARDABLE     "res\\mmplacelinepath.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    ID_INDICATOR_TIME       "Time"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Map-N-Zap\n\nMapZap\nMap-N-Zap Files (*.map)\n.map\nMapNZap.Document\nMapZap Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Map-N-Zap"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the standard toolbar\nToggle Standard ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_GOHOME               "Send the Robot home\nGo Home"
+    ID_SEARCHAREA           "Search an area\nSearch Area"
+    ID_SEARCHWALLLEFT       "Search a wall to the left\nSearch Left"
+    ID_SEARCHWALLRIGHT      "Search a wall to the right\nSearch Right"
+    ID_VACUUM               "Create  a Vacuum Path Area on the map\nVacuum Path"
+    ID_BLOCKAREA            "Create a Danger Zone on the map\nDanger Zone"
+    ID_PLACELABEL           "Place a Hot Point on the map\nHot Point"
+    ID_RUNPROGRAM           "Run a program\nRun"
+    ID_VIEW_ROBOTCONTROLS   "Show or hide the robot controls\nToggle RobotControls"
+    ID_VIEW_ROBOTSTATUS     "Show or hide the robot status\nToggle Robot Status"
+    ID_CENTERROBOT          "Center the Robot in the Window\nCenter Robot"
+    ID_STOP                 "Stop the Robot\nStop"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_CALIBRATIONSURFACE   "Create a Calibration Wall\nCalibration Wall"
+    ID_BUTTON32785          "Calibrate the Robot's Heading\nCalibrate Heading"
+    ID_CALIBRATESURFACE     "Perform Surface Calibration\nSurface Calibration"
+    ID_CREATECALIBRATIONWALL "Create a Check Point on the map\nCheck Point"
+    ID_CREATECALIBRATIONDOORWAY 
+                            "Create a Calibration Doorway\nCreate Calibration Doorway"
+    ID_VIEW_MOTORCONTROLS   "Show or hide the motor controls\nToggle Motor Controls"
+    ID_ZOOM100              "Zoom %100\n%100"
+    ID_ZOOM200              "Zoom %200\n%200"
+    ID_ZOOM400              "Zoom %400\n%400"
+    ID_MOUSEDEFAULT         "Default Mouse Actions\nDefault"
+    ID_MMMOVE               "Relocate or Resize Map Objects\nRelocate\\Resize Objects"
+    ID_MMDEFAULT            "Drag the robot around or execute map objects\nDrag Robot"
+    ID_MMERASE              "Erase Map Objects\nErase"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_SQUARE_TO_WALL  "The robot failed squaring to the wall."
+    IDS_ERR_PATH_GENERAL_ERROR 
+                            "The robot could not complete its instructions."
+    IDS_ERR_PATH_NO_OBSTACLE 
+                            "The robot missed the obstacle for which it was searching."
+    IDS_ERR_PATH_NO_TIMEOUT "The robot did not time out while executing its path."
+    IDS_ERR_PATH_NO_ESTOP   "Robot was not E-Stopped."
+    IDS_ERR_PATH_TIMEOUT    "The robot timed out while executing its path."
+    IDS_ERR_PATH_UNEXPECTED_OBSTACLE 
+                            "The robot encountered an unexpected obstacle in its path."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_LABELS          "Show Labels\nShow Labels"
+    ID_VIEW_REDZONES        "Show Red Zones\nShow Red Zones"
+    ID_VIEW_PROPERTIES      "View the properties of an object.\nShow Properties"
+    ID_EDIT_PROPERTIES      "Edit object properties\nObject Properties"
+    ID_VIEW_JOYSTICK_CONTROLS 
+                            "Shows the joystick control dialog box\nShow Joystick Control Dialog"
+    ID_VIEW_VACUUM_PATCHES  "View the Vacuum Paths\nView Vacuum Paths"
+    ID_MM_BLOCK_GRID        "Place an obstacle in the world\nBlock Area"
+    ID_BUTTON32814          "Clear Area\nClear an area in the world"
+    ID_BUTTON32815          "Unknown Area\nPlace an unknown area in the world"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_MM_UNKNOWN_GRID      "Make an area in the world unknown\nUnknown Area"
+    ID_MM_CLEAR_GRID        "Clear an area in the world\nClear Area"
+    ID_VIEW_FLOWZAP         "Shows the Zap programming window\nShow Zap Programmer"
+    ID_VIEW_TEST_ROBOT      "View the test robot dialog box\nView Test Dialog"
+    ID_VIEW_MOUSE_CONTROLS  "Shows the Mouse Controls Dialog\nShow Mouse Controls"
+    ID_VIEW_POSITION_SPOTS  "Show HotPoints\nShow HotPoints"
+    ID_VIEW_DRAWING_TOOLS   "Shows the drawing tools toolbar\nShow drawing tools"
+    ID_MM_PLACE_FINISH_LINE "Create a Finish Line on the map\nFinish Line"
+    ID_VIEW_SETTINGS        "View program settings\nProgram settings"
+    ID_LINE_PATH            "Create a Line Path on the map\nLine Path"
+    ID_VACUUM_ATTACHED      "Vacuum Attached\nVacuum is attached to the robot"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_MMMOVE_ROBOT         "Manipulate Robot Icon\nManipulate Robot Icon"
+    ID_VIEW_ZAP_CONTROLS    "View the Zap Controls toolbar\nView Zap Controls"
+    ID_VIEW_MAP_OBJECTS_TOOLBAR "View the map objects toolbar\nMap Objects"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_INSTRUMENT_PANEL 
+                            "View the robot's instrument panel\nView Instrument Panel"
+    ID_HELP_LAYGO_SHOW_TIP1 "Show Laygo Tip Number 1"
+    ID_HELP_LAYGO_SHOW_TIP2 "Show Laygo Tip Number 2"
+    ID_HELP_LAYGO_SHOW_TIP3 "Show Laygo Tip Number 3"
+    ID_HELP_LAYGO_SHOW_TIP4 "Show Laygo Tip Number 4"
+    ID_HELP_LAYGO_SHOW_TIP6 "Show Laygo Tip Number 6"
+    ID_HELP_LAYGO_SHOW_TIP7 "Show Laygo Tip Number 7"
+    ID_HELP_LAYGO_SHOW_TIP8 "Show Laygo Tip Number 8"
+    ID_HELP_LAYGO_SHOW_TIP9 "Show Laygo Tip Number 9"
+    ID_HELP_LAYGO_SHOW_TIP10 "Show Laygo Tip Number 10"
+    ID_HELP_LAYGO_SHOW_TIP11 "Show Laygo Tip Number 11"
+    ID_HELP_LAYGO_SHOW_TIP5 "Show Laygo Tip Number 5"
+    ID_VIEW_LINE_PATHS      "View Line Paths\nView Line Paths"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_DRAW_FREEHAND        "Draw Freehand on the map\nDraw Freehand"
+    ID_DRAW_RECTANGLE       "Draw a Rectangle on the map\nDraw Rectangle"
+    ID_DRAW_PEN_SIZE        "Pen Size\nPen Size"
+    ID_DRAW_PEN_STYLE       "Pen Style (Obstacle, Unknown and Clear area)\nPen Style"
+    IDC_EDT_EXTERNAL_INPUT  "The Voltage at the Robot's External Input\nExternal Input Voltage"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_DRAW_LINE            "Draw a line on the map\nDraw Line"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDT_RADIO_LEVEL      "Shows the number of successful radio transmissions as a percent\nRadio Level Meter"
+    ID_COM_FLOWZAP_FILE     "Choose a Zap file to open\nOpen Zap file"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDT_BATTERY_LEVEL    "Shows the robot's battery voltage\nBattery Voltage Meter"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_RULER_GRID      "View the Ruler Grid\nView Ruler Grid"
+    ID_MM_PLACE_START_LINE  "Create a Start Line on the map\nStart Line"
+    ID_HELP_LAYGO_SHOWTIP12 "Show Laygo Tip Number 12"
+    ID_EDIT_DELETE          "Delete an object\nDelete Object"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_DRAW_PEN_OBSTACLE    "Draw an obstacle on the map\nDraw obstacle"
+    ID_DRAW_PEN_UNKNOWN     "Draw an unknown area on the map\nDraw unknown area"
+    ID_DRAW_PEN_FREE        "Draw a clear area on the map\nDraw clear area"
+    ID_DRAW_PEN_WIDTH1      "Draw with a thin pen\nThin pen"
+    ID_DRAW_PEN_WIDTH2      "Draw with a medium pen\nMedium pen"
+    ID_DRAW_PEN_WIDTH3      "Draw with a large pen\nLarge pen"
+    ID_DRAW_PEN_WIDTH4      "Draw with an XLarge pen\nXLarge pen"
+    ID_DRAW_PEN_CLEAR       "Draw a free area on the map\nDraw free area"
+    ID_ADJUST_CHECKPOINT    "Adjust the CheckPoint\nAdjust CheckPoint"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EXTERNAL_OUTPUT_OFF  "Turn Off External Output\nExternal Output Off"
+    ID_EXTERNAL_OUTPUT_ON   "Turn On External Output\nExternal Output On"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_ADD_ROBOT       "Add a Robot to the World\nAdd Robot"
+    ID_VIEW_ADD_HOMEBASE    "Add a new home base to the map\nAdd a new home base"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\RobotWorld.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#include ".\FlowZap\FlowZap.rc"   //Flow Zap resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
