@@ -55,24 +55,17 @@
   #include "Calibrate.h"
   #include "Motion.h"
   #include "PathFollow.h"
-  #include "iostream.h"
+  #include <iostream>
   #include "Preferences.h"
   #include "Tool.h"
   #include "ExternalOutput.h"
-  #include "RobotWorld.h"
-  #include "RobotWorldView.h"
+  #include "..\RobotWorld.h"
+  #include "..\RobotWorldView.h"
   
-  #include "RothUtil.h"
+  #include "..\RothUtil.h"
   
   #include "afx.h"
-  
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   #define FLOWZAP_WINDOW_SECTION "FLOWZAP_WINDOW_DIM"
   
   const char* cFlowZapFilesDirectory = ".\\Zap Files";
@@ -1123,13 +1116,13 @@
   * METHOD:
   *	
   ************************************************************************************************/
-  
+    int i;
   
   	// IF OPEN PREV FILE SELECTED IN THE PREFERENCES FILE:
   	if (m_PreferencesControl->m_TestLastProject) {
   		if (OpenFile(m_PreferencesControl->m_PreviousFileName)) {
   			CString FileName = m_PreferencesControl->m_PreviousFileName;
-  			for (int i = FileName.GetLength() - 1; i >= 0; i--) {
+  			for (i = FileName.GetLength() - 1; i >= 0; i--) {
   				if (FileName.GetAt(i) == '\\') break;
   			}
   			FileName.Delete(0, i + 1);
@@ -2285,7 +2278,7 @@
   CInstruction* CFlowZap::DeselectInstruction()
   {
   	CInstruction* in = NULL;
-  	if (m_SelectedInstruction != NULL && m_SelectedInstruction->GetSafeHwnd != NULL) {
+  	if (m_SelectedInstruction != NULL && m_SelectedInstruction->GetSafeHwnd() != NULL) {
   		in = m_SelectedInstruction;
   		m_SelectedInstruction->MakeSelected(FALSE);
   		if (!m_ExpandedView) m_SelectedInstruction->MakeCondensed();

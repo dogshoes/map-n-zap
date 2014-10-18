@@ -41,14 +41,7 @@
   #include "PMotion.h"
   #include "PSong.h"
   #include "CyePersona.h"
-  
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   short Vf = 300;		 
   short Vn = 200;
   short Vns = 150;

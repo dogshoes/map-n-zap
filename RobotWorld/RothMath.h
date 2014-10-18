@@ -80,7 +80,7 @@
  #define RadianToDegree(x) (x*180.0/pi)
  
  //const double pi = 3.14159;
- const double pi = atan2(0,-1);
+ const double pi = atan2((double)0,(double)-1);
  
  double sqr(double x);
  double XPROD(robPOINT V1, robPOINT V2);

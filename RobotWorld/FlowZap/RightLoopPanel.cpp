@@ -36,14 +36,8 @@
   #include "mmsystem.h" 
   #include "Util.h"
   #include "Instruction.h"
-  #include "RobotWorld.h"
-  
-  #ifdef _DEBUG
-  #undef THIS_FILE
-  static char THIS_FILE[]=__FILE__;
-  #define new DEBUG_NEW
-  #endif
-  
+  #include "..\RobotWorld.h"
+
   //////////////////////////////////////////////////////////////////////
   // Construction/Destruction
   //////////////////////////////////////////////////////////////////////

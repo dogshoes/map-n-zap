@@ -25,9 +25,8 @@
    Pittsburgh, PA 15212
    USA
  **********************************************************************/
- #include <fstream.h>
+ #include <fstream>
  
  CPoint GetDesktopSize(void);
- void PrintTimeStamp(ofstream stream);
- void PrintTimeStamp(ostream_withassign stream);
+ void PrintTimeStamp(std::ofstream stream);
  CString TimeStampString();

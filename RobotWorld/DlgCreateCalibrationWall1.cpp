@@ -39,13 +39,7 @@
   #include "Probability Grid.h"
   #include "CTDPath.h"
   #include "Robot.h"
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   const unsigned long cBmpFrameWidth = 40;
   const unsigned long cBmpFrameHeight = 40;
   const unsigned long cBmpFramePerLine = 5;

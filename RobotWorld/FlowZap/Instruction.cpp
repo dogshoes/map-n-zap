@@ -29,7 +29,7 @@
   #include "instruction.h"
   #include "flowzap.h"
   #include "util.h"
-  #include "RobotWorld.h"
+  #include "..\RobotWorld.h"
   
   #include "mmsystem.h" 
   

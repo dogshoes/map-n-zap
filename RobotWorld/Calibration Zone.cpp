@@ -491,7 +491,7 @@
   	point.x += ProbGrid->ClientSizeToRobotSize(CalZoneCircleBmpWidth/2) * cos(m_Heading);
   	point.y += ProbGrid->ClientSizeToRobotSize(CalZoneCircleBmpWidth/2) * sin(m_Heading);
   	CPoint P2 = ProbGrid->RobotToDDSurface(point, SurfaceOffset);
-  	double theta = atan2(P2.y - P1.y, P2.x - P1.x);
+  	double theta = atan2((double)(P2.y - P1.y), (double)(P2.x - P1.x));
   	P1.x -= long(CalZoneCircleBmpWidth * cos(theta));
   	P1.y -= long(CalZoneCircleBmpWidth * sin(theta));
   	P2.x += long(CalZoneCircleBmpWidth * cos(theta));

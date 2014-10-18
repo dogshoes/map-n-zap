@@ -34,13 +34,7 @@
   #include "Robot.h"
   #include "DlgMouseControls.h"
   #include "RRDim.h"
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   /////////////////////////////////////////////////////////////////////////////
   // CDlgMouseControls dialog
   IMPLEMENT_DYNCREATE(CDlgMouseControls, CPropertyPage)

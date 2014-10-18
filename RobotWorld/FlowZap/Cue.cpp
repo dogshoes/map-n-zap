@@ -35,15 +35,9 @@
   #include "Cue.h"
   #include "flowzap.h"
   #include "Instruction.h"
-  #include "RobotWorld.h"
+  #include "..\RobotWorld.h"
   #include "util.h"
-   
-  #ifdef _DEBUG
-  #undef THIS_FILE
-  static char THIS_FILE[]=__FILE__;
-  #define new DEBUG_NEW
-  #endif
-  
+
   //////////////////////////////////////////////////////////////////////
   // Construction/Destruction
   //////////////////////////////////////////////////////////////////////

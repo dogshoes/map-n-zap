@@ -33,13 +33,8 @@
   #include "robotworld.h"
   #include "DlgTestRobot.h"
   #include "Robot.h"
-  #include <fstream.h>
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+  #include <fstream>
+
   /////////////////////////////////////////////////////////////////////////////
   // CDlgTestRobot dialog
   
@@ -87,7 +82,7 @@
   
   bool CDlgTestRobot::FreeWheelTest()
   {
-  	ofstream output("Testing.txt");
+	std::ofstream output("Testing.txt");
   	output << "Hello There Ho'wre your doing?";
   
   	FILE* out = fopen("FreeWheelTest.txt", "w");
@@ -227,7 +222,7 @@
   		if ( (TimeDiff.GetHours() == 0) && (TimeDiff.GetMinutes() == 0) &&
   		(TimeDiff.GetSeconds() <= 0) ) done = true;
   	}
-  	for (i = 0; i < nSamples; i++) {
+  	for (int i = 0; i < nSamples; i++) {
   	/*Wait for a while*/
   		WaitUntilTime = CTime::GetCurrentTime();
   		WaitUntilTime += CTimeSpan(0,0,0,2);
@@ -493,7 +488,7 @@
   const float cMaxStuckAD = 0.98f;
   	bool TestSuccessful = true;
   	CTime WaitUntilTime;
-  	ofstream out("Against Wall Test.txt");
+	std::ofstream out("Against Wall Test.txt");
   	AfxMessageBox("Please place the robot against a flat section of wall");
   
   	m_Robot->SetObstacleSensitivity(osNone);
@@ -544,7 +539,7 @@
   /*Give motors a little juice and repeat the tests*/
   	m_Robot->SetPwm(333,333);
   /*Wait a while for ADs to get updated*/
-  	for (i = 0; i < 3; i++) {
+  	for (int i = 0; i < 3; i++) {
   		WaitUntilTime = CTime::GetCurrentTime();
   		WaitUntilTime += CTimeSpan(0,0,0,1);
   		bool done = false;
@@ -615,7 +610,7 @@
   
   bool CDlgTestRobot::RotationTest()
   {
-  	ofstream out("Rotation Test.txt");
+	std::ofstream out("Rotation Test.txt");
   	bool TestSuccessful = true;
   	const int nSamples = 5;
   	const double cMaxSTD = 3;

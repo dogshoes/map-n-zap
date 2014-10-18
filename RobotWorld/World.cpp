@@ -92,7 +92,7 @@
   	return;
   
       Blend(row, col, *clear);
-      cerr << "Hit " << row << " " << col << endl;
+	  std::cerr << "Hit " << row << " " << col << std::endl;
       delete clear;
   
       CharMatrix *changed = new CharMatrix(*this, t_rmin, t_cmin,

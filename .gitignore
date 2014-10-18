@@ -3,3 +3,8 @@
 /*/Release
 /*/*/Debug
 /*/*/Release
+*.ncb
+*.suo
+*.aps
+stderr.err
+stdout.txt

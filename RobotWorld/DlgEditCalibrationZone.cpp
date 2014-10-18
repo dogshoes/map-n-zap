@@ -32,13 +32,7 @@
   #include "stdafx.h"
   #include "robotworld.h"
   #include "DlgEditCalibrationZone.h"
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   const int cMaxScrollCornerSize = 1000;
   const float cMaxCornerSize = 7.0f;
   const float cMinCornerSize = 2.0f;

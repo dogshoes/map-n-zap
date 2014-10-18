@@ -57,13 +57,7 @@
   #include "Laygo.h"
   
   //#include "Label.h"
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   #define MAIN_FRAME_SECTION "MAIN_FRAME_DIM"
   /////////////////////////////////////////////////////////////////////////////
   // CMainFrame

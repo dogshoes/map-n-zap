@@ -41,13 +41,7 @@
   #include "ddutil.h"
   #include "Probability Grid.h"
   #include "RobotWorldView.h"
-  
-  #ifdef _DEBUG
-  #undef THIS_FILE
-  static char THIS_FILE[]=__FILE__;
-  #define new DEBUG_NEW
-  #endif
-  
+
   IMPLEMENT_SERIAL(CFinishLine, CExecutableRWGraphicObject, VERSIONABLE_SCHEMA | VERSION_NUMBER)
   
   const int cZoom3BmpHeight = 72;
@@ -327,7 +321,7 @@
   	m_lpddsAnimationBmps2[5] = ProbGrid->DDrawLoadBitmap(IDB_FINISH_LINE25);
   	m_lpddsAnimationBmps2[6] = ProbGrid->DDrawLoadBitmap(IDB_FINISH_LINE26);
   	m_lpddsAnimationBmps2[7] = ProbGrid->DDrawLoadBitmap(IDB_FINISH_LINE27);
-  	for (i = 0; i < 8; i++) {
+  	for (int i = 0; i < 8; i++) {
   		if (m_lpddsAnimationBmps2[i] == NULL) {
   			fprintf(stderr, "CFinishLine::LoadBitmaps error!! Did not load m_lpddsAnimationBmps2[%d]\n", i);
   		}
@@ -341,7 +335,7 @@
   	m_lpddsAnimationBmps3[5] = ProbGrid->DDrawLoadBitmap(IDB_FINISH_LINE35);
   	m_lpddsAnimationBmps3[6] = ProbGrid->DDrawLoadBitmap(IDB_FINISH_LINE36);
   	m_lpddsAnimationBmps3[7] = ProbGrid->DDrawLoadBitmap(IDB_FINISH_LINE37);
-  	for (i = 0; i < 8; i++) {
+  	for (int i = 0; i < 8; i++) {
   		if (m_lpddsAnimationBmps3[i] == NULL) {
   			fprintf(stderr, "CFinishLine::LoadBitmaps error!! Did not load m_lpddsAnimationBmps3[%d]\n", i);
   		}

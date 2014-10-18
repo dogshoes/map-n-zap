@@ -399,12 +399,13 @@
   
   void CTuneInstruction::SendInstruction(CRobot* Robot)
   {
+    int i;
   	short Frequency[5];
   	int Duration[5];
   	int NumberOfNotesSent = m_Notes.GetCount();
   	if (NumberOfNotesSent > 5) NumberOfNotesSent = 5;
   	m_CurrentPosition = m_Notes.GetHeadPosition();
-  	for (int i = 0; i < NumberOfNotesSent; i++) {
+  	for (i = 0; i < NumberOfNotesSent; i++) {
   		TNote Note = m_Notes.GetNext(m_CurrentPosition);
   		Frequency[i] = Note.m_Frequency;
   		Duration[i] = Note.m_Duration;

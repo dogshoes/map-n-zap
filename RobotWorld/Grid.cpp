@@ -63,16 +63,16 @@ void Grid::SetOrigin(double x, double y)
 
 
 
-ostream& operator << (ostream &os, const Grid &g) {
-    os << g.size << endl;
-    os << g.origin[0] << " " << g.origin[1] << endl;
+std::ostream& operator << (std::ostream &os, const Grid &g) {
+	os << g.size << std::endl;
+	os << g.origin[0] << " " << g.origin[1] << std::endl;
     os << (CharMatrix &)g;
 
     return os;
 }
 
 
-istream& operator >> (istream &is, Grid &g) {
+std::istream& operator >> (std::istream &is, Grid &g) {
     int origin_x, origin_y;
 
     is >> g.size;

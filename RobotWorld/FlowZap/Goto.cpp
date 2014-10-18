@@ -32,13 +32,7 @@
   #include "FlowZap.h"
   #include "Goto.h"
   #include "Util.h"
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   /////////////////////////////////////////////////////////////////////////////
   // CGoto dialog
   IMPLEMENT_DYNAMIC( CGoto, CInstruction)

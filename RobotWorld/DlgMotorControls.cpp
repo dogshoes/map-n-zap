@@ -38,13 +38,7 @@
   
   #include "DlgMotorControls.h"
   #include "Path.h"
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   /////////////////////////////////////////////////////////////////////////////
   // CDlgMotorControls dialog
   
@@ -338,7 +332,7 @@
   #include <share.h>
   #include <sys\stat.h>
   #include "VacuumPatch.h"
-  #include "fstream.h"
+  #include <fstream>
   #include "Homebase.h"
   
   void CDlgMotorControls::OnButton1() 

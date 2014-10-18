@@ -30,7 +30,9 @@
  #ifndef CHARMATRIX_H
  #define CHARMATRIX_H
  
- #include <iostream.h>
+ #include <istream>
+ #include <ostream>
+ #include <iostream>
  #include <assert.h>
  
  #define NEUTRAL_NUMBER 127
@@ -83,8 +85,8 @@
      const unsigned char * operator[](int pos) const;
  
      // Friends
-     friend ostream& operator << (ostream &os, const CharMatrix &m);
-     friend istream& operator >> (istream &is, CharMatrix &m);
+	 friend std::ostream& operator << (std::ostream &os, const CharMatrix &m);
+	 friend std::istream& operator >> (std::istream &is, CharMatrix &m);
  };
  
  

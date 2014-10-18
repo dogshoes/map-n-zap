@@ -33,13 +33,8 @@
   #include "PropGeneral.h"
   #include "Robot.h"
   #include "RRDim.h"
-  #include <fstream.h>
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+  #include <fstream>
+
   /////////////////////////////////////////////////////////////////////////////
   // CPropGeneral property page
   
@@ -140,7 +135,7 @@
   
   void CPropGeneral::OnButRobotTest() 
   {
-  	ofstream output(((CRobotWorldApp*)AfxGetApp())->m_DefaultPath + "/Test Robot.txt");
+	std::ofstream output(((CRobotWorldApp*)AfxGetApp())->m_DefaultPath + "/Test Robot.txt");
   	if (!m_Robot->GetCommunicationsEstablished()) {
   		AfxMessageBox("Test Robot Error: The PC has not established\ncommunications with the robot");
   		output << "The PC has not established communications with the robot.\n";

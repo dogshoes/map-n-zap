@@ -95,18 +95,12 @@
   #include "LinePath.h"
   #include "RothUtil.h"
   
-  #include <iomanip.h>
+  #include <iomanip>
   
   #ifdef MHCOMM_CONTROL
   #include "Robot Communication.h"
   #endif
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   //#define CIRCUIT_TESTING
   
   #define SER_TIMER				1		//Timer identifier for the serial output timer
@@ -3459,7 +3453,7 @@
   	robPOINT Error;
   	robPOINT Position;
   	const robPOINT Origin(0,0);
-  	const NextTipClicks = 50;
+  	const int NextTipClicks = 50;
   	BOOL Show = FALSE;
   
   	if (m_LaygoNumberClicks <= NextTipClicks) m_LaygoNumberClicks++;

@@ -78,13 +78,7 @@
   #include "HomeBase.h"
   #include "PathDisplay.h"
   #include "CyePersona.h"
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   //#pragma warning( once : 4244 )        //Issue warning 4244 only once.
   //#pragma warning( once : 4800 )
   
@@ -2223,8 +2217,10 @@
   
   TTaskResult CRobot::SpinAround(double OriginalHeading, int NumberOfRotations, bool CounterClockwise, short Speed)
   {
+    int i;
+
   	if (CounterClockwise) {
-  		for (int i = 1; i <= NumberOfRotations; i++) {
+  		for (i = 1; i <= NumberOfRotations; i++) {
   			AddHeadingToInstructions(OriginalHeading + 3*pi/4, NULL, pi/3, Speed, 0);
   			AddHeadingToInstructions(OriginalHeading + 5*pi/4, NULL, pi/3, Speed, 0);
   			AddHeadingToInstructions(OriginalHeading + 7*pi/4, NULL, pi/3, Speed, 0);
@@ -2233,7 +2229,7 @@
   	/*Go to final heading with small heading zone*/
   		AddHeadingToInstructions(OriginalHeading + ((i-2)*2*pi + 2*pi), NULL, cSmlHeadingZone, Speed, 0);
   	} else {
-  		for (int i = 1; i <= NumberOfRotations; i++) {
+  		for (i = 1; i <= NumberOfRotations; i++) {
   			AddHeadingToInstructions(OriginalHeading - 3*pi/4, NULL, pi/3, Speed, 0);
   			AddHeadingToInstructions(OriginalHeading - 5*pi/4, NULL, pi/3, Speed, 0);
   			AddHeadingToInstructions(OriginalHeading - 7*pi/4, NULL, pi/3, Speed, 0);
@@ -4927,7 +4923,7 @@
   	}
   //CLEANUP:
   /*Remove temporary obstacle*/
-  	for (i = cNumGridSpacesInTempObstacle-1; i >= 0; i--) {
+  	for (int i = cNumGridSpacesInTempObstacle-1; i >= 0; i--) {
   		ProbGrid->SetGridValue(TempObstaclePoints[i], TempObstacleOldValues[i], 1, true);
   	}
   	return TaskResult;
@@ -5167,9 +5163,9 @@
   	const char cExtendedPromptPathSegment = 'Y';
   	const char cRequestTuneNotes = 'X';
   	const char cSendNumberOfClapsMessage = 'W';
-  	const cPathBufferEmptyMessage = 'U';
-  	const cTuneBufferEmptyMessage = 'T';
-  	const cSendDestination = 'M';
+  	const char cPathBufferEmptyMessage = 'U';
+  	const char cTuneBufferEmptyMessage = 'T';
+  	const char cSendDestination = 'M';
   
   	robPOINT Position;
   	double Heading;
