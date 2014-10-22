@@ -4,6 +4,7 @@
 	Version="9.00"
 	Name="FlowChart"
 	ProjectGUID="{66BFAE45-713A-441B-B01E-FA9BCD3F0F15}"
+	RootNamespace="FlowChart"
 	Keyword="MFCProj"
 	TargetFrameworkVersion="0"
 	>
@@ -1497,10 +1498,6 @@
 		</File>
 		<File
 			RelativePath="sounds\expand.wav"
-			>
-		</File>
-		<File
-			RelativePath="ReadMe.txt"
 			>
 		</File>
 		<File

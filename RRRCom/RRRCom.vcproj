@@ -4,6 +4,7 @@
 	Version="9.00"
 	Name="RRRCom"
 	ProjectGUID="{2A959934-474C-4E89-B54A-0EFED33C3606}"
+	RootNamespace="RRRCom"
 	Keyword="MFCProj"
 	TargetFrameworkVersion="0"
 	>
@@ -507,10 +508,6 @@
 						PreprocessorDefinitions=""
 					/>
 				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="ReadMe.txt"
-				>
 			</File>
 			<File
 				RelativePath="RRRCom.cpp"

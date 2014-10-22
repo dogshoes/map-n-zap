@@ -4,6 +4,7 @@
 	Version="9.00"
 	Name="RRRSrv"
 	ProjectGUID="{F63E1C96-78A3-415D-9954-07AA2F524564}"
+	RootNamespace="RRRSrv"
 	Keyword="MFCProj"
 	TargetFrameworkVersion="0"
 	>
@@ -328,10 +329,6 @@
 						PreprocessorDefinitions=""
 					/>
 				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="ReadMe.txt"
-				>
 			</File>
 			<File
 				RelativePath="robot communication.cpp"
