@@ -38,13 +38,7 @@
   #include "RobotWorldView.h"
   #include "global.h"
   #include "PathDisplay.h"
-  
-  #ifdef _DEBUG
-  #undef THIS_FILE
-  static char THIS_FILE[]=__FILE__;
-  #define new DEBUG_NEW
-  #endif
-  
+
   IMPLEMENT_SERIAL(CLinePath, CExecutableRWGraphicObject, VERSIONABLE_SCHEMA | VERSION_NUMBER)
   
   const short cTrackerHandleSize = 7;

@@ -33,13 +33,7 @@
   #include "RobotWorld.h"
   #include "DlgJoystickControl.h"
   #include "rothmath.h"
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   /*******************************************************************************
   //Created: 11/13/97 S.R.
   //Last Revision: 11/13/97 S.R.

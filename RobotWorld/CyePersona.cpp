@@ -38,13 +38,7 @@
   #include "robotworld.h"
   #include "CyePersona.h"
   #include "Robot.h"
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   /////////////////////////////////////////////////////////////////////////////
   // CCyePersona dialog
   

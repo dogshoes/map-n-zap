@@ -35,13 +35,7 @@
   #include "RobotWorldView.h"
   #include "RRDim.h"
   #include "MainFrm.h"
-  
-  #ifdef _DEBUG
-  #undef THIS_FILE
-  static char THIS_FILE[]=__FILE__;
-  #define new DEBUG_NEW
-  #endif
-  
+
   const int cSpeedballHeight = 9;
   const int cSpeedballWidth = 9;
   const RECT cMaxSpeedRect = {236, 5, 305, 16};

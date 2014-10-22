@@ -164,7 +164,7 @@
  	for (char i = 1; i<=4; i++) OutputString.SetAt(i,NumOutput[i-1]);
  /*Output the Y coordinate*/
  	NumOutput = LongToBytes(WorldToRobotUnits(Destination.y));
- 	for (i = 5; i<9; i++) OutputString.SetAt(i,NumOutput[i-5]);
+ 	for (char i = 5; i<9; i++) OutputString.SetAt(i,NumOutput[i-5]);
  	rcom->SendMsg(OutputString);
  	return;
  }
@@ -567,7 +567,7 @@
  	for (char i = 1; i<=4; i++) OutputString.SetAt(i,NumOutput[i-1]);
  /*Output the Y coordinate*/
  	NumOutput = LongToBytes(WorldToRobotUnits(Position.y));
- 	for (i = 5; i<9; i++) OutputString.SetAt(i,NumOutput[i-5]);
+ 	for (char i = 5; i<9; i++) OutputString.SetAt(i,NumOutput[i-5]);
  	rcom->SendMsg(OutputString);
  }
  
@@ -651,7 +651,7 @@
  	for (char i = 1; i<=4; i++) OutputString.SetAt(i,NumOutput[i-1]);
  /*Output the Y coordinate*/
  	NumOutput = LongToBytes(WorldToRobotUnits(Destination.y));
- 	for (i = 5; i<9; i++) OutputString.SetAt(i,NumOutput[i-5]);
+ 	for (char i = 5; i<9; i++) OutputString.SetAt(i,NumOutput[i-5]);
  	NumOutput = LongToBytes(Velocity);
  	OutputString.SetAt(9,NumOutput[0]);
  	OutputString.SetAt(10,NumOutput[1]);
@@ -899,9 +899,9 @@
  		for (unsigned char i = 0; i<4; i++) OutputString.SetAt(i+3,NumOutput[i]);
  	/*Output the Y0 coordinate*/
  		NumOutput = LongToBytes(WorldToRobotUnits(Points[0].y));
- 		for (i = 0; i<4; i++) OutputString.SetAt(i+7,NumOutput[i]);
+ 		for (unsigned char i = 0; i<4; i++) OutputString.SetAt(i+7,NumOutput[i]);
  	/*Output the rest of the coordinates*/
- 		for (i = 0; i < nPoints - 1; i++) {
+ 		for (unsigned char i = 0; i < nPoints - 1; i++) {
  			OutputString.SetAt(2*i+11, (unsigned char)WorldToRobotUnits(Points[i+1].x - Points[i].x));
  			OutputString.SetAt(2*i+1+11, (unsigned char)WorldToRobotUnits(Points[i+1].y - Points[i].y));
  		}

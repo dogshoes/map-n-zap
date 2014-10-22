@@ -33,13 +33,7 @@
   #include "FlowZap.h"
   #include "Calibrate.h"
   #include "util.h"
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW 
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   /////////////////////////////////////////////////////////////////////////////
   // CCalibrate dialog
   

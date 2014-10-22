@@ -40,13 +40,7 @@
   #include "Robot.h"
   #include "CyePersona.h"
   #include <mmsystem.h>
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   /////////////////////////////////////////////////////////////////////////////
   // CPMotion dialog
   
@@ -659,7 +653,7 @@
   		TurnLeft(200);
   
   	limit = m_cyepersona->GetRandomNumber(3);
-  	for ( i = 1; i<=limit; i++)
+  	for (int i = 1; i<=limit; i++)
   		TurnRight(200);
   }
   

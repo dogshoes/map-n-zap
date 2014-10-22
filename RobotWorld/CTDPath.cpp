@@ -154,7 +154,7 @@
   		/*Start appending to path*/
   			IndexOffset = m_Size;
   			m_Size += PathLength;
-  			for (i = IndexOffset; i < m_Size; i++) {
+  			for (unsigned short i = IndexOffset; i < m_Size; i++) {
   				m_Path[i].x = m_Path[i-1].x + c;
   				m_Path[i].y = m_Path[i-1].y + s;
   			}

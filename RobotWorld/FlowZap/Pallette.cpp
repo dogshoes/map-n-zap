@@ -31,14 +31,7 @@
   #include "stdafx.h"
   #include "flowzap.h"
   #include "Pallette.h"
-  
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   #define dNUM_ICONS 11
   
   const COLORREF Background = RGB (0, 103, 223);

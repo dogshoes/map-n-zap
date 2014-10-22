@@ -46,13 +46,7 @@
   #include "ExecutableRWGraphicObject.h"
   //#include "Label.h"
   #endif
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   /////////////////////////////////////////////////////////////////////////////
   // CExecute dialog
   

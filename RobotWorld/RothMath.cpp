@@ -821,7 +821,7 @@
   	Avg /= nElements;
   
   	*std = 0;
-  	for (i = 0; i < nElements; i++) {
+  	for (unsigned long i = 0; i < nElements; i++) {
   		*std += SQR(Numbers[i] - Avg);
   	}
   	if (nElements > 1) {
@@ -882,7 +882,7 @@
   	Avg /= nElements;
   
   	*std = 0;
-  	for (i = 0; i < nElements; i++) {
+  	for (unsigned long i = 0; i < nElements; i++) {
   		*std += SQR(Numbers[i] - Avg);
   	}
   	if (nElements > 1) {
@@ -994,7 +994,7 @@
   	Avg /= nElements;
   
   	*std = 0;
-  	for (i = 0; i < nElements; i++) {
+  	for (unsigned long i = 0; i < nElements; i++) {
   		*std += SQR(Numbers[i] - Avg);
   	}
   	if (nElements > 1) {

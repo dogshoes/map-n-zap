@@ -45,13 +45,7 @@
   #include "LinePath.h"
   #include "GoalSet.h"
   #include "HomeBase.h"
-  
-  #ifdef _DEBUG
-  #undef THIS_FILE
-  static char THIS_FILE[]=__FILE__;
-  #define new DEBUG_NEW
-  #endif
-  
+
   IMPLEMENT_SERIAL(CExecutableRWGraphicObject, CRWGraphicObject, VERSIONABLE_SCHEMA | VERSION_NUMBER)
   //////////////////////////////////////////////////////////////////////
   // Construction/Destruction
@@ -610,6 +604,7 @@
   //
   *******************************************************************************/
   {
+    unsigned int i;
   	CalZonesList[0] = CalZonesList[1] = CalZonesList[2] = NULL;
   	unsigned int nNodes = NumberOfNodes();
   /*Take care of empty lists*/
@@ -621,7 +616,7 @@
   	Min0 = Min1 = Min2 = MAX_DOUBLE;
   //	Min0 = Min1 = Min2 = CurrentNode->m_CalibrationZone->DistanceFromCalibrationZone(Position);
   //	CalZonesList[0] = CalZonesList[1] = CalZonesList[2] = CurrentNode->m_CalibrationZone;
-  	for (unsigned int i = 0; i < nNodes; i++) {
+  	for (i = 0; i < nNodes; i++) {
   		if (CurrentNode->m_Object->GetObjectType() == goCalibrationZone) {
   			distance = Distance(CurrentNode->m_Object->GetEntryPoint(), Position);
   			if (distance <= Min0) {

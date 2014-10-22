@@ -36,13 +36,7 @@
   #include "RobotWorld Resource.h"
   //#include "Probability Grid.h"
   #include "rothmath.h"
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   /////////////////////////////////////////////////////////////////////////////
   // CDlgRelocateRobot dialog
   

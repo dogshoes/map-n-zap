@@ -372,17 +372,17 @@
   
   
   
-  ostream& operator << (ostream &os, const CharMatrix &m)
+  std::ostream& operator << (std::ostream &os, const CharMatrix &m)
   {
       int i,j;
   
-      os << m.rows << " " << m.cols << endl;
-      os << (int)m.min_value << " " << (int)m.max_value << endl;
+	  os << m.rows << " " << m.cols << std::endl;
+	  os << (int)m.min_value << " " << (int)m.max_value << std::endl;
       for (i = 0; i < m.rows; i++) {
   	for (j = 0; j < m.cols-1; j++) {
   	    os << (int)m[i][j] << " ";
   	}
-  	os << (int)m[i][m.cols-1] << endl;
+	os << (int)m[i][m.cols-1] << std::endl;
       }
       return(os);
   }
@@ -390,7 +390,7 @@
   
   
   
-  istream& operator >> (istream &is, CharMatrix &m)
+  std::istream& operator >> (std::istream &is, CharMatrix &m)
   {
       int i, j, tmp;
   

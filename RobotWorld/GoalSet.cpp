@@ -54,8 +54,10 @@ goalSet& CGoalSet::operator[](int Position)
 
 CGoalSet::CGoalSet(goalSet *goalList)
 {
+	int cntr;
+
 	memset(m_GoalSet, 0, sizeof(m_GoalSet));
-	for (int cntr = 0; (cntr < cMaxGoalSets) && (goalList[cntr].thePath != NULL); cntr++) {
+	for (cntr = 0; (cntr < cMaxGoalSets) && (goalList[cntr].thePath != NULL); cntr++) {
 		m_GoalSet[cntr].calZone = goalList[cntr].calZone;
 		m_GoalSet[cntr].thePath = goalList[cntr].thePath;
 		m_GoalSet[cntr].Cached = goalList[cntr].Cached;

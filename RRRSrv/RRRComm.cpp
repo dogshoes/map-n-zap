@@ -140,20 +140,16 @@
  #include "RRRSrv.h"
  #include "RRRComm.h"
  #include "RRRConst.h"
- 
- #ifdef _DEBUG
- #define new DEBUG_NEW
- #undef THIS_FILE
- static char THIS_FILE[] = __FILE__;
- #endif
- 
+ #include <fstream>
+
  #ifdef _DEBUG
  #define PRINTOUTPUT
  #endif
+
  #ifdef PRINTOUTPUT
- #include "fstream.h"
- 	ofstream IO("SerialComm (No Transparency, STX or ETX).txt");
- 	ofstream RAW("SerialComm (Raw Data).txt");
+ #include <fstream>
+   std::ofstream IO("SerialComm (No Transparency, STX or ETX).txt");
+   std::ofstream RAW("SerialComm (Raw Data).txt");
  #endif
  /////////////////////////////////////////////////////////////////////////////
  // RRRCom
@@ -435,6 +431,7 @@
     case CRC_ENCODING:
        {
           RRRMsg NewMsg;
+		  short i;
           unsigned char Addr;
           unsigned char DestAddr = (unsigned char)Msg.GetDestAddress();
           Addr = (unsigned char)(((m_MyAddress << 4) | (DestAddr & 0xf)) & 0xff);
@@ -450,7 +447,7 @@
           NewMsg.Add(char(CRC & 0xff));
           NewMsg.Add(char(CRC >> 8));
           
-          for (short i=0;i < m_PreFlag;i++)    // add pre flag characters
+          for (i=0;i < m_PreFlag;i++)    // add pre flag characters
           {
              EMsg.Add(FLAG);
           }

@@ -35,13 +35,7 @@
   #include "MainFrm.h"
   #include "RobotWorldDoc.h"
   #include "RobotWorldView.h"
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   #define GENERAL_SECTION "GENERAL"
   #define CURRENT_FILE "CURRENT_FILE"
   #define ROBOT_SOFTWARE "ROBOT SOFTWARE"
@@ -75,15 +69,18 @@
   
   /////////////////////////////////////////////////////////////////////////////
   // CRobotWorldApp construction
-  #include "fstream.h"
-  ofstream coutfile("cout.txt");
-  ofstream cerrfile("cerr.txt");
-  
+  #include <fstream>
+  #include <iostream>
+  #include <cstdio>
+
   CRobotWorldApp::CRobotWorldApp()
   {
   	freopen("stderr.err","w",stderr);
-  	cout = coutfile;
-  	cerr = cerrfile;
+	freopen("stdout.txt","w",stdout);
+
+	std::cout.sync_with_stdio(false);
+	std::cerr.sync_with_stdio(false);
+
   	// TODO: add construction code here,
   	// Place all significant initialization in InitInstance
   }

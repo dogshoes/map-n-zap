@@ -108,8 +108,8 @@
      unsigned char GridValue(const double x, const double y);
  
      // Friends
-     friend ostream& operator << (ostream &os, const Grid &g);
-     friend istream& operator >> (istream &is, Grid &g);
+	 friend std::ostream& operator << (std::ostream &os, const Grid &g);
+	 friend std::istream& operator >> (std::istream &is, Grid &g);
  };
  
  

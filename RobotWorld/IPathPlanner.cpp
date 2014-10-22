@@ -48,14 +48,7 @@
   #include "Path.h"
   #include "WorldGridConsts.h"
   #include "Probability Grid.h"
-  
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   #ifdef _DEBUG
   // #define SHOW_DEBUG_MESSAGES
   #endif
@@ -1127,7 +1120,7 @@
   	// set up the powerarray
   	for (i = 0; i < 20; i++)
   	{
-  		powerarray[i] = (int)pow(powerbase, i);
+  		powerarray[i] = (int)pow((long double)powerbase, i);
   	}
   	
   	int stuffValue = 10000;
@@ -1167,7 +1160,7 @@
   	NewMaxX = MIN(illahmaxx-1, NewWorldXSize);
   	NewMaxY = MIN(illahmaxy-1, NewWorldYSize);
   
-  	MinProgress = (int)(-(1 + pow(3, minObstacleVal) + 20));
+  	MinProgress = (int)(-(1 + (int)pow((long double)3, (minObstacleVal) + 20)));
   
   	progress = 0; // if this stays at zero, there is no path
   	while (atGoal == 0) 
@@ -1814,8 +1807,8 @@
   		p->GetPoint(i, x2, y2);
   		toIGrid(x1, y1, ix1, iy1);
   		toIGrid(x2, y2, ix2, iy2);
-  		totalLength += sqrt( ((ix1-ix2)*(ix1-ix2)) + 
-  			((iy1-iy2)*(iy1-iy2)) );
+  		totalLength += sqrt( (double)((ix1-ix2)*(ix1-ix2)) + 
+  			(double)((iy1-iy2)*(iy1-iy2)) );
   		i++;
   	} while(i < numPts);
   
@@ -1830,8 +1823,8 @@
   		p->GetPoint(i, x2, y2);
   		toIGrid(x1, y1, ix1, iy1);
   		toIGrid(x2, y2, ix2, iy2);
-  		pathLength += sqrt( ((ix1-ix2)*(ix1-ix2)) + 
-  			((iy1-iy2)*(iy1-iy2)) );
+  		pathLength += sqrt( (double)((ix1-ix2)*(ix1-ix2)) + 
+  			(double)((iy1-iy2)*(iy1-iy2)) );
   
   		// we've passed the desired length, so find the true coordinates
   		//  of the midpoint or max length using linear interpolation.
@@ -1860,8 +1853,8 @@
   			}
   
   			double testLength;
-  			testLength = sqrt( ((ix1 - mpx)*(ix1 - mpx)) + 
-  							   ((iy1 - mpy)*(iy1 - mpy)) );
+  			testLength = sqrt( (double)((ix1 - mpx)*(ix1 - mpx)) + 
+  							   (double)((iy1 - mpy)*(iy1 - mpy)) );
   			char buf[100];
   			sprintf(buf, "deslen = %f, testlen = %f\0", remainingLength, 
   				testLength);

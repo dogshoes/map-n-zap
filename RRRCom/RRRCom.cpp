@@ -30,13 +30,6 @@
 #include "stdafx.h"
 #include "RRRCom.h"
 
-#ifdef _DEBUG
-#define new DEBUG_NEW
-#undef THIS_FILE
-static char THIS_FILE[] = __FILE__;
-#endif
-
-
 CRRRComApp NEAR theApp;
 
 const GUID CDECL BASED_CODE _tlid =

@@ -27,7 +27,7 @@
  **********************************************************************/
   #include "stdafx.h"
   #include <winuser.h>
-  #include <iomanip.h>
+  #include <iomanip>
   #include "rothutil.h"
   
   CPoint GetDesktopSize(void) {
@@ -47,23 +47,13 @@
   	return Dim;
   }
   
-  void PrintTimeStamp(ofstream stream) {
+  void PrintTimeStamp(std::ofstream stream) {
   	SYSTEMTIME TimeStruct;
   	GetSystemTime(&TimeStruct);
-  	stream << setw(2) << setfill('0') << TimeStruct.wHour << ':';
-  	stream << setw(2) << setfill('0') << TimeStruct.wMinute << ':';
-  	stream << setw(2) << setfill('0') << TimeStruct.wSecond << '.';
-  	stream << setw(3) << setfill('0') << TimeStruct.wMilliseconds << ' ';
-  	return;
-  }
-  
-  void PrintTimeStamp(ostream_withassign stream) {
-  	SYSTEMTIME TimeStruct;
-  	GetSystemTime(&TimeStruct);
-  	stream << setw(2) << setfill('0') << TimeStruct.wHour << ':';
-  	stream << setw(2) << setfill('0') << TimeStruct.wMinute << ':';
-  	stream << setw(2) << setfill('0') << TimeStruct.wSecond << '.';
-  	stream << setw(3) << setfill('0') << TimeStruct.wMilliseconds << ' ';
+	stream << std::setw(2) << std::setfill('0') << TimeStruct.wHour << ':';
+	stream << std::setw(2) << std::setfill('0') << TimeStruct.wMinute << ':';
+	stream << std::setw(2) << std::setfill('0') << TimeStruct.wSecond << '.';
+	stream << std::setw(3) << std::setfill('0') << TimeStruct.wMilliseconds << ' ';
   	return;
   }
   

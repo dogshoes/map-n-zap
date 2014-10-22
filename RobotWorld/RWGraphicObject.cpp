@@ -35,13 +35,7 @@
   #include "PathDisplay.h"
   #include "RulerGrid.h"
   #include "FinishLine.h"
-  
-  #ifdef _DEBUG
-  #undef THIS_FILE
-  static char THIS_FILE[]=__FILE__;
-  #define new DEBUG_NEW
-  #endif
-  
+
   IMPLEMENT_SERIAL(CRWGraphicObject, CObject, VERSIONABLE_SCHEMA | VERSION_NUMBER)
   IMPLEMENT_SERIAL(CRWGraphicObjectList, CObject, VERSIONABLE_SCHEMA | VERSION_NUMBER)
   

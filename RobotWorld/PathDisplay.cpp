@@ -35,13 +35,7 @@
   #include "CTDPath.h"
   #include "Probability Grid.h"
   #include "RobotWorldView.h"
-  
-  #ifdef _DEBUG
-  #undef THIS_FILE
-  static char THIS_FILE[]=__FILE__;
-  #define new DEBUG_NEW
-  #endif
-  
+
   void CleanPointList(robPOINT* OriginalPointList, int nPoints, TrobPOINTList* CleanedPointList);
   void CleanPointList(TrobPOINTList* OriginalPointList, TrobPOINTList* CleanedPointList);
   void DrawOuterLines(CPoint SurfaceOffset, CDC* pDC, CProbabilityGrid* ProbGrid, TrobPOINTList* PointList);
@@ -340,7 +334,7 @@
   					CircleRectangle.BottomRight() = ProbGrid->RobotToDDSurface(CircleRectBottomRight, SurfaceOffset);
   					CPoint ArcCenter = ProbGrid->RobotToDDSurface(C, SurfaceOffset);
   
-  					if ( abs(int(atan2(cP2.y - ArcCenter.y, cP2.x - ArcCenter.x) - atan2(cP1.y - ArcCenter.y, cP1.x - ArcCenter.x))) >= (1.0 / 16) ) {
+  					if ( abs(int(atan2((double)(cP2.y - ArcCenter.y), (double)(cP2.x - ArcCenter.x)) - atan2((double)(cP1.y - ArcCenter.y), (double)(cP1.x - ArcCenter.x)))) >= (1.0 / 16) ) {
   						pDC->Arc(CircleRectangle, cP1, cP2);
   					} else {
   						pDC->LineTo(cP2);
@@ -376,7 +370,7 @@
   					CircleRectangle.BottomRight() = ProbGrid->RobotToDDSurface(CircleRectBottomRight, SurfaceOffset);
   					CPoint ArcCenter = ProbGrid->RobotToDDSurface(C, SurfaceOffset);
   
-  					if ( abs(int(atan2(cP2.y - ArcCenter.y, cP2.x - ArcCenter.x) - atan2(cP1.y - ArcCenter.y, cP1.x - ArcCenter.x))) >= (1.0 / 16) ) {
+  					if ( abs(int(atan2((double)(cP2.y - ArcCenter.y), (double)(cP2.x - ArcCenter.x)) - atan2((double)(cP1.y - ArcCenter.y), (double)(cP1.x - ArcCenter.x)))) >= (1.0 / 16) ) {
   						pDC->Arc(CircleRectangle, cP2, cP1);
   					} else {
   						pDC->LineTo(cP2);

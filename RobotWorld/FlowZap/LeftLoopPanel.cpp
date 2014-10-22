@@ -39,13 +39,7 @@
   #include "Util.h"
   #include "Instruction.h"
   #include "Repeat.h"
-  #include "RobotWorld.h"
-  
-  #ifdef _DEBUG
-  #undef THIS_FILE
-  static char THIS_FILE[]=__FILE__;
-  #define new DEBUG_NEW
-  #endif
+  #include "..\RobotWorld.h"
   
   //////////////////////////////////////////////////////////////////////
   // Construction/Destruction
@@ -223,7 +217,7 @@
   		if (in->IsKindOf( RUNTIME_CLASS( CRepeat ) ) ) in->m_Loop->m_Level = 0;
   	}
   		
-  	for (i =0; i < fc->GetInstructionsSize() - 1; i++) {
+  	for (int i =0; i < fc->GetInstructionsSize() - 1; i++) {
   		in = fc->GetInstructionAtIndex(i);
   		if (in->IsKindOf( RUNTIME_CLASS( CRepeat ) ) ) {
   			//in.moveable = false;

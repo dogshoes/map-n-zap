@@ -58,13 +58,7 @@
  #include "stdafx.h"
  
  #include "RRRClist.h"
- 
- #ifdef _DEBUG
- #define new DEBUG_NEW
- #undef THIS_FILE
- static char THIS_FILE[] = __FILE__;
- #endif
- 
+
  /////////////////////////////////////////////////////////////////////////////
  // RRRCListEntry
  
@@ -195,7 +189,7 @@
     }
     // release the critical section
     lock.Unlock(1);
-    for (i=0; i<windows.GetSize();i++)
+    for (short i=0; i<windows.GetSize();i++)
        PostMessage((HWND)windows[i], Msg, wParam, lParam);
  }
  
@@ -213,6 +207,6 @@
     }
     // release the critical section
     lock.Unlock(1);
-    for (i=0; i<windows.GetSize();i++)
+    for (short i=0; i<windows.GetSize();i++)
        SendMessage((HWND)windows[i], Msg, wParam, lParam);
  }

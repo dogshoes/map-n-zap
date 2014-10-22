@@ -28,8 +28,8 @@
 
    #include "stdafx.h"
    #include "global.h"
-   #include <fstream.h>
-   #include <iomanip.h>
+   #include <fstream>
+   #include <iomanip>
    #include "RobotWorld.h"
    #include "RRDim.h"
    #include "Probability Grid.h"
@@ -231,11 +231,11 @@
    		ASSERT(FALSE);
    	}
    	RoverFileTest.Close();
-   	ifstream rover_file(datapath);
+	std::ifstream rover_file(datapath);
    	rover_file >> str >> grid;
    
    	rover.SetGrid(Body, grid);
-   	for (i=M0_F; i <= M2_B; i++) {
+   	for (int i=M0_F; i <= M2_B; i++) {
    		rover_file >> str >> grid;
    		rover.SetGrid((RoverGrid)i, grid);
    	}
@@ -836,7 +836,7 @@
    #endif
    
    /*Sketch the robots' errors*/
-   	for (i = 0; m_RobotList[i] != NULL; i++) {
+   	for (int i = 0; m_RobotList[i] != NULL; i++) {
    		CRobot* Robot = m_RobotList[i];
    		if (Robot != NULL) {
    			robPOINT RobotPosition = Robot->GetDrawPosition();
@@ -853,7 +853,7 @@
    	m_RWGraphicObjectList->DrawObjects(ProbGridBmpUpdateRect, m_lpDDSBack, this);
    
    /*Draw robots*/
-   	for (i = 0; m_RobotList[i] != NULL; i++) {
+   	for (int i = 0; m_RobotList[i] != NULL; i++) {
    		CRobot* Robot = m_RobotList[i];
    		if (Robot != NULL) {
    			robPOINT RobotPosition = Robot->GetDrawPosition();
@@ -1063,7 +1063,7 @@
    		pPaletteEntry[index+246].peBlue = SysPalEntries[index+246].peBlue;
    	}
    // Now set up private entries.
-   	for (index = 10; index < cSizeProbabilityPalette + 10; index ++) {
+   	for (unsigned int index = 10; index < cSizeProbabilityPalette + 10; index ++) {
    		pPaletteEntry[index].peFlags = PC_NOCOLLAPSE;
    		pPaletteEntry[index].peRed = PALETTECOLOR(index - 10);
    		pPaletteEntry[index].peGreen = pPaletteEntry[index].peRed;
@@ -1073,7 +1073,7 @@
    	pPaletteEntry[cSizeProbabilityPalette + 9].peRed = 0xFF;
    	pPaletteEntry[cSizeProbabilityPalette + 9].peGreen = 0xFF;
    	pPaletteEntry[cSizeProbabilityPalette + 9].peBlue = 0xFF;
-   	for (index = cSizeProbabilityPalette + 10; index < 246; index++) {
+   	for (unsigned int index = cSizeProbabilityPalette + 10; index < 246; index++) {
    		pPaletteEntry[index].peFlags = PC_NOCOLLAPSE;
    		pPaletteEntry[index].peRed = 0;
    		pPaletteEntry[index].peGreen = pPaletteEntry[index].peRed;
@@ -3950,11 +3950,11 @@
    
    void CPixelValueList::PrintPixelValues()
    {
-   	ofstream out("Palette Values.txt");
+	std::ofstream out("Palette Values.txt");
    	for (long i = 0; i < nNodes; i++) {
    		CPixelValue* CurrentPos = PixelValues[i];
    		while (CurrentPos != NULL) {
-   			out << setw(4) << CurrentPos->R << setw(4) << CurrentPos->G << setw(4) << CurrentPos->B << setw(9) << CurrentPos->NumberOfValues << '\n';
+   			out << std::setw(4) << CurrentPos->R << std::setw(4) << CurrentPos->G << std::setw(4) << CurrentPos->B << std::setw(9) << CurrentPos->NumberOfValues << '\n';
    			CurrentPos = CurrentPos->Next;
    		}
    	}
@@ -3990,7 +3990,7 @@
    	bool Changed = false;
    	do {
    		Changed = false;
-   		for ( i = 0; i < nPixelValues - 1; i++) {
+   		for (int i = 0; i < nPixelValues - 1; i++) {
    			if (RankedPixelValues[i]->NumberOfValues < RankedPixelValues[i+1]->NumberOfValues) {
    				CPixelValue* temp = RankedPixelValues[i];
    				RankedPixelValues[i] = RankedPixelValues[i+1];
@@ -4003,7 +4003,7 @@
    
    void GetBitmapPalette(char* Path, CPixelValueList* PixelValues)
    {
-   	ofstream out("Palette.txt");
+	std::ofstream out("Palette.txt");
    	HBITMAP hbm = (HBITMAP)LoadImage(NULL, Path, IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE|LR_CREATEDIBSECTION);
    	CBitmap* pBitmap = CBitmap::FromHandle(hbm);
    	BITMAP BitmapStruct;
@@ -4029,7 +4029,7 @@
    				B = (Pixel & 0x1F);
    				G = ( (Pixel >> 5) & 0x1F);
    				R = ( (Pixel >> 10) & 0x1F);
-   				out << setw(4) << R << setw(4) << G << setw(4) << B << '\n';
+   				out << std::setw(4) << R << std::setw(4) << G << std::setw(4) << B << '\n';
    				PixelValues->AddPixelValue(R, G, B);
    				break;
    			case 24:
@@ -4039,7 +4039,7 @@
    				G = ( (Pixel >> 8) & 0xFF );
    				R = ( (Pixel >> 16) & 0xFF );
    //				if ( (R != G) || (R != B) || (B != G) ) out << "RGB not const\n";
-   				out << setw(4) << R << setw(4) << G << setw(4) << B << '\n';
+   				out << std::setw(4) << R << std::setw(4) << G << std::setw(4) << B << '\n';
    				PixelValues->AddPixelValue(R, G, B);
    				break;
    			case 32:
@@ -4048,7 +4048,7 @@
    				B = (Pixel & 0xFF);
    				G = ( (Pixel >> 8) & 0xFF );
    				R = ( (Pixel >> 16) & 0xFF );
-   				out << setw(4) << R << setw(4) << G << setw(4) << B << '\n';
+   				out << std::setw(4) << R << std::setw(4) << G << std::setw(4) << B << '\n';
    				PixelValues->AddPixelValue(R, G, B);
    				break;
    			}
@@ -4243,19 +4243,19 @@
    	long nPixelValues = long(PixelValues->NumberOfValues());
    	unsigned long AnimatedPaletteEntry = 10 + cSizeProbabilityPalette;
    //	unsigned long AnimatedPaletteEntry = 10;
-   	ofstream out("Palettes Comp.txt");
+	std::ofstream out("Palettes Comp.txt");
    	out << nPixelValues << "\n";
    	for (long i = 0; i < nPixelValues; i++) {
-   		out << setw(4) << PixelValues->RankedPixelValues[i]->R << setw(4) << PixelValues->RankedPixelValues[i]->G << setw(4) << PixelValues->RankedPixelValues[i]->B << '\n';
+   		out << std::setw(4) << PixelValues->RankedPixelValues[i]->R << std::setw(4) << PixelValues->RankedPixelValues[i]->G << std::setw(4) << PixelValues->RankedPixelValues[i]->B << '\n';
    	}
    	out << "\n\n\n";
    	for (long j = 0; j < 256; j++) {
-   		out << setw(4) << (int)PaletteEntries[j].peRed << setw(4) << (int)PaletteEntries[j].peGreen << setw(4) << (int)PaletteEntries[j].peBlue << '\n';
+   		out << std::setw(4) << (int)PaletteEntries[j].peRed << std::setw(4) << (int)PaletteEntries[j].peGreen << std::setw(4) << (int)PaletteEntries[j].peBlue << '\n';
    	}
    	out << "\n\n\n";
-   	for (i = 0; i < nPixelValues; i++) {
+   	for (long i = 0; i < nPixelValues; i++) {
    		bool InPalette = false;
-   		for (j = 0; (j < 256) && !InPalette; j++) {
+   		for (long j = 0; (j < 256) && !InPalette; j++) {
    //			if ( (PixelValues->RankedPixelValues[i]->R == PaletteEntries[j].peRed) && 
    //				(PixelValues->RankedPixelValues[i]->G == PaletteEntries[j].peGreen) &&
    //				(PixelValues->RankedPixelValues[i]->B == PaletteEntries[j].peBlue) ) {
@@ -4268,9 +4268,9 @@
    			}
    		}
    		if (InPalette) {
-   			out << setw(4) << PixelValues->RankedPixelValues[i]->R << setw(4) << PixelValues->RankedPixelValues[i]->G << setw(4) << PixelValues->RankedPixelValues[i]->B << '\n';
+   			out << std::setw(4) << PixelValues->RankedPixelValues[i]->R << std::setw(4) << PixelValues->RankedPixelValues[i]->G << std::setw(4) << PixelValues->RankedPixelValues[i]->B << '\n';
    		} else {
-   			out << "! " << setw(4) << PixelValues->RankedPixelValues[i]->R << setw(4) << PixelValues->RankedPixelValues[i]->G << setw(4) << PixelValues->RankedPixelValues[i]->B << '\n';
+   			out << "! " << std::setw(4) << PixelValues->RankedPixelValues[i]->R << std::setw(4) << PixelValues->RankedPixelValues[i]->G << std::setw(4) << PixelValues->RankedPixelValues[i]->B << '\n';
    		}
    		if (!InPalette) {
    			if (AnimatedPaletteEntry < 246) {
@@ -4401,7 +4401,8 @@
    
    short CProbabilityGrid::GetNumberOfRobots()
    {
-   	for (short i = 0; (i < cMaxRobots) && (m_RobotList[i] != NULL); i++);
+    short i;
+   	for (i = 0; (i < cMaxRobots) && (m_RobotList[i] != NULL); i++);
    	return i;
    }
    
@@ -4416,8 +4417,9 @@
    
    bool CProbabilityGrid::AddRobot(CRobot *Robot)
    {
+    int i;
    	bool Added = false;
-   	for (int i = 0; (i < cMaxRobots) && (m_RobotList[i] != NULL); i++);
+   	for (i = 0; (i < cMaxRobots) && (m_RobotList[i] != NULL); i++);
    	ASSERT(i < cMaxRobots);
    	if (i < cMaxRobots) {
    		m_RobotList[i] = Robot;
@@ -4558,7 +4560,7 @@
    if you create a new robot, and it's on the primary home base then this function will
    think the new robot is occupying the primary home base and not return it as the
    closest one.*/
-   	for (i = 0; i < NumberOfRobots; i++) {
+   	for (int i = 0; i < NumberOfRobots; i++) {
    		if (RobotPositions[i] == Position) {
    			for (; i< NumberOfRobots - 1; i++) {
    				RobotPositions[i] = RobotPositions[i+1];

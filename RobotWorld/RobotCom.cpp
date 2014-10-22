@@ -66,13 +66,7 @@
   #include "RobotWorldView.h"
   //#include "Robot.h"
   #include "RobotCom.h"
-  
-  #ifdef _DEBUG
-  #define new DEBUG_NEW
-  #undef THIS_FILE
-  static char THIS_FILE[] = __FILE__;
-  #endif
-  
+
   enum PCXMIT_DATA {
   	SET_RAM_DATA_COMMAND_CHAR = 'n',
   	SET_ENABLE_OBSTACLE_BOUNCE_COMMAND_CHAR = 'q',
@@ -665,7 +659,7 @@
   void RobotCom::SendRAMData(unsigned short Address, unsigned char NumberBytes, unsigned char *Data)
   {
   	ASSERT (NumberBytes < 15);
-  	CString String(SET_RAM_DATA_COMMAND_CHAR, NumberBytes + 4);
+	CString String((LPCSTR)SET_RAM_DATA_COMMAND_CHAR, NumberBytes + 4);
   	String.SetAt(1, NumberBytes);
   	
   	char* Numbers;
