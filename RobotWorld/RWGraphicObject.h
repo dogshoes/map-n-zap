@@ -31,7 +31,7 @@
  
  #include "RothMath.h"
  #include "Robot.h"
- #include "ddraw.h"
+ #include "..\vendor\ddraw.h"
  
  enum TEditMode {emMove, emResize, emSelected, emNone};
  enum TFrameSide {fsNone = 0, fsTop, fsBot, fsLft, fsRgt, fsTopLft, fsTopRgt, fsBotLft, fsBotRgt};

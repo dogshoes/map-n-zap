@@ -38,7 +38,7 @@
  
  #include "ExecutableRWGraphicObject.h"
  #include "RothMath.h"	// Added by ClassView
- #include "ddraw.h"
+ #include "..\vendor\ddraw.h"
  #include "Robot.h"	// Added by ClassView
  
  class Path;

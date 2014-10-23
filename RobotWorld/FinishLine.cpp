@@ -37,8 +37,8 @@
   #include "global.h"
   #include "PathList.h"
   #include "DlgLabelName.h"
-  #include "ddraw.h"
-  #include "ddutil.h"
+  #include "..\vendor\ddraw.h"
+  #include "..\vendor\ddutil.h"
   #include "Probability Grid.h"
   #include "RobotWorldView.h"
 

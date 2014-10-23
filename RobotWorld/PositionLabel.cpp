@@ -36,8 +36,8 @@
   #include "WorldGridConsts.h"
   #include "global.h"
   #include "PathList.h"
-  #include "ddraw.h"
-  #include "ddutil.h"
+  #include "..\vendor\ddraw.h"
+  #include "..\vendor\ddutil.h"
   #include "Probability Grid.h"
   #include "DlgExecutableObjectGeneralProperties.h"
   

@@ -33,7 +33,7 @@
  #include "rothmath.h"
  #include "rrdim.h"
  #include "Robot.h"
- #include "ddraw.h"
+ #include "..\vendor\ddraw.h"
  
  enum TCalibrationZone {czWall, czDoorway, czCornerWall};
  

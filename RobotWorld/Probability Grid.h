@@ -31,8 +31,8 @@
  
  #include <stdio.h>
  #include "World.h"
- #include "ddraw.h"
- #include "ddutil2.h"
+ #include "..\vendor\ddraw.h"
+ #include "..\vendor\ddutil2.h"
  #include "RothMath.h"
  #include "WorldGridConsts.h"
  #include "Calibration Zone.h"	// Added by ClassView
