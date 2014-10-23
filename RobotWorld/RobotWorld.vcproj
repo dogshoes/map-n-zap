@@ -174,11 +174,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="&quot;ateam.lib&quot; &quot;dxguid.lib&quot; &quot;ddraw.lib&quot; &quot;base.lib&quot; &quot;list.lib&quot;"
+				AdditionalDependencies="&quot;ddraw.lib&quot; &quot;dxguid.lib&quot; &quot;vfw32.lib&quot;"
 				OutputFile=".\Release/Map-N-Zap.exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
-				AdditionalLibraryDirectories="$(DXSDK_DIR)\Lib\x86\"
+				AdditionalLibraryDirectories="&quot;$(SolutionDir)\vendor\&quot;;&quot;$(DXSDK_DIR)\Lib\x86\&quot;"
 				SubSystem="2"
 				RandomizedBaseAddress="1"
 				DataExecutionPrevention="0"
