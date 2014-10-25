@@ -33,11 +33,34 @@
 #if !defined(AFX_STDAFX_H__C4DFEA5D_88FC_11D1_AC8C_0040F6B8AE22__INCLUDED_)
 #define AFX_STDAFX_H__C4DFEA5D_88FC_11D1_AC8C_0040F6B8AE22__INCLUDED_
 
-#if _MSC_VER >= 1000
 #pragma once
-#endif // _MSC_VER >= 1000
 
-#define VC_EXTRALEAN		// Exclude rarely-used stuff from Windows headers
+#ifndef VC_EXTRALEAN
+#define VC_EXTRALEAN	// Exclude rarely-used items from Windows headers.
+#endif
+
+// Modify the following defines if you have to target an OS before the ones
+// specified in the following code. See MSDN for the latest information
+// about corresponding values for different operating systems.
+#ifndef WINVER		// Permit use of features specific to Windows 95 and Windows NT 4.0 or later.
+#define WINVER 0x0400	// Change this to the appropriate value to target 
+#endif                     // Windows 98 and Windows 2000 or later.
+
+#ifndef _WIN32_WINNT	// Permit use of features specific to Windows NT 4.0 or later.
+#define _WIN32_WINNT 0x0400	// Change this to the appropriate value to target 
+#endif		         // Windows 98 and Windows 2000 or later.			
+
+#ifndef _WIN32_WINDOWS	      // Permit use of features specific to Windows 98 or later.
+#define _WIN32_WINDOWS 0x0410    // Change this to the appropriate value to target 
+#endif			      // Windows Millennium Edition or later.
+
+#ifndef _WIN32_IE		// Permit use of features specific to Internet Explorer 4.0 or later.
+#define _WIN32_IE 0x0400   // Change this to the appropriate value to target 
+#endif			// Internet Explorer 5.0 or later.
+
+// Turns off MFC feature that hides of some common warning messages
+// that are frequently and safely ignored .
+#define _AFX_ALL_WARNINGS
 
 #include <afxwin.h>         // MFC core and standard components
 #include <afxext.h>         // MFC extensions
