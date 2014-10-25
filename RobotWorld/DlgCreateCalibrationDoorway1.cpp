@@ -35,12 +35,12 @@ static char THIS_FILE[] = __FILE__;
 
 CDlgCreateCalibrationDoorway1::CDlgCreateCalibrationDoorway1(CRobotWorldView* View)
 {
-	Create(IDD_CREATECALIBRATIONDOORWAY1, View);
-	m_View = View;
-	m_DlgCreateCalibrationDoorway2 = new CDlgCreateCalibrationDoorway2(View);
-	//{{AFX_DATA_INIT(CDlgCreateCalibrationDoorway1)
-		// NOTE: the ClassWizard will add member initialization here
-	//}}AFX_DATA_INIT
+    Create(IDD_CREATECALIBRATIONDOORWAY1, View);
+    m_View = View;
+    m_DlgCreateCalibrationDoorway2 = new CDlgCreateCalibrationDoorway2(View);
+    //{{AFX_DATA_INIT(CDlgCreateCalibrationDoorway1)
+    // NOTE: the ClassWizard will add member initialization here
+    //}}AFX_DATA_INIT
 }
 
 
@@ -59,22 +59,22 @@ void CDlgCreateCalibrationDoorway1::DoDataExchange(CDataExchange* pDX)
 //
 *******************************************************************************/
 {
-	CDialog::DoDataExchange(pDX);
-	//{{AFX_DATA_MAP(CDlgCreateCalibrationDoorway1)
-		// NOTE: the ClassWizard will add DDX and DDV calls here
-	//}}AFX_DATA_MAP
+    CDialog::DoDataExchange(pDX);
+    //{{AFX_DATA_MAP(CDlgCreateCalibrationDoorway1)
+    // NOTE: the ClassWizard will add DDX and DDV calls here
+    //}}AFX_DATA_MAP
 }
 
 
 BEGIN_MESSAGE_MAP(CDlgCreateCalibrationDoorway1, CDialog)
-	//{{AFX_MSG_MAP(CDlgCreateCalibrationDoorway1)
-	//}}AFX_MSG_MAP
+    //{{AFX_MSG_MAP(CDlgCreateCalibrationDoorway1)
+    //}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
 // CDlgCreateCalibrationDoorway1 message handlers
 
-void CDlgCreateCalibrationDoorway1::OnOK() 
+void CDlgCreateCalibrationDoorway1::OnOK()
 /*******************************************************************************
 //Created: 01/10/97 S.R.
 //Last Revision: 11/13/97 S.R.
@@ -93,33 +93,40 @@ void CDlgCreateCalibrationDoorway1::OnOK()
 //
 *******************************************************************************/
 {
-	CDialog::OnOK();
-/*Show the EStop dialog window*/
-	BOOL EStopWasVisible = m_View->m_Robot->GetEStopVisible();
-	m_View->m_Robot->SetEStopVisible(true);
-/*Find the corner*/
-	if ( m_View->m_Robot->FindCorner( &(m_DlgCreateCalibrationDoorway2->m_P0),
-		&(m_DlgCreateCalibrationDoorway2->m_H0) ) != IR_InstructionComplete) {
-		if (!EStopWasVisible) {
-			m_View->m_Robot->SetEStopVisible(false);
-		}
-		return;
-	}
-	POINT p;
-	p.x = Round(m_DlgCreateCalibrationDoorway2->m_P0.x);
-	p.y = Round(m_DlgCreateCalibrationDoorway2->m_P0.y);
-	double h = m_DlgCreateCalibrationDoorway2->m_H0;
+    CDialog::OnOK();
+    /*Show the EStop dialog window*/
+    BOOL EStopWasVisible = m_View->m_Robot->GetEStopVisible();
+    m_View->m_Robot->SetEStopVisible(true);
 
-//	m_RobotWorldWindow->AddObject(OT_ELLIPSE, p.x - 10, p.y + 10, p.x + 10, p.y - 10);
-//	m_RobotWorldWindow->SetLineColor(0);
-//	m_RobotWorldWindow->SetFillColor(COL_RED);
-//	m_RobotWorldWindow->AddObject(OT_LINE, p.x, p.y, p.x + 40 * cos(h), p.y + 40*sin(h));
-//	m_RobotWorldWindow->SetLineColor(0);
-/*Hide the EStop*/
-	if (!EStopWasVisible) {
-		m_View->m_Robot->SetEStopVisible(false);
-	}
-	m_DlgCreateCalibrationDoorway2->ShowWindow(SW_SHOW);
+    /*Find the corner*/
+    if (m_View->m_Robot->FindCorner(&(m_DlgCreateCalibrationDoorway2->m_P0),
+                                    &(m_DlgCreateCalibrationDoorway2->m_H0)) != IR_InstructionComplete)
+    {
+        if (!EStopWasVisible)
+        {
+            m_View->m_Robot->SetEStopVisible(false);
+        }
+
+        return;
+    }
+
+    POINT p;
+    p.x = Round(m_DlgCreateCalibrationDoorway2->m_P0.x);
+    p.y = Round(m_DlgCreateCalibrationDoorway2->m_P0.y);
+    double h = m_DlgCreateCalibrationDoorway2->m_H0;
+
+    //	m_RobotWorldWindow->AddObject(OT_ELLIPSE, p.x - 10, p.y + 10, p.x + 10, p.y - 10);
+    //	m_RobotWorldWindow->SetLineColor(0);
+    //	m_RobotWorldWindow->SetFillColor(COL_RED);
+    //	m_RobotWorldWindow->AddObject(OT_LINE, p.x, p.y, p.x + 40 * cos(h), p.y + 40*sin(h));
+    //	m_RobotWorldWindow->SetLineColor(0);
+    /*Hide the EStop*/
+    if (!EStopWasVisible)
+    {
+        m_View->m_Robot->SetEStopVisible(false);
+    }
+
+    m_DlgCreateCalibrationDoorway2->ShowWindow(SW_SHOW);
 }
 
 CDlgCreateCalibrationDoorway1::~CDlgCreateCalibrationDoorway1()
@@ -137,5 +144,5 @@ CDlgCreateCalibrationDoorway1::~CDlgCreateCalibrationDoorway1()
 //
 *******************************************************************************/
 {
-	delete m_DlgCreateCalibrationDoorway2;
+    delete m_DlgCreateCalibrationDoorway2;
 }

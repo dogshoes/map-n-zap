@@ -16,29 +16,29 @@ static char THIS_FILE[] = __FILE__;
 IMPLEMENT_DYNCREATE(CDlgDrawingTools, CPropertyPage)
 
 CDlgDrawingTools::CDlgDrawingTools()
-	: CPropertyPage(CDlgDrawingTools::IDD)
+    : CPropertyPage(CDlgDrawingTools::IDD)
 {
-	//{{AFX_DATA_INIT(CDlgDrawingTools)
-	m_radPenSize = -1;
-	m_radToolType = -1;
-	//}}AFX_DATA_INIT
+    //{{AFX_DATA_INIT(CDlgDrawingTools)
+    m_radPenSize = -1;
+    m_radToolType = -1;
+    //}}AFX_DATA_INIT
 }
 
 
 void CDlgDrawingTools::DoDataExchange(CDataExchange* pDX)
 {
-	CPropertyPage::DoDataExchange(pDX);
-	//{{AFX_DATA_MAP(CDlgDrawingTools)
-	DDX_Radio(pDX, IDC_RADIO1, m_radPenSize);
-	DDX_Radio(pDX, IDC_RADIO4, m_radToolType);
-	//}}AFX_DATA_MAP
+    CPropertyPage::DoDataExchange(pDX);
+    //{{AFX_DATA_MAP(CDlgDrawingTools)
+    DDX_Radio(pDX, IDC_RADIO1, m_radPenSize);
+    DDX_Radio(pDX, IDC_RADIO4, m_radToolType);
+    //}}AFX_DATA_MAP
 }
 
 
 BEGIN_MESSAGE_MAP(CDlgDrawingTools, CPropertyPage)
-	//{{AFX_MSG_MAP(CDlgDrawingTools)
-		// NOTE: the ClassWizard will add message map macros here
-	//}}AFX_MSG_MAP
+    //{{AFX_MSG_MAP(CDlgDrawingTools)
+    // NOTE: the ClassWizard will add message map macros here
+    //}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -46,25 +46,41 @@ END_MESSAGE_MAP()
 
 short CDlgDrawingTools::GetPenSize()
 {
-	if (m_hWnd != NULL) UpdateData(TRUE);
-	return m_radPenSize;
+    if (m_hWnd != NULL)
+    {
+        UpdateData(TRUE);
+    }
+
+    return m_radPenSize;
 }
 
 
 void CDlgDrawingTools::SetPenSize(short Size)
 {
-	m_radPenSize = Size;
-	if (m_hWnd != NULL) UpdateData(FALSE);
+    m_radPenSize = Size;
+
+    if (m_hWnd != NULL)
+    {
+        UpdateData(FALSE);
+    }
 }
 
 short CDlgDrawingTools::GetPenTool()
 {
-	if (m_hWnd != NULL) UpdateData(TRUE);
-	return m_radToolType;
+    if (m_hWnd != NULL)
+    {
+        UpdateData(TRUE);
+    }
+
+    return m_radToolType;
 }
 
 void CDlgDrawingTools::SetPenTool(short Tool)
 {
-	m_radToolType = Tool;
-	if (m_hWnd != NULL) UpdateData(FALSE);
+    m_radToolType = Tool;
+
+    if (m_hWnd != NULL)
+    {
+        UpdateData(FALSE);
+    }
 }

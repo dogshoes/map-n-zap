@@ -1,6 +1,6 @@
 /**********************************************************************
   Map-N-Zap v2.x. Interface to the CYE Personal Robot
-  Copyright (C) 2000, Probotics, Inc. 
+  Copyright (C) 2000, Probotics, Inc.
 
   This program is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License
@@ -11,12 +11,12 @@
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
   General Public License for more details.Furthermore, this source code
-  is distributed without any promise, implied or explicit, of 
+  is distributed without any promise, implied or explicit, of
   support from Probotics, Inc.
 
   You should have received a copy of the GNU General Public License
   along with this program; if not, write to the Free Software
-  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  
+  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
   02111-1307, USA.
 
   Probotics, Inc
@@ -49,206 +49,206 @@ IMPLEMENT_DYNCREATE(CGauge, CWnd)
 
 short CGauge::GetInnerTop()
 {
-	short result;
-	GetProperty(0x2, VT_I2, (void*)&result);
-	return result;
+    short result;
+    GetProperty(0x2, VT_I2, (void*)&result);
+    return result;
 }
 
 void CGauge::SetInnerTop(short propVal)
 {
-	SetProperty(0x2, VT_I2, propVal);
+    SetProperty(0x2, VT_I2, propVal);
 }
 
 short CGauge::GetInnerLeft()
 {
-	short result;
-	GetProperty(0x3, VT_I2, (void*)&result);
-	return result;
+    short result;
+    GetProperty(0x3, VT_I2, (void*)&result);
+    return result;
 }
 
 void CGauge::SetInnerLeft(short propVal)
 {
-	SetProperty(0x3, VT_I2, propVal);
+    SetProperty(0x3, VT_I2, propVal);
 }
 
 short CGauge::GetInnerRight()
 {
-	short result;
-	GetProperty(0x4, VT_I2, (void*)&result);
-	return result;
+    short result;
+    GetProperty(0x4, VT_I2, (void*)&result);
+    return result;
 }
 
 void CGauge::SetInnerRight(short propVal)
 {
-	SetProperty(0x4, VT_I2, propVal);
+    SetProperty(0x4, VT_I2, propVal);
 }
 
 short CGauge::GetInnerBottom()
 {
-	short result;
-	GetProperty(0x5, VT_I2, (void*)&result);
-	return result;
+    short result;
+    GetProperty(0x5, VT_I2, (void*)&result);
+    return result;
 }
 
 void CGauge::SetInnerBottom(short propVal)
 {
-	SetProperty(0x5, VT_I2, propVal);
+    SetProperty(0x5, VT_I2, propVal);
 }
 
 short CGauge::GetMin()
 {
-	short result;
-	GetProperty(0x6, VT_I2, (void*)&result);
-	return result;
+    short result;
+    GetProperty(0x6, VT_I2, (void*)&result);
+    return result;
 }
 
 void CGauge::SetMin(short propVal)
 {
-	SetProperty(0x6, VT_I2, propVal);
+    SetProperty(0x6, VT_I2, propVal);
 }
 
 short CGauge::GetMax()
 {
-	short result;
-	GetProperty(0x7, VT_I2, (void*)&result);
-	return result;
+    short result;
+    GetProperty(0x7, VT_I2, (void*)&result);
+    return result;
 }
 
 void CGauge::SetMax(short propVal)
 {
-	SetProperty(0x7, VT_I2, propVal);
+    SetProperty(0x7, VT_I2, propVal);
 }
 
 short CGauge::GetValue()
 {
-	short result;
-	GetProperty(0x8, VT_I2, (void*)&result);
-	return result;
+    short result;
+    GetProperty(0x8, VT_I2, (void*)&result);
+    return result;
 }
 
 void CGauge::SetValue(short propVal)
 {
-	SetProperty(0x8, VT_I2, propVal);
+    SetProperty(0x8, VT_I2, propVal);
 }
 
 long CGauge::GetStyle()
 {
-	long result;
-	GetProperty(0x9, VT_I4, (void*)&result);
-	return result;
+    long result;
+    GetProperty(0x9, VT_I4, (void*)&result);
+    return result;
 }
 
 void CGauge::SetStyle(long propVal)
 {
-	SetProperty(0x9, VT_I4, propVal);
+    SetProperty(0x9, VT_I4, propVal);
 }
 
 BOOL CGauge::GetAutosize()
 {
-	BOOL result;
-	GetProperty(0xa, VT_BOOL, (void*)&result);
-	return result;
+    BOOL result;
+    GetProperty(0xa, VT_BOOL, (void*)&result);
+    return result;
 }
 
 void CGauge::SetAutosize(BOOL propVal)
 {
-	SetProperty(0xa, VT_BOOL, propVal);
+    SetProperty(0xa, VT_BOOL, propVal);
 }
 
 CPicture CGauge::GetPicture()
 {
-	LPDISPATCH pDispatch;
-	GetProperty(0xb, VT_DISPATCH, (void*)&pDispatch);
-	return CPicture(pDispatch);
+    LPDISPATCH pDispatch;
+    GetProperty(0xb, VT_DISPATCH, (void*)&pDispatch);
+    return CPicture(pDispatch);
 }
 
 void CGauge::SetPicture(LPDISPATCH propVal)
 {
-	SetProperty(0xb, VT_DISPATCH, propVal);
+    SetProperty(0xb, VT_DISPATCH, propVal);
 }
 
 short CGauge::GetNeedleWidth()
 {
-	short result;
-	GetProperty(0xc, VT_I2, (void*)&result);
-	return result;
+    short result;
+    GetProperty(0xc, VT_I2, (void*)&result);
+    return result;
 }
 
 void CGauge::SetNeedleWidth(short propVal)
 {
-	SetProperty(0xc, VT_I2, propVal);
+    SetProperty(0xc, VT_I2, propVal);
 }
 
 BOOL CGauge::GetEnabled()
 {
-	BOOL result;
-	GetProperty(DISPID_ENABLED, VT_BOOL, (void*)&result);
-	return result;
+    BOOL result;
+    GetProperty(DISPID_ENABLED, VT_BOOL, (void*)&result);
+    return result;
 }
 
 void CGauge::SetEnabled(BOOL propVal)
 {
-	SetProperty(DISPID_ENABLED, VT_BOOL, propVal);
+    SetProperty(DISPID_ENABLED, VT_BOOL, propVal);
 }
 
 OLE_COLOR CGauge::GetBackColor()
 {
-	OLE_COLOR result;
-	GetProperty(DISPID_BACKCOLOR, VT_I4, (void*)&result);
-	return result;
+    OLE_COLOR result;
+    GetProperty(DISPID_BACKCOLOR, VT_I4, (void*)&result);
+    return result;
 }
 
 void CGauge::SetBackColor(OLE_COLOR propVal)
 {
-	SetProperty(DISPID_BACKCOLOR, VT_I4, propVal);
+    SetProperty(DISPID_BACKCOLOR, VT_I4, propVal);
 }
 
 OLE_COLOR CGauge::GetForeColor()
 {
-	OLE_COLOR result;
-	GetProperty(DISPID_FORECOLOR, VT_I4, (void*)&result);
-	return result;
+    OLE_COLOR result;
+    GetProperty(DISPID_FORECOLOR, VT_I4, (void*)&result);
+    return result;
 }
 
 void CGauge::SetForeColor(OLE_COLOR propVal)
 {
-	SetProperty(DISPID_FORECOLOR, VT_I4, propVal);
+    SetProperty(DISPID_FORECOLOR, VT_I4, propVal);
 }
 
 long CGauge::GetMousePointer()
 {
-	long result;
-	GetProperty(0x1, VT_I4, (void*)&result);
-	return result;
+    long result;
+    GetProperty(0x1, VT_I4, (void*)&result);
+    return result;
 }
 
 void CGauge::SetMousePointer(long propVal)
 {
-	SetProperty(0x1, VT_I4, propVal);
+    SetProperty(0x1, VT_I4, propVal);
 }
 
 CPicture CGauge::GetMouseIcon()
 {
-	LPDISPATCH pDispatch;
-	GetProperty(0xd, VT_DISPATCH, (void*)&pDispatch);
-	return CPicture(pDispatch);
+    LPDISPATCH pDispatch;
+    GetProperty(0xd, VT_DISPATCH, (void*)&pDispatch);
+    return CPicture(pDispatch);
 }
 
 void CGauge::SetMouseIcon(LPDISPATCH propVal)
 {
-	SetProperty(0xd, VT_DISPATCH, propVal);
+    SetProperty(0xd, VT_DISPATCH, propVal);
 }
 
 OLE_HANDLE CGauge::GetHWnd()
 {
-	OLE_HANDLE result;
-	GetProperty(DISPID_HWND, VT_I4, (void*)&result);
-	return result;
+    OLE_HANDLE result;
+    GetProperty(DISPID_HWND, VT_I4, (void*)&result);
+    return result;
 }
 
 void CGauge::SetHWnd(OLE_HANDLE propVal)
 {
-	SetProperty(DISPID_HWND, VT_I4, propVal);
+    SetProperty(DISPID_HWND, VT_I4, propVal);
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -256,10 +256,10 @@ void CGauge::SetHWnd(OLE_HANDLE propVal)
 
 void CGauge::Refresh()
 {
-	InvokeHelper(DISPID_REFRESH, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+    InvokeHelper(DISPID_REFRESH, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
 }
 
 void CGauge::AboutBox()
 {
-	InvokeHelper(0xfffffdd8, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+    InvokeHelper(0xfffffdd8, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
 }

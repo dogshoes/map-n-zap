@@ -11,44 +11,44 @@
 
 class CSplashWnd : public CWnd
 {
-// Construction
-protected:
-	CSplashWnd();
+        // Construction
+    protected:
+        CSplashWnd();
 
-// Attributes:
-public:
-	CBitmap m_bitmap;
+        // Attributes:
+    public:
+        CBitmap m_bitmap;
 
-// Operations
-public:
-	static void EnableSplashScreen(BOOL bEnable = TRUE);
-	static void ShowSplashScreen(CWnd* pParentWnd = NULL);
-	static BOOL PreTranslateAppMessage(MSG* pMsg);
+        // Operations
+    public:
+        static void EnableSplashScreen(BOOL bEnable = TRUE);
+        static void ShowSplashScreen(CWnd* pParentWnd = NULL);
+        static BOOL PreTranslateAppMessage(MSG* pMsg);
 
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CSplashWnd)
-	//}}AFX_VIRTUAL
+        // Overrides
+        // ClassWizard generated virtual function overrides
+        //{{AFX_VIRTUAL(CSplashWnd)
+        //}}AFX_VIRTUAL
 
-// Implementation
-public:
-	~CSplashWnd();
-	virtual void PostNcDestroy();
+        // Implementation
+    public:
+        ~CSplashWnd();
+        virtual void PostNcDestroy();
 
-protected:
-	BOOL Create(CWnd* pParentWnd = NULL);
-	void HideSplashScreen();
-	static BOOL c_bShowSplashWnd;
-	static CSplashWnd* c_pSplashWnd;
+    protected:
+        BOOL Create(CWnd* pParentWnd = NULL);
+        void HideSplashScreen();
+        static BOOL c_bShowSplashWnd;
+        static CSplashWnd* c_pSplashWnd;
 
-// Generated message map functions
-protected:
-	//{{AFX_MSG(CSplashWnd)
-	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
-	afx_msg void OnPaint();
-	afx_msg void OnTimer(UINT nIDEvent);
-	//}}AFX_MSG
-	DECLARE_MESSAGE_MAP()
+        // Generated message map functions
+    protected:
+        //{{AFX_MSG(CSplashWnd)
+        afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+        afx_msg void OnPaint();
+        afx_msg void OnTimer(UINT nIDEvent);
+        //}}AFX_MSG
+        DECLARE_MESSAGE_MAP()
 };
 
 

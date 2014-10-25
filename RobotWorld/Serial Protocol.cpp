@@ -64,26 +64,38 @@ char CCOMProtocol::GetSerialCharacter(BOOL* TimedOut)
 //	control does not handle strings with embedded NULL characters.
 *******************************************************************************/
 {
-	int nChar;
-	unsigned int TStart;
-/*Get the start time or return NULL if timed out*/
-	if (!*TimedOut) {
-		TStart = Time_CurrentTime();
-	} else {
-		return NULL;
-	}
+    int nChar;
+    unsigned int TStart;
 
-/*Wait for a character while you haven't timed out*/
-	while ( ((nChar = CCOMPort::GetInBufferCount()) == 0) && (*TimedOut == FALSE) ) {
-		if ( Time_DT(TStart, Time_CurrentTime()) > cTimeOut ) *TimedOut = TRUE;
-	}
-/*Return the character if you have one or #0 if you don't*/
-	if (nChar == 0) {
-		return NULL;
-	} else {
-		TimedOut = FALSE;
-		return CCOMPort::GetSerialChar();
-	}
+    /*Get the start time or return NULL if timed out*/
+    if (!*TimedOut)
+    {
+        TStart = Time_CurrentTime();
+    }
+    else
+    {
+        return NULL;
+    }
+
+    /*Wait for a character while you haven't timed out*/
+    while (((nChar = CCOMPort::GetInBufferCount()) == 0) && (*TimedOut == FALSE))
+    {
+        if (Time_DT(TStart, Time_CurrentTime()) > cTimeOut)
+        {
+            *TimedOut = TRUE;
+        }
+    }
+
+    /*Return the character if you have one or #0 if you don't*/
+    if (nChar == 0)
+    {
+        return NULL;
+    }
+    else
+    {
+        TimedOut = FALSE;
+        return CCOMPort::GetSerialChar();
+    }
 }
 
 CString* CCOMProtocol::GetSerialData(unsigned char* Errors)
@@ -122,33 +134,47 @@ CString* CCOMProtocol::GetSerialData(unsigned char* Errors)
 //	the corresponding error code in the	Errors parameter.
 *******************************************************************************/
 {
-	unsigned char CheckSum;
-	unsigned char StrLength;
-	BOOL TimedOut = FALSE;
-	CString* SerStr = NULL;
-  	*Errors = GSDNoErrors;
-/*Read in the STX character*/
-	if (GetSerialCharacter(&TimedOut) == STX) {
-	/*Get the string length and start the check sum*/
-  		StrLength = GetSerialCharacter(&TimedOut);
-		unsigned char Sum = StrLength;
-		SerStr = new CString('\000',StrLength);
-  	/*Read in the string and calculate the check sum*/
-   	for (unsigned char i = 0; i<StrLength; i++) {
-			unsigned char temp = GetSerialCharacter(&TimedOut);
-			SerStr->SetAt(i,temp);
-			Sum += temp;
-		}
-	/*Read in the check sum and check it with the calculated value*/
-		CheckSum = GetSerialCharacter(&TimedOut);
-     	if (Sum != CheckSum) {
-         *Errors = GSDCheckSumError;
-		}
-	} else {
-		*Errors = GSDNoSTX;
-	}
-  	if (TimedOut) *Errors = GSDTimeOutError;
-	return SerStr;
+    unsigned char CheckSum;
+    unsigned char StrLength;
+    BOOL TimedOut = FALSE;
+    CString* SerStr = NULL;
+    *Errors = GSDNoErrors;
+
+    /*Read in the STX character*/
+    if (GetSerialCharacter(&TimedOut) == STX)
+    {
+        /*Get the string length and start the check sum*/
+        StrLength = GetSerialCharacter(&TimedOut);
+        unsigned char Sum = StrLength;
+        SerStr = new CString('\000', StrLength);
+
+        /*Read in the string and calculate the check sum*/
+        for (unsigned char i = 0; i < StrLength; i++)
+        {
+            unsigned char temp = GetSerialCharacter(&TimedOut);
+            SerStr->SetAt(i, temp);
+            Sum += temp;
+        }
+
+        /*Read in the check sum and check it with the calculated value*/
+        CheckSum = GetSerialCharacter(&TimedOut);
+
+        if (Sum != CheckSum)
+        {
+            *Errors = GSDCheckSumError;
+        }
+    }
+    else
+    {
+        *Errors = GSDNoSTX;
+    }
+
+    if (TimedOut)
+    {
+        *Errors = GSDTimeOutError;
+    }
+
+    return SerStr;
 }
 
 void CCOMProtocol::SendSerialData(CString* SerString)
@@ -180,33 +206,36 @@ void CCOMProtocol::SendSerialData(CString* SerString)
 //	length of the string sent is less than 255 characters.
 *******************************************************************************/
 {
-/*Get the length of the string*/
-	unsigned char nChars = SerString->GetLength();
-/*Start calculating the CheckSum*/
-	unsigned char CheckSum = nChars;
-/*Initialize the transmission string*/
-	CString TXString('\000',nChars + 3);
-//	CString TXString('\000',nChars + 4);
-/*Set the STX char*/
-//const unsigned char cSTX = 2;
-	TXString.SetAt(0,STX);
-//	TXString.SetAt(1,STX);
+    /*Get the length of the string*/
+    unsigned char nChars = SerString->GetLength();
+    /*Start calculating the CheckSum*/
+    unsigned char CheckSum = nChars;
+    /*Initialize the transmission string*/
+    CString TXString('\000', nChars + 3);
+    //	CString TXString('\000',nChars + 4);
+    /*Set the STX char*/
+    //const unsigned char cSTX = 2;
+    TXString.SetAt(0, STX);
+    //	TXString.SetAt(1,STX);
 
-/*Set the string length char*/
-	TXString.SetAt(1,nChars);
-//	TXString.SetAt(2,nChars);
-/*Calculate the check sum and set the rest of the transmission string*/
-	for (unsigned char i = 0; i<nChars; i++) {
-	  	CheckSum += SerString->GetAt(i);
-		TXString.SetAt(i+2,SerString->GetAt(i));
-//		TXString.SetAt(i+3,SerString->GetAt(i));
-	}
-/*Set the check sum character*/
-	TXString.SetAt(nChars+2,CheckSum);
-//	TXString.SetAt(nChars+3,CheckSum);
-/*Send Out STX + String Length + string + the check sum*/
-	CCOMPort::SendSerialString(&TXString);
-	return;
+    /*Set the string length char*/
+    TXString.SetAt(1, nChars);
+
+    //	TXString.SetAt(2,nChars);
+    /*Calculate the check sum and set the rest of the transmission string*/
+    for (unsigned char i = 0; i < nChars; i++)
+    {
+        CheckSum += SerString->GetAt(i);
+        TXString.SetAt(i + 2, SerString->GetAt(i));
+        //		TXString.SetAt(i+3,SerString->GetAt(i));
+    }
+
+    /*Set the check sum character*/
+    TXString.SetAt(nChars + 2, CheckSum);
+    //	TXString.SetAt(nChars+3,CheckSum);
+    /*Send Out STX + String Length + string + the check sum*/
+    CCOMPort::SendSerialString(&TXString);
+    return;
 }
 
 /*******************************************************************************

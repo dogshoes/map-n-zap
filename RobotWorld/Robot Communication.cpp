@@ -80,16 +80,26 @@ void CRobotComm::SendPositionDestination(robPOINT Destination)
 //	individually for both the X and Y coordinate.
 *******************************************************************************/
 {
-	CString OutputString('\000',9);
-	OutputString.SetAt(0,SET_BUNGEE_DEST_COMMAND_CHAR);
-/*Output the X coordinate*/
-	char* NumOutput = LongToBytes(WorldToRobotUnits(Destination.x));
-	for (char i = 1; i<=4; i++) OutputString.SetAt(i,NumOutput[i-1]);
-/*Output the Y coordinate*/
-	NumOutput = LongToBytes(WorldToRobotUnits(Destination.y));
-	for (i = 5; i<9; i++) OutputString.SetAt(i,NumOutput[i-5]);
-	CCOMProtocol::SendSerialData(&OutputString);
-	return;
+    CString OutputString('\000', 9);
+    OutputString.SetAt(0, SET_BUNGEE_DEST_COMMAND_CHAR);
+    /*Output the X coordinate*/
+    char* NumOutput = LongToBytes(WorldToRobotUnits(Destination.x));
+
+    for (char i = 1; i <= 4; i++)
+    {
+        OutputString.SetAt(i, NumOutput[i - 1]);
+    }
+
+    /*Output the Y coordinate*/
+    NumOutput = LongToBytes(WorldToRobotUnits(Destination.y));
+
+    for (i = 5; i < 9; i++)
+    {
+        OutputString.SetAt(i, NumOutput[i - 5]);
+    }
+
+    CCOMProtocol::SendSerialData(&OutputString);
+    return;
 }
 
 long int* CRobotComm::DecodeSerialInput(CString* InputString, unsigned char* InputCode)
@@ -115,61 +125,77 @@ long int* CRobotComm::DecodeSerialInput(CString* InputString, unsigned char* Inp
 //	on the command code (the length of the number depends on the command character.)
 *******************************************************************************/
 {
-	static long int ReturnValue[3];
-	if ( (InputString != NULL) && (InputString->GetLength() != 0) ) {
-		switch (*InputCode = InputString->GetAt(0)) {
-		case cPositionInput:
-			if (InputString->GetLength() >= 11) {
-				ReturnValue[0] = RobotToWorldUnits(BytesToLong(InputString->GetAt(1),InputString->GetAt(2),
-					InputString->GetAt(3),InputString->GetAt(4)));
-				ReturnValue[1] = RobotToWorldUnits(BytesToLong(InputString->GetAt(5),InputString->GetAt(6),
-					InputString->GetAt(7),InputString->GetAt(8)));
-				ReturnValue[2] = BytesToInt(InputString->GetAt(9),InputString->GetAt(10));
-			}
-			break;
-/*One char input*/
-		case cNudgeInput:
-			ReturnValue[0] = InputString->GetAt(1);
-			break;
-/*Two char input*/
-		case cObstacleInput:
-			ReturnValue[0] = InputString->GetAt(1);
-			ReturnValue[1] = InputString->GetAt(2);
-			break;
-		case cEncodersInput:
-			ReturnValue[0] = InputString->GetAt(1);
-			ReturnValue[1] = InputString->GetAt(2);
-			break;
-/*Two int input*/
-		case cVelocityInput:
-		case cAccelerationInput:
-		case cPwmInput:
-			ReturnValue[0] = BytesToInt(InputString->GetAt(1), InputString->GetAt(2));
-			ReturnValue[1] = BytesToInt(InputString->GetAt(3), InputString->GetAt(4));
-			break;
-/*Three int input*/
-		case cAnalogInput:
-			ReturnValue[0] = BytesToInt(InputString->GetAt(1), InputString->GetAt(2));
-			ReturnValue[1] = BytesToInt(InputString->GetAt(3), InputString->GetAt(4));
-			ReturnValue[2] = BytesToInt(InputString->GetAt(5), InputString->GetAt(6));
-			break;
-/*One long input*/
-		case cRingBufferInput:
-		case cRobotError:
-			ReturnValue[0] = BytesToLong(InputString->GetAt(1), InputString->GetAt(2), InputString->GetAt(3), InputString->GetAt(4));
-			break;
-/*No data input*/
-		case cSendNewPathSegment:
-		case cLowBatteryMessage:
-			break;
-		default:
-			*InputCode = cInvalidInputString;
-			break;
-		}
-	} else {
-		InputCode = cInvalidInputString;
-	}
-	return ReturnValue;
+    static long int ReturnValue[3];
+
+    if ((InputString != NULL) && (InputString->GetLength() != 0))
+    {
+        switch (*InputCode = InputString->GetAt(0))
+        {
+        case cPositionInput:
+            if (InputString->GetLength() >= 11)
+            {
+                ReturnValue[0] = RobotToWorldUnits(BytesToLong(InputString->GetAt(1), InputString->GetAt(2),
+                                                   InputString->GetAt(3), InputString->GetAt(4)));
+                ReturnValue[1] = RobotToWorldUnits(BytesToLong(InputString->GetAt(5), InputString->GetAt(6),
+                                                   InputString->GetAt(7), InputString->GetAt(8)));
+                ReturnValue[2] = BytesToInt(InputString->GetAt(9), InputString->GetAt(10));
+            }
+
+            break;
+
+        /*One char input*/
+        case cNudgeInput:
+            ReturnValue[0] = InputString->GetAt(1);
+            break;
+
+        /*Two char input*/
+        case cObstacleInput:
+            ReturnValue[0] = InputString->GetAt(1);
+            ReturnValue[1] = InputString->GetAt(2);
+            break;
+
+        case cEncodersInput:
+            ReturnValue[0] = InputString->GetAt(1);
+            ReturnValue[1] = InputString->GetAt(2);
+            break;
+
+        /*Two int input*/
+        case cVelocityInput:
+        case cAccelerationInput:
+        case cPwmInput:
+            ReturnValue[0] = BytesToInt(InputString->GetAt(1), InputString->GetAt(2));
+            ReturnValue[1] = BytesToInt(InputString->GetAt(3), InputString->GetAt(4));
+            break;
+
+        /*Three int input*/
+        case cAnalogInput:
+            ReturnValue[0] = BytesToInt(InputString->GetAt(1), InputString->GetAt(2));
+            ReturnValue[1] = BytesToInt(InputString->GetAt(3), InputString->GetAt(4));
+            ReturnValue[2] = BytesToInt(InputString->GetAt(5), InputString->GetAt(6));
+            break;
+
+        /*One long input*/
+        case cRingBufferInput:
+        case cRobotError:
+            ReturnValue[0] = BytesToLong(InputString->GetAt(1), InputString->GetAt(2), InputString->GetAt(3), InputString->GetAt(4));
+            break;
+
+        /*No data input*/
+        case cSendNewPathSegment:
+        case cLowBatteryMessage:
+            break;
+
+        default:
+            *InputCode = cInvalidInputString;
+            break;
+        }
+    }
+    else
+    {
+        InputCode = cInvalidInputString;
+    }
+
+    return ReturnValue;
 }
 
 int CRobotComm::BytesToInt(unsigned char Byte0, unsigned char Byte1)
@@ -189,11 +215,11 @@ int CRobotComm::BytesToInt(unsigned char Byte0, unsigned char Byte1)
 //	together.
 *******************************************************************************/
 {
-	return ( ( (int)Byte0 ) | ( ((int)Byte1)<<8 ) );
+    return (((int)Byte0) | (((int)Byte1) << 8));
 }
 
 long int CRobotComm::BytesToLong(unsigned char Byte0, unsigned char Byte1,
-											unsigned char Byte2, unsigned char Byte3)
+                                 unsigned char Byte2, unsigned char Byte3)
 /*******************************************************************************
 //Created: 04/16/96 S.R.
 //Last Revision: 04/16/96 S.R.
@@ -209,11 +235,11 @@ long int CRobotComm::BytesToLong(unsigned char Byte0, unsigned char Byte1,
 //	together.
 *******************************************************************************/
 {
-	long int Result = Byte0;
-	Result |= ((long int)Byte1)<<8;
-	Result |= ((long int)Byte2)<<16;
-	Result |= ((long int)Byte3)<<24;
-	return Result;
+    long int Result = Byte0;
+    Result |= ((long int)Byte1) << 8;
+    Result |= ((long int)Byte2) << 16;
+    Result |= ((long int)Byte3) << 24;
+    return Result;
 }
 
 
@@ -237,12 +263,12 @@ char* CRobotComm::LongToBytes(long int X)
 //	occur.
 *******************************************************************************/
 {
-	static char Result[4];
-	Result[0] = (char)X;
-	Result[1] = (char)(X>>8);
-	Result[2] = (char)(X>>16);
-	Result[3] = (char)(X>>24);
-	return Result;
+    static char Result[4];
+    Result[0] = (char)X;
+    Result[1] = (char)(X >> 8);
+    Result[2] = (char)(X >> 16);
+    Result[3] = (char)(X >> 24);
+    return Result;
 }
 
 void CRobotComm::SendMotorsPWM(int M0PWM, int M1PWM)
@@ -264,19 +290,19 @@ void CRobotComm::SendMotorsPWM(int M0PWM, int M1PWM)
 //	sent through the COM port by the CCOMProtocol::SendSerialData function.
 *******************************************************************************/
 {
-	CString OutputString('\000',5);
-/*Set the command character*/
-	OutputString.SetAt(0,SET_MOTORS_PWM_COMMAND_CHAR);
-/*Set M0's pwm*/
-	char* NumOutput = LongToBytes(M0PWM);
-	OutputString.SetAt(1,NumOutput[0]);
-	OutputString.SetAt(2,NumOutput[1]);
-/*Set M1's pwm*/
-	NumOutput = LongToBytes(M1PWM);
-	OutputString.SetAt(3,NumOutput[0]);
-	OutputString.SetAt(4,NumOutput[1]);
-/*Send the data*/
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 5);
+    /*Set the command character*/
+    OutputString.SetAt(0, SET_MOTORS_PWM_COMMAND_CHAR);
+    /*Set M0's pwm*/
+    char* NumOutput = LongToBytes(M0PWM);
+    OutputString.SetAt(1, NumOutput[0]);
+    OutputString.SetAt(2, NumOutput[1]);
+    /*Set M1's pwm*/
+    NumOutput = LongToBytes(M1PWM);
+    OutputString.SetAt(3, NumOutput[0]);
+    OutputString.SetAt(4, NumOutput[1]);
+    /*Send the data*/
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendStopMotors()
@@ -296,8 +322,8 @@ void CRobotComm::SendStopMotors()
 //	function.
 *******************************************************************************/
 {
-	CString OutputString = STOP_MOTORS_COMMAND_CHAR;
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString = STOP_MOTORS_COMMAND_CHAR;
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendPurgeRingBuffer()
@@ -315,8 +341,8 @@ void CRobotComm::SendPurgeRingBuffer()
 //
 *******************************************************************************/
 {
-	CString OutputString = PURGE_RING_BUFFER_COMMAND_CHAR;
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString = PURGE_RING_BUFFER_COMMAND_CHAR;
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendHeadingDestination(double Heading, short Velocity)
@@ -336,18 +362,18 @@ void CRobotComm::SendHeadingDestination(double Heading, short Velocity)
 //	function.
 *******************************************************************************/
 {
-	CString OutputString('\000',5);
-/*Set the command character*/
-	OutputString.SetAt(0,SET_HEADING_DEST_COMMAND_CHAR);
-/*Set the heading*/
- 	char* NumOutput = LongToBytes(RadianToEncoderHeading(Heading));
-	OutputString.SetAt(1,NumOutput[0]);
-	OutputString.SetAt(2,NumOutput[1]);
-	NumOutput = LongToBytes(Velocity);
-	OutputString.SetAt(3,NumOutput[0]);
-	OutputString.SetAt(4,NumOutput[1]);
-/*Send the data*/
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 5);
+    /*Set the command character*/
+    OutputString.SetAt(0, SET_HEADING_DEST_COMMAND_CHAR);
+    /*Set the heading*/
+    char* NumOutput = LongToBytes(RadianToEncoderHeading(Heading));
+    OutputString.SetAt(1, NumOutput[0]);
+    OutputString.SetAt(2, NumOutput[1]);
+    NumOutput = LongToBytes(Velocity);
+    OutputString.SetAt(3, NumOutput[0]);
+    OutputString.SetAt(4, NumOutput[1]);
+    /*Send the data*/
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendMaxPWM(unsigned char MaxPWM)
@@ -367,13 +393,13 @@ void CRobotComm::SendMaxPWM(unsigned char MaxPWM)
 //	function.
 *******************************************************************************/
 {
-	CString OutputString('\000',2);
-/*Set the command character*/
-	OutputString.SetAt(0,SET_MAXPWM_COMMAND_CHAR);
-/*Set M0's pwm*/
-	OutputString.SetAt(1,MaxPWM);
-/*Send the data*/
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 2);
+    /*Set the command character*/
+    OutputString.SetAt(0, SET_MAXPWM_COMMAND_CHAR);
+    /*Set M0's pwm*/
+    OutputString.SetAt(1, MaxPWM);
+    /*Send the data*/
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendFlipHandle(BOOL value)
@@ -393,13 +419,13 @@ void CRobotComm::SendFlipHandle(BOOL value)
 //	function.
 *******************************************************************************/
 {
-	CString OutputString('\000',2);
-/*Set the command character*/
-	OutputString.SetAt(0,SET_FLIPHANDLE_COMMAND_CHAR);
-/*Set the value*/
-	OutputString.SetAt(1,value);
-/*Send the data*/
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 2);
+    /*Set the command character*/
+    OutputString.SetAt(0, SET_FLIPHANDLE_COMMAND_CHAR);
+    /*Set the value*/
+    OutputString.SetAt(1, value);
+    /*Send the data*/
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendHeadingCorrectionFactor(int Correction)
@@ -419,15 +445,15 @@ void CRobotComm::SendHeadingCorrectionFactor(int Correction)
 //	function.
 *******************************************************************************/
 {
-	CString OutputString('\000',3);
-/*Set the command character*/
-	OutputString.SetAt(0,SET_HEADCORRECTFACT_COMMAND_CHAR);
-/*Set the correction bytes*/
-	char* NumOutput = LongToBytes(Correction);
-	OutputString.SetAt(1,NumOutput[0]);
-	OutputString.SetAt(2,NumOutput[1]);
-/*Send the data*/
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 3);
+    /*Set the command character*/
+    OutputString.SetAt(0, SET_HEADCORRECTFACT_COMMAND_CHAR);
+    /*Set the correction bytes*/
+    char* NumOutput = LongToBytes(Correction);
+    OutputString.SetAt(1, NumOutput[0]);
+    OutputString.SetAt(2, NumOutput[1]);
+    /*Send the data*/
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendMotorVelocities(int M0Velocity, int M1Velocity)
@@ -448,18 +474,18 @@ void CRobotComm::SendMotorVelocities(int M0Velocity, int M1Velocity)
 //	function.
 *******************************************************************************/
 {
-	CString OutputString('\000',5);
-/*Set the command character*/
-	OutputString.SetAt(0,SET_MOTORS_VELOCITY_COMMAND_CHAR);
-/*Set M0's pwm*/
-	char* NumOutput = LongToBytes(M0Velocity);
-	OutputString.SetAt(1,NumOutput[0]);
-	OutputString.SetAt(2,NumOutput[1]);
-	NumOutput = LongToBytes(M1Velocity);
-	OutputString.SetAt(3,NumOutput[0]);
-	OutputString.SetAt(4,NumOutput[1]);
-/*Send the data*/
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 5);
+    /*Set the command character*/
+    OutputString.SetAt(0, SET_MOTORS_VELOCITY_COMMAND_CHAR);
+    /*Set M0's pwm*/
+    char* NumOutput = LongToBytes(M0Velocity);
+    OutputString.SetAt(1, NumOutput[0]);
+    OutputString.SetAt(2, NumOutput[1]);
+    NumOutput = LongToBytes(M1Velocity);
+    OutputString.SetAt(3, NumOutput[0]);
+    OutputString.SetAt(4, NumOutput[1]);
+    /*Send the data*/
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendPosition(robPOINT Position)
@@ -480,15 +506,25 @@ void CRobotComm::SendPosition(robPOINT Position)
 //	function.
 *******************************************************************************/
 {
-	CString OutputString('\000',9);
-	OutputString.SetAt(0,SET_POSITION_COMMAND_CHAR);
-/*Output the X coordinate*/
-	char* NumOutput = LongToBytes(WorldToRobotUnits(Position.x));
-	for (char i = 1; i<=4; i++) OutputString.SetAt(i,NumOutput[i-1]);
-/*Output the Y coordinate*/
-	NumOutput = LongToBytes(WorldToRobotUnits(Position.y));
-	for (i = 5; i<9; i++) OutputString.SetAt(i,NumOutput[i-5]);
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 9);
+    OutputString.SetAt(0, SET_POSITION_COMMAND_CHAR);
+    /*Output the X coordinate*/
+    char* NumOutput = LongToBytes(WorldToRobotUnits(Position.x));
+
+    for (char i = 1; i <= 4; i++)
+    {
+        OutputString.SetAt(i, NumOutput[i - 1]);
+    }
+
+    /*Output the Y coordinate*/
+    NumOutput = LongToBytes(WorldToRobotUnits(Position.y));
+
+    for (i = 5; i < 9; i++)
+    {
+        OutputString.SetAt(i, NumOutput[i - 5]);
+    }
+
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendHeading(double Heading)
@@ -509,20 +545,23 @@ void CRobotComm::SendHeading(double Heading)
 //	function.
 *******************************************************************************/
 {
-	CString OutputString('\000',3);
-/*Set the command character*/
-	OutputString.SetAt(0,SET_HEADING_COMMAND_CHAR);
-/*Set the heading*/
-	short RobotHeading = RadianToEncoderHeading(Heading);
-	if ( (RobotHeading < 0) || (RobotHeading > cNHeadings) ) {
-		fprintf(stderr, "ERROR!!! SendHeading: Radian Heading = %10lf Robot Heading = %d\n",Heading, RobotHeading);
-		ASSERT(FALSE);
-	}
- 	char* NumOutput = LongToBytes(RobotHeading);
-	OutputString.SetAt(1,NumOutput[0]);
-	OutputString.SetAt(2,NumOutput[1]);
-/*Send the data*/
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 3);
+    /*Set the command character*/
+    OutputString.SetAt(0, SET_HEADING_COMMAND_CHAR);
+    /*Set the heading*/
+    short RobotHeading = RadianToEncoderHeading(Heading);
+
+    if ((RobotHeading < 0) || (RobotHeading > cNHeadings))
+    {
+        fprintf(stderr, "ERROR!!! SendHeading: Radian Heading = %10lf Robot Heading = %d\n", Heading, RobotHeading);
+        ASSERT(FALSE);
+    }
+
+    char* NumOutput = LongToBytes(RobotHeading);
+    OutputString.SetAt(1, NumOutput[0]);
+    OutputString.SetAt(2, NumOutput[1]);
+    /*Send the data*/
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendMaxSpeed(short MaxSpeed)
@@ -542,15 +581,15 @@ void CRobotComm::SendMaxSpeed(short MaxSpeed)
 //	function.
 *******************************************************************************/
 {
-	CString OutputString('\000',3);
-/*Set the command character*/
-	OutputString.SetAt(0,SET_MAXSPEED_COMMAND_CHAR);
-	char*NumOutput = LongToBytes(MaxSpeed);
-/*Set M0's speed*/
-	OutputString.SetAt(1,NumOutput[0]);
-	OutputString.SetAt(2,NumOutput[1]);
-/*Send the data*/
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 3);
+    /*Set the command character*/
+    OutputString.SetAt(0, SET_MAXSPEED_COMMAND_CHAR);
+    char*NumOutput = LongToBytes(MaxSpeed);
+    /*Set M0's speed*/
+    OutputString.SetAt(1, NumOutput[0]);
+    OutputString.SetAt(2, NumOutput[1]);
+    /*Send the data*/
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendPositionVelocityDestination(robPOINT Destination, short Velocity)
@@ -568,18 +607,28 @@ void CRobotComm::SendPositionVelocityDestination(robPOINT Destination, short Vel
 //
 *******************************************************************************/
 {
-	CString OutputString('\000',11);
-	OutputString.SetAt(0,SET_POSITIONVELOCITY_DESTINATION_COMMAND_CHAR);
-/*Output the X coordinate*/
-	char* NumOutput = LongToBytes(WorldToRobotUnits(Destination.x));
-	for (char i = 1; i<=4; i++) OutputString.SetAt(i,NumOutput[i-1]);
-/*Output the Y coordinate*/
-	NumOutput = LongToBytes(WorldToRobotUnits(Destination.y));
-	for (i = 5; i<9; i++) OutputString.SetAt(i,NumOutput[i-5]);
-	NumOutput = LongToBytes(Velocity);
-	OutputString.SetAt(9,NumOutput[0]);
-	OutputString.SetAt(10,NumOutput[1]);
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 11);
+    OutputString.SetAt(0, SET_POSITIONVELOCITY_DESTINATION_COMMAND_CHAR);
+    /*Output the X coordinate*/
+    char* NumOutput = LongToBytes(WorldToRobotUnits(Destination.x));
+
+    for (char i = 1; i <= 4; i++)
+    {
+        OutputString.SetAt(i, NumOutput[i - 1]);
+    }
+
+    /*Output the Y coordinate*/
+    NumOutput = LongToBytes(WorldToRobotUnits(Destination.y));
+
+    for (i = 5; i < 9; i++)
+    {
+        OutputString.SetAt(i, NumOutput[i - 5]);
+    }
+
+    NumOutput = LongToBytes(Velocity);
+    OutputString.SetAt(9, NumOutput[0]);
+    OutputString.SetAt(10, NumOutput[1]);
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendStraightVelocity(int Velocity, double Heading)
@@ -597,15 +646,15 @@ void CRobotComm::SendStraightVelocity(int Velocity, double Heading)
 //
 *******************************************************************************/
 {
-	CString OutputString('\000',5);
-	OutputString.SetAt(0,SET_GO_STRAIGHT_VELOCITY);
-	char* NumOutput = LongToBytes(Velocity);
-	OutputString.SetAt(1,NumOutput[0]);
-	OutputString.SetAt(2,NumOutput[1]);
-	NumOutput = LongToBytes(RadianToEncoderHeading(Heading));
-	OutputString.SetAt(3,NumOutput[0]);
-	OutputString.SetAt(4,NumOutput[1]);
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 5);
+    OutputString.SetAt(0, SET_GO_STRAIGHT_VELOCITY);
+    char* NumOutput = LongToBytes(Velocity);
+    OutputString.SetAt(1, NumOutput[0]);
+    OutputString.SetAt(2, NumOutput[1]);
+    NumOutput = LongToBytes(RadianToEncoderHeading(Heading));
+    OutputString.SetAt(3, NumOutput[0]);
+    OutputString.SetAt(4, NumOutput[1]);
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 int CRobotComm::RadianToEncoderHeading(double Heading)
@@ -623,14 +672,21 @@ int CRobotComm::RadianToEncoderHeading(double Heading)
 //
 *******************************************************************************/
 {
-	Heading = BringAngleInRange(Heading);
-/*Transform radian heading into a robot heading*/
-	Heading = Heading * cNHeadings / (2*pi);
-	if (Heading >= cNHeadings) Heading -= cNHeadings;
-	if (Heading >= cNHeadings) {
-		AfxMessageBox("RadianToEncoderHeading:  Heading Out Of Range",MB_OK,0);
-	}
-	return Round(Heading);
+    Heading = BringAngleInRange(Heading);
+    /*Transform radian heading into a robot heading*/
+    Heading = Heading * cNHeadings / (2 * pi);
+
+    if (Heading >= cNHeadings)
+    {
+        Heading -= cNHeadings;
+    }
+
+    if (Heading >= cNHeadings)
+    {
+        AfxMessageBox("RadianToEncoderHeading:  Heading Out Of Range", MB_OK, 0);
+    }
+
+    return Round(Heading);
 }
 
 void CRobotComm::SendObstacleSensitivity(TObstacleSensitivity Sensitive)
@@ -648,13 +704,13 @@ void CRobotComm::SendObstacleSensitivity(TObstacleSensitivity Sensitive)
 //
 *******************************************************************************/
 {
-	CString OutputString('\000',2);
-/*Set the command character*/
-	OutputString.SetAt(0,SET_SENSITIVE_OBSTACLE_DETECTION);
-/*Set the value*/
-	OutputString.SetAt(1,Sensitive);
-/*Send the data*/
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 2);
+    /*Set the command character*/
+    OutputString.SetAt(0, SET_SENSITIVE_OBSTACLE_DETECTION);
+    /*Set the value*/
+    OutputString.SetAt(1, Sensitive);
+    /*Send the data*/
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 CRobotComm::~CRobotComm()
@@ -689,23 +745,23 @@ void CRobotComm::SendTurn(double Heading, short Velocity, short Diameter)
 //
 *******************************************************************************/
 {
-	CString OutputString('\000',7);
-/*Set the command character*/
-	OutputString.SetAt(0,SET_TURN_COMMAND_CHAR);
-/*Set the heading*/
- 	char* NumOutput = LongToBytes(RadianToEncoderHeading(Heading));
-	OutputString.SetAt(1,NumOutput[0]);
-	OutputString.SetAt(2,NumOutput[1]);
-/*Set the velocity*/
-	NumOutput = LongToBytes(Velocity);
-	OutputString.SetAt(3,NumOutput[0]);
-	OutputString.SetAt(4,NumOutput[1]);
-/*Set the diameter*/
-	NumOutput = LongToBytes(WorldToRobotUnits((long)Diameter));
-	OutputString.SetAt(5,NumOutput[0]);
-	OutputString.SetAt(6,NumOutput[1]);
-/*Send the data*/
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 7);
+    /*Set the command character*/
+    OutputString.SetAt(0, SET_TURN_COMMAND_CHAR);
+    /*Set the heading*/
+    char* NumOutput = LongToBytes(RadianToEncoderHeading(Heading));
+    OutputString.SetAt(1, NumOutput[0]);
+    OutputString.SetAt(2, NumOutput[1]);
+    /*Set the velocity*/
+    NumOutput = LongToBytes(Velocity);
+    OutputString.SetAt(3, NumOutput[0]);
+    OutputString.SetAt(4, NumOutput[1]);
+    /*Set the diameter*/
+    NumOutput = LongToBytes(WorldToRobotUnits((long)Diameter));
+    OutputString.SetAt(5, NumOutput[0]);
+    OutputString.SetAt(6, NumOutput[1]);
+    /*Send the data*/
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendMotorControlConstants(char Kp, char Ki, char Kd, char Kb, char KPwm)
@@ -723,17 +779,17 @@ void CRobotComm::SendMotorControlConstants(char Kp, char Ki, char Kd, char Kb, c
 //
 *******************************************************************************/
 {
-	CString OutputString('\000',6);
-/*Set the command character*/
-	OutputString.SetAt(0,SET_MOTION_CONTROL_CONSTANTS_COMMAND_CHAR);
-/*Set the string values*/
-	OutputString.SetAt(1,Kp);
-	OutputString.SetAt(2,Ki);
-	OutputString.SetAt(3,Kd);
-	OutputString.SetAt(4,Kb);
-	OutputString.SetAt(5,KPwm);
-/*Send the data*/
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 6);
+    /*Set the command character*/
+    OutputString.SetAt(0, SET_MOTION_CONTROL_CONSTANTS_COMMAND_CHAR);
+    /*Set the string values*/
+    OutputString.SetAt(1, Kp);
+    OutputString.SetAt(2, Ki);
+    OutputString.SetAt(3, Kd);
+    OutputString.SetAt(4, Kb);
+    OutputString.SetAt(5, KPwm);
+    /*Send the data*/
+    CCOMProtocol::SendSerialData(&OutputString);
 
 }
 
@@ -753,16 +809,16 @@ void CRobotComm::SendHandleLength(short HandleLength)
 //
 *******************************************************************************/
 {
-	CString OutputString('\000',3);
-/*Set the command character*/
-	OutputString.SetAt(0, SET_HANDLE_LENGTH_COMMAND_CHAR);
-/*Set the handle length*/
-	HandleLength = WorldToRobotUnits((long)HandleLength);
- 	char* NumOutput = LongToBytes(HandleLength);
-	OutputString.SetAt(1, NumOutput[0]);
-	OutputString.SetAt(2, NumOutput[1]);
-/*Send the data*/
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 3);
+    /*Set the command character*/
+    OutputString.SetAt(0, SET_HANDLE_LENGTH_COMMAND_CHAR);
+    /*Set the handle length*/
+    HandleLength = WorldToRobotUnits((long)HandleLength);
+    char* NumOutput = LongToBytes(HandleLength);
+    OutputString.SetAt(1, NumOutput[0]);
+    OutputString.SetAt(2, NumOutput[1]);
+    /*Send the data*/
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendFollowPath(short Speed)
@@ -781,15 +837,15 @@ void CRobotComm::SendFollowPath(short Speed)
 //
 *******************************************************************************/
 {
-	CString OutputString('\000',3);
-/*Set the command character*/
-	OutputString.SetAt(0, SET_FOLLOW_PATH_COMMAND_CHAR);
-/*Set Speed*/
- 	char* NumOutput = LongToBytes(Speed);
-	OutputString.SetAt(1, NumOutput[0]);
-	OutputString.SetAt(2, NumOutput[1]);
-/*Send the data*/
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 3);
+    /*Set the command character*/
+    OutputString.SetAt(0, SET_FOLLOW_PATH_COMMAND_CHAR);
+    /*Set Speed*/
+    char* NumOutput = LongToBytes(Speed);
+    OutputString.SetAt(1, NumOutput[0]);
+    OutputString.SetAt(2, NumOutput[1]);
+    /*Send the data*/
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendPathSegment(BOOL PurgePath, robPOINT* Points, unsigned char nPoints)
@@ -811,133 +867,172 @@ void CRobotComm::SendPathSegment(BOOL PurgePath, robPOINT* Points, unsigned char
 //	successive points.  This saves download time.
 *******************************************************************************/
 {
-	CString OutputString('\000',8 + 2*(nPoints-1) + 3);
-	OutputString.SetAt(0,SET_PATH_SEGMENT_COMMAND_CHAR);
-/*Set Purge Path*/
-	OutputString.SetAt(1, PurgePath);
-/*Set the number of points*/
-	OutputString.SetAt(2, nPoints);
-	if (nPoints != 0) {
-	/*Output the X0 coordinate*/
-		char* NumOutput = LongToBytes(WorldToRobotUnits(Points[0].x));
-		for (unsigned char i = 0; i<4; i++) OutputString.SetAt(i+3,NumOutput[i]);
-	/*Output the Y0 coordinate*/
-		NumOutput = LongToBytes(WorldToRobotUnits(Points[0].y));
-		for (i = 0; i<4; i++) OutputString.SetAt(i+7,NumOutput[i]);
-	/*Output the rest of the coordinates*/
-		for (i = 0; i < nPoints - 1; i++) {
-			OutputString.SetAt(2*i+11, WorldToRobotUnits(Points[i+1].x - Points[i].x));
-			OutputString.SetAt(2*i+1+11, WorldToRobotUnits(Points[i+1].y - Points[i].y));
-		}
-	}
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 8 + 2 * (nPoints - 1) + 3);
+    OutputString.SetAt(0, SET_PATH_SEGMENT_COMMAND_CHAR);
+    /*Set Purge Path*/
+    OutputString.SetAt(1, PurgePath);
+    /*Set the number of points*/
+    OutputString.SetAt(2, nPoints);
+
+    if (nPoints != 0)
+    {
+        /*Output the X0 coordinate*/
+        char* NumOutput = LongToBytes(WorldToRobotUnits(Points[0].x));
+
+        for (unsigned char i = 0; i < 4; i++)
+        {
+            OutputString.SetAt(i + 3, NumOutput[i]);
+        }
+
+        /*Output the Y0 coordinate*/
+        NumOutput = LongToBytes(WorldToRobotUnits(Points[0].y));
+
+        for (i = 0; i < 4; i++)
+        {
+            OutputString.SetAt(i + 7, NumOutput[i]);
+        }
+
+        /*Output the rest of the coordinates*/
+        for (i = 0; i < nPoints - 1; i++)
+        {
+            OutputString.SetAt(2 * i + 11, WorldToRobotUnits(Points[i + 1].x - Points[i].x));
+            OutputString.SetAt(2 * i + 1 + 11, WorldToRobotUnits(Points[i + 1].y - Points[i].y));
+        }
+    }
+
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendBuzzerOn(BOOL On)
 {
-	CString OutputString('\000',2);
-/*Set the command character*/
-	OutputString.SetAt(0,SET_BUZZER_ON_COMMAND_CHAR);
-/*Set M0's pwm*/
-	OutputString.SetAt(1,On);
-/*Send the data*/
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 2);
+    /*Set the command character*/
+    OutputString.SetAt(0, SET_BUZZER_ON_COMMAND_CHAR);
+    /*Set M0's pwm*/
+    OutputString.SetAt(1, On);
+    /*Send the data*/
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendBuzzerFrequency(short BuzzerFrequency)
 {
-typedef enum {bf0, bf2000, bf4000, bf6000, bf8000} TBuzzerFrequency;
-	CString OutputString('\000',3);
-/*Set the command character*/
-	OutputString.SetAt(0,SET_BUZZER_FREQUENCY_COMMAND_CHAR);
-/*Set Buzzer Frequency*/
- 	char* NumOutput = LongToBytes(BuzzerFrequency);
-	OutputString.SetAt(1,NumOutput[0]);
-	OutputString.SetAt(2,NumOutput[1]);
-/*Send the data*/
-	CCOMProtocol::SendSerialData(&OutputString);
+    typedef enum {bf0, bf2000, bf4000, bf6000, bf8000} TBuzzerFrequency;
+    CString OutputString('\000', 3);
+    /*Set the command character*/
+    OutputString.SetAt(0, SET_BUZZER_FREQUENCY_COMMAND_CHAR);
+    /*Set Buzzer Frequency*/
+    char* NumOutput = LongToBytes(BuzzerFrequency);
+    OutputString.SetAt(1, NumOutput[0]);
+    OutputString.SetAt(2, NumOutput[1]);
+    /*Send the data*/
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 long CRobotComm::WorldToRobotUnits(long WorldUnit)
 {
-	return (WorldUnit * cRobotEncoderTicksPerInch / cTPI);
+    return (WorldUnit * cRobotEncoderTicksPerInch / cTPI);
 }
 
 double CRobotComm::RobotToWorldUnits(long RobotUnit)
 {
-	return (RobotUnit * cTPI / cRobotEncoderTicksPerInch);
+    return (RobotUnit * cTPI / cRobotEncoderTicksPerInch);
 }
 
 long CRobotComm::WorldToRobotUnits(double WorldUnit)
 {
-	return Round(WorldUnit * cRobotEncoderTicksPerInch / cTPI);
+    return Round(WorldUnit * cRobotEncoderTicksPerInch / cTPI);
 }
 
 void CRobotComm::SendP1(long P1)
 {
-	CString OutputString('\000',5);
-	OutputString.SetAt(0,SET_P1_COMMAND_CHAR);
-/*Output P1*/
-	char* NumOutput = LongToBytes(P1);
-	for (char i = 1; i<=4; i++) OutputString.SetAt(i,NumOutput[i-1]);
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 5);
+    OutputString.SetAt(0, SET_P1_COMMAND_CHAR);
+    /*Output P1*/
+    char* NumOutput = LongToBytes(P1);
+
+    for (char i = 1; i <= 4; i++)
+    {
+        OutputString.SetAt(i, NumOutput[i - 1]);
+    }
+
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendP2(long P2)
 {
-	CString OutputString('\000',5);
-	OutputString.SetAt(0,SET_P2_COMMAND_CHAR);
-/*Output P2*/
-	char* NumOutput = LongToBytes(P2);
-	for (char i = 1; i<=4; i++) OutputString.SetAt(i,NumOutput[i-1]);
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 5);
+    OutputString.SetAt(0, SET_P2_COMMAND_CHAR);
+    /*Output P2*/
+    char* NumOutput = LongToBytes(P2);
+
+    for (char i = 1; i <= 4; i++)
+    {
+        OutputString.SetAt(i, NumOutput[i - 1]);
+    }
+
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendP3(long P3)
 {
-	CString OutputString('\000',5);
-	OutputString.SetAt(0,SET_P3_COMMAND_CHAR);
-/*Output P3*/
-	char* NumOutput = LongToBytes(P3);
-	for (char i = 1; i<=4; i++) OutputString.SetAt(i,NumOutput[i-1]);
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 5);
+    OutputString.SetAt(0, SET_P3_COMMAND_CHAR);
+    /*Output P3*/
+    char* NumOutput = LongToBytes(P3);
+
+    for (char i = 1; i <= 4; i++)
+    {
+        OutputString.SetAt(i, NumOutput[i - 1]);
+    }
+
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendP4(long P4)
 {
-	CString OutputString('\000',5);
-	OutputString.SetAt(0,SET_P4_COMMAND_CHAR);
-/*Output P4*/
-	char* NumOutput = LongToBytes(P4);
-	for (char i = 1; i<=4; i++) OutputString.SetAt(i,NumOutput[i-1]);
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 5);
+    OutputString.SetAt(0, SET_P4_COMMAND_CHAR);
+    /*Output P4*/
+    char* NumOutput = LongToBytes(P4);
+
+    for (char i = 1; i <= 4; i++)
+    {
+        OutputString.SetAt(i, NumOutput[i - 1]);
+    }
+
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendVelocityDirection(int Velocity, double Heading)
 {
-	CString OutputString('\000',5);
-	OutputString.SetAt(0,SET_VELOCITY_DIRECTION_COMMAND_CHAR);
-	char* NumOutput = LongToBytes(Velocity);
-	OutputString.SetAt(1,NumOutput[0]);
-	OutputString.SetAt(2,NumOutput[1]);
-	NumOutput = LongToBytes(RadianToEncoderHeading(Heading));
-	OutputString.SetAt(3,NumOutput[0]);
-	OutputString.SetAt(4,NumOutput[1]);
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 5);
+    OutputString.SetAt(0, SET_VELOCITY_DIRECTION_COMMAND_CHAR);
+    char* NumOutput = LongToBytes(Velocity);
+    OutputString.SetAt(1, NumOutput[0]);
+    OutputString.SetAt(2, NumOutput[1]);
+    NumOutput = LongToBytes(RadianToEncoderHeading(Heading));
+    OutputString.SetAt(3, NumOutput[0]);
+    OutputString.SetAt(4, NumOutput[1]);
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendInformationToTransmit(long mask)
 {
-	CString OutputString('\000',5);
-	OutputString.SetAt(0,SET_INFORMATION_TO_TRANSMIT_COMMAND_CHAR);
-/*Output mask*/
-	char* NumOutput = LongToBytes(mask);
-	for (char i = 1; i<=4; i++) OutputString.SetAt(i,NumOutput[i-1]);
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString('\000', 5);
+    OutputString.SetAt(0, SET_INFORMATION_TO_TRANSMIT_COMMAND_CHAR);
+    /*Output mask*/
+    char* NumOutput = LongToBytes(mask);
+
+    for (char i = 1; i <= 4; i++)
+    {
+        OutputString.SetAt(i, NumOutput[i - 1]);
+    }
+
+    CCOMProtocol::SendSerialData(&OutputString);
 }
 
 void CRobotComm::SendRequestState()
 {
-	CString OutputString = REQUEST_STATE_COMMAND_CHAR;
-	CCOMProtocol::SendSerialData(&OutputString);
+    CString OutputString = REQUEST_STATE_COMMAND_CHAR;
+    CCOMProtocol::SendSerialData(&OutputString);
 }

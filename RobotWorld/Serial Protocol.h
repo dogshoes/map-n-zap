@@ -6,12 +6,13 @@
 #define GSDTimeOutError		2		//Function timed out waiting for a character
 #define GSDCheckSumError	4		//The check sum did not check out
 
-class CCOMProtocol : public CCOMPort {
-public:
-	CString* GetSerialData(unsigned char* Errors);
-	void SendSerialData(CString* SerString);
-protected:
+class CCOMProtocol : public CCOMPort
+{
+    public:
+        CString* GetSerialData(unsigned char* Errors);
+        void SendSerialData(CString* SerString);
+    protected:
 
-private:
-	char GetSerialCharacter(BOOL* TimedOut);
+    private:
+        char GetSerialCharacter(BOOL* TimedOut);
 };

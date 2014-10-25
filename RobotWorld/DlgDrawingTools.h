@@ -12,38 +12,38 @@
 
 class CDlgDrawingTools : public CPropertyPage
 {
-	DECLARE_DYNCREATE(CDlgDrawingTools)
-// Construction
-public:
-	void SetPenTool(short Tool);
-	short GetPenTool(void);
-	void SetPenSize(short Size);
-	short GetPenSize(void);
-	CDlgDrawingTools();   // standard constructor
+        DECLARE_DYNCREATE(CDlgDrawingTools)
+        // Construction
+    public:
+        void SetPenTool(short Tool);
+        short GetPenTool(void);
+        void SetPenSize(short Size);
+        short GetPenSize(void);
+        CDlgDrawingTools();   // standard constructor
 
-// Dialog Data
-	//{{AFX_DATA(CDlgDrawingTools)
-	enum { IDD = IDD_DRAWING_TOOLS };
-	int		m_radPenSize;
-	int		m_radToolType;
-	//}}AFX_DATA
+        // Dialog Data
+        //{{AFX_DATA(CDlgDrawingTools)
+        enum { IDD = IDD_DRAWING_TOOLS };
+        int		m_radPenSize;
+        int		m_radToolType;
+        //}}AFX_DATA
 
 
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CDlgDrawingTools)
-	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
-	//}}AFX_VIRTUAL
+        // Overrides
+        // ClassWizard generated virtual function overrides
+        //{{AFX_VIRTUAL(CDlgDrawingTools)
+    protected:
+        virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
+        //}}AFX_VIRTUAL
 
-// Implementation
-protected:
+        // Implementation
+    protected:
 
-	// Generated message map functions
-	//{{AFX_MSG(CDlgDrawingTools)
-		// NOTE: the ClassWizard will add member functions here
-	//}}AFX_MSG
-	DECLARE_MESSAGE_MAP()
+        // Generated message map functions
+        //{{AFX_MSG(CDlgDrawingTools)
+        // NOTE: the ClassWizard will add member functions here
+        //}}AFX_MSG
+        DECLARE_MESSAGE_MAP()
 };
 
 //{{AFX_INSERT_LOCATION}}
