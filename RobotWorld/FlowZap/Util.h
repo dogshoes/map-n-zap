@@ -1,6 +1,6 @@
 /**********************************************************************
   Map-N-Zap v2.x. Interface to the CYE Personal Robot
-  Copyright (C) 2000, Probotics, Inc. 
+  Copyright (C) 2000, Probotics, Inc.
 
   This program is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License
@@ -11,12 +11,12 @@
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
   General Public License for more details.Furthermore, this source code
-  is distributed without any promise, implied or explicit, of 
+  is distributed without any promise, implied or explicit, of
   support from Probotics, Inc.
 
   You should have received a copy of the GNU General Public License
   along with this program; if not, write to the Free Software
-  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  
+  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
   02111-1307, USA.
 
   Probotics, Inc
@@ -30,17 +30,17 @@
 // Util.h Header File
 
 
-int GetMin (int a, int b);
-int GetMax (int a, int b);
-void Split (CString key, CString linem, CStringList& words);
+int GetMin(int a, int b);
+int GetMax(int a, int b);
+void Split(CString key, CString linem, CStringList& words);
 
-CString DoubleToString (double value, int precision); // precision is the number of spaces after the decimal space
-CString IntToString    (int value);
-CString BoolToString (BOOL value);
+CString DoubleToString(double value, int precision);  // precision is the number of spaces after the decimal space
+CString IntToString(int value);
+CString BoolToString(BOOL value);
 
-BOOL StringToBool (CString string);
+BOOL StringToBool(CString string);
 
-int Power (int num, int power);
+int Power(int num, int power);
 
 int Abs(int num);
 
