@@ -69,12 +69,6 @@ BOOL CFlowChartApp::InitInstance()
     //  of your final executable, you should remove from the following
     //  the specific initialization routines you do not need.
 
-#ifdef _AFXDLL
-    Enable3dControls();			// Call this when using MFC in a shared DLL
-#else
-    Enable3dControlsStatic();	// Call this when linking to MFC statically
-#endif
-
     CFlowChartDlg dlg;
     m_pMainWnd = &dlg;
     int nResponse = dlg.DoModal();
