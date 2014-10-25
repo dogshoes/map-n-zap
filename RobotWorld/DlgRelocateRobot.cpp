@@ -130,7 +130,7 @@ void CDlgRelocateRobot::SetRobotHeading(float Heading)
     m_scrRobotHeading.SetScrollPos((int)HeadingToScrollPos(Heading));
     m_RobotHeading = RadianToDegree(Heading);
     char buffer[cMaxHeadingChars];
-    m_edtRobotHeading = itoa((int)m_RobotHeading, buffer, 10);
+    m_edtRobotHeading = _itoa((int)m_RobotHeading, buffer, 10);
     UpdateHeading((float)m_RobotHeading);
     UpdateData(FALSE);
 }
@@ -237,7 +237,7 @@ void CDlgRelocateRobot::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBa
     m_scrRobotHeading.SetScrollPos(nPos, TRUE);
     char buffer[cMaxHeadingChars];
     m_RobotHeading = ScrollPosToHeading(nPos);
-    m_edtRobotHeading = itoa((int)m_RobotHeading, buffer, 10);
+    m_edtRobotHeading = _itoa((int)m_RobotHeading, buffer, 10);
     UpdateData(FALSE);
     UpdateHeading((float)ScrollPosToHeading(nPos));
 
@@ -389,7 +389,7 @@ BOOL CDlgRelocateRobot::Create(UINT idDialogID, CRobotWorldView* View, double Ro
     m_RobotX = RobotX;
     m_RobotY = RobotY;
     char buffer[cMaxHeadingChars];
-    m_edtRobotHeading = itoa((int)m_RobotHeading, buffer, 10);
+    m_edtRobotHeading = _itoa((int)m_RobotHeading, buffer, 10);
     return TRUE;
 }
 
@@ -416,7 +416,7 @@ int CDlgRelocateRobot::DoModal(CRobotWorldView * View, double RobotX, double Rob
     m_RobotHeading = RadianToDegree(Heading);
     m_InitialDegreeHeading = (unsigned int)m_RobotHeading;
     char buffer[cMaxHeadingChars];
-    m_edtRobotHeading = itoa((int)m_RobotHeading, buffer, 10);
+    m_edtRobotHeading = _itoa((int)m_RobotHeading, buffer, 10);
     return (CDialog::DoModal());
 }
 

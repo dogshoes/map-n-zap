@@ -353,7 +353,7 @@ void CDbrRobotStatus::SetRadioLevel(float RadioLevel)
     if (RadioLevel <= 100.0f)
     {
         char buffer[10];
-        gcvt(RadioLevel, 5, buffer);
+        _gcvt(RadioLevel, 5, buffer);
         wndRadioLevel->SetWindowText(buffer);
     }
     else

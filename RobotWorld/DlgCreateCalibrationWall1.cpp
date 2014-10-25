@@ -420,7 +420,7 @@ void CDlgCreateCalibrationWall1::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* 
     m_scrCornerSize.SetScrollPos(nPos, TRUE);
     char buffer[cMaxCornerSizeChars];
     m_CornerSize = ScrollPosToCornerSize(nPos);
-    m_edtCornerSize = gcvt(m_CornerSize, 2, buffer);
+    m_edtCornerSize = _gcvt(m_CornerSize, 2, buffer);
     UpdateData(FALSE);
 
     CDialog::OnHScroll(nSBCode, nPos, pScrollBar);
@@ -454,7 +454,7 @@ void CDlgCreateCalibrationWall1::SetCornerSize(float CornerSize)
     {
         m_scrCornerSize.SetScrollPos(CornerSizeToScrollPos(m_CornerSize), TRUE);
         char buffer[cMaxCornerSizeChars];
-        m_edtCornerSize = gcvt(m_CornerSize, 2, buffer);
+        m_edtCornerSize = _gcvt(m_CornerSize, 2, buffer);
         UpdateData(FALSE);
     }
 }
@@ -477,7 +477,7 @@ void CDlgCreateCalibrationWall1::OnChangeEdtCornerSize()
     {
         m_CornerSize = cMinCornerSize;
         char buffer[cMaxCornerSizeChars];
-        m_edtCornerSize = gcvt(m_CornerSize, 2, buffer);
+        m_edtCornerSize = _gcvt(m_CornerSize, 2, buffer);
         UpdateData(FALSE);
     }
 
@@ -485,7 +485,7 @@ void CDlgCreateCalibrationWall1::OnChangeEdtCornerSize()
     {
         m_CornerSize = cMaxCornerSize;
         char buffer[cMaxCornerSizeChars];
-        m_edtCornerSize = gcvt(m_CornerSize, 2, buffer);
+        m_edtCornerSize = _gcvt(m_CornerSize, 2, buffer);
         UpdateData(FALSE);
     }
 

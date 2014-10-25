@@ -111,7 +111,7 @@ void CDlgEditCalibrationZone::OnChangeEdtCornerSize()
     {
         m_CornerSize = cMinCornerSize;
         char buffer[cMaxCornerSizeChars];
-        m_edtCornerSize = gcvt(m_CornerSize, 2, buffer);
+        m_edtCornerSize = _gcvt(m_CornerSize, 2, buffer);
         UpdateData(FALSE);
     }
 
@@ -119,7 +119,7 @@ void CDlgEditCalibrationZone::OnChangeEdtCornerSize()
     {
         m_CornerSize = cMaxCornerSize;
         char buffer[cMaxCornerSizeChars];
-        m_edtCornerSize = gcvt(m_CornerSize, 2, buffer);
+        m_edtCornerSize = _gcvt(m_CornerSize, 2, buffer);
         UpdateData(FALSE);
     }
 
@@ -150,7 +150,7 @@ void CDlgEditCalibrationZone::SetCornerSize(float CornerSize)
     {
         m_scrCornerSize.SetScrollPos(CornerSizeToScrollPos(m_CornerSize), TRUE);
         char buffer[cMaxCornerSizeChars];
-        m_edtCornerSize = gcvt(m_CornerSize, 2, buffer);
+        m_edtCornerSize = _gcvt(m_CornerSize, 2, buffer);
         UpdateData(FALSE);
     }
 }
@@ -255,7 +255,7 @@ void CDlgEditCalibrationZone::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pSc
     m_scrCornerSize.SetScrollPos(nPos, TRUE);
     char buffer[cMaxCornerSizeChars];
     m_CornerSize = ScrollPosToCornerSize(nPos);
-    m_edtCornerSize = gcvt(m_CornerSize, 2, buffer);
+    m_edtCornerSize = _gcvt(m_CornerSize, 2, buffer);
     UpdateData(FALSE);
 
     CDialog::OnHScroll(nSBCode, nPos, pScrollBar);

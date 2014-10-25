@@ -3198,13 +3198,13 @@ HRESULT WINAPI EnumModesCallback(LPDDSURFACEDESC lpDDSurfaceDesc, LPVOID lpConte
     {
         CString NewString(' ', 20);
         char tempstr[10];
-        itoa(lpDDSurfaceDesc->dwWidth, tempstr, 10);
+        _itoa(lpDDSurfaceDesc->dwWidth, tempstr, 10);
         NewString = tempstr;
         NewString += " X ";
-        itoa(lpDDSurfaceDesc->dwHeight, tempstr, 10);
+        _itoa(lpDDSurfaceDesc->dwHeight, tempstr, 10);
         NewString += tempstr;
         NewString += " ";
-        itoa(lpDDSurfaceDesc->ddpfPixelFormat.dwRGBBitCount, tempstr, 10);
+        _itoa(lpDDSurfaceDesc->ddpfPixelFormat.dwRGBBitCount, tempstr, 10);
         NewString += tempstr;
         NewString += "-bit";
         Context->DisplayModes->AddHead(NewString);

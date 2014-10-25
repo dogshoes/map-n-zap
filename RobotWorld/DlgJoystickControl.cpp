@@ -241,7 +241,7 @@ void CDlgJoystickControl::SetOrientation(double Orientation)
 {
     Orientation = Orientation / (2 * pi) * 360;
     char buffer[cMaxOrientationChars];
-    m_edtJoystickOrientation = itoa((int)Orientation, buffer, 10);
+    m_edtJoystickOrientation = _itoa((int)Orientation, buffer, 10);
 
     if (m_hWnd != NULL)
     {
@@ -364,7 +364,7 @@ void CDlgJoystickControl::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScroll
 
         m_scrJoystickOrientation.SetScrollPos(nPos, TRUE);
         char buffer[cMaxOrientationChars];
-        m_edtJoystickOrientation = itoa((int)ScrollPosToHeading(nPos), buffer, 10);
+        m_edtJoystickOrientation = _itoa((int)ScrollPosToHeading(nPos), buffer, 10);
         //		m_edtJoystickOrientation = ScrollPosToHeading(nPos);
         UpdateData(FALSE);
         //		UpdateOrientation(m_edtJoystickOrientation);

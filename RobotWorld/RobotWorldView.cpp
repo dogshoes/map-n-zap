@@ -1445,7 +1445,7 @@ void CRobotWorldView::ObstacleHandler(short RobotNumber, short M0, short M1)
 
     default:
         char string[5];
-        gcvt(temp, 4, string);
+        _gcvt(temp, 4, string);
         m_DlgMotorControls.m_edtM0Obstacle = string;
         break;
     }
@@ -1480,7 +1480,7 @@ void CRobotWorldView::ObstacleHandler(short RobotNumber, short M0, short M1)
 
     default:
         char string[5];
-        gcvt(temp, 4, string);
+        _gcvt(temp, 4, string);
         m_DlgMotorControls.m_edtM1Obstacle = string;
         break;
     }
@@ -3837,20 +3837,20 @@ LRESULT CRobotWorldView::OnRobotFindPathFinished(WPARAM, LPARAM outputparams)
         double qualities[5];
         FoundPath->GetQualities(qualities);
         char buffer[10];
-        m_DlgMotorControls.m_edtMinFound = gcvt(qualities[MinFound], 7, buffer);
-        m_DlgMotorControls.m_edtAvgFound = gcvt(qualities[AveFound], 7, buffer);
-        m_DlgMotorControls.m_edtStartDist = gcvt(qualities[StartDist], 7, buffer);
-        m_DlgMotorControls.m_edtEndDist = gcvt(qualities[EndDist], 7, buffer);
-        m_DlgMotorControls.m_edtFreeDist = gcvt(qualities[FreeDist], 7, buffer);
+        m_DlgMotorControls.m_edtMinFound = _gcvt(qualities[MinFound], 7, buffer);
+        m_DlgMotorControls.m_edtAvgFound = _gcvt(qualities[AveFound], 7, buffer);
+        m_DlgMotorControls.m_edtStartDist = _gcvt(qualities[StartDist], 7, buffer);
+        m_DlgMotorControls.m_edtEndDist = _gcvt(qualities[EndDist], 7, buffer);
+        m_DlgMotorControls.m_edtFreeDist = _gcvt(qualities[FreeDist], 7, buffer);
 
         robPOINT P1;
         FoundPath->GetPoint(0, P1.x, P1.y);
-        m_DlgMotorControls.m_edtStartX = gcvt(P1.x, 7, buffer);
-        m_DlgMotorControls.m_edtStartY = gcvt(P1.y, 7, buffer);
+        m_DlgMotorControls.m_edtStartX = _gcvt(P1.x, 7, buffer);
+        m_DlgMotorControls.m_edtStartY = _gcvt(P1.y, 7, buffer);
 
         FoundPath->GetPoint(FoundPath->GetNumberOfPoints() - 1, P1.x, P1.y);
-        m_DlgMotorControls.m_edtEndX = gcvt(P1.x, 7, buffer);
-        m_DlgMotorControls.m_edtEndY = gcvt(P1.y, 7, buffer);
+        m_DlgMotorControls.m_edtEndX = _gcvt(P1.x, 7, buffer);
+        m_DlgMotorControls.m_edtEndY = _gcvt(P1.y, 7, buffer);
 
         m_DlgMotorControls.UpdateData(FALSE);
         //		delete FoundPath;

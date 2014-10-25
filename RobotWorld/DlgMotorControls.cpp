@@ -477,7 +477,7 @@ void CDlgMotorControls::OnButton1()
     GetRobotWorldView()->GetActiveRobot()->m_Position.y = -363;
     static int i = 4;
     char buffer[10];
-    m_edtVelocityDirectionHeading = itoa(i, buffer, 10);
+    m_edtVelocityDirectionHeading = _itoa(i, buffer, 10);
     UpdateData(FALSE);
     GetRobotWorldView()->GetActiveRobot()->GetParent()->RedrawWindow(&UpdateRects[i], NULL, RDW_INVALIDATE | RDW_NOERASE);
 

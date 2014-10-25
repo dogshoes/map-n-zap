@@ -250,13 +250,13 @@ void CFinishLine::SetCaption(unsigned char Minutes, float Seconds)
     }
 
     int temp = (int)Seconds;
-    itoa(temp, buff, 10);
+    _itoa(temp, buff, 10);
     Caption = buff;
     Caption += ".";
 
     Seconds = Seconds - temp;
     temp = (int)Seconds * 10;
-    itoa(temp, buff, 10);
+    _itoa(temp, buff, 10);
     Caption += buff;
     SetCaption(Caption);
 }

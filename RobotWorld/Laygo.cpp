@@ -530,7 +530,7 @@ void CLaygo::SaveState()
     }
 
     char tempString[10];
-    itoa(GetCurrentState(), tempString, 10);
+    _itoa(GetCurrentState(), tempString, 10);
     App->WriteProfileString(LAYGO_SECTION, LAYGO_STEP, tempString);
 }
 
