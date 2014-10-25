@@ -1,0 +1,13 @@
+--mode=c
+--style=ansi
+--indent=spaces=4
+--indent-classes
+--indent-modifiers
+--indent-col1-comments
+--break-blocks
+--pad-oper
+--unpad-paren
+--pad-header 
+--add-brackets
+--suffix=none
+--verbose

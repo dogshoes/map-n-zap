@@ -1,6 +1,6 @@
 /**********************************************************************
   Map-N-Zap v2.x. Interface to the CYE Personal Robot
-  Copyright (C) 2000, Probotics, Inc. 
+  Copyright (C) 2000, Probotics, Inc.
 
   This program is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License
@@ -11,12 +11,12 @@
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
   General Public License for more details.Furthermore, this source code
-  is distributed without any promise, implied or explicit, of 
+  is distributed without any promise, implied or explicit, of
   support from Probotics, Inc.
 
   You should have received a copy of the GNU General Public License
   along with this program; if not, write to the Free Software
-  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  
+  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
   02111-1307, USA.
 
   Probotics, Inc
@@ -28,7 +28,7 @@
 // RRRCom.h : main header file for RRRCOM.DLL
 
 #if !defined( __AFXCTL_H__ )
-	#error include 'afxctl.h' before including this file
+#error include 'afxctl.h' before including this file
 #endif
 
 #include "resource.h"       // main symbols
@@ -38,9 +38,9 @@
 
 class CRRRComApp : public COleControlModule
 {
-public:
-	BOOL InitInstance();
-	int ExitInstance();
+    public:
+        BOOL InitInstance();
+        int ExitInstance();
 };
 
 extern const GUID CDECL _tlid;

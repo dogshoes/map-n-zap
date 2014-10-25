@@ -1,6 +1,6 @@
 /**********************************************************************
   Map-N-Zap v2.x. Interface to the CYE Personal Robot
-  Copyright (C) 2000, Probotics, Inc. 
+  Copyright (C) 2000, Probotics, Inc.
 
   This program is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License
@@ -11,12 +11,12 @@
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
   General Public License for more details.Furthermore, this source code
-  is distributed without any promise, implied or explicit, of 
+  is distributed without any promise, implied or explicit, of
   support from Probotics, Inc.
 
   You should have received a copy of the GNU General Public License
   along with this program; if not, write to the Free Software
-  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  
+  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
   02111-1307, USA.
 
   Probotics, Inc
@@ -41,37 +41,37 @@
 
 class CFlowChartDlg : public CDialog
 {
-// Construction
-public:
-	CFlowZap m_FlowZap;
-	CFlowChartDlg(CWnd* pParent = NULL);	// standard constructor
+        // Construction
+    public:
+        CFlowZap m_FlowZap;
+        CFlowChartDlg(CWnd* pParent = NULL);	// standard constructor
 
-// Dialog Data
-	//{{AFX_DATA(CFlowChartDlg)
-	enum { IDD = IDD_FLOWCHART_DIALOG };
-		// NOTE: the ClassWizard will add data members here
-	//}}AFX_DATA
+        // Dialog Data
+        //{{AFX_DATA(CFlowChartDlg)
+        enum { IDD = IDD_FLOWCHART_DIALOG };
+        // NOTE: the ClassWizard will add data members here
+        //}}AFX_DATA
 
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CFlowChartDlg)
-	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV support
-	virtual LRESULT DefWindowProc(UINT message, WPARAM wParam, LPARAM lParam);
-	//}}AFX_VIRTUAL
+        // ClassWizard generated virtual function overrides
+        //{{AFX_VIRTUAL(CFlowChartDlg)
+    protected:
+        virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV support
+        virtual LRESULT DefWindowProc(UINT message, WPARAM wParam, LPARAM lParam);
+        //}}AFX_VIRTUAL
 
-// Implementation
-protected:
-	HICON m_hIcon;
+        // Implementation
+    protected:
+        HICON m_hIcon;
 
-	// Generated message map functions
-	//{{AFX_MSG(CFlowChartDlg)
-	virtual BOOL OnInitDialog();
-	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
-	afx_msg void OnPaint();
-	afx_msg HCURSOR OnQueryDragIcon();
-	afx_msg void OnOpenflowzap();
-	//}}AFX_MSG
-	DECLARE_MESSAGE_MAP()
+        // Generated message map functions
+        //{{AFX_MSG(CFlowChartDlg)
+        virtual BOOL OnInitDialog();
+        afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
+        afx_msg void OnPaint();
+        afx_msg HCURSOR OnQueryDragIcon();
+        afx_msg void OnOpenflowzap();
+        //}}AFX_MSG
+        DECLARE_MESSAGE_MAP()
 };
 
 //{{AFX_INSERT_LOCATION}}

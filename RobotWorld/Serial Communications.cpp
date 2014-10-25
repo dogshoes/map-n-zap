@@ -36,7 +36,7 @@ void CCOMPort::SendSerialString(CString* String)
 //		This function sends a string through the MHComm communications control.
 //Method:
 //		If the string is of 0 length, the function just returns.  Otherwise, it
-//	goes through the string and breaks it into pieces that do not contain 
+//	goes through the string and breaks it into pieces that do not contain
 //	embedded NULL characters.
 //		The SetOutput member function of the MHComm control is unable to output
 //	NULL characters.  It is expecting a NULL terminated string as an argument
@@ -53,26 +53,40 @@ void CCOMPort::SendSerialString(CString* String)
 //	are obtained using the Right member function of CString.
 *******************************************************************************/
 {
-/*make sure there's a string to output*/
-	if (String == NULL) return;
-	if (String->GetLength() == 0) return;
-/*output the first string of characters not including a NULL*/
-	CString tempString = String->SpanExcluding("\0");
-	if (tempString.GetLength() != 0)	{
-		SetOutput(tempString);
-	}
-/*if there was an embedded null character then the length of tempStr != nChars*/
-	int temp = String->GetLength() - tempString.GetLength();
-	if ( temp != 0 ) {
-	/*Output a NULL char using WriteFile Win32API function*/
-		DWORD temp1;
-		OVERLAPPED tOverlapped;
-		WriteFile((void*)(GetCommID()),"\0",1,&temp1,&tOverlapped);
-	/*Recurse on the remaining characters*/
-		tempString = String->Right(temp-1);
-		SendSerialString(&tempString);
-	}
-	return;
+    /*make sure there's a string to output*/
+    if (String == NULL)
+    {
+        return;
+    }
+
+    if (String->GetLength() == 0)
+    {
+        return;
+    }
+
+    /*output the first string of characters not including a NULL*/
+    CString tempString = String->SpanExcluding("\0");
+
+    if (tempString.GetLength() != 0)
+    {
+        SetOutput(tempString);
+    }
+
+    /*if there was an embedded null character then the length of tempStr != nChars*/
+    int temp = String->GetLength() - tempString.GetLength();
+
+    if (temp != 0)
+    {
+        /*Output a NULL char using WriteFile Win32API function*/
+        DWORD temp1;
+        OVERLAPPED tOverlapped;
+        WriteFile((void*)(GetCommID()), "\0", 1, &temp1, &tOverlapped);
+        /*Recurse on the remaining characters*/
+        tempString = String->Right(temp - 1);
+        SendSerialString(&tempString);
+    }
+
+    return;
 }
 
 char CCOMPort::GetSerialChar()
@@ -87,7 +101,7 @@ char CCOMPort::GetSerialChar()
 //	character was in the buffer.
 ********************************************************************************
 //Description:
-//	This function gets a single character from the serial port's input buffer.	
+//	This function gets a single character from the serial port's input buffer.
 //***NOTE!!! InputLen needs to be set to 1 for this function to work properly!****
 //Method:
 //		The GetInput member function of MHComm does not handle NULL characters
@@ -102,19 +116,28 @@ char CCOMPort::GetSerialChar()
 *******************************************************************************/
 {
 #ifdef _DEBUG
-	if (GetInputLen() != 1) {
-		AfxMessageBox("MhComm InputLen != 1.  Fix This.",MB_OK,0);
-	}
+
+    if (GetInputLen() != 1)
+    {
+        AfxMessageBox("MhComm InputLen != 1.  Fix This.", MB_OK, 0);
+    }
+
 #endif
 
 
-	if (GetInBufferCount() > 0) {
-		CString tString = GetInput();
-		if (tString.GetLength()<1) {
-			return NULL;
-		} else {
-			return tString[0];
-		}
-	}
-	return NULL;
+    if (GetInBufferCount() > 0)
+    {
+        CString tString = GetInput();
+
+        if (tString.GetLength() < 1)
+        {
+            return NULL;
+        }
+        else
+        {
+            return tString[0];
+        }
+    }
+
+    return NULL;
 }

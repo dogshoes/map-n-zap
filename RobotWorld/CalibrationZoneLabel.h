@@ -17,19 +17,19 @@ class CCalibrationZone;
 class CLabelList;
 class Path;
 
-class CCalibrationZoneLabel : public CLabel  
+class CCalibrationZoneLabel : public CLabel
 {
-public:
-	TTaskResult SpecialFunction(CRobot* Robot);
-	robPOINT GetDestination(void);
-	void Serialize(CArchive& archive);
-	CCalibrationZoneLabel(CString Caption, robPOINT WorldPoint, CView* pParentWnd, CLabelList* LabelList, CCalibrationZone* CalZone);
-	CCalibrationZoneLabel();
-	virtual ~CCalibrationZoneLabel();
+    public:
+        TTaskResult SpecialFunction(CRobot* Robot);
+        robPOINT GetDestination(void);
+        void Serialize(CArchive& archive);
+        CCalibrationZoneLabel(CString Caption, robPOINT WorldPoint, CView* pParentWnd, CLabelList* LabelList, CCalibrationZone* CalZone);
+        CCalibrationZoneLabel();
+        virtual ~CCalibrationZoneLabel();
 
-private:
-	DECLARE_SERIAL(CCalibrationZoneLabel)
-	CCalibrationZone* m_CalibrationZone;
+    private:
+        DECLARE_SERIAL(CCalibrationZoneLabel)
+        CCalibrationZone* m_CalibrationZone;
 };
 
 #endif // !defined(AFX_CALIBRATIONZONELABEL_H__0D769B62_8E5B_11D1_B231_0040F6B87672__INCLUDED_)
