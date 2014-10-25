@@ -1,6 +1,6 @@
 /**********************************************************************
   Map-N-Zap v2.x. Interface to the CYE Personal Robot
-  Copyright (C) 2000, Probotics, Inc. 
+  Copyright (C) 2000, Probotics, Inc.
 
   This program is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License
@@ -11,12 +11,12 @@
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
   General Public License for more details.Furthermore, this source code
-  is distributed without any promise, implied or explicit, of 
+  is distributed without any promise, implied or explicit, of
   support from Probotics, Inc.
 
   You should have received a copy of the GNU General Public License
   along with this program; if not, write to the Free Software
-  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  
+  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
   02111-1307, USA.
 
   Probotics, Inc
@@ -31,48 +31,48 @@
 //
 // Abstract:   Dispatch ID definitions file.
 //
-// Author:     J.C.H	
+// Author:     J.C.H
 //
 // Revisions:
 //    $History: RRRDispID.h $
-// 
+//
 // *****************  Version 11  *****************
 // User: Harnden      Date: 10/25/99   Time: 10:55p
 // Updated in $/RRR/RRRCom
 // Added MicrophoneVolume event. Implemented SetRobotAddress. Removed all
 // references to RobotAdress setting in CyeSrv.ini file.
-// 
+//
 // *****************  Version 10  *****************
 // User: Harnden      Date: 10/12/99   Time: 12:25a
 // Updated in $/RRR/RRRCom
 // Added multi robot support.
-// 
+//
 // *****************  Version 9  *****************
 // User: Harnden      Date: 3/07/99    Time: 12:14p
 // Updated in $/RRR/RRRCom
 // Added all functionality in Stephan's document.
-// 
+//
 // *****************  Version 8  *****************
 // User: Harnden      Date: 3/06/99    Time: 11:58a
 // Updated in $/RRR/RRRCom
 // Last file set sent to Henry.
-// 
+//
 // *****************  Version 7  *****************
 // User: Harnden      Date: 2/14/99    Time: 9:53p
 // Updated in $/RRR/RRRCom
 // Updated to VC 6.0 and renamed all existing methods to prepare for
 // release.
-// 
+//
 // *****************  Version 6  *****************
 // User: Harnden      Date: 11/16/98   Time: 12:42a
 // Updated in $/RRR/RRRCom
 // Added dynamic serial port change logic.
-// 
+//
 // *****************  Version 5  *****************
 // User: Harnden      Date: 9/09/98    Time: 7:13a
 // Updated in $/RRR/RRRCom
 // Added RetryLimit property.
-// 
+//
 // *****************  Version 4  *****************
 // User: Harnden      Date: 8/03/98    Time: 10:58p
 // Updated in $/RRR/RRRCom
@@ -80,17 +80,17 @@
 // PowerDown command. Added send and receive of raw data. Added
 // CommStateChange event. Purge outgoing message queue when communications
 // link is lost.
-// 
+//
 // *****************  Version 3  *****************
 // User: Harnden      Date: 6/22/98    Time: 9:11p
 // Updated in $/RRR/RRRCom
 // Added three new messages and one event.
-// 
+//
 // *****************  Version 2  *****************
 // User: Harnden      Date: 5/26/98    Time: 10:51p
 // Updated in $/RRR/RRRCom
 // First radio interface release sent to Cycle Time Corp.
-// 
+//
 // *****************  Version 1  *****************
 // User: Harnden      Date: 5/25/98    Time: 3:54p
 // Created in $/RRR/RRRCom

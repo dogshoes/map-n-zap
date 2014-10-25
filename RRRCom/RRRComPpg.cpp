@@ -1,6 +1,6 @@
 /**********************************************************************
   Map-N-Zap v2.x. Interface to the CYE Personal Robot
-  Copyright (C) 2000, Probotics, Inc. 
+  Copyright (C) 2000, Probotics, Inc.
 
   This program is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License
@@ -11,12 +11,12 @@
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
   General Public License for more details.Furthermore, this source code
-  is distributed without any promise, implied or explicit, of 
+  is distributed without any promise, implied or explicit, of
   support from Probotics, Inc.
 
   You should have received a copy of the GNU General Public License
   along with this program; if not, write to the Free Software
-  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  
+  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
   02111-1307, USA.
 
   Probotics, Inc
@@ -38,10 +38,10 @@ IMPLEMENT_DYNCREATE(CRRRComPropPage, COlePropertyPage)
 // Message map
 
 BEGIN_MESSAGE_MAP(CRRRComPropPage, COlePropertyPage)
-	//{{AFX_MSG_MAP(CRRRComPropPage)
-	// NOTE - ClassWizard will add and remove message map entries
-	//    DO NOT EDIT what you see in these blocks of generated code !
-	//}}AFX_MSG_MAP
+    //{{AFX_MSG_MAP(CRRRComPropPage)
+    // NOTE - ClassWizard will add and remove message map entries
+    //    DO NOT EDIT what you see in these blocks of generated code !
+    //}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 
@@ -49,7 +49,7 @@ END_MESSAGE_MAP()
 // Initialize class factory and guid
 
 IMPLEMENT_OLECREATE_EX(CRRRComPropPage, "RRRCOM.RRRComPropPage.1",
-	0x1bb9c514, 0x657f, 0x11d0, 0x84, 0x65, 0xca, 0x28, 0x1d, 0, 0, 0)
+                       0x1bb9c514, 0x657f, 0x11d0, 0x84, 0x65, 0xca, 0x28, 0x1d, 0, 0, 0)
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -58,11 +58,13 @@ IMPLEMENT_OLECREATE_EX(CRRRComPropPage, "RRRCOM.RRRComPropPage.1",
 
 BOOL CRRRComPropPage::CRRRComPropPageFactory::UpdateRegistry(BOOL bRegister)
 {
-	if (bRegister)
-		return AfxOleRegisterPropertyPageClass(AfxGetInstanceHandle(),
-			m_clsid, IDS_RRRCOM_PPG);
-	else
-		return AfxOleUnregisterClass(m_clsid, NULL);
+    if (bRegister)
+        return AfxOleRegisterPropertyPageClass(AfxGetInstanceHandle(),
+                                               m_clsid, IDS_RRRCOM_PPG);
+    else
+    {
+        return AfxOleUnregisterClass(m_clsid, NULL);
+    }
 }
 
 
@@ -70,12 +72,12 @@ BOOL CRRRComPropPage::CRRRComPropPageFactory::UpdateRegistry(BOOL bRegister)
 // CRRRComPropPage::CRRRComPropPage - Constructor
 
 CRRRComPropPage::CRRRComPropPage() :
-	COlePropertyPage(IDD, IDS_RRRCOM_PPG_CAPTION)
+    COlePropertyPage(IDD, IDS_RRRCOM_PPG_CAPTION)
 {
-	//{{AFX_DATA_INIT(CRRRComPropPage)
-	// NOTE: ClassWizard will add member initialization here
-	//    DO NOT EDIT what you see in these blocks of generated code !
-	//}}AFX_DATA_INIT
+    //{{AFX_DATA_INIT(CRRRComPropPage)
+    // NOTE: ClassWizard will add member initialization here
+    //    DO NOT EDIT what you see in these blocks of generated code !
+    //}}AFX_DATA_INIT
 }
 
 
@@ -84,11 +86,11 @@ CRRRComPropPage::CRRRComPropPage() :
 
 void CRRRComPropPage::DoDataExchange(CDataExchange* pDX)
 {
-	//{{AFX_DATA_MAP(CRRRComPropPage)
-	// NOTE: ClassWizard will add DDP, DDX, and DDV calls here
-	//    DO NOT EDIT what you see in these blocks of generated code !
-	//}}AFX_DATA_MAP
-	DDP_PostProcessing(pDX);
+    //{{AFX_DATA_MAP(CRRRComPropPage)
+    // NOTE: ClassWizard will add DDP, DDX, and DDV calls here
+    //    DO NOT EDIT what you see in these blocks of generated code !
+    //}}AFX_DATA_MAP
+    DDP_PostProcessing(pDX);
 }
 
 

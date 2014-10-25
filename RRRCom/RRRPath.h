@@ -1,6 +1,6 @@
 /**********************************************************************
   Map-N-Zap v2.x. Interface to the CYE Personal Robot
-  Copyright (C) 2000, Probotics, Inc. 
+  Copyright (C) 2000, Probotics, Inc.
 
   This program is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License
@@ -11,12 +11,12 @@
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
   General Public License for more details.Furthermore, this source code
-  is distributed without any promise, implied or explicit, of 
+  is distributed without any promise, implied or explicit, of
   support from Probotics, Inc.
 
   You should have received a copy of the GNU General Public License
   along with this program; if not, write to the Free Software
-  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  
+  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
   02111-1307, USA.
 
   Probotics, Inc
@@ -35,17 +35,17 @@
 //
 // Revisions:
 //    $History: RRRPath.h $
-// 
+//
 // *****************  Version 3  *****************
 // User: Harnden      Date: 5/26/98    Time: 10:51p
 // Updated in $/RRR/RRRCom
 // First radio interface release sent to Cycle Time Corp.
-// 
+//
 // *****************  Version 2  *****************
 // User: Harnden      Date: 1/03/98    Time: 5:58p
 // Updated in $/RRRCom
 // Completion of all ActiveX method interfaces for RobotWorld.
-// 
+//
 // *****************  Version 1  *****************
 // User: Harnden      Date: 12/29/97   Time: 6:24p
 // Created in $/RRRCom
@@ -67,52 +67,52 @@
 
 class RRRPath : public CCmdTarget
 {
-	DECLARE_DYNCREATE(RRRPath)
+        DECLARE_DYNCREATE(RRRPath)
 
-	RRRPath();           // protected constructor used by dynamic creation
+        RRRPath();           // protected constructor used by dynamic creation
 
-// Attributes
-public:
+        // Attributes
+    public:
 
-// Operations
-public:
+        // Operations
+    public:
 
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(RRRPath)
-	public:
-	virtual void OnFinalRelease();
-	//}}AFX_VIRTUAL
+        // Overrides
+        // ClassWizard generated virtual function overrides
+        //{{AFX_VIRTUAL(RRRPath)
+    public:
+        virtual void OnFinalRelease();
+        //}}AFX_VIRTUAL
 
-// Implementation
-protected:
-	virtual ~RRRPath();
+        // Implementation
+    protected:
+        virtual ~RRRPath();
 
-   CArray<double, double> m_x;
-   CArray<double, double> m_y;
-   short m_NumPoints;
+        CArray<double, double> m_x;
+        CArray<double, double> m_y;
+        short m_NumPoints;
 
-   BOOL ValidIndex(short Index);
+        BOOL ValidIndex(short Index);
 
-	// Generated message map functions
-	//{{AFX_MSG(RRRPath)
-		// NOTE - the ClassWizard will add and remove member functions here.
-	//}}AFX_MSG
+        // Generated message map functions
+        //{{AFX_MSG(RRRPath)
+        // NOTE - the ClassWizard will add and remove member functions here.
+        //}}AFX_MSG
 
-	DECLARE_MESSAGE_MAP()
-	DECLARE_OLECREATE(RRRPath)
+        DECLARE_MESSAGE_MAP()
+        DECLARE_OLECREATE(RRRPath)
 
-	// Generated OLE dispatch map functions
-	//{{AFX_DISPATCH(RRRPath)
-	//}}AFX_DISPATCH
-	afx_msg short GetNumPoints();
-	afx_msg void SetNumPoints(short nNewValue);
-	afx_msg double GetX(short Index);
-	afx_msg void SetX(short Index, double newValue);
-	afx_msg double GetY(short Index);
-	afx_msg void SetY(short Index, double newValue);
-	DECLARE_DISPATCH_MAP()
-	DECLARE_INTERFACE_MAP()
+        // Generated OLE dispatch map functions
+        //{{AFX_DISPATCH(RRRPath)
+        //}}AFX_DISPATCH
+        afx_msg short GetNumPoints();
+        afx_msg void SetNumPoints(short nNewValue);
+        afx_msg double GetX(short Index);
+        afx_msg void SetX(short Index, double newValue);
+        afx_msg double GetY(short Index);
+        afx_msg void SetY(short Index, double newValue);
+        DECLARE_DISPATCH_MAP()
+        DECLARE_INTERFACE_MAP()
 };
 
 /////////////////////////////////////////////////////////////////////////////
