@@ -485,28 +485,6 @@
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="RRRSrv.rc"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					>
-					<Tool
-						Name="VCResourceCompilerTool"
-						PreprocessorDefinitions=""
-						AdditionalIncludeDirectories="$(OUTDIR)"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug|Win32"
-					>
-					<Tool
-						Name="VCResourceCompilerTool"
-						PreprocessorDefinitions=""
-						AdditionalIncludeDirectories="$(OUTDIR)"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
 				RelativePath="RRRSrvCom.cpp"
 				>
 				<FileConfiguration
@@ -715,6 +693,28 @@
 			<File
 				RelativePath="res\RRRSrv.ico"
 				>
+			</File>
+			<File
+				RelativePath="RRRSrv.rc"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCResourceCompilerTool"
+						PreprocessorDefinitions=""
+						AdditionalIncludeDirectories="$(OUTDIR)"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCResourceCompilerTool"
+						PreprocessorDefinitions=""
+						AdditionalIncludeDirectories="$(OUTDIR)"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="res\RRRSrv.rc2"

@@ -84,7 +84,6 @@
 
 #include "stdafx.h"
 #include "RRRSrv.h"
-
 #include "MainFrm.h"
 #include "ChildFrm.h"
 #include "RRRSrvDoc.h"
@@ -123,8 +122,7 @@ CRRRSrvApp theApp;
 // You may change it if you prefer to choose a specific identifier.
 
 // {F300B090-6343-11D0-8461-707D42000000}
-static const CLSID clsid =
-{ 0xf300b090, 0x6343, 0x11d0, { 0x84, 0x61, 0x70, 0x7d, 0x42, 0x0, 0x0, 0x0 } };
+static const CLSID clsid = { 0xf300b090, 0x6343, 0x11d0, { 0x84, 0x61, 0x70, 0x7d, 0x42, 0x0, 0x0, 0x0 } };
 
 /////////////////////////////////////////////////////////////////////////////
 // CRRRSrvApp initialization

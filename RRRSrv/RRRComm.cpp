@@ -136,7 +136,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"
-
 #include "RRRSrv.h"
 #include "RRRComm.h"
 #include "RRRConst.h"
@@ -1591,6 +1590,3 @@ UINT RRRCom::MsgTimerThread()
     SetEvent(m_hMsgThreadDead);            // set the thread dead event
     return 0;
 }
-
-
-

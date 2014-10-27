@@ -165,8 +165,7 @@ BOOL CTrayIcon::SetIcon(HICON hicon, LPCSTR lpTip)
 //
 LRESULT CTrayIcon::OnTrayNotification(WPARAM wID, LPARAM lEvent)
 {
-    if (wID != m_nid.uID ||
-            (lEvent != WM_RBUTTONUP && lEvent != WM_LBUTTONDBLCLK))
+    if (wID != m_nid.uID || (lEvent != WM_RBUTTONUP && lEvent != WM_LBUTTONDBLCLK))
     {
         return 0;
     }
@@ -202,9 +201,7 @@ LRESULT CTrayIcon::OnTrayNotification(WPARAM wID, LPARAM lEvent)
         CPoint mouse;
         GetCursorPos(&mouse);
         ::SetForegroundWindow(m_nid.hWnd);
-        ::TrackPopupMenu(pSubMenu->m_hMenu, 0, mouse.x, mouse.y, 0,
-                         m_nid.hWnd, NULL);
-
+        ::TrackPopupMenu(pSubMenu->m_hMenu, 0, mouse.x, mouse.y, 0, m_nid.hWnd, NULL);
     }
     else    // double click: execute first menu item
     {

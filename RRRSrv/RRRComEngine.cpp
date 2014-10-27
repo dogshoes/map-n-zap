@@ -62,7 +62,6 @@
 
 #include "stdafx.h"
 #include "RRRSrv.h"
-
 #include "RRRComEngine.h"
 #include "Robot Communication.h"
 //#include "RRRCom.h"
@@ -207,13 +206,14 @@ int RRRComEngine::BytesToInt(unsigned char Byte0, unsigned char Byte1)
 //		The function uses the or and bit shift operations to glue the four bytes
 //	together.
 *******************************************************************************/
-long int RRRComEngine::BytesToLong(unsigned char Byte0, unsigned char Byte1,
-                                   unsigned char Byte2, unsigned char Byte3)
+long int RRRComEngine::BytesToLong(unsigned char Byte0, unsigned char Byte1, unsigned char Byte2, unsigned char Byte3)
 {
     long int Result = Byte0;
+
     Result |= ((long int)Byte1) << 8;
     Result |= ((long int)Byte2) << 16;
     Result |= ((long int)Byte3) << 24;
+
     return Result;
 }
 
@@ -227,6 +227,7 @@ void RRRComEngine::ServiceReceivedMessage(RRRMsg &Buffer)
 {
     // static long int ReturnValue[3];
     RRR_CHECKSUM_MSG Msg;
+
     memset(&Msg, 0, sizeof(Msg));
     Msg.CommandNum = Buffer.GetAt(0);
     BOOL SendMsg = TRUE;

@@ -259,4 +259,3 @@ struct RRR_CHECKSUM_MSG
 };
 
 #endif
-

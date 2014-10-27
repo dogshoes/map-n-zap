@@ -30,7 +30,6 @@
 
 #include "stdafx.h"
 #include "RRRSrv.h"
-
 #include "RRRSrvDoc.h"
 #include "CyeCom.h"
 
@@ -124,8 +123,7 @@ END_DISPATCH_MAP()
 //  dispinterface in the .ODL file.
 
 // {F300B092-6343-11D0-8461-707D42000000}
-static const IID IID_ICyeSrv =
-{ 0xf300b092, 0x6343, 0x11d0, { 0x84, 0x61, 0x70, 0x7d, 0x42, 0x0, 0x0, 0x0 } };
+static const IID IID_ICyeSrv = { 0xf300b092, 0x6343, 0x11d0, { 0x84, 0x61, 0x70, 0x7d, 0x42, 0x0, 0x0, 0x0 } };
 
 BEGIN_INTERFACE_MAP(CRRRSrvDoc, CDocument)
 INTERFACE_PART(CRRRSrvDoc, IID_ICyeSrv, Dispatch)
@@ -275,13 +273,11 @@ void CRRRSrvDoc::MoveToRelative(long X, long Y)
 void CRRRSrvDoc::ResetPosition(long X, long Y, long H)
 {
     // TODO: Add your dispatch handler code here
-
 }
 
 void CRRRSrvDoc::Stop()
 {
     // TODO: Add your dispatch handler code here
-
 }
 
 void CRRRSrvDoc::Pause()
@@ -297,27 +293,23 @@ void CRRRSrvDoc::Resume()
 short CRRRSrvDoc::GetRadioStatus(short rNum)
 {
     // TODO: Add your dispatch handler code here
-
     return 0;
 }
 
 void CRRRSrvDoc::SetRadioStatus(short rNum, short nNewValue)
 {
     // TODO: Add your dispatch handler code here
-
 }
 
 short CRRRSrvDoc::GetRobotStatus(short rNum)
 {
     // TODO: Add your dispatch handler code here
-
     return 0;
 }
 
 void CRRRSrvDoc::SetRobotStatus(short rNum, short nNewValue)
 {
     // TODO: Add your dispatch handler code here
-
 }
 
 void CRRRSrvDoc::SendP1(long P1)
@@ -421,10 +413,11 @@ void CRRRSrvDoc::SendPositionDestination(double X, double Y)
 void CRRRSrvDoc::ExecutePath(BOOL PurgeOld, LPDISPATCH PathObject)
 {
     PathObject->AddRef();
+
     ICyePath Path(PathObject);
     short nPoints = Path.GetNumPoints();
+    
     robPOINT *Points = new robPOINT[nPoints];
-
     for (short i = 0; i < nPoints; i++)
     {
         Points[i].x = Path.GetX(i);
@@ -432,9 +425,9 @@ void CRRRSrvDoc::ExecutePath(BOOL PurgeOld, LPDISPATCH PathObject)
     }
 
     RobotCom.SendPathSegment(RobotAddress, PurgeOld, Points, nPoints);
+
     delete Points;
 }
-
 
 void CRRRSrvDoc::SendP5(long P5)
 {
@@ -471,6 +464,7 @@ void CRRRSrvDoc::SendPositionVelocityDestination(double X, double Y, short Veloc
     robPOINT Destination;
     Destination.x = X;
     Destination.y = Y;
+ 
     RobotCom.SendPositionVelocityDestination(RobotAddress, Destination, Velocity, Priority);
 }
 
@@ -522,6 +516,7 @@ void CRRRSrvDoc::SendMessage(const VARIANT FAR& MsgData)
                 }
 
                 array.UnaccessData();
+
                 RobotCom.SendRawData(RobotAddress, Msg);
             }
         }
@@ -552,20 +547,26 @@ void CRRRSrvDoc::SetPort(LPCTSTR NewPort)
     {
         // delete the old interface and make a new with with this port
         HWND m_hWnd = rcom->GetMainWnd();
+        
         // remove the old interface
         delete theApp->m_oRRRCom;
+        
         // save the new port
         theApp->m_sPortName = NewPort;
+        
         // create the interface
         theApp->m_oRRRCom = new RRRSrvCom(m_hWnd, theApp->m_MyAddress,
                                           theApp->m_sPortName, theApp->m_BaudRate,
                                           theApp->m_EnableDTR, theApp->m_DTROnDelay,
                                           theApp->m_DTROffDelay, theApp->m_Encoding, theApp->m_FullDuplex,
                                           theApp->m_InvertDTR);
+        
         // place the interface pointer in rcom
         rcom = theApp->m_oRRRCom;
+        
         // provide new interface pointer to RobotCom
         RobotCom.ResetInterface(rcom);
+
         // save the parameters
         theApp->SaveParameters();
     }

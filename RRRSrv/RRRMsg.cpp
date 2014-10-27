@@ -81,7 +81,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"
-
 #include "RRRMsg.h"
 
 /////////////////////////////////////////////////////////////////////////////
@@ -112,6 +111,7 @@ RRRMsg::RRRMsg(const RRRMsg& src)
     Priority = src.Priority;
     RcvMsgNum = src.RcvMsgNum;
     SndMsgNum = src.SndMsgNum;
+
     memcpy(buffer, src.buffer, sizeof(buffer));
 }
 
@@ -133,7 +133,6 @@ RRRMsg::~RRRMsg()
 {
 }
 
-
 RRRMsg& RRRMsg::operator=(const RRRMsg &src)
 {
     buflen = src.buflen;
@@ -143,16 +142,21 @@ RRRMsg& RRRMsg::operator=(const RRRMsg &src)
     Priority = src.Priority;
     RcvMsgNum = src.RcvMsgNum;
     SndMsgNum = src.SndMsgNum;
+
     memcpy(buffer, src.buffer, sizeof(buffer));
+
     return *this;
 }
 
 RRRMsg& RRRMsg::operator+=(const RRRMsg &src)
 {
     VERIFY((src.buflen + buflen) < MAX_MSG_LEN);
+
     memcpy(&buffer[buflen], src.buffer, src.buflen);
+
     buflen += src.buflen;
     bufindex = 0;
+
     return *this;
 }
 
@@ -179,6 +183,7 @@ RRRMsg RRRMsg::Left(int nCount) const
     dest.Priority = Priority;
     dest.RcvMsgNum = RcvMsgNum;
     dest.SndMsgNum = SndMsgNum;
+
     return dest;
 }
 
@@ -207,6 +212,7 @@ RRRMsg RRRMsg::Right(int nCount) const
     dest.Priority = Priority;
     dest.RcvMsgNum = RcvMsgNum;
     dest.SndMsgNum = SndMsgNum;
+
     return dest;
 }
 
@@ -219,6 +225,7 @@ void RRRMsg::Empty()
     RcvMsgNum = 0;
     SndMsgNum = 0;
     Priority = HIGH_PRIORITY;
+
     memset(buffer, 0, sizeof(buffer));
 }
 
@@ -227,6 +234,7 @@ unsigned char RRRMsg::GetAt(short index) const
 {
     VERIFY(index < MAX_MSG_LEN);
     VERIFY(index >= 0);
+
     return buffer[index];
 }
 
@@ -234,6 +242,7 @@ void RRRMsg::SetAt(short index, unsigned char ch)
 {
     VERIFY(index < MAX_MSG_LEN);
     VERIFY(index >= 0);
+
     buffer[index] = ch;
 }
 
@@ -241,8 +250,10 @@ unsigned char RRRMsg::GetChar()
 {
     VERIFY(bufindex < buflen);
     VERIFY(bufindex >= 0);
+
     unsigned char ch = buffer[bufindex];
     ++bufindex;
+
     return ch;
 }
 
@@ -264,8 +275,10 @@ long RRRMsg::GetLong()
 {
     VERIFY((bufindex + 3) < buflen);
     VERIFY(bufindex >= 0);
+
     long value = *(long *)(&buffer[bufindex]);
     bufindex += 4;
+
     return value;
 }
 
@@ -273,8 +286,7 @@ void RRRMsg::AddLong(long value)
 {
     VERIFY((buflen + 3) < MAX_MSG_LEN);
     VERIFY(buflen >= 0);
+
     *(long *)(&buffer[buflen]) = value;
     buflen += 4;
 }
-
-

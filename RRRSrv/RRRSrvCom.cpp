@@ -185,7 +185,6 @@
 
 #include "stdafx.h"
 #include "RRRSrv.h"
-
 #include "RRRSrvCom.h"
 #include "Robot Communication.h"
 

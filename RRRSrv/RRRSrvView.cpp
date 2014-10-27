@@ -30,7 +30,6 @@
 
 #include "stdafx.h"
 #include "RRRSrv.h"
-
 #include "RRRSrvDoc.h"
 #include "RRRSrvView.h"
 

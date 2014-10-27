@@ -30,7 +30,6 @@
 
 #include "stdafx.h"
 #include "RRRSrv.h"
-
 #include "MainFrm.h"
 #include "RRRConst.h"
 
@@ -337,4 +336,3 @@ afx_msg LRESULT CMainFrame::OnMsgTimeout(WPARAM uID, LPARAM lEvent)
     SrvApp->m_oRRRCom->ServiceReceiveTimeout();
     return 0;
 }
-

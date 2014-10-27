@@ -36,7 +36,9 @@
 short ICyePath::GetNumPoints()
 {
     short result;
+
     GetProperty(0x64, VT_I2, (void*)&result);
+
     return result;
 }
 
@@ -51,35 +53,32 @@ void ICyePath::SetNumPoints(short propVal)
 double ICyePath::GetX(short Index)
 {
     double result;
-    static BYTE parms[] =
-        VTS_I2;
-    InvokeHelper(0x65, DISPATCH_PROPERTYGET, VT_R8, (void*)&result, parms,
-                 Index);
+    static BYTE parms[] = VTS_I2;
+
+    InvokeHelper(0x65, DISPATCH_PROPERTYGET, VT_R8, (void*)&result, parms, Index);
+
     return result;
 }
 
 void ICyePath::SetX(short Index, double newValue)
 {
-    static BYTE parms[] =
-        VTS_I2 VTS_R8;
-    InvokeHelper(0x65, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, parms,
-                 Index, newValue);
+    static BYTE parms[] = VTS_I2 VTS_R8;
+
+    InvokeHelper(0x65, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, parms, Index, newValue);
 }
 
 double ICyePath::GetY(short Index)
 {
     double result;
-    static BYTE parms[] =
-        VTS_I2;
-    InvokeHelper(0x66, DISPATCH_PROPERTYGET, VT_R8, (void*)&result, parms,
-                 Index);
+    static BYTE parms[] = VTS_I2;
+
+    InvokeHelper(0x66, DISPATCH_PROPERTYGET, VT_R8, (void*)&result, parms, Index);
+
     return result;
 }
 
 void ICyePath::SetY(short Index, double newValue)
 {
-    static BYTE parms[] =
-        VTS_I2 VTS_R8;
-    InvokeHelper(0x66, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, parms,
-                 Index, newValue);
+    static BYTE parms[] = VTS_I2 VTS_R8;
+    InvokeHelper(0x66, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, parms, Index, newValue);
 }

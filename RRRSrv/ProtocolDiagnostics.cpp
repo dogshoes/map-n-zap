@@ -123,7 +123,6 @@ void ProtocolDiagnostics::DoDataExchange(CDataExchange* pDX)
     //}}AFX_DATA_MAP
 }
 
-
 BEGIN_MESSAGE_MAP(ProtocolDiagnostics, CDialog)
     //{{AFX_MSG_MAP(ProtocolDiagnostics)
     ON_WM_TIMER()
