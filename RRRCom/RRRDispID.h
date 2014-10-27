@@ -198,5 +198,3 @@
 #define RRRPTH_NUMPOINTS 100
 #define RRRPTH_X 101
 #define RRRPTH_Y 102
-
-

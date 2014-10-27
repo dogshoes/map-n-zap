@@ -36,7 +36,6 @@
 
 IMPLEMENT_DYNCREATE(CRRRComCtrl, COleControl)
 
-
 /////////////////////////////////////////////////////////////////////////////
 // Message map
 
@@ -51,7 +50,6 @@ BEGIN_MESSAGE_MAP(CRRRComCtrl, COleControl)
     ON_MESSAGE(RRR_COMMSTATECHANGE, OnCommStateChange)
     ON_MESSAGE(RRR_RADIOLEVELCHANGE, OnRadioLevelChange)
 END_MESSAGE_MAP()
-
 
 /////////////////////////////////////////////////////////////////////////////
 // Dispatch map
@@ -127,7 +125,6 @@ BEGIN_DISPATCH_MAP(CRRRComCtrl, COleControl)
     DISP_FUNCTION_ID(CRRRComCtrl, "RequestExternalInput", RRRCTL_REQUESTEXTERNALINPUT, RequestExternalInput, VT_EMPTY, VTS_NONE)
 END_DISPATCH_MAP()
 
-
 /////////////////////////////////////////////////////////////////////////////
 // Event map
 
@@ -161,7 +158,6 @@ BEGIN_EVENT_MAP(CRRRComCtrl, COleControl)
     EVENT_CUSTOM_ID("MicrophoneVolume", RRRCTL_MICROPHONEVOLUME, FireMicrophoneVolume, VTS_I2)
 END_EVENT_MAP()
 
-
 /////////////////////////////////////////////////////////////////////////////
 // Property pages
 
@@ -170,41 +166,28 @@ BEGIN_PROPPAGEIDS(CRRRComCtrl, 1)
     PROPPAGEID(CRRRComPropPage::guid)
 END_PROPPAGEIDS(CRRRComCtrl)
 
-
 /////////////////////////////////////////////////////////////////////////////
 // Initialize class factory and guid
 
-IMPLEMENT_OLECREATE_EX(CRRRComCtrl, "CyeCOM.CyeComCtrl.1",
-                       0x1bb9c513, 0x657f, 0x11d0, 0x84, 0x65, 0xca, 0x28, 0x1d, 0, 0, 0)
-
+IMPLEMENT_OLECREATE_EX(CRRRComCtrl, "CyeCOM.CyeComCtrl.1", 0x1bb9c513, 0x657f, 0x11d0, 0x84, 0x65, 0xca, 0x28, 0x1d, 0, 0, 0)
 
 /////////////////////////////////////////////////////////////////////////////
 // Type library ID and version
 
 IMPLEMENT_OLETYPELIB(CRRRComCtrl, _tlid, _wVerMajor, _wVerMinor)
 
-
 /////////////////////////////////////////////////////////////////////////////
 // Interface IDs
 
-const IID BASED_CODE IID_DCyeCom =
-{ 0x1bb9c511, 0x657f, 0x11d0, { 0x84, 0x65, 0xca, 0x28, 0x1d, 0, 0, 0 } };
-const IID BASED_CODE IID_DCyeComEvents =
-{ 0x1bb9c512, 0x657f, 0x11d0, { 0x84, 0x65, 0xca, 0x28, 0x1d, 0, 0, 0 } };
-
+const IID BASED_CODE IID_DCyeCom = { 0x1bb9c511, 0x657f, 0x11d0, { 0x84, 0x65, 0xca, 0x28, 0x1d, 0, 0, 0 } };
+const IID BASED_CODE IID_DCyeComEvents = { 0x1bb9c512, 0x657f, 0x11d0, { 0x84, 0x65, 0xca, 0x28, 0x1d, 0, 0, 0 } };
 
 /////////////////////////////////////////////////////////////////////////////
 // Control type information
 
-static const DWORD BASED_CODE _dwRRRComOleMisc =
-    OLEMISC_INVISIBLEATRUNTIME |
-    OLEMISC_SETCLIENTSITEFIRST |
-    OLEMISC_INSIDEOUT |
-    OLEMISC_CANTLINKINSIDE |
-    OLEMISC_RECOMPOSEONRESIZE;
+static const DWORD BASED_CODE _dwRRRComOleMisc = OLEMISC_INVISIBLEATRUNTIME | OLEMISC_SETCLIENTSITEFIRST | OLEMISC_INSIDEOUT | OLEMISC_CANTLINKINSIDE | OLEMISC_RECOMPOSEONRESIZE;
 
 IMPLEMENT_OLECTLTYPE(CRRRComCtrl, IDS_RRRCOM, _dwRRRComOleMisc)
-
 
 /////////////////////////////////////////////////////////////////////////////
 // CRRRComCtrl::CRRRComCtrlFactory::UpdateRegistry -
@@ -235,7 +218,6 @@ BOOL CRRRComCtrl::CRRRComCtrlFactory::UpdateRegistry(BOOL bRegister)
         return AfxOleUnregisterClass(m_clsid, m_lpszProgID);
     }
 }
-
 
 /////////////////////////////////////////////////////////////////////////////
 // CRRRComCtrl::CRRRComCtrl - Constructor
@@ -270,7 +252,6 @@ CRRRComCtrl::CRRRComCtrl()
     m_BatteryVoltage = 0;
 }
 
-
 /////////////////////////////////////////////////////////////////////////////
 // CRRRComCtrl::~CRRRComCtrl - Destructor
 
@@ -280,19 +261,16 @@ CRRRComCtrl::~CRRRComCtrl()
     DetachControl();
 }
 
-
 /////////////////////////////////////////////////////////////////////////////
 // CRRRComCtrl::OnDraw - Drawing function
 
-void CRRRComCtrl::OnDraw(
-    CDC* pdc, const CRect& rcBounds, const CRect& rcInvalid)
+void CRRRComCtrl::OnDraw(CDC* pdc, const CRect& rcBounds, const CRect& rcInvalid)
 {
     // TODO: Replace the following code with your own drawing code.
     //	pdc->FillRect(rcBounds, CBrush::FromHandle((HBRUSH)GetStockObject(WHITE_BRUSH)));
     //	pdc->Ellipse(rcBounds);
     m_pImage.Render(pdc, rcBounds, rcInvalid);
 }
-
 
 /////////////////////////////////////////////////////////////////////////////
 // CRRRComCtrl::DoPropExchange - Persistence support
@@ -318,7 +296,6 @@ void CRRRComCtrl::DoPropExchange(CPropExchange* pPX)
         RecreateControlWindow();
     }
 }
-
 
 /////////////////////////////////////////////////////////////////////////////
 // CRRRComCtrl::OnResetState - Reset control to default state
@@ -590,7 +567,6 @@ void CRRRComCtrl::DetachControl()
     m_oCyeSrv.Disconnect(m_lConnectId);
 }
 
-
 /////////////////////////////////////////////////////////////////////////////
 // CRRRComCtrl message handlers
 
@@ -611,7 +587,6 @@ BOOL CRRRComCtrl::OnSetExtent(LPSIZEL lpSizeL)
     //	return COleControl::OnSetExtent(lpSizeL);
     return FALSE;
 }
-
 
 int CRRRComCtrl::OnCreate(LPCREATESTRUCT lpCreateStruct)
 {
@@ -715,7 +690,6 @@ void CRRRComCtrl::SetHeading(double nNewValue)
 short CRRRComCtrl::GetRobotAddress()
 {
     // TODO: Add your property handler here
-
     return m_robotAddress;
 }
 
@@ -960,8 +934,7 @@ void CRRRComCtrl::SendMessage(const VARIANT FAR& MsgData)
     // First make sure it's a SafeArray
     if (MsgData.vt != (VT_ARRAY | VT_UI1))
     {
-        ThrowError(CTL_E_ILLEGALFUNCTIONCALL,
-                   "Invalid VARIANT type passed to SendMessage. Expected VT_ARRAY | VT_UI1.");
+        ThrowError(CTL_E_ILLEGALFUNCTIONCALL, "Invalid VARIANT type passed to SendMessage. Expected VT_ARRAY | VT_UI1.");
     }
     else
     {
@@ -970,8 +943,7 @@ void CRRRComCtrl::SendMessage(const VARIANT FAR& MsgData)
 
         if (array.GetDim() != 1)
         {
-            ThrowError(CTL_E_ILLEGALFUNCTIONCALL,
-                       "Invalid VARIANT SafeArray dimensions passed to SendMessage. Expected single dimensional array.");
+            ThrowError(CTL_E_ILLEGALFUNCTIONCALL, "Invalid VARIANT SafeArray dimensions passed to SendMessage. Expected single dimensional array.");
         }
         else
         {
@@ -979,8 +951,7 @@ void CRRRComCtrl::SendMessage(const VARIANT FAR& MsgData)
 
             if (Size < 1)
             {
-                ThrowError(CTL_E_ILLEGALFUNCTIONCALL,
-                           "Empty VARIANT SafeArray passed to SendMessage.");
+                ThrowError(CTL_E_ILLEGALFUNCTIONCALL, "Empty VARIANT SafeArray passed to SendMessage.");
             }
             else
             {

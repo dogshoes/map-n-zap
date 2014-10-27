@@ -91,7 +91,6 @@ RRRPath::~RRRPath()
     AfxOleUnlockApp();
 }
 
-
 void RRRPath::OnFinalRelease()
 {
     // When the last reference for an automation object is released
@@ -101,7 +100,6 @@ void RRRPath::OnFinalRelease()
 
     CCmdTarget::OnFinalRelease();
 }
-
 
 BEGIN_MESSAGE_MAP(RRRPath, CCmdTarget)
     //{{AFX_MSG_MAP(RRRPath)
@@ -122,8 +120,7 @@ END_DISPATCH_MAP()
 //  dispinterface in the .ODL file.
 
 // {723BB6A6-8075-11D1-BCC1-444553540000}
-static const IID IID_ICyePath =
-{ 0x723bb6a6, 0x8075, 0x11d1, { 0xbc, 0xc1, 0x44, 0x45, 0x53, 0x54, 0x0, 0x0 } };
+static const IID IID_ICyePath = { 0x723bb6a6, 0x8075, 0x11d1, { 0xbc, 0xc1, 0x44, 0x45, 0x53, 0x54, 0x0, 0x0 } };
 
 BEGIN_INTERFACE_MAP(RRRPath, CCmdTarget)
 INTERFACE_PART(RRRPath, IID_ICyePath, Dispatch)

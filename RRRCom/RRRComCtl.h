@@ -203,26 +203,32 @@ class CRRRComCtrl : public COleControl
         {
             FireEvent(RRRCTL_RADIOLEVELCHANGE, EVENT_PARAM(VTS_R4), RadioLevel);
         }
+
         void FireBatteryChange()
         {
             FireEvent(RRRCTL_BATTERYLOW, EVENT_PARAM(VTS_NONE));
         }
+
         void FirePositionChange(long X, long Y, long Heading)
         {
             FireEvent(RRRCTL_POSITIONCHANGE, EVENT_PARAM(VTS_I4  VTS_I4  VTS_I4), X, Y, Heading);
         }
+
         void FireObstacleDetected(short RightWheel, short LeftWheel)
         {
             FireEvent(RRRCTL_OBSTACLEDETECTED, EVENT_PARAM(VTS_I2  VTS_I2), RightWheel, LeftWheel);
         }
+
         void FireNudgeDetected(BOOL RightWheel, BOOL LeftWheel)
         {
             FireEvent(RRRCTL_NUDGEDETECTED, EVENT_PARAM(VTS_BOOL  VTS_BOOL), RightWheel, LeftWheel);
         }
+
         void FireVelocityChange(short RightWheel, short LeftWheel)
         {
             FireEvent(RRRCTL_VELOCITYCHANGE, EVENT_PARAM(VTS_I2  VTS_I2), RightWheel, LeftWheel);
         }
+
         void FireAccelerationChange(short RightWheel, short LeftWheel)
         {
             FireEvent(RRRCTL_ACCELERATIONCHANGE, EVENT_PARAM(VTS_I2  VTS_I2), RightWheel, LeftWheel);
@@ -232,42 +238,52 @@ class CRRRComCtrl : public COleControl
         {
             FireEvent(RRRCTL_ENCODERUPDATE, EVENT_PARAM(VTS_I4  VTS_I4), RightWheel, LeftWheel);
         }
+
         void FireAnalogUpdate(short RightWheel, short LeftWheel, short BatteryAD)
         {
             FireEvent(RRRCTL_ANALOGUPDATE, EVENT_PARAM(VTS_I2  VTS_I2  VTS_I2), RightWheel, LeftWheel, BatteryAD);
         }
+
         void FirePWMUpdate(short RightWheel, short LeftWheel)
         {
             FireEvent(RRRCTL_PWMUPDATE, EVENT_PARAM(VTS_I2  VTS_I2), RightWheel, LeftWheel);
         }
+
         void FireRingBufferDump(long Value)
         {
             FireEvent(RRRCTL_RINGBUFFERDUMP, EVENT_PARAM(VTS_I4), Value);
         }
+
         void FireNewPathSegmentRequest()
         {
             FireEvent(RRRCTL_NEWPATHSEGMENTREQUEST, EVENT_PARAM(VTS_NONE));
         }
+
         void FireRobotError(long Error)
         {
             FireEvent(RRRCTL_ROBOTERROR, EVENT_PARAM(VTS_I4), Error);
         }
+
         void FireOnHomeBase(short OnHomeBase)
         {
             FireEvent(RRRCTL_ONHOMEBASE, EVENT_PARAM(VTS_I2), OnHomeBase);
         }
+
         void FireRobotStatusChange(long X, long Y, double Heading, short RightVelocity, short LeftVelocity, float RightCurrent, float LeftCurrent, float BatteryVoltage)
         {
             FireEvent(RRRCTL_ROBOTSTATUSCHANGE, EVENT_PARAM(VTS_I4  VTS_I4  VTS_R8  VTS_I2  VTS_I2  VTS_R4  VTS_R4  VTS_R4), X, Y, Heading, RightVelocity, LeftVelocity, RightCurrent, LeftCurrent, BatteryVoltage);
         }
+
         void FireBatteryChargingStateChange(short State)
         {
             FireEvent(RRRCTL_BATTERYCHARGINGSTATECHANGE, EVENT_PARAM(VTS_I2), State);
         }
+
         void FireUnknownMessage(const VARIANT FAR& Buffer)
         {
             FireEvent(RRRCTL_UNKNOWNMESSAGE, EVENT_PARAM(VTS_VARIANT), &Buffer);
         }
+
         void FireCommStateChange(short NewState)
         {
             FireEvent(RRRCTL_COMMSTATECHANGE, EVENT_PARAM(VTS_I2), NewState);
@@ -276,26 +292,32 @@ class CRRRComCtrl : public COleControl
         {
             FireEvent(RRRCTL_TASKRESULT, EVENT_PARAM(VTS_I2  VTS_I4  VTS_I4  VTS_R8), Result, X, Y, Heading);
         }
+
         void FireSoftwareRevNumber(long RevNumber)
         {
             FireEvent(RRRCTL_SOFTWAREREVNUMBER, EVENT_PARAM(VTS_I4), RevNumber);
         }
+
         void FireRobotOn()
         {
             FireEvent(RRRCTL_ROBOTON, EVENT_PARAM(VTS_NONE));
         }
+
         void FireRobotOnTime(float SecondsOn)
         {
             FireEvent(RRRCTL_ROBOTONTIME, EVENT_PARAM(VTS_R4), SecondsOn);
         }
+
         void FireExternalInput(float Voltage)
         {
             FireEvent(RRRCTL_EXTERNALINPUT, EVENT_PARAM(VTS_R4), Voltage);
         }
+
         void FireMicrophoneVolume(short Volume)
         {
             FireEvent(RRRCTL_MICROPHONEVOLUME, EVENT_PARAM(VTS_I2), Volume);
         }
+
         DECLARE_EVENT_MAP()
 
         // Dispatch and event IDs

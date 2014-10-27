@@ -57,10 +57,7 @@
 #if !defined(AFX_RRRPATH_H__723BB6A8_8075_11D1_BCC1_444553540000__INCLUDED_)
 #define AFX_RRRPATH_H__723BB6A8_8075_11D1_BCC1_444553540000__INCLUDED_
 
-#if _MSC_VER >= 1000
 #pragma once
-#endif // _MSC_VER >= 1000
-
 
 /////////////////////////////////////////////////////////////////////////////
 // RRRPath command target

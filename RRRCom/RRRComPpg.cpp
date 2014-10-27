@@ -33,7 +33,6 @@
 
 IMPLEMENT_DYNCREATE(CRRRComPropPage, COlePropertyPage)
 
-
 /////////////////////////////////////////////////////////////////////////////
 // Message map
 
@@ -44,13 +43,10 @@ BEGIN_MESSAGE_MAP(CRRRComPropPage, COlePropertyPage)
     //}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
-
 /////////////////////////////////////////////////////////////////////////////
 // Initialize class factory and guid
 
-IMPLEMENT_OLECREATE_EX(CRRRComPropPage, "RRRCOM.RRRComPropPage.1",
-                       0x1bb9c514, 0x657f, 0x11d0, 0x84, 0x65, 0xca, 0x28, 0x1d, 0, 0, 0)
-
+IMPLEMENT_OLECREATE_EX(CRRRComPropPage, "RRRCOM.RRRComPropPage.1", 0x1bb9c514, 0x657f, 0x11d0, 0x84, 0x65, 0xca, 0x28, 0x1d, 0, 0, 0)
 
 /////////////////////////////////////////////////////////////////////////////
 // CRRRComPropPage::CRRRComPropPageFactory::UpdateRegistry -
@@ -59,14 +55,14 @@ IMPLEMENT_OLECREATE_EX(CRRRComPropPage, "RRRCOM.RRRComPropPage.1",
 BOOL CRRRComPropPage::CRRRComPropPageFactory::UpdateRegistry(BOOL bRegister)
 {
     if (bRegister)
-        return AfxOleRegisterPropertyPageClass(AfxGetInstanceHandle(),
-                                               m_clsid, IDS_RRRCOM_PPG);
+    {
+        return AfxOleRegisterPropertyPageClass(AfxGetInstanceHandle(), m_clsid, IDS_RRRCOM_PPG);
+    }
     else
     {
         return AfxOleUnregisterClass(m_clsid, NULL);
     }
 }
-
 
 /////////////////////////////////////////////////////////////////////////////
 // CRRRComPropPage::CRRRComPropPage - Constructor
@@ -80,7 +76,6 @@ CRRRComPropPage::CRRRComPropPage() :
     //}}AFX_DATA_INIT
 }
 
-
 /////////////////////////////////////////////////////////////////////////////
 // CRRRComPropPage::DoDataExchange - Moves data between page and properties
 
@@ -92,7 +87,6 @@ void CRRRComPropPage::DoDataExchange(CDataExchange* pDX)
     //}}AFX_DATA_MAP
     DDP_PostProcessing(pDX);
 }
-
 
 /////////////////////////////////////////////////////////////////////////////
 // CRRRComPropPage message handlers
