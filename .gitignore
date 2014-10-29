@@ -8,3 +8,4 @@
 *.aps
 stderr.err
 stdout.txt
+SerialComm*
