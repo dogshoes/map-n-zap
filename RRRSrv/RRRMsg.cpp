@@ -229,7 +229,6 @@ void RRRMsg::Empty()
     memset(buffer, 0, sizeof(buffer));
 }
 
-
 unsigned char RRRMsg::GetAt(short index) const
 {
     VERIFY(index < MAX_MSG_LEN);

@@ -83,75 +83,230 @@
 
 #include "RRRConst.h"
 
+/// <summary>
+/// A message to or from the Cye robot.
+/// </summary>
 class RRRMsg : public CObject
 {
-        DECLARE_DYNAMIC(RRRMsg)
+    DECLARE_DYNAMIC(RRRMsg)
 
     public:
+        /// <summary>
+        /// Construct a new robot message.
+        /// </summary>
+        /// <returns>A newly constructed RRRMsg.</returns>
         RRRMsg();
+
+        /// <summary>
+        /// Construct a new robot message.
+        /// </summary>
+        /// <param name="address">The destination node's address.</param>
+        /// <returns>A newly constructed RRRMsg.</returns>
         RRRMsg(short address);
+
+        /// <summary>
+        /// Construct a new robot message copied from an existing message.
+        /// </summary>
+        /// <param name="src">The message to copy.</param>
+        /// <returns>A newly constructed RRRMsg.</returns>
         RRRMsg(const RRRMsg& src);
+
+        /// <summary>
+        /// Construct a new robot message.
+        /// </summary>
+        /// <remarks>
+        /// The buffer will remain MAX_MSG_LEN bytes long regardless of the settings here.
+        /// </remarks>
+        /// <param name="address">The destination node's address.</param>
+        /// <param name="ch">The character to initialize the message buffer with.</param>
+        /// <param name="nRepeat">The number of bytes to initialize in the buffer.</param>
+        /// <returns>A newly constructed RRRMsg.</returns>
         RRRMsg(short address, unsigned char ch, int nRepeat);
+
+        /// <summary>
+        /// Destroy this instance of the robot message.
+        /// </summary>
         ~RRRMsg();
+
+        /// <summary>
+        /// Operator overload for deep cloning a robot message.
+        /// </summary>
         RRRMsg& operator=(const RRRMsg &src);
+
+        /// <summary>
+        /// Operator overload for combining two robot message buffers together.
+        /// </summary>
         RRRMsg& operator+=(const RRRMsg &src);
+
+        /// <summary>
+        /// Get a byte in the message buffer at a specific position.
+        /// </summary>
+        /// <param name="index">The buffer position to get.</param>
+        /// <returns>The byte at the supplied buffer position.</returns>
         unsigned char GetAt(short index) const;
+
+        /// <summary>
+        /// Set a byte in the message buffer.
+        /// </summary>
+        /// <param name="index">The buffer position to set.</param>
+        /// <param name="ch">The byte to set.</param>
         void SetAt(short index, unsigned char ch);
+
+        /// <summary>
+        /// Get the byte in the message buffer at the current position and advance the cursor.
+        /// </summary>
+        /// <returns>The byte at the current cursor position.</returns>
         unsigned char GetChar();
+
+        /// <summary>
+        /// Add a byte to the message buffer starting at the current cursor position and advance the cursor.
+        /// </summary>
+        /// <param name="value">The byte to add to the buffer.</param>
         void Add(unsigned char ch);
+
+        /// <summary>
+        /// Get the size of the message buffer.
+        /// </summary>
+        /// <returns>Size of the message buffer.</returns>
         int GetLength() const
         {
             return buflen;
         }
+
+        /// <summary>
+        /// Get the entire message buffer.
+        /// </summary>
+        /// <returns>The message buffer.</returns>
         LPCTSTR GetBuffer(int nMinBufLength)
         {
             return (LPCTSTR)buffer;
         }
+        
+        /// <summary>
+        /// Reset the message options and buffer to default.
+        /// </summary>
         void Empty();
+        
+        /// <summary>
+        /// Clone this message including a selection of the left-most bytes in the buffer.
+        /// </summary>
+        /// <param name="nCount">The number of bytes to copy from the buffer starting at position 0.</param>
+        /// <returns>The created message clone.</returns>
         RRRMsg Left(int nCount) const;
+        
+        /// <summary>
+        /// Clone this message including a selection of the right-most bytes in the buffer.
+        /// </summary>
+        /// <param name="nCount">The number of bytes to copy from the buffer starting this number of bytes from the end.</param>
+        /// <returns>The created message clone.</returns>
         RRRMsg Right(int nCount) const;
+        
+        /// <summary>
+        /// Get the next four bytes from the message buffer as a long and advance the cursor position.
+        /// </summary>
+        /// <returns>The next four bytes from the message buffer.</returns>
         long GetLong();
+        
+        /// <summary>
+        /// Add a long (four bytes) to the message buffer starting at the current cursor position and advance the cursor position
+        /// </summary>
+        /// <param name="value">The long to add to the buffer.</param>
         void AddLong(long value);
+        
+        /// <summary>
+        /// Set the destination node's address.
+        /// </summary>
+        /// <param name="address">The address of the destination node.</param>
         void SetDestAddress(short address)
         {
             DestAddr = address;
         }
+        
+        /// <summary>
+        /// Get the destination node's address.
+        /// </summary>
+        /// <returns>The destination node's address.</returns>
         short GetDestAddress()
         {
             return DestAddr;
         }
+        
+        /// <summary>
+        /// Set the source node's address.
+        /// </summary>
+        /// <param name="address">The address of the source node.</param>
         void SetSrcAddress(short address)
         {
             SrcAddr = address;
         }
+        
+        /// <summary>
+        /// Get the source node's address.
+        /// </summary>
+        /// <returns>The source node's address.</returns>
         short GetSrcAddress()
         {
             return SrcAddr;
         }
-        void SetRcvMsgNum(unsigned char  num)
+        
+        /// <summary>
+        /// Set the received message number for acknowledgement.
+        /// </summary>
+        /// <param name="num">The received message number.</param>
+        void SetRcvMsgNum(unsigned char num)
         {
             RcvMsgNum = num;
         }
-        unsigned char  GetRcvMsgNum()
+        
+        /// <summary>
+        /// Get the received message number for acknowledgement.
+        /// </summary>
+        /// <returns>The received message number.</returns>
+        unsigned char GetRcvMsgNum()
         {
             return RcvMsgNum;
         }
-        void SetSndMsgNum(unsigned char  num)
+        
+        /// <summary>
+        /// Set the sent message number for acknowledgement.
+        /// </summary>
+        /// <param name="num">The sent message number.</param>
+        void SetSndMsgNum(unsigned char num)
         {
             SndMsgNum = num;
         }
-        unsigned char  GetSndMsgNum()
+        
+        /// <summary>
+        /// Get the sent message number for acknowledgement.
+        /// </summary>
+        /// <returns>The sent message number.</returns>
+        unsigned char GetSndMsgNum()
         {
             return SndMsgNum;
         }
+        
+        /// <summary>
+        /// Get a pointer to the message buffer.
+        /// </summary>
+        /// <returns>A pointer to the message buffer.</returns>
         const unsigned char *GetBufferAddr()
         {
             return buffer;
         }
+        
+        /// <summary>
+        /// Check whether the buffer is full.
+        /// </summary>
+        /// <returns>A value indicating whether the buffer is full.</returns>
         BOOL BufferFull()
         {
             return buflen == MAX_MSG_LEN;
         }
+        
+        /// <summary>
+        /// Set the message priority.
+        /// </summary>
+        /// <params name="priority">The priority: either LOW_PRIORITY or HIGH_PRIORITY.</params>
         void SetPriority(short priority)
         {
             if (priority == LOW_PRIORITY)
@@ -163,10 +318,20 @@ class RRRMsg : public CObject
                 Priority = HIGH_PRIORITY;
             }
         }
+        
+        /// <summary>
+        /// Get the message's priority.
+        /// </summary>
+        /// <returns>The priority: either LOW_PRIORITY or HIGH_PRIORITY.</returns>
         short GetPriority()
         {
             return Priority;
         }
+
+        /// <summary>
+        /// Check whether this message has a high priority.
+        /// </summary>
+        /// <returns>A value indicating whether this message has a high priority.</returns>
         BOOL HighPriority()
         {
             if (Priority == LOW_PRIORITY)
@@ -195,4 +360,3 @@ class RRRMsg : public CObject
         short Priority;
 };
 #endif
-/////////////////////////////////////////////////////////////////////////////
