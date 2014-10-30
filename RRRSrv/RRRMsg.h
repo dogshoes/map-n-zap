@@ -168,19 +168,13 @@ class RRRMsg : public CObject
         /// Get the size of the message buffer.
         /// </summary>
         /// <returns>Size of the message buffer.</returns>
-        int GetLength() const
-        {
-            return buflen;
-        }
+        int GetLength() const;
 
         /// <summary>
         /// Get the entire message buffer.
         /// </summary>
         /// <returns>The message buffer.</returns>
-        LPCTSTR GetBuffer(int nMinBufLength)
-        {
-            return (LPCTSTR)buffer;
-        }
+        LPCTSTR GetBuffer(int nMinBufLength);
         
         /// <summary>
         /// Reset the message options and buffer to default.
@@ -217,132 +211,79 @@ class RRRMsg : public CObject
         /// Set the destination node's address.
         /// </summary>
         /// <param name="address">The address of the destination node.</param>
-        void SetDestAddress(short address)
-        {
-            DestAddr = address;
-        }
+        void SetDestAddress(short address);
         
         /// <summary>
         /// Get the destination node's address.
         /// </summary>
         /// <returns>The destination node's address.</returns>
-        short GetDestAddress()
-        {
-            return DestAddr;
-        }
+        short GetDestAddress();
         
         /// <summary>
         /// Set the source node's address.
         /// </summary>
         /// <param name="address">The address of the source node.</param>
-        void SetSrcAddress(short address)
-        {
-            SrcAddr = address;
-        }
+        void SetSrcAddress(short address);
         
         /// <summary>
         /// Get the source node's address.
         /// </summary>
         /// <returns>The source node's address.</returns>
-        short GetSrcAddress()
-        {
-            return SrcAddr;
-        }
+        short GetSrcAddress();
         
         /// <summary>
         /// Set the received message number for acknowledgement.
         /// </summary>
         /// <param name="num">The received message number.</param>
-        void SetRcvMsgNum(unsigned char num)
-        {
-            RcvMsgNum = num;
-        }
+        void SetRcvMsgNum(unsigned char num);
         
         /// <summary>
         /// Get the received message number for acknowledgement.
         /// </summary>
         /// <returns>The received message number.</returns>
-        unsigned char GetRcvMsgNum()
-        {
-            return RcvMsgNum;
-        }
+        unsigned char GetRcvMsgNum();
         
         /// <summary>
         /// Set the sent message number for acknowledgement.
         /// </summary>
         /// <param name="num">The sent message number.</param>
-        void SetSndMsgNum(unsigned char num)
-        {
-            SndMsgNum = num;
-        }
+        void SetSndMsgNum(unsigned char num);
         
         /// <summary>
         /// Get the sent message number for acknowledgement.
         /// </summary>
         /// <returns>The sent message number.</returns>
-        unsigned char GetSndMsgNum()
-        {
-            return SndMsgNum;
-        }
+        unsigned char GetSndMsgNum();
         
         /// <summary>
         /// Get a pointer to the message buffer.
         /// </summary>
         /// <returns>A pointer to the message buffer.</returns>
-        const unsigned char *GetBufferAddr()
-        {
-            return buffer;
-        }
+        const unsigned char *GetBufferAddr();
         
         /// <summary>
         /// Check whether the buffer is full.
         /// </summary>
         /// <returns>A value indicating whether the buffer is full.</returns>
-        BOOL BufferFull()
-        {
-            return buflen == MAX_MSG_LEN;
-        }
+        BOOL BufferFull();
         
         /// <summary>
         /// Set the message priority.
         /// </summary>
         /// <params name="priority">The priority: either LOW_PRIORITY or HIGH_PRIORITY.</params>
-        void SetPriority(short priority)
-        {
-            if (priority == LOW_PRIORITY)
-            {
-                Priority = LOW_PRIORITY;
-            }
-            else
-            {
-                Priority = HIGH_PRIORITY;
-            }
-        }
+        void SetPriority(short priority);
         
         /// <summary>
         /// Get the message's priority.
         /// </summary>
         /// <returns>The priority: either LOW_PRIORITY or HIGH_PRIORITY.</returns>
-        short GetPriority()
-        {
-            return Priority;
-        }
+        short GetPriority();
 
         /// <summary>
         /// Check whether this message has a high priority.
         /// </summary>
         /// <returns>A value indicating whether this message has a high priority.</returns>
-        BOOL HighPriority()
-        {
-            if (Priority == LOW_PRIORITY)
-            {
-                return FALSE;
-            }
-            else
-            {
-                return TRUE;
-            }
-        }
+        BOOL HighPriority();
 
         enum RRRMSG_CONSTANTS
         {

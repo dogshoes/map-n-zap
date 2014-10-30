@@ -216,6 +216,16 @@ RRRMsg RRRMsg::Right(int nCount) const
     return dest;
 }
 
+int RRRMsg::GetLength() const
+{
+    return buflen;
+}
+
+LPCTSTR RRRMsg::GetBuffer(int nMinBufLength)
+{
+    return (LPCTSTR)buffer;
+}
+
 void RRRMsg::Empty()
 {
     buflen = 0;
@@ -288,4 +298,83 @@ void RRRMsg::AddLong(long value)
 
     *(long *)(&buffer[buflen]) = value;
     buflen += 4;
+}
+
+void RRRMsg::SetDestAddress(short address)
+{
+    DestAddr = address;
+}
+
+short RRRMsg::GetDestAddress()
+{
+    return DestAddr;
+}
+
+void RRRMsg::SetSrcAddress(short address)
+{
+    SrcAddr = address;
+}
+
+short RRRMsg::GetSrcAddress()
+{
+    return SrcAddr;
+}
+
+void RRRMsg::SetRcvMsgNum(unsigned char num)
+{
+    RcvMsgNum = num;
+}
+
+unsigned char RRRMsg::GetRcvMsgNum()
+{
+    return RcvMsgNum;
+}
+
+void RRRMsg::SetSndMsgNum(unsigned char num)
+{
+    SndMsgNum = num;
+}
+
+unsigned char RRRMsg::GetSndMsgNum()
+{
+    return SndMsgNum;
+}
+
+const unsigned char *RRRMsg::GetBufferAddr()
+{
+    return buffer;
+}
+
+BOOL RRRMsg::BufferFull()
+{
+    return buflen == MAX_MSG_LEN;
+}
+
+void RRRMsg::SetPriority(short priority)
+{
+    if (priority == LOW_PRIORITY)
+    {
+        Priority = LOW_PRIORITY;
+    }
+    else
+    {
+        Priority = HIGH_PRIORITY;
+    }
+}
+
+short RRRMsg::GetPriority()
+{
+    return Priority;
+}
+
+BOOL RRRMsg::HighPriority()
+{
+    if (Priority == LOW_PRIORITY)
+    {
+        return FALSE;
+    }
+    else
+    {
+        return TRUE;
+    }
 }
