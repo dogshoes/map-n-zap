@@ -88,6 +88,7 @@
 #include "ChildFrm.h"
 #include "RRRSrvDoc.h"
 #include "RRRSrvView.h"
+#include "CAboutDlg.h"
 
 /////////////////////////////////////////////////////////////////////////////
 // CRRRSrvApp
@@ -171,41 +172,36 @@ BOOL CRRRSrvApp::InitInstance()
     WriteProfileString(GENERAL_SECTION, PORTNAME, m_sPortName);
 
     m_Encoding = GetProfileInt(GENERAL_SECTION, ENCODE, RRRCom::CHECKSUM_ENCODING);
-
     switch (m_Encoding)
     {
-    case RRRCom::CHECKSUM_ENCODING:
-    case RRRCom::CRC_ENCODING:
-        break;
-
-    default:
-        m_Encoding = RRRCom::CHECKSUM_ENCODING;
-        break;
+        case RRRCom::CHECKSUM_ENCODING:
+        case RRRCom::CRC_ENCODING:
+            break;
+        default:
+            m_Encoding = RRRCom::CHECKSUM_ENCODING;
+            break;
     }
 
     WriteProfileInt(GENERAL_SECTION, ENCODE, m_Encoding);
 
     m_BaudRate = GetProfileInt(GENERAL_SECTION, BAUDRATE, 4800);
-
     switch (m_BaudRate)
     {
-    case 19200:
-    case 9600:
-    case 4800:
-    case 2400:
-    case 1200:
-    case 300:
-        break;
-
-    default:
-        m_BaudRate = 4800;
-        break;
+        case 19200:
+        case 9600:
+        case 4800:
+        case 2400:
+        case 1200:
+        case 300:
+            break;
+        default:
+            m_BaudRate = 4800;
+            break;
     }
 
     WriteProfileInt(GENERAL_SECTION, BAUDRATE, m_BaudRate);
 
     CString DTREnable = GetProfileString(GENERAL_SECTION, DTRENABLE, "OFF");
-
     if ((DTREnable.CompareNoCase("ON") == 0) || (DTREnable.CompareNoCase("TRUE") == 0))
     {
         m_EnableDTR = TRUE;
@@ -218,13 +214,14 @@ BOOL CRRRSrvApp::InitInstance()
     }
 
     WriteProfileString(GENERAL_SECTION, DTRENABLE, DTREnable);
+    
     m_DTROnDelay = GetProfileInt(GENERAL_SECTION, DTRONDELAY, 3);
     WriteProfileInt(GENERAL_SECTION, DTRONDELAY, m_DTROnDelay);
+
     m_DTROffDelay = GetProfileInt(GENERAL_SECTION, DTROFFDELAY, 3);
     WriteProfileInt(GENERAL_SECTION, DTROFFDELAY, m_DTROffDelay);
 
     CString FullDuplex = GetProfileString(GENERAL_SECTION, FULLDUPLEX, "ON");
-
     if ((FullDuplex.CompareNoCase("ON") == 0) || (FullDuplex.CompareNoCase("TRUE") == 0))
     {
         m_FullDuplex = TRUE;
@@ -253,7 +250,6 @@ BOOL CRRRSrvApp::InitInstance()
     //WriteProfileInt(GENERAL_SECTION, ROBOTADDRESS, m_RobotAddress);
 
     CString InvertDTR = GetProfileString(GENERAL_SECTION, INVERTDTR, "OFF");
-
     if ((InvertDTR.CompareNoCase("ON") == 0) || (InvertDTR.CompareNoCase("TRUE") == 0))
     {
         m_InvertDTR = TRUE;
@@ -268,7 +264,6 @@ BOOL CRRRSrvApp::InitInstance()
     WriteProfileString(GENERAL_SECTION, INVERTDTR, InvertDTR);
 
     m_PreFlag = GetProfileInt(GENERAL_SECTION, PREFLAGCHARS, RRRCom::PRE_FLAG);
-
     if ((m_PreFlag < 0) || (m_PreFlag > 1000))
     {
         m_PreFlag = RRRCom::PRE_FLAG;
@@ -277,7 +272,6 @@ BOOL CRRRSrvApp::InitInstance()
     WriteProfileInt(GENERAL_SECTION, PREFLAGCHARS, m_PreFlag);
 
     m_PostFlag = GetProfileInt(GENERAL_SECTION, POSTFLAGCHARS, RRRCom::POST_FLAG);
-
     if ((m_PostFlag < 0) || (m_PostFlag > 1000))
     {
         m_PostFlag = RRRCom::POST_FLAG;
@@ -287,7 +281,6 @@ BOOL CRRRSrvApp::InitInstance()
 
     // create main MDI Frame window
     CMainFrame* pMainFrame = new CMainFrame;
-
     if (!pMainFrame->LoadFrame(IDR_MAINFRAME))
     {
         return FALSE;
@@ -324,51 +317,6 @@ BOOL CRRRSrvApp::InitInstance()
     return TRUE;
 }
 
-/////////////////////////////////////////////////////////////////////////////
-// CAboutDlg dialog used for App About
-
-class CAboutDlg : public CDialog
-{
-    public:
-        CAboutDlg();
-
-        // Dialog Data
-        //{{AFX_DATA(CAboutDlg)
-        enum { IDD = IDD_ABOUTBOX };
-        //}}AFX_DATA
-
-        // ClassWizard generated virtual function overrides
-        //{{AFX_VIRTUAL(CAboutDlg)
-    protected:
-        virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
-        //}}AFX_VIRTUAL
-
-        // Implementation
-    protected:
-        //{{AFX_MSG(CAboutDlg)
-        // No message handlers
-        //}}AFX_MSG
-        DECLARE_MESSAGE_MAP()
-};
-
-CAboutDlg::CAboutDlg() : CDialog(CAboutDlg::IDD)
-{
-    //{{AFX_DATA_INIT(CAboutDlg)
-    //}}AFX_DATA_INIT
-}
-
-void CAboutDlg::DoDataExchange(CDataExchange* pDX)
-{
-    CDialog::DoDataExchange(pDX);
-    //{{AFX_DATA_MAP(CAboutDlg)
-    //}}AFX_DATA_MAP
-}
-
-BEGIN_MESSAGE_MAP(CAboutDlg, CDialog)
-    //{{AFX_MSG_MAP(CAboutDlg)
-    // No message handlers
-    //}}AFX_MSG_MAP
-END_MESSAGE_MAP()
 
 // App command to run the dialog
 void CRRRSrvApp::OnAppAbout()
@@ -384,9 +332,7 @@ void CRRRSrvApp::OnAppAbout()
 void CRRRSrvApp::SaveParameters()
 {
     WriteProfileString(GENERAL_SECTION, PORTNAME, m_sPortName);
-
     WriteProfileInt(GENERAL_SECTION, ENCODE, m_Encoding);
-
     WriteProfileInt(GENERAL_SECTION, BAUDRATE, m_BaudRate);
 
     CString DTREnable;
@@ -401,7 +347,6 @@ void CRRRSrvApp::SaveParameters()
     }
 
     WriteProfileString(GENERAL_SECTION, DTRENABLE, DTREnable);
-
     WriteProfileInt(GENERAL_SECTION, DTRONDELAY, m_DTROnDelay);
     WriteProfileInt(GENERAL_SECTION, DTROFFDELAY, m_DTROffDelay);
 
@@ -417,9 +362,7 @@ void CRRRSrvApp::SaveParameters()
     }
 
     WriteProfileString(GENERAL_SECTION, FULLDUPLEX, FullDuplex);
-
     WriteProfileInt(GENERAL_SECTION, LOCALADDRESS, m_MyAddress);
-
     //WriteProfileInt(GENERAL_SECTION, ROBOTADDRESS, m_RobotAddress);
 
     CString InvertDTR;
