@@ -25,7 +25,7 @@
   Pittsburgh, PA 15212
   USA
 **********************************************************************/
-// RRRCList.h : interface of the RRRClistEntry & RRRClist classes
+// RRREventQueue.h : interface of the RRREventQueueEntry & RRREventQueue classes
 //
 /////////////////////////////////////////////////////////////////////////////
 

@@ -25,7 +25,7 @@
   Pittsburgh, PA 15212
   USA
 **********************************************************************/
-// RRRCList.cpp : implementation of the RRRCListEntry & RRRCList classes
+// RRREventQueue.cpp : implementation of the RRREventQueueEntry & RRREventQueue classes
 //
 
 #include "stdafx.h"
@@ -33,12 +33,12 @@
 #include "RRREventQueue.h"
 
 /////////////////////////////////////////////////////////////////////////////
-// RRRCListEntry
+// RRREventQueueEntry
 
 IMPLEMENT_DYNAMIC(RRREventQueueEntry, CObject)
 
 /////////////////////////////////////////////////////////////////////////////
-// RRRCListEntry construction/destruction
+// RRREventQueueEntry construction/destruction
 
 RRREventQueueEntry::RRREventQueueEntry(UINT msg, WPARAM wparam, LPARAM lparam)
     : Msg(msg), wParam(wparam), lParam(lparam)
@@ -50,12 +50,12 @@ RRREventQueueEntry::~RRREventQueueEntry()
 }
 
 /////////////////////////////////////////////////////////////////////////////
-// RRRCList
+// RRREventQueue
 
 IMPLEMENT_DYNAMIC(RRREventQueue, CObArray)
 
 /////////////////////////////////////////////////////////////////////////////
-// RRRCListEntry construction/destruction
+// RRREventQueue construction/destruction
 
 RRREventQueue::RRREventQueue()
 {
