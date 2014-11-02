@@ -28,7 +28,7 @@
 // Machine generated IDispatch wrapper class(es) created with ClassWizard
 
 #include "stdafx.h"
-#include "cyecom.h"
+#include "CyePath.h"
 
 /////////////////////////////////////////////////////////////////////////////
 // ICyePath properties
@@ -37,6 +37,8 @@ short ICyePath::GetNumPoints()
 {
     short result;
 
+    // This call dispatches over to the RRRPath class in the RRRCom project.
+    // See mapping defined in RRRCom/CyeCom.odl.
     GetProperty(0x64, VT_I2, (void*)&result);
 
     return result;
@@ -44,6 +46,8 @@ short ICyePath::GetNumPoints()
 
 void ICyePath::SetNumPoints(short propVal)
 {
+    // This call dispatches over to the RRRPath class in the RRRCom project.
+    // See mapping defined in RRRCom/CyeCom.odl.
     SetProperty(0x64, VT_I2, propVal);
 }
 
@@ -55,6 +59,8 @@ double ICyePath::GetX(short Index)
     double result;
     static BYTE parms[] = VTS_I2;
 
+    // This call dispatches over to the RRRPath class in the RRRCom project.
+    // See mapping defined in RRRCom/CyeCom.odl.
     InvokeHelper(0x65, DISPATCH_PROPERTYGET, VT_R8, (void*)&result, parms, Index);
 
     return result;
@@ -64,6 +70,8 @@ void ICyePath::SetX(short Index, double newValue)
 {
     static BYTE parms[] = VTS_I2 VTS_R8;
 
+    // This call dispatches over to the RRRPath class in the RRRCom project.
+    // See mapping defined in RRRCom/CyeCom.odl.
     InvokeHelper(0x65, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, parms, Index, newValue);
 }
 
@@ -72,6 +80,8 @@ double ICyePath::GetY(short Index)
     double result;
     static BYTE parms[] = VTS_I2;
 
+    // This call dispatches over to the RRRPath class in the RRRCom project.
+    // See mapping defined in RRRCom/CyeCom.odl.
     InvokeHelper(0x66, DISPATCH_PROPERTYGET, VT_R8, (void*)&result, parms, Index);
 
     return result;
@@ -80,5 +90,8 @@ double ICyePath::GetY(short Index)
 void ICyePath::SetY(short Index, double newValue)
 {
     static BYTE parms[] = VTS_I2 VTS_R8;
+
+    // This call dispatches over to the RRRPath class in the RRRCom project.
+    // See mapping defined in RRRCom/CyeCom.odl.
     InvokeHelper(0x66, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, parms, Index, newValue);
 }
