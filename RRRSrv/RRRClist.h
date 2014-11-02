@@ -26,28 +26,10 @@
    USA
  **********************************************************************/
 ///////////////////////////////////////////////////////////////////////////////
-//
 // Module:     RRRCList.h
-//
 // Abstract:   interface of the RRRClistEntry & RRRClist classes
-//
 // Author:     J.C.H
-//
-// Revisions:
-//    $History: RRRClist.h $
-//
-// *****************  Version 3  *****************
-// User: Harnden      Date: 10/12/99   Time: 12:23a
-// Updated in $/RRR/RRRSrv
-// Added multi robot support.
-//
-// *****************  Version 2  *****************
-// User: Harnden      Date: 1/12/98    Time: 12:45a
-// Updated in $/RRRSrv
-// First delivery of ActiveX interface.
-//
 // Copyright 1997 Cycle Time Corp
-//
 ///////////////////////////////////////////////////////////////////////////////
 
 #ifndef RRRCLIST

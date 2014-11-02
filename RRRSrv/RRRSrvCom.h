@@ -26,108 +26,10 @@
    USA
  **********************************************************************/
 ///////////////////////////////////////////////////////////////////////////////
-//
 // Module:     RRRSrvCom.h
-//
 // Abstract:   RRRSrv serial communications class header file.
-//
 // Author:     J.C.H
-//
-// Revisions:
-//    $History: RRRSrvCom.h $
-//
-// *****************  Version 18  *****************
-// User: Harnden      Date: 10/17/99   Time: 3:02p
-// Updated in $/RRR/RRRSrv
-// Rewrote message timeout and delivery logic to avoid duplicate messages.
-//
-// *****************  Version 17  *****************
-// User: Harnden      Date: 10/16/99   Time: 5:30p
-// Updated in $/RRR/RRRSrv
-// Fixed RetryLimit get and set.
-//
-// *****************  Version 16  *****************
-// User: Harnden      Date: 10/13/99   Time: 10:53p
-// Updated in $/RRR/RRRSrv
-// Added BAd Address counter to Protocol Diagnostics dialog.
-//
-// *****************  Version 15  *****************
-// User: Harnden      Date: 10/12/99   Time: 12:23a
-// Updated in $/RRR/RRRSrv
-// Added multi robot support.
-//
-// *****************  Version 14  *****************
-// User: Harnden      Date: 8/09/99    Time: 10:46p
-// Updated in $/RRR/RRRSrv
-// Added new robot status packet support for software revision 9.
-//
-// *****************  Version 13  *****************
-// User: Harnden      Date: 8/09/99    Time: 10:03p
-// Updated in $/RRR/RRRSrv
-// Merged 1P5 changes into mainstream. Included changes from Stephan in
-// RRRSrvCom.cpp.
-//
-// *****************  Version 13  *****************
-// User: Harnden      Date: 4/27/99    Time: 2:07a
-// Updated in $/RRR1P5 Branch/RRRSrv
-// Incorporated fixes made to 1.04 software to make work on Pony.
-//
-// *****************  Version 11  *****************
-// User: Harnden      Date: 12/19/98   Time: 3:04p
-// Updated in $/RRR/RRRSrv
-// Added message priority support.
-//
-// *****************  Version 10  *****************
-// User: Harnden      Date: 12/07/98   Time: 12:22a
-// Updated in $/RRR/RRRSrv
-// Added IDLE support to radio level logic.
-//
-// *****************  Version 9  *****************
-// User: Harnden      Date: 12/03/98   Time: 12:07p
-// Updated in $/RRR/RRRSrv
-// Added RadioLevel support and fixed about box displays.
-//
-// *****************  Version 8  *****************
-// User: Harnden      Date: 8/21/98    Time: 9:38p
-// Updated in $/RRR/RRRSrv
-// Added INVERTDTR parameter to rrrsrv.ini file to invert the DTR toggling
-// logic.
-//
-// *****************  Version 7  *****************
-// User: Harnden      Date: 8/03/98    Time: 10:57p
-// Updated in $/RRR/RRRSrv
-// Added OnHomeBase parameter. Added OnBatteryChargeStateChange. Added
-// PowerDown command. Added send and receive of raw data. Added
-// CommStateChange event. Purge outgoing message queue when communications
-// link is lost.
-//
-// *****************  Version 6  *****************
-// User: Harnden      Date: 5/26/98    Time: 10:51p
-// Updated in $/RRR/RRRSrv
-// First radio interface release sent to Cycle Time Corp.
-//
-// *****************  Version 5  *****************
-// User: Harnden      Date: 5/25/98    Time: 10:19a
-// Updated in $/RRRSrv
-// Working radio interface.
-//
-// *****************  Version 4  *****************
-// User: Harnden      Date: 3/22/98    Time: 7:38p
-// Updated in $/RRRSrv
-// Updated status to include work at CTC.
-//
-// *****************  Version 3  *****************
-// User: Harnden      Date: 1/12/98    Time: 12:45a
-// Updated in $/RRRSrv
-// First delivery of ActiveX interface.
-//
-// *****************  Version 2  *****************
-// User: Harnden      Date: 1/05/98    Time: 12:50a
-// Updated in $/RRRSrv
-// Full send message protocol support (except ExecutePath).
-//
 // Copyright 1997 Cycle Time Corp
-//
 ///////////////////////////////////////////////////////////////////////////////
 
 #ifndef RRRSRVCOM

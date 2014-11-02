@@ -26,29 +26,12 @@
    USA
  **********************************************************************/
 ///////////////////////////////////////////////////////////////////////////////
-//
 // Module:     Trayicon.cpp
-//
 // Abstract:   CTrayIcon Copyright 1996 Microsoft Systems Journal.
 //             If this code works, it was written by Paul DiLascia.
 //             If not, I don't know who wrote it.
-//
 // Author:     J.C.H
-//
-// Revisions:
-//    $History: Trayicon.h $
-//
-// *****************  Version 2  *****************
-// User: Harnden      Date: 3/22/98    Time: 7:38p
-// Updated in $/RRRSrv
-// Updated status to include work at CTC.
-//
-// *****************  Version 1  *****************
-// User: Harnden      Date: 3/22/98    Time: 9:59a
-// Created in $/RRRSrv
-//
 // Copyright 1997 Cycle Time Corp
-//
 ///////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////

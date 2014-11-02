@@ -26,56 +26,10 @@
    USA
  **********************************************************************/
 ///////////////////////////////////////////////////////////////////////////////
-//
 // Module:     RRRMsg.cpp
-//
 // Abstract:   RRR Message class header file.
-//
 // Author:     J.C.H
-//
-// Revisions:
-//    $History: RRRMsg.h $
-//
-// *****************  Version 7  *****************
-// User: Harnden      Date: 10/12/99   Time: 12:23a
-// Updated in $/RRR/RRRSrv
-// Added multi robot support.
-//
-// *****************  Version 6  *****************
-// User: Harnden      Date: 12/19/98   Time: 3:04p
-// Updated in $/RRR/RRRSrv
-// Added message priority support.
-//
-// *****************  Version 5  *****************
-// User: Harnden      Date: 9/09/98    Time: 7:14a
-// Updated in $/RRR/RRRSrv
-// Added RetryLimit property. Fixed buffer overrun problem in receive
-// logic. Tweaked RobotStatusUpdate logic.
-//
-// *****************  Version 4  *****************
-// User: Harnden      Date: 8/03/98    Time: 10:57p
-// Updated in $/RRR/RRRSrv
-// Added OnHomeBase parameter. Added OnBatteryChargeStateChange. Added
-// PowerDown command. Added send and receive of raw data. Added
-// CommStateChange event. Purge outgoing message queue when communications
-// link is lost.
-//
-// *****************  Version 3  *****************
-// User: Harnden      Date: 5/25/98    Time: 10:19a
-// Updated in $/RRRSrv
-// Working radio interface.
-//
-// *****************  Version 2  *****************
-// User: Harnden      Date: 1/05/98    Time: 12:50a
-// Updated in $/RRRSrv
-// Full send message protocol support (except ExecutePath).
-//
-// *****************  Version 1  *****************
-// User: Harnden      Date: 1/03/98    Time: 6:17p
-// Created in $/RRRSrv
-//
 // Copyright 1997 Cycle Time Corp
-//
 ///////////////////////////////////////////////////////////////////////////////
 
 #ifndef RRRMSG

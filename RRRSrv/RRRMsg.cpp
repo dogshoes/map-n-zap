@@ -26,58 +26,10 @@
    USA
  **********************************************************************/
 ///////////////////////////////////////////////////////////////////////////////
-//
 // Module:     RRRMsg.cpp
-//
 // Abstract:   Implementation of the RRR Message class.
-//
 // Author:     J.C.H
-//
-// Revisions:
-//    $History: RRRMsg.cpp $
-//
-// *****************  Version 6  *****************
-// User: Harnden      Date: 10/12/99   Time: 12:23a
-// Updated in $/RRR/RRRSrv
-// Added multi robot support.
-//
-// *****************  Version 5  *****************
-// User: Harnden      Date: 8/09/99    Time: 10:03p
-// Updated in $/RRR/RRRSrv
-// Merged 1P5 changes into mainstream. Included changes from Stephan in
-// RRRSrvCom.cpp.
-//
-// *****************  Version 6  *****************
-// User: Harnden      Date: 4/27/99    Time: 2:07a
-// Updated in $/RRR1P5 Branch/RRRSrv
-// Incorporated fixes made to 1.04 software to make work on Pony.
-//
-// *****************  Version 6  *****************
-// User: Harnden      Date: 4/18/99    Time: 10:04p
-// Updated in $/RRR1P0 Branch/RRRSrv
-// Added protocol diagnostics and fixed some minor problems.
-//
-// *****************  Version 4  *****************
-// User: Harnden      Date: 12/19/98   Time: 3:04p
-// Updated in $/RRR/RRRSrv
-// Added message priority support.
-//
-// *****************  Version 3  *****************
-// User: Harnden      Date: 5/25/98    Time: 10:19a
-// Updated in $/RRRSrv
-// Working radio interface.
-//
-// *****************  Version 2  *****************
-// User: Harnden      Date: 1/05/98    Time: 12:50a
-// Updated in $/RRRSrv
-// Full send message protocol support (except ExecutePath).
-//
-// *****************  Version 1  *****************
-// User: Harnden      Date: 1/03/98    Time: 6:17p
-// Created in $/RRRSrv
-//
 // Copyright 1997 Cycle Time Corp
-//
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"

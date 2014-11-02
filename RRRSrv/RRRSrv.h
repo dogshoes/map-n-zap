@@ -26,55 +26,10 @@
    USA
  **********************************************************************/
 ///////////////////////////////////////////////////////////////////////////////
-//
 // Module:     RRRSrv.h
-//
 // Abstract:   main header file for the RRRSRV application
-//
 // Author:     J.C.H
-//
-// Revisions:
-//    $History: RRRSrv.h $
-//
-// *****************  Version 8  *****************
-// User: Harnden      Date: 10/25/99   Time: 10:56p
-// Updated in $/RRR/RRRSrv
-// Added MicrophoneVolume event. Implemented SetRobotAddress. Removed all
-// references to RobotAdress setting in CyeSrv.ini file.
-//
-// *****************  Version 7  *****************
-// User: Harnden      Date: 10/12/99   Time: 12:23a
-// Updated in $/RRR/RRRSrv
-// Added multi robot support.
-//
-// *****************  Version 6  *****************
-// User: Harnden      Date: 11/16/98   Time: 12:41a
-// Updated in $/RRR/RRRSrv
-// Added dynamic serial port change logic.
-//
-// *****************  Version 5  *****************
-// User: Harnden      Date: 8/21/98    Time: 9:38p
-// Updated in $/RRR/RRRSrv
-// Added INVERTDTR parameter to rrrsrv.ini file to invert the DTR toggling
-// logic.
-//
-// *****************  Version 4  *****************
-// User: Harnden      Date: 5/25/98    Time: 10:19a
-// Updated in $/RRRSrv
-// Working radio interface.
-//
-// *****************  Version 3  *****************
-// User: Harnden      Date: 3/22/98    Time: 7:38p
-// Updated in $/RRRSrv
-// Updated status to include work at CTC.
-//
-// *****************  Version 2  *****************
-// User: Harnden      Date: 1/05/98    Time: 12:50a
-// Updated in $/RRRSrv
-// Full send message protocol support (except ExecutePath).
-//
 // Copyright 1997 Cycle Time Corp
-//
 ///////////////////////////////////////////////////////////////////////////////
 
 #ifndef __AFXWIN_H__

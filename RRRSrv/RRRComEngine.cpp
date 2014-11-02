@@ -26,38 +26,10 @@
    USA
  **********************************************************************/
 ///////////////////////////////////////////////////////////////////////////////
-//
 // Module:     RRRComEngine.cpp
-//
 // Abstract:   RRRSrv serial communications class.
-//
 // Author:     J.C.H
-//
-// Revisions:
-//    $History: RRRComEngine.cpp $
-//
-// *****************  Version 4  *****************
-// User: Harnden      Date: 10/25/99   Time: 10:56p
-// Updated in $/RRR/RRRSrv
-// Added MicrophoneVolume event. Implemented SetRobotAddress. Removed all
-// references to RobotAdress setting in CyeSrv.ini file.
-//
-// *****************  Version 3  *****************
-// User: Harnden      Date: 10/13/99   Time: 10:57p
-// Updated in $/RRR/RRRSrv
-// Removed invalid reference to RRRCom.h.
-//
-// *****************  Version 2  *****************
-// User: Harnden      Date: 10/12/99   Time: 12:23a
-// Updated in $/RRR/RRRSrv
-// Added multi robot support.
-//
-// *****************  Version 1  *****************
-// User: Harnden      Date: 10/03/99   Time: 3:10p
-// Created in $/RRR/RRRSrv
-//
 // Copyright 1999 Cycle Time Corp
-//
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"

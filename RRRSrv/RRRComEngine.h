@@ -26,32 +26,10 @@
    USA
  **********************************************************************/
 ///////////////////////////////////////////////////////////////////////////////
-//
 // Module:     RRRComEngine.h
-//
 // Abstract:   RRRSrv protocol engine class header file.
-//
 // Author:     J.C.H
-//
-// Revisions:
-//    $History: RRRComEngine.h $
-//
-// *****************  Version 3  *****************
-// User: Harnden      Date: 10/16/99   Time: 5:30p
-// Updated in $/RRR/RRRSrv
-// Fixed RetryLimit get and set.
-//
-// *****************  Version 2  *****************
-// User: Harnden      Date: 10/12/99   Time: 12:23a
-// Updated in $/RRR/RRRSrv
-// Added multi robot support.
-//
-// *****************  Version 1  *****************
-// User: Harnden      Date: 10/03/99   Time: 3:11p
-// Created in $/RRR/RRRSrv
-//
 // Copyright 1999 Cycle Time Corp
-//
 ///////////////////////////////////////////////////////////////////////////////
 
 #ifndef RRRCOMENGINE

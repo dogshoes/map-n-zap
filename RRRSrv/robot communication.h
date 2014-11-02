@@ -26,93 +26,10 @@
    USA
  **********************************************************************/
 ///////////////////////////////////////////////////////////////////////////////
-//
 // Module:     Robot Communication.h
-//
 // Abstract:   CRobotComm class header file.
-//
 // Author:     S.R.
-//
-// Revisions:
-//    $History: robot communication.h $
-//
-// *****************  Version 13  *****************
-// User: Harnden      Date: 10/12/99   Time: 12:23a
-// Updated in $/RRR/RRRSrv
-// Added multi robot support.
-//
-// *****************  Version 12  *****************
-// User: Harnden      Date: 8/09/99    Time: 10:03p
-// Updated in $/RRR/RRRSrv
-// Merged 1P5 changes into mainstream. Included changes from Stephan in
-// RRRSrvCom.cpp.
-//
-// *****************  Version 13  *****************
-// User: Harnden      Date: 4/27/99    Time: 2:07a
-// Updated in $/RRR1P5 Branch/RRRSrv
-// Incorporated fixes made to 1.04 software to make work on Pony.
-//
-// *****************  Version 11  *****************
-// User: Harnden      Date: 3/07/99    Time: 12:12p
-// Updated in $/RRR/RRRSrv
-// Added all functionality in Stephan's document. Converted name to
-// CyeSrv.exe.
-//
-// *****************  Version 10  *****************
-// User: Harnden      Date: 12/19/98   Time: 3:04p
-// Updated in $/RRR/RRRSrv
-// Added message priority support.
-//
-// *****************  Version 9  *****************
-// User: Harnden      Date: 11/16/98   Time: 12:41a
-// Updated in $/RRR/RRRSrv
-// Added dynamic serial port change logic.
-//
-// *****************  Version 8  *****************
-// User: Harnden      Date: 8/03/98    Time: 10:57p
-// Updated in $/RRR/RRRSrv
-// Added OnHomeBase parameter. Added OnBatteryChargeStateChange. Added
-// PowerDown command. Added send and receive of raw data. Added
-// CommStateChange event. Purge outgoing message queue when communications
-// link is lost.
-//
-// *****************  Version 7  *****************
-// User: Harnden      Date: 7/06/98    Time: 12:44a
-// Updated in $/RRR/RRRSrv
-// Added new RobotStatusUpdate event and changed SendFollowPath from BOOL
-// to short.
-//
-// *****************  Version 6  *****************
-// User: Harnden      Date: 6/22/98    Time: 9:11p
-// Updated in $/RRR/RRRSrv
-// Added three new messages and one event.
-//
-// *****************  Version 5  *****************
-// User: Harnden      Date: 5/25/98    Time: 10:19a
-// Updated in $/RRRSrv
-// Working radio interface.
-//
-// *****************  Version 4  *****************
-// User: Harnden      Date: 3/22/98    Time: 10:01p
-// Updated in $/RRRSrv
-// Added new functions for Stephan.
-//
-// *****************  Version 3  *****************
-// User: Harnden      Date: 1/12/98    Time: 12:45a
-// Updated in $/RRRSrv
-// First delivery of ActiveX interface.
-//
-// *****************  Version 2  *****************
-// User: Harnden      Date: 1/05/98    Time: 12:50a
-// Updated in $/RRRSrv
-// Full send message protocol support (except ExecutePath).
-//
-// *****************  Version 1  *****************
-// User: Harnden      Date: 1/05/98    Time: 12:16a
-// Created in $/RRRSrv
-//
 // Copyright 1997 Cycle Time Corp
-//
 ///////////////////////////////////////////////////////////////////////////////
 
 #ifndef ROBOTCOMMUNICATION230495lsdfjg0934ldfjb039w4ldfj

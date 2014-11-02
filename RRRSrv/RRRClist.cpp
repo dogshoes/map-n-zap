@@ -26,33 +26,10 @@
    USA
  **********************************************************************/
 ///////////////////////////////////////////////////////////////////////////////
-//
 // Module:     RRRCList.cpp
-//
 // Abstract:   implementation of the RRRCListEntry & RRRCList classes
-//
 // Author:     J.C.H
-//
-// Revisions:
-//    $History: RRRClist.cpp $
-//
-// *****************  Version 4  *****************
-// User: Harnden      Date: 10/12/99   Time: 12:23a
-// Updated in $/RRR/RRRSrv
-// Added multi robot support.
-//
-// *****************  Version 3  *****************
-// User: Harnden      Date: 1/17/98    Time: 4:32p
-// Updated in $/RRRSrv
-// First working copy tested against RobotSim.
-//
-// *****************  Version 2  *****************
-// User: Harnden      Date: 1/12/98    Time: 12:45a
-// Updated in $/RRRSrv
-// First delivery of ActiveX interface.
-//
 // Copyright 1997 Cycle Time Corp
-//
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"

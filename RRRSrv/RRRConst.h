@@ -26,98 +26,10 @@
   USA
 **********************************************************************/
 ///////////////////////////////////////////////////////////////////////////////
-//
 // Module:     RRRConst.h
-//
 // Abstract:   Common RRR constants.
-//
 // Author:     J.C.H
-//
-// Revisions:
-//    $History: RRRConst.h $
-//
-// *****************  Version 15  *****************
-// User: Harnden      Date: 10/25/99   Time: 10:56p
-// Updated in $/RRR/RRRSrv
-// Added MicrophoneVolume event. Implemented SetRobotAddress. Removed all
-// references to RobotAdress setting in CyeSrv.ini file.
-//
-// *****************  Version 14  *****************
-// User: Harnden      Date: 10/17/99   Time: 3:02p
-// Updated in $/RRR/RRRSrv
-// Rewrote message timeout and delivery logic to avoid duplicate messages.
-//
-// *****************  Version 13  *****************
-// User: Harnden      Date: 10/12/99   Time: 12:23a
-// Updated in $/RRR/RRRSrv
-// Added multi robot support.
-//
-// *****************  Version 12  *****************
-// User: Harnden      Date: 3/07/99    Time: 12:12p
-// Updated in $/RRR/RRRSrv
-// Added all functionality in Stephan's document. Converted name to
-// CyeSrv.exe.
-//
-// *****************  Version 11  *****************
-// User: Harnden      Date: 12/19/98   Time: 3:04p
-// Updated in $/RRR/RRRSrv
-// Added message priority support.
-//
-// *****************  Version 10  *****************
-// User: Harnden      Date: 12/03/98   Time: 12:07p
-// Updated in $/RRR/RRRSrv
-// Added RadioLevel support and fixed about box displays.
-//
-// *****************  Version 9  *****************
-// User: Harnden      Date: 8/03/98    Time: 10:57p
-// Updated in $/RRR/RRRSrv
-// Added OnHomeBase parameter. Added OnBatteryChargeStateChange. Added
-// PowerDown command. Added send and receive of raw data. Added
-// CommStateChange event. Purge outgoing message queue when communications
-// link is lost.
-//
-// *****************  Version 8  *****************
-// User: Harnden      Date: 7/06/98    Time: 10:28p
-// Updated in $/RRR/RRRSrv
-// Added Heading parameter to RobotStatusUpdate event.
-//
-// *****************  Version 7  *****************
-// User: Harnden      Date: 7/06/98    Time: 12:44a
-// Updated in $/RRR/RRRSrv
-// Added new RobotStatusUpdate event and changed SendFollowPath from BOOL
-// to short.
-//
-// *****************  Version 6  *****************
-// User: Harnden      Date: 6/22/98    Time: 9:11p
-// Updated in $/RRR/RRRSrv
-// Added three new messages and one event.
-//
-// *****************  Version 5  *****************
-// User: Harnden      Date: 5/25/98    Time: 10:19a
-// Updated in $/RRRSrv
-// Working radio interface.
-//
-// *****************  Version 4  *****************
-// User: Harnden      Date: 3/22/98    Time: 7:38p
-// Updated in $/RRRSrv
-// Updated status to include work at CTC.
-//
-// *****************  Version 3  *****************
-// User: Harnden      Date: 1/12/98    Time: 12:45a
-// Updated in $/RRRSrv
-// First delivery of ActiveX interface.
-//
-// *****************  Version 2  *****************
-// User: Harnden      Date: 1/03/98    Time: 5:58p
-// Updated in $/RRRSrv
-// Completion of all ActiveX method interfaces for RobotWorld.
-//
-// *****************  Version 1  *****************
-// User: Harnden      Date: 12/29/97   Time: 6:48p
-// Created in $/RRRSrv
-//
 // Copyright 1997 Cycle Time Corp
-//
 ///////////////////////////////////////////////////////////////////////////////
 
 #ifndef RRRCONST

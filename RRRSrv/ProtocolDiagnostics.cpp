@@ -26,53 +26,10 @@
    USA
  **********************************************************************/
 ///////////////////////////////////////////////////////////////////////////////
-//
 // Module:     ProtocolDiagnostics.cpp
-//
 // Abstract:   ProtocolDiagnostics dialog class implementation file.
-//
 // Author:     J.C.H
-//
-// Revisions:
-//    $History: ProtocolDiagnostics.cpp $
-//
-// *****************  Version 5  *****************
-// User: Harnden      Date: 10/13/99   Time: 10:53p
-// Updated in $/RRR/RRRSrv
-// Added BAd Address counter to Protocol Diagnostics dialog.
-//
-// *****************  Version 4  *****************
-// User: Harnden      Date: 10/12/99   Time: 12:23a
-// Updated in $/RRR/RRRSrv
-// Added multi robot support.
-//
-// *****************  Version 3  *****************
-// User: Harnden      Date: 8/09/99    Time: 10:03p
-// Updated in $/RRR/RRRSrv
-// Merged 1P5 changes into mainstream. Included changes from Stephan in
-// RRRSrvCom.cpp.
-//
-// *****************  Version 4  *****************
-// User: Harnden      Date: 4/27/99    Time: 2:07a
-// Updated in $/RRR1P5 Branch/RRRSrv
-// Incorporated fixes made to 1.04 software to make work on Pony.
-//
-// *****************  Version 4  *****************
-// User: Harnden      Date: 4/18/99    Time: 10:04p
-// Updated in $/RRR1P0 Branch/RRRSrv
-// Added protocol diagnostics and fixed some minor problems.
-//
-// *****************  Version 2  *****************
-// User: Harnden      Date: 5/26/98    Time: 10:51p
-// Updated in $/RRR/RRRSrv
-// First radio interface release sent to Cycle Time Corp.
-//
-// *****************  Version 1  *****************
-// User: Harnden      Date: 5/26/98    Time: 12:07a
-// Created in $/RRR/RRRSrv
-//
 // Copyright 1997 Cycle Time Corp
-//
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"
