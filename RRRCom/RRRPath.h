@@ -26,32 +26,10 @@
   USA
 **********************************************************************/
 ///////////////////////////////////////////////////////////////////////////////
-//
 // Module:     RRRPath.cpp
-//
 // Abstract:   Robot path OLE object header file.
-//
 // Author:     J.C.H
-//
-// Revisions:
-//    $History: RRRPath.h $
-//
-// *****************  Version 3  *****************
-// User: Harnden      Date: 5/26/98    Time: 10:51p
-// Updated in $/RRR/RRRCom
-// First radio interface release sent to Cycle Time Corp.
-//
-// *****************  Version 2  *****************
-// User: Harnden      Date: 1/03/98    Time: 5:58p
-// Updated in $/RRRCom
-// Completion of all ActiveX method interfaces for RobotWorld.
-//
-// *****************  Version 1  *****************
-// User: Harnden      Date: 12/29/97   Time: 6:24p
-// Created in $/RRRCom
-//
 // Copyright 1997 Cycle Time Corp
-//
 ///////////////////////////////////////////////////////////////////////////////
 
 #if !defined(AFX_RRRPATH_H__723BB6A8_8075_11D1_BCC1_444553540000__INCLUDED_)

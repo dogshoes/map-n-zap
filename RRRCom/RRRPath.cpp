@@ -26,37 +26,10 @@
   USA
 **********************************************************************/
 ///////////////////////////////////////////////////////////////////////////////
-//
 // Module:     RRRPath.cpp
-//
 // Abstract:   Robot path OLE object.
-//
 // Author:     J.C.H
-//
-// Revisions:
-//    $History: RRRPath.cpp $
-//
-// *****************  Version 4  *****************
-// User: Harnden      Date: 3/07/99    Time: 2:12p
-// Updated in $/RRR/RRRCom
-// Changed name to CyeCom.ocx.
-//
-// *****************  Version 3  *****************
-// User: Harnden      Date: 5/26/98    Time: 10:51p
-// Updated in $/RRR/RRRCom
-// First radio interface release sent to Cycle Time Corp.
-//
-// *****************  Version 2  *****************
-// User: Harnden      Date: 1/03/98    Time: 5:58p
-// Updated in $/RRRCom
-// Completion of all ActiveX method interfaces for RobotWorld.
-//
-// *****************  Version 1  *****************
-// User: Harnden      Date: 12/29/97   Time: 6:24p
-// Created in $/RRRCom
-//
 // Copyright 1997 Cycle Time Corp
-//
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"
