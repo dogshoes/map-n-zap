@@ -32,63 +32,136 @@
 // Copyright 1997 Cycle Time Corp
 ///////////////////////////////////////////////////////////////////////////////
 
-#ifndef RRRCLIST
-#define RRRCLIST
+#pragma once
 
+/// <summary>
+/// An entry for the OCX instance list.
+/// </summary>
 class RRRCListEntry : public CObject
 {
-        DECLARE_DYNAMIC(RRRCListEntry)
+    DECLARE_DYNAMIC(RRRCListEntry)
 
     public:
+        /// <summary>
+        /// Construct a new OCX instance list entry.
+        /// </summary>
+        /// <param name="ConnectId">Connection identifier.</param>
+        /// <param name="hWnd">Window handle.</param>
+        /// <param name="ControlName">Connected control's instance name.</param>
+        /// <param name="NodeAddress">Node address control is attached to.</param>
         RRRCListEntry(long ConnectId, long hWnd, LPCTSTR ControlName, short NodeAddress);
+
+        /// <summary>
+        /// Destroy this connection list entry.
+        /// </summary>
         ~RRRCListEntry();
 
-        // Attributes
-    public:
+        /// <summary>
+        /// Connection identifier.
+        /// </summary>
+        long m_lConnectId;
 
-        // Operations
-    public:
+        /// <summary>
+        /// Window handle.
+        /// </summary>
+        long m_hWnd;
 
-        // Overrides
+        /// <summary>
+        /// Connected control's instance name.
+        /// </summary>
+        CString m_sControlName; 
 
-        // Implementation
-    private:
-
-    public:
-        long m_lConnectId;                  // connection id
-        long m_hWnd;                        // window handle
-        CString m_sControlName;             // connected control's instance name
-        short m_NodeAddress;                // node address control is attached to
+        /// <summary>
+        /// Node address control is attached to.
+        /// </summary>
+        short m_NodeAddress;
 };
 
+/// <summary>
+/// A collection of CyeCom.ocx controls connected to this CyeSrv.exe.  This is used to dispatch window messages
+/// to these controls.
+/// </summary>
+/// <remarks>
+/// One instance of CyeSrv.exe can service requests from mutliple applications each running their own
+/// instance of CyeCom.ocx.  This list class will broker dispatching messages out to connected OCX controls.
+/// </remarks>
 class RRRCList : public CObArray
 {
-        DECLARE_DYNAMIC(RRRCList)
+    DECLARE_DYNAMIC(RRRCList)
 
     public:
+        /// <summary>
+        /// Construct a new OCX instance list.
+        /// </summary>
         RRRCList();
+
+        /// <summary>
+        /// Destroy the OCX instance list.
+        /// </summary>
         ~RRRCList();
 
-        // Attributes
-    public:
-
-        // Operations
-    public:
+        /// <summary>
+        /// Add a newly established CyeCom.ocx to the list.
+        /// </summary>
+        /// <remarks>
+        /// The robot's node address cannot be changed for an entry after it's been added.  The entry must be
+        /// deleted and added again with the changed node address.
+        /// </remarks>
+        /// <param name="ConnectId">A unique connection identifier.</param>
+        /// <param name="wHnd">The window handle of the established OCX which to send messages to.</param>
+        /// <param name="ControlName">The ambient display name of the connected OCX.</param>
+        /// <param name="NodeAddress">The robot's address which is being commicated with.</param>
         void AddEntry(long ConnectId, long wHnd, LPCTSTR ControlName, short NodeAddress);
+
+        /// <summary>
+        /// Remove the link to a CyeCom.ocx.
+        /// </summary>
         void DeleteEntry(long ConnectId);
+
+        /// <summary>
+        /// Get a connection's robot node address.
+        /// </summary>
+        /// <param name="ConnectId">The connection to look up the robot's node address for.</param>
+        /// <returns>The robot's node address.  Will return -1 if no connection was registered for the supplied identifier.</returns>
         short GetEntryAddress(long ConnectId);
+
+        /// <summary>
+        /// Check to see if a connection registered with this list is already communicating with a specific
+        /// robot's node address.
+        /// </summary>
+        /// <param name="Address">The robot node address to look up.</param>
+        /// <returns>An indication whether that address is in use.</returns>
         BOOL AddressInUse(short Address);
+
+        /// <summary>
+        /// Call PostMessage() against all connected controls which are registered under the supplied 
+        /// robot node address.
+        /// </summary>
+        /// <param name="Msg">The message to send.</param>
+        /// <param name="wParam">Additional message-specific information.</param>
+        /// <param name="lParam">Additional message-specific information.</param>
+        /// <param name="NodeAddress">The robot's node address which generated this message.</param>
         void PostAllClients(UINT Msg, WPARAM wParam, LPARAM lParam, short NodeAddress);
+
+        /// <summary>
+        /// Call SendMessage() against all connected controls which are registered under the supplied 
+        /// robot node address.
+        /// </summary>
+        /// <remarks>
+        /// This is primarily used to dispatch WM_COPYDATA messages.
+        /// </remarks>
+        /// <param name="Msg">The message to send.</param>
+        /// <param name="wParam">Additional message-specific information.</param>
+        /// <param name="lParam">Additional message-specific information.</param>
+        /// <param name="NodeAddress">The robot's node address which generated this message.</param>
         void SendAllClients(UINT Msg, WPARAM wParam, LPARAM lParam, short NodeAddress);
 
-        // Overrides
-
-        // Implementation
     private:
-        CSemaphore m_oSem;                  // multithreading lock support
-
-    public:
+        /// <summary>
+        /// Multithreading semaphore.
+        /// </summary>
+        /// <remarks>
+        /// Use when modifying the internal collection of connected OCX controls.
+        /// </remarks>
+        CSemaphore m_oSem;
 };
-
-#endif
-/////////////////////////////////////////////////////////////////////////////
