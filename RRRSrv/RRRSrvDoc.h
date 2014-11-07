@@ -147,5 +147,3 @@ class CRRRSrvDoc : public CDocument
         DECLARE_DISPATCH_MAP()
         DECLARE_INTERFACE_MAP()
 };
-
-/////////////////////////////////////////////////////////////////////////////

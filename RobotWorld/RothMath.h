@@ -26,9 +26,7 @@
    USA
  **********************************************************************/
 
-#ifndef ROTHMATH02938576949294856
-
-#define ROTHMATH02938576949294856
+#pragma once
 
 #include <math.h>
 
@@ -128,5 +126,3 @@ double Max(double* x, unsigned int n);
 void FindCircle(robPOINT P1, robPOINT P2, robPOINT P3, robPOINT* Center, double* radius);
 double Max(double x1, double x2);
 int RobotHeadingToBitmapFrame(double Heading, int TotalFrames);
-
-#endif

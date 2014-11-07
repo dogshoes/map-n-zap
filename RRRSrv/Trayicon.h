@@ -40,8 +40,7 @@
 // If this code works, it was written by Paul DiLascia.
 // If not, I don't know who wrote it.
 
-#ifndef _TRAYICON_H
-#define _TRAYICON_H
+#pragma once
 
 ////////////////
 // CTrayIcon manages an icon in the Windows 95 system tray.
@@ -75,5 +74,3 @@ class CTrayIcon : public CCmdTarget
 
         virtual LRESULT OnTrayNotification(WPARAM uID, LPARAM lEvent);
 };
-
-#endif

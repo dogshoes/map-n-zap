@@ -32,8 +32,7 @@
 // Copyright 1997 Cycle Time Corp
 ///////////////////////////////////////////////////////////////////////////////
 
-#ifndef RRRCOM
-#define RRRCOM
+#pragma once
 
 #include "RRRCList.h"
 #include "RRRMsg.h"
@@ -203,5 +202,3 @@ class RRRCom : public CObject
 
         friend class ProtocolDiagnostics;
 };
-#endif
-/////////////////////////////////////////////////////////////////////////////

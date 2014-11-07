@@ -32,9 +32,7 @@
 // Copyright 1997 Cycle Time Corp
 ///////////////////////////////////////////////////////////////////////////////
 
-#ifndef ROBOTCOMMUNICATION230495lsdfjg0934ldfjb039w4ldfj
-
-#define ROBOTCOMMUNICATION230495lsdfjg0934ldfjb039w4ldfj
+#pragma once
 
 #include "RothMath.h"
 #include "rrdim.h"
@@ -123,5 +121,3 @@ class CRobotComm : public CObject
         long int BytesToLong(unsigned char Byte0, unsigned char Byte1,
                              unsigned char Byte2, unsigned char Byte3);
 };
-
-#endif

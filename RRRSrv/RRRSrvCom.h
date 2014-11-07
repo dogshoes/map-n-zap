@@ -32,8 +32,7 @@
 // Copyright 1997 Cycle Time Corp
 ///////////////////////////////////////////////////////////////////////////////
 
-#ifndef RRRSRVCOM
-#define RRRSRVCOM
+#pragma once
 
 #include "RRRComm.h"
 #include "RRRComEngine.h"
@@ -82,5 +81,3 @@ class RRRSrvCom : public RRRCom
 
         CTypedPtrMap<CMapWordToOb, WORD, RRRComEngine*> EngineMap;
 };
-#endif
-/////////////////////////////////////////////////////////////////////////////

@@ -25,9 +25,9 @@
    Pittsburgh, PA 15212
    USA
  **********************************************************************/
-#ifndef RRDIM2309423ojdrfg0394ldgj0934lkdjg0938lkd
 
-#define RRDIM2309423ojdrfg0394ldgj0934lkdjg0938lkd
+#pragma once
+
 /*RugRover dimensions*/
 const float cRobotEncoderTicksPerInch = 12.20187f;		//Number of encoder ticks per inch (as reported by robot)
 const float cTPI = 10.0f;										//Encoder Ticks Per Inch (in robot world coords)
@@ -58,5 +58,3 @@ const short cMinSpeed = 25;									//Minimum speed the robot can go
 const short cMaxPwm = 1000;									//Maximum Pwm for robot
 
 typedef enum {osNone = 0, osLowSensitivity = 1, osMediumSensitivity = 2, osHighSensitivity = 3} TObstacleSensitivity;
-
-#endif

@@ -32,8 +32,7 @@
 // Copyright 1999 Cycle Time Corp
 ///////////////////////////////////////////////////////////////////////////////
 
-#ifndef RRRCOMENGINE
-#define RRRCOMENGINE
+#pragma once
 
 class RRRCList;
 
@@ -133,5 +132,3 @@ class RRRComEngine : public CObject
 
         friend class ProtocolDiagnostics;
 };
-#endif
-/////////////////////////////////////////////////////////////////////////////

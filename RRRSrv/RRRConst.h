@@ -32,8 +32,7 @@
 // Copyright 1997 Cycle Time Corp
 ///////////////////////////////////////////////////////////////////////////////
 
-#ifndef RRRCONST
-#define RRRCONST
+#pragma once
 
 //
 // Message codes for message from PC to Robot
@@ -169,5 +168,3 @@ struct RRR_CHECKSUM_MSG
     double dReturnValue[1];
     unsigned char SoundVolume;
 };
-
-#endif

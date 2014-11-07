@@ -32,8 +32,7 @@
 // Copyright 1997 Cycle Time Corp
 ///////////////////////////////////////////////////////////////////////////////
 
-#ifndef RRRMSG
-#define RRRMSG
+#pragma once
 
 #include "RRRConst.h"
 
@@ -254,4 +253,3 @@ class RRRMsg : public CObject
         unsigned char SndMsgNum;
         short Priority;
 };
-#endif

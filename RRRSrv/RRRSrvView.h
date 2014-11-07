@@ -82,5 +82,3 @@ inline CRRRSrvDoc* CRRRSrvView::GetDocument()
     return (CRRRSrvDoc*)m_pDocument;
 }
 #endif
-
-/////////////////////////////////////////////////////////////////////////////
