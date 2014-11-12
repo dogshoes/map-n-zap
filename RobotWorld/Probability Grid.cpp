@@ -4496,20 +4496,24 @@ void CProbabilityGrid::Serialize(CArchive & archive)
 
             switch (ColorRobot)
             {
-            case 9:		//Black Green
+            case crLegacyBlack:		//Black Green
                 ColorRobot = crBlack;
                 break;
 
-            case 200:	//Orange Black
+            case crLegacyOrange:	//Orange Black
                 ColorRobot = crOrange;
                 break;
 
-            case 300:	//Yellow Black
+            case crLegacyYellow:	//Yellow Black
                 ColorRobot = crYellow;
                 break;
 
-            case 400:	//Chrome
+            case crLegacyChrome:	//Chrome
                 ColorRobot = crChrome;
+                break;
+
+            default:
+                ASSERT(false);
                 break;
             }
 
@@ -5319,18 +5323,22 @@ void CProbabilityGrid::LoadRobotBitmaps(void)
 
                 switch (ColorRobot)
                 {
+                case crLegacyBlack:
                 case crBlack:
                     RobotBitmapPath += "\\Robot Bitmaps\\011 large.bmp";
                     break;
 
+                case crLegacyOrange:
                 case crOrange:
                     RobotBitmapPath += "\\Robot Bitmaps\\200 large.bmp";
                     break;
 
+                case crLegacyYellow:
                 case crYellow:
                     RobotBitmapPath += "\\Robot Bitmaps\\300 large.bmp";
                     break;
 
+                case crLegacyChrome:
                 case crChrome:
                     RobotBitmapPath += "\\Robot Bitmaps\\large_chrome.bmp";
                     break;
@@ -5414,18 +5422,22 @@ void CProbabilityGrid::LoadRobotBitmaps(void)
 
                     switch (ColorRobot)
                     {
+                    case crLegacyBlack:
                     case crBlack:
                         RobotBitmapPath += "\\Robot Bitmaps\\011 small.bmp";
                         break;
 
+                    case crLegacyOrange:
                     case crOrange:
                         RobotBitmapPath += "\\Robot Bitmaps\\200 small.bmp";
                         break;
 
+                    case crLegacyYellow:
                     case crYellow:
                         RobotBitmapPath += "\\Robot Bitmaps\\300 small.bmp";
                         break;
 
+                    case crLegacyChrome:
                     case crChrome:
                         RobotBitmapPath += "\\Robot Bitmaps\\small_chrome.bmp";
                         break;
@@ -5447,18 +5459,22 @@ void CProbabilityGrid::LoadRobotBitmaps(void)
 
                     switch (ColorRobot)
                     {
+                    case crLegacyBlack:
                     case crBlack:
                         RobotBitmapPath += "\\Robot Bitmaps\\011 med.bmp";
                         break;
 
+                    case crLegacyOrange:
                     case crOrange:
                         RobotBitmapPath += "\\Robot Bitmaps\\200 med.bmp";
                         break;
 
+                    case crLegacyYellow:
                     case crYellow:
                         RobotBitmapPath += "\\Robot Bitmaps\\300 med.bmp";
                         break;
 
+                    case crLegacyChrome:
                     case crChrome:
                         RobotBitmapPath += "\\Robot Bitmaps\\med_chrome.bmp";
                         break;
@@ -5480,18 +5496,22 @@ void CProbabilityGrid::LoadRobotBitmaps(void)
 
                     switch (ColorRobot)
                     {
+                    case crLegacyBlack:
                     case crBlack:
                         RobotBitmapPath += "\\Robot Bitmaps\\011 large.bmp";
                         break;
 
+                    case crLegacyOrange:
                     case crOrange:
                         RobotBitmapPath += "\\Robot Bitmaps\\200 large.bmp";
                         break;
 
+                    case crLegacyYellow:
                     case crYellow:
                         RobotBitmapPath += "\\Robot Bitmaps\\300 large.bmp";
                         break;
 
+                    case crLegacyChrome:
                     case crChrome:
                         RobotBitmapPath += "\\Robot Bitmaps\\large_chrome.bmp";
                         break;

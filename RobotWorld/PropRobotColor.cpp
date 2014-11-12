@@ -31,6 +31,7 @@
 #include "stdafx.h"
 #include "robotworld.h"
 #include "PropRobotColor.h"
+#include "Robot.h"
 
 /////////////////////////////////////////////////////////////////////////////
 // CPropRobotColor property page
@@ -149,19 +150,23 @@ void CPropRobotColor::SetRobotColor(int RobotColor)
 {
     switch (RobotColor)
     {
-    case 0:
+    case crLegacyBlack:
+    case crBlack:
         m_HighlightedBmp = &m_Bmp011;
         break;
 
-    case 1:
+    case crLegacyOrange:
+    case crOrange:
         m_HighlightedBmp = &m_Bmp200;
         break;
 
-    case 2:
+    case crLegacyYellow:
+    case crYellow:
         m_HighlightedBmp = &m_Bmp300;
         break;
 
-    case 3:
+    case crLegacyChrome:
+    case crChrome:
         m_HighlightedBmp = &m_BmpChrome;
         break;
 
@@ -176,22 +181,22 @@ int CPropRobotColor::GetRobotColor()
 {
     if (m_HighlightedBmp == &m_Bmp011)
     {
-        return 0;
+        return crBlack;
     }
 
     if (m_HighlightedBmp == &m_Bmp200)
     {
-        return 1;
+        return crOrange;
     }
 
     if (m_HighlightedBmp == &m_Bmp300)
     {
-        return 2;
+        return crYellow;
     }
 
     if (m_HighlightedBmp == &m_BmpChrome)
     {
-        return 3;
+        return crChrome;
     }
 
     ASSERT(FALSE);
