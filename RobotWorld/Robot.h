@@ -64,6 +64,7 @@ typedef enum {stCalibrating, stWaiting, stDragging, stFollowingInstructions,
 typedef enum {ftWood, ftThinCarpet, ftThickCarpet} TFloorType;
 typedef enum {atNone, atWagon, atVacuum} TAttachmentType;
 typedef enum {crNone = -1, crBlack = 0, crOrange, crYellow, crChrome} TRobotColor;
+typedef enum {crLegacyBlack = 9, crLegacyOrange = 200, crLegacyYellow = 300, crLegacyChrome = 400} TRobotColorLegacy;
 
 struct TRobotInfo
 {
