@@ -54,24 +54,16 @@ CRobotComm::CRobotComm()
     rcom = SrvApp->m_oRRRCom;
 }
 
+CRobotComm::~CRobotComm()
+{
+}
+
+void CRobotComm::ResetInterface(RRRSrvCom *newrcom)
+{
+    rcom = newrcom;
+}
+
 void CRobotComm::SendPositionDestination(short RobotAddress, robPOINT Destination)
-/*******************************************************************************
-//Created: 04/16/96 S.R.
-//Last Revision: 11/18/97 S.R.
-//Parameters:
-//	RRDest	The destination coordinate for the RugRover.
-//Return Value:
-//	none.
-********************************************************************************
-//Description:
-//		This function sends the robot destination to the RugRover through the
-//	serial link.
-//Method:
-//		The function uses the LongToBytes function to break the long int X and Y
-//	coordinates into their individual bytes.  Then the string to output is formed
-//	and sent out using the rcom->SendMsg function.  This is done
-//	individually for both the X and Y coordinate.
-*******************************************************************************/
 {
     RRRMsg OutputString(RobotAddress, '\000', 9);
 
@@ -96,27 +88,6 @@ void CRobotComm::SendPositionDestination(short RobotAddress, robPOINT Destinatio
 
 #ifdef IMPLEMENTED
 long int* CRobotComm::DecodeSerialInput(CString* InputString, unsigned char* InputCode)
-/*******************************************************************************
-//Created: 04/16/96 S.R.
-//Last Revision: 11/18/97 S.R.
-//Parameters:
-//	InputString		The string received from the serial port that is to be decoded.
-//	InputCode		A character signifying what command was received from the RugRover
-//Return Value:
-//	The long integer part of the command received.  Do not delete the returned pointer.
-********************************************************************************
-//Description:
-//		This function decodes the serial input from the robot.  The function
-//	returns a character signifying what command was recieved and a long integer
-//	array that has the numbers associated with that command (if any.)
-//Method:
-//		The input string from the robot is made up of two parts.  The first
-//	part is the command code stored as a character at the beginning of the input
-//	string.  The second part is a set of optional numbers associated with that command.
-//	The function strips the InputCode command from the beginning of the input
-//	string.  Then the function forms the return value.  How this is formed depends
-//	on the command code (the length of the number depends on the command character.)
-*******************************************************************************/
 {
     static long int ReturnValue[3];
 
@@ -192,41 +163,11 @@ long int* CRobotComm::DecodeSerialInput(CString* InputString, unsigned char* Inp
 #endif
 
 int CRobotComm::BytesToInt(unsigned char Byte0, unsigned char Byte1)
-/*******************************************************************************
-//Created: 04/16/96 S.R.
-//Last Revision: 04/16/96 S.R.
-//Parameters:
-//	Byte0		The low byte of the number
-//	Byte1		The high byte of the number
-//Return Value:
-//	The ingeger made up of the individual bytes in Byte0 and Byte 1.
-********************************************************************************
-//Description:
-//		This function takes two individual bytes and turns them into an integer.
-//Method:
-//		The function uses the or and bit shift operations to glue the two bytes
-//	together.
-*******************************************************************************/
 {
     return (((int)Byte0) | (((int)Byte1) << 8));
 }
 
-long int CRobotComm::BytesToLong(unsigned char Byte0, unsigned char Byte1,
-                                 unsigned char Byte2, unsigned char Byte3)
-/*******************************************************************************
-//Created: 04/16/96 S.R.
-//Last Revision: 04/16/96 S.R.
-//Parameters:
-//	Byte0..Byte3	The individual bytes to join together.  0 is the low order byte.
-//Return Value:
-//	The long integer made up of the individual bytes in Byte0..Byte3.
-********************************************************************************
-//Description:
-//	This function takes four individual bytes and turns them into a long integer.
-//Method:
-//		The function uses the or and bit shift operations to glue the four bytes
-//	together.
-*******************************************************************************/
+long int CRobotComm::BytesToLong(unsigned char Byte0, unsigned char Byte1, unsigned char Byte2, unsigned char Byte3)
 {
     long int Result = Byte0;
     Result |= ((long int)Byte1) << 8;
@@ -235,25 +176,7 @@ long int CRobotComm::BytesToLong(unsigned char Byte0, unsigned char Byte1,
     return Result;
 }
 
-
 char* CRobotComm::LongToBytes(long int X)
-/*******************************************************************************
-//Created: 04/16/96 S.R.
-//Last Revision: 04/16/96 S.R.
-//Parameters:
-//	X		The long integer to break up into individual bytes.
-//Return Value:
-//	an array of characters containing the individual bytes of X.
-//	!!!!!!!!!!!Do not delte the resulting pointer!!!!!!!!!!!
-********************************************************************************
-//Description:
-//	This function takes a long integer and breaks it up into its individual bytes.
-//	!!!!!Do Not Delete the Pointer Returned!!!!!!
-//Method:
-//		This function uses the bit shift operations to strip out the individual
-//	bytes of the long integer.  It then returns an array of characters containing
-//	the individual characters.
-*******************************************************************************/
 {
     static char Result[4];
     Result[0] = (char)X;
@@ -264,23 +187,6 @@ char* CRobotComm::LongToBytes(long int X)
 }
 
 void CRobotComm::SendMotorsPWM(short RobotAddress, int M0PWM, int M1PWM)
-/*******************************************************************************
-//Created: 04/30/96 S.R.
-//Last Revision: 04/30/96 S.R.
-//Parameters:
-//	M0PWM		The amount of pwm to send to motor 0.
-//	M1PWM		The amount of pwm to send to motor 1.
-//Return Value:
-//	none.
-********************************************************************************
-//Description:
-//		This function sends the Robot a command to change the pwm for the two
-//	motors.
-//Method:
-//		The function forms a string with the command character to set the motors'
-//	PWM at the front followed by motor0's pwm and motor1's pwm.  This string is
-//	sent through the COM port by the rcom->SendMsg function.
-*******************************************************************************/
 {
     RRRMsg OutputString(RobotAddress, '\000', 5);
 
@@ -302,21 +208,6 @@ void CRobotComm::SendMotorsPWM(short RobotAddress, int M0PWM, int M1PWM)
 }
 
 void CRobotComm::SendStopMotors(short RobotAddress)
-/*******************************************************************************
-//Created: 04/30/96 S.R.
-//Last Revision: 04/30/96 S.R.
-//Parameters:
-//	none.
-//Return Value:
-//	none.
-********************************************************************************
-//Description:
-//	This function sends a command to the RugRover to stop the motors.
-//Method:
-//		The function sends a string with the command character to stop the motors.
-// This string is sent through the COM port by the rcom->SendMsg
-//	function.
-*******************************************************************************/
 {
     RRRMsg OutputString(RobotAddress);
 
@@ -326,19 +217,6 @@ void CRobotComm::SendStopMotors(short RobotAddress)
 }
 
 void CRobotComm::SendPurgeRingBuffer(short RobotAddress)
-/*******************************************************************************
-//Created: 04/21/97 S.R.
-//Last Revision: 04/21/97 S.R.
-//Parameters:
-//	none.
-//Return Value:
-//	none.
-********************************************************************************
-//Description:
-//
-//Method:
-//
-*******************************************************************************/
 {
     RRRMsg OutputString(RobotAddress);
 
@@ -348,21 +226,6 @@ void CRobotComm::SendPurgeRingBuffer(short RobotAddress)
 }
 
 void CRobotComm::SendHeadingDestination(short RobotAddress, double Heading, short Velocity)
-/*******************************************************************************
-//Created: 04/30/96 S.R.
-//Last Revision: 01/30/97 S.R.
-//Parameters:
-//	Heading:		The heading to send to the robot.
-//Return Value:
-//	none.
-********************************************************************************
-//Description:
-//		This function sends a heading for the robot to turn to.
-//Method:
-//		The function creates a string with the SET_HEADING_DEST_COMMAND_CHAR and Heading.
-// The string is sent through the COM port by the rcom->SendMsg
-//	function.
-*******************************************************************************/
 {
     RRRMsg OutputString(RobotAddress, '\000', 5);
 
@@ -383,21 +246,6 @@ void CRobotComm::SendHeadingDestination(short RobotAddress, double Heading, shor
 }
 
 void CRobotComm::SendMaxPWM(short RobotAddress, unsigned char MaxPWM)
-/*******************************************************************************
-//Created: 04/30/96 S.R.
-//Last Revision: 04/30/96 S.R.
-//Parameters:
-//	MaxPWM:	The max pwm the robot can use.
-//Return Value:
-//	none.
-********************************************************************************
-//Description:
-//	This function sends the maximum pwm the robot can use.
-//Method:
-//	The function creates a string with the SET_MAXPWM_COMMAND_CHAR and MaxPWM.
-// The string is sent through the COM port by the rcom->SendMsg
-//	function.
-*******************************************************************************/
 {
     RRRMsg OutputString(RobotAddress, '\000', 2);
 
@@ -412,21 +260,6 @@ void CRobotComm::SendMaxPWM(short RobotAddress, unsigned char MaxPWM)
 }
 
 void CRobotComm::SendFlipHandle(short RobotAddress, BOOL value)
-/*******************************************************************************
-//Created: 08/29/96 S.R.
-//Last Revision: 08/29/96 S.R.
-//Parameters:
-//	value: the value to set FlipHandle to.
-//Return Value:
-//	none.
-********************************************************************************
-//Description:
-//	This function sends the flip handle value to the robot.
-//Method:
-//	The function creates a string with the SET_FLIPHANDLE_COMMAND_CHAR and value.
-// The string is sent through the COM port by the rcom->SendMsg
-//	function.
-*******************************************************************************/
 {
     RRRMsg OutputString(RobotAddress, '\000', 2);
 
@@ -441,21 +274,6 @@ void CRobotComm::SendFlipHandle(short RobotAddress, BOOL value)
 }
 
 void CRobotComm::SendHeadingCorrectionFactor(short RobotAddress, int Correction)
-/*******************************************************************************
-//Created: 11/12/96 S.R.
-//Last Revision: 11/15/96 S.R.
-//Parameters:
-//	Correction:	The heading correction factor.
-//Return Value:
-//	none.
-********************************************************************************
-//Description:
-//	The function sends the heading correction factor to the robot.
-//Method:
-//	The function creates a string with the SET_HEADCORRECTFACT_COMMAND_CHAR and Correction.
-// The string is sent through the COM port by the rcom->SendMsg
-//	function.
-*******************************************************************************/
 {
     RRRMsg OutputString(RobotAddress, '\000', 3);
 
@@ -471,22 +289,6 @@ void CRobotComm::SendHeadingCorrectionFactor(short RobotAddress, int Correction)
     rcom->SendMsg(OutputString);
 }
 
-/*******************************************************************************
-//Created: 11/21/96 S.R.
-//Last Revision: 04/01/97 S.R.
-//Parameters:
-//	M0Speed, M1Speed:	The velocities the motors should go.
-//Return Value:
-//	none.
-********************************************************************************
-//Description:
-//	This function sets the velocities the robot's motors should go.
-//Method:
-//		The function creates a string with the SET_MOTORS_VELOCITY_COMMAND_CHAR and
-//	M0Velocity and M1Velocity.
-//	The string is sent through the COM port by the rcom->SendMsg
-//	function.
-*******************************************************************************/
 void CRobotComm::SendMotorVelocities(short RobotAddress, int M0Velocity, int M1Velocity, short Priority)
 {
     RRRMsg OutputString(RobotAddress, '\000', 5);
@@ -510,22 +312,6 @@ void CRobotComm::SendMotorVelocities(short RobotAddress, int M0Velocity, int M1V
 }
 
 void CRobotComm::SendPosition(short RobotAddress, robPOINT Position)
-/*******************************************************************************
-//Created: 12/19/96 S.R.
-//Last Revision: 11/18/97 S.R.
-//Parameters:
-//	Position:	The robot's correct position.
-//Return Value:
-//	none.
-********************************************************************************
-//Description:
-//	This function sends the robot's correct position.
-//Method:
-//		The function creates a string with the SET_POSITION_COMMAND_CHAR and
-//	Position.  Position is transformed from world to robot coordinates.
-//	The string is sent through the COM port by the rcom->SendMsg
-//	function.
-*******************************************************************************/
 {
     RRRMsg OutputString(RobotAddress, '\000', 9);
 
@@ -549,22 +335,7 @@ void CRobotComm::SendPosition(short RobotAddress, robPOINT Position)
 }
 
 void CRobotComm::SendHeading(short RobotAddress, double Heading)
-/*******************************************************************************
-//Created: 12/19/96 S.R.
-//Last Revision: 01/30/97 S.R.
-//Parameters:
-//	Heading:	The robot's correct heading.
-//Return Value:
-//	none.
-********************************************************************************
-//Description:
-//	This function sends the robot's correct heading.
-//Method:
-//		The function creates a string with the SET_HEADING_COMMAND_CHAR and
-//	Heading.
-//	The string is sent through the COM port by the rcom->SendMsg
-//	function.
-*******************************************************************************/
+
 {
     RRRMsg OutputString(RobotAddress, '\000', 3);
 
@@ -581,21 +352,6 @@ void CRobotComm::SendHeading(short RobotAddress, double Heading)
 }
 
 void CRobotComm::SendMaxSpeed(short RobotAddress, short MaxSpeed)
-/*******************************************************************************
-//Created: 01/23/97 S.R.
-//Last Revision: 04/01/97 S.R.
-//Parameters:
-//	MaxPWM:	The max speed the robot can use.
-//Return Value:
-//	none.
-********************************************************************************
-//Description:
-//	This function sends the maximum speed the robot can use.
-//Method:
-//	The function creates a string with the SET_MAXSPEED_COMMAND_CHAR and MaxSpeed.
-// The string is sent through the COM port by the rcom->SendMsg
-//	function.
-*******************************************************************************/
 {
     RRRMsg OutputString(RobotAddress, '\000', 3);
 
@@ -611,19 +367,6 @@ void CRobotComm::SendMaxSpeed(short RobotAddress, short MaxSpeed)
     rcom->SendMsg(OutputString);
 }
 
-/*******************************************************************************
-//Created: 01/23/97 S.R.
-//Last Revision: 11/18/97 S.R.
-//Parameters:
-//
-//Return Value:
-//
-********************************************************************************
-//Description:
-//
-//Method:
-//
-*******************************************************************************/
 void CRobotComm::SendPositionVelocityDestination(short RobotAddress, robPOINT Destination, short Velocity, short Priority)
 {
     RRRMsg OutputString(RobotAddress, '\000', 11);
@@ -653,19 +396,6 @@ void CRobotComm::SendPositionVelocityDestination(short RobotAddress, robPOINT De
 }
 
 void CRobotComm::SendStraightVelocity(short RobotAddress, int Velocity, double Heading)
-/*******************************************************************************
-//Created: 01/30/97 S.R.
-//Last Revision: 04/10/97 S.R.
-//Parameters:
-//
-//Return Value:
-//
-********************************************************************************
-//Description:
-//	!!Warning!! This command can change the value of FlipHandle and MaxSpeed in the robot!!
-//Method:
-//
-*******************************************************************************/
 {
     RRRMsg OutputString(RobotAddress, '\000', 5);
 
@@ -683,19 +413,6 @@ void CRobotComm::SendStraightVelocity(short RobotAddress, int Velocity, double H
 }
 
 int CRobotComm::RadianToEncoderHeading(double Heading)
-/*******************************************************************************
-//Created: 01/30/97 S.R.
-//Last Revision: 01/30/97 S.R.
-//Parameters:
-//
-//Return Value:
-//
-********************************************************************************
-//Description:
-//
-//Method:
-//
-*******************************************************************************/
 {
     Heading = BringAngleInRange(Heading);
     /*Transform radian heading into a robot heading*/
@@ -715,19 +432,6 @@ int CRobotComm::RadianToEncoderHeading(double Heading)
 }
 
 void CRobotComm::SendSensitiveObstacleDetection(short RobotAddress, short Sensitive)
-/*******************************************************************************
-//Created: 02/06/97 S.R.
-//Last Revision: 02/06/97 S.R.
-//Parameters:
-//
-//Return Value:
-//
-********************************************************************************
-//Description:
-//
-//Method:
-//
-*******************************************************************************/
 {
     RRRMsg OutputString(RobotAddress, '\000', 2);
 
@@ -741,37 +445,7 @@ void CRobotComm::SendSensitiveObstacleDetection(short RobotAddress, short Sensit
     rcom->SendMsg(OutputString);
 }
 
-CRobotComm::~CRobotComm()
-/*******************************************************************************
-//Created: 02/13/97 S.R.
-//Last Revision: 02/13/97 S.R.
-//Parameters:
-//
-//Return Value:
-//
-********************************************************************************
-//Description:
-//
-//Method:
-//
-*******************************************************************************/
-{
-}
-
 void CRobotComm::SendTurn(short RobotAddress, double Heading, short Velocity, short Diameter)
-/*******************************************************************************
-//Created: 09/17/97 S.R.
-//Last Revision: 09/17/97 S.R.
-//Parameters:
-//
-//Return Value:
-//
-********************************************************************************
-//Description:
-//
-//Method:
-//
-*******************************************************************************/
 {
     RRRMsg OutputString(RobotAddress, '\000', 7);
 
@@ -798,19 +472,6 @@ void CRobotComm::SendTurn(short RobotAddress, double Heading, short Velocity, sh
 }
 
 void CRobotComm::SendMotorControlConstants(short RobotAddress, char Kp, char Ki, char Kd, char Kb, char KPwm)
-/*******************************************************************************
-//Created: 10/06/97 S.R.
-//Last Revision: 10/06/97 S.R.
-//Parameters:
-//
-//Return Value:
-//	none.
-********************************************************************************
-//Description:
-//
-//Method:
-//
-*******************************************************************************/
 {
     RRRMsg OutputString(RobotAddress, '\000', 6);
 
@@ -829,20 +490,6 @@ void CRobotComm::SendMotorControlConstants(short RobotAddress, char Kp, char Ki,
 }
 
 void CRobotComm::SendHandleLength(short RobotAddress, short HandleLength)
-/*******************************************************************************
-//Created: 10/07/97 S.R.
-//Last Revision: 11/18/97 S.R.
-//Parameters:
-//	HandleLength:	the new robot's handle length in world units.
-//Return Value:
-//	none.
-********************************************************************************
-//Description:
-//	This function transforms HandleLength into robot units then sends it to the
-//	robot.
-//Method:
-//
-*******************************************************************************/
 {
     RRRMsg OutputString(RobotAddress, '\000', 3);
 
@@ -860,20 +507,6 @@ void CRobotComm::SendHandleLength(short RobotAddress, short HandleLength)
 }
 
 void CRobotComm::SendFollowPath(short RobotAddress, short FollowPath)
-/*******************************************************************************
-//Created: 10/07/97 S.R.
-//Last Revision: 10/07/97 S.R.
-//Parameters:
-//	FollowPath:	Follow path or not?
-//Return Value:
-//	none.
-********************************************************************************
-//Description:
-//		This function sends a command to the robot to start or stop following its
-//	stored connect-the-dots path.
-//Method:
-//
-*******************************************************************************/
 {
     RRRMsg OutputString(RobotAddress, '\000', 3);
 
@@ -890,23 +523,6 @@ void CRobotComm::SendFollowPath(short RobotAddress, short FollowPath)
 }
 
 void CRobotComm::SendPathSegment(short RobotAddress, BOOL PurgePath, robPOINT* Points, short nPoints)
-/*******************************************************************************
-//Created: 10/14/97 S.R.
-//Last Revision: 11/18/97 S.R.
-//Parameters:
-//	PurgePath:	TRUE if the robot should purge its previous path.
-//	Points:	points to add to the robot's connect-the-dots path.
-//	nPoints:	number of points in Points array.
-//Return Value:
-//	none.
-********************************************************************************
-//Description:
-//		This function sends a connect-the-dots path segment to the robot.
-//Method:
-//		The function transforms the points from world to robot coordinates.  It
-//	sends the path segment down as a segment origin point then the distance between
-//	successive points.  This saves download time.
-*******************************************************************************/
 {
     RRRMsg OutputString(RobotAddress, '\000', 8 + 2 * (nPoints - 1) + 3);
 
