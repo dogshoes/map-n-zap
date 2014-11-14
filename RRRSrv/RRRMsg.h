@@ -240,16 +240,53 @@ class RRRMsg : public CObject
 
         enum RRRMSG_CONSTANTS
         {
+            /// <summary>
+            /// The maximum length for a robot message.
+            /// </summary>
             MAX_MSG_LEN = 1024,
         };
 
     protected:
+        /// <summary>
+        /// The message buffer.
+        /// </summary>
         unsigned char buffer[MAX_MSG_LEN];
+
+        /// <summary>
+        /// The expected length of the message buffer set at RRRMsg construction.
+        /// </summary>
+        /// <remarks>
+        /// This must not exceed MAX_MSG_LEN.
+        /// </remarks>
         short buflen;
+
+        /// <summary>
+        /// The current position of the cursor in the buffer.
+        /// </summary>
         short bufindex;
+
+        /// <summary>
+        /// The address of the message recipient.
+        /// </summary>
         short DestAddr;
+
+        /// <summary>
+        /// The address of the message source.
+        /// </summary>
         short SrcAddr;
+
+        /// <summary>
+        /// The received message number for acknowledgement.
+        /// </summary>
         unsigned char RcvMsgNum;
+
+        /// <summary>
+        /// The sent message number for acknowledgement.
+        /// </summary>
         unsigned char SndMsgNum;
+
+        /// <summary>
+        /// The message priority.
+        /// </summary>
         short Priority;
 };
