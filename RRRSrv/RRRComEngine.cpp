@@ -35,7 +35,7 @@
 #include "stdafx.h"
 #include "RRRSrv.h"
 #include "RRRComEngine.h"
-#include "Robot Communication.h"
+#include "RobotComm.h"
 //#include "RRRCom.h"
 
 /////////////////////////////////////////////////////////////////////////////

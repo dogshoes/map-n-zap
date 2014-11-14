@@ -337,7 +337,7 @@
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="robot communication.cpp"
+				RelativePath="RobotComm.cpp"
 				>
 				<FileConfiguration
 					Name="Release|Win32"
@@ -632,7 +632,7 @@
 				>
 			</File>
 			<File
-				RelativePath="robot communication.h"
+				RelativePath="RobotComm.h"
 				>
 			</File>
 			<File

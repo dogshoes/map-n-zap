@@ -45,7 +45,7 @@
 //#include <afxdisp.h>
 #include "stdafx.h"
 #include "rrrsrv.h"
-#include "Robot Communication.h"
+#include "RobotComm.h"
 
 CRobotComm::CRobotComm()
 {

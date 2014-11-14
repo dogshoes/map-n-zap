@@ -26,7 +26,7 @@
    USA
  **********************************************************************/
 ///////////////////////////////////////////////////////////////////////////////
-// Module:     Robot Communication.h
+// Module:     RobotComm.h
 // Abstract:   CRobotComm class header file.
 // Author:     S.R.
 // Copyright 1997 Cycle Time Corp

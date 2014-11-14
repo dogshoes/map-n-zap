@@ -29,7 +29,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////
 
-#include "Robot Communication.h"
+#include "RobotComm.h"
 
 class CRRRSrvDoc : public CDocument
 {
