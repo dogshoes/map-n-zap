@@ -34,11 +34,11 @@
 
 #include "stdafx.h"
 #include "RRRSrv.h"
-#include "MainFrm.h"
-#include "ChildFrm.h"
+#include "MainFrame.h"
+#include "ChildFrame.h"
 #include "RRRSrvDoc.h"
 #include "RRRSrvView.h"
-#include "CAboutDlg.h"
+#include "AboutDlg.h"
 
 /////////////////////////////////////////////////////////////////////////////
 // CRRRSrvApp

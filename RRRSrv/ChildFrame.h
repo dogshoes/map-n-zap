@@ -25,18 +25,15 @@
    Pittsburgh, PA 15212
    USA
  **********************************************************************/
-// MainFrm.h : interface of the CMainFrame class
+// ChildFrame.h : interface of the CChildFrame class
 //
 /////////////////////////////////////////////////////////////////////////////
 
-#include "trayicon.h"
-#include "ProtocolDiagnostics.h"
-
-class CMainFrame : public CMDIFrameWnd
+class CChildFrame : public CMDIChildWnd
 {
-        DECLARE_DYNAMIC(CMainFrame)
+        DECLARE_DYNCREATE(CChildFrame)
     public:
-        CMainFrame();
+        CChildFrame();
 
         // Attributes
     public:
@@ -46,52 +43,24 @@ class CMainFrame : public CMDIFrameWnd
 
         // Overrides
         // ClassWizard generated virtual function overrides
-        //{{AFX_VIRTUAL(CMainFrame)
+        //{{AFX_VIRTUAL(CChildFrame)
         virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
         //}}AFX_VIRTUAL
 
         // Implementation
     public:
-        virtual ~CMainFrame();
+        virtual ~CChildFrame();
 #ifdef _DEBUG
         virtual void AssertValid() const;
         virtual void Dump(CDumpContext& dc) const;
 #endif
 
-        CTrayIcon m_trayIcon;
-
-    protected:  // control bar embedded members
-        CStatusBar  m_wndStatusBar;
-        CToolBar    m_wndToolBar;
-        BOOL m_SendState;                   // set to TRUE when sending a message
-        BOOL m_RecvState;                   // set to TRUE when receiving a message
-        ProtocolDiagnostics *m_oProtDialog; // protocol diagnostics
-
-        enum TIMER_CONSTANTS
-        {
-            SEND_TIMER = 1,
-            RECV_TIMER = 2,
-        };
-
-        HICON m_hSend;
-        HICON m_hRecv;
-        HICON m_hIdle;
-        HICON m_hSendRecv;
-        void UpdateIconState();
-
         // Generated message map functions
     protected:
-        //{{AFX_MSG(CMainFrame)
-        afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
-        afx_msg void OnTimer(UINT nIDEvent);
+        //{{AFX_MSG(CChildFrame)
+        // NOTE - the ClassWizard will add and remove member functions here.
+        //    DO NOT EDIT what you see in these blocks of generated code!
         //}}AFX_MSG
-        afx_msg LRESULT OnCopyData(WPARAM wParam, LPARAM lParam);
-        afx_msg LRESULT OnTrayNotification(WPARAM uID, LPARAM lEvent);
-        afx_msg LRESULT OnSending(WPARAM uID, LPARAM lEvent);
-        afx_msg LRESULT OnReceiving(WPARAM uID, LPARAM lEvent);
-        afx_msg void OnProtocolDiagnostics();
-        afx_msg LRESULT OnMsgReceived(WPARAM uID, LPARAM lEvent);
-        afx_msg LRESULT OnMsgTimeout(WPARAM uID, LPARAM lEvent);
         DECLARE_MESSAGE_MAP()
 };
 

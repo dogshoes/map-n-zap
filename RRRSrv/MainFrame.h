@@ -25,15 +25,18 @@
    Pittsburgh, PA 15212
    USA
  **********************************************************************/
-// ChildFrm.h : interface of the CChildFrame class
+// MainFrame.h : interface of the CMainFrame class
 //
 /////////////////////////////////////////////////////////////////////////////
 
-class CChildFrame : public CMDIChildWnd
+#include "trayicon.h"
+#include "ProtocolDiagnostics.h"
+
+class CMainFrame : public CMDIFrameWnd
 {
-        DECLARE_DYNCREATE(CChildFrame)
+        DECLARE_DYNAMIC(CMainFrame)
     public:
-        CChildFrame();
+        CMainFrame();
 
         // Attributes
     public:
@@ -43,24 +46,52 @@ class CChildFrame : public CMDIChildWnd
 
         // Overrides
         // ClassWizard generated virtual function overrides
-        //{{AFX_VIRTUAL(CChildFrame)
+        //{{AFX_VIRTUAL(CMainFrame)
         virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
         //}}AFX_VIRTUAL
 
         // Implementation
     public:
-        virtual ~CChildFrame();
+        virtual ~CMainFrame();
 #ifdef _DEBUG
         virtual void AssertValid() const;
         virtual void Dump(CDumpContext& dc) const;
 #endif
 
+        CTrayIcon m_trayIcon;
+
+    protected:  // control bar embedded members
+        CStatusBar  m_wndStatusBar;
+        CToolBar    m_wndToolBar;
+        BOOL m_SendState;                   // set to TRUE when sending a message
+        BOOL m_RecvState;                   // set to TRUE when receiving a message
+        ProtocolDiagnostics *m_oProtDialog; // protocol diagnostics
+
+        enum TIMER_CONSTANTS
+        {
+            SEND_TIMER = 1,
+            RECV_TIMER = 2,
+        };
+
+        HICON m_hSend;
+        HICON m_hRecv;
+        HICON m_hIdle;
+        HICON m_hSendRecv;
+        void UpdateIconState();
+
         // Generated message map functions
     protected:
-        //{{AFX_MSG(CChildFrame)
-        // NOTE - the ClassWizard will add and remove member functions here.
-        //    DO NOT EDIT what you see in these blocks of generated code!
+        //{{AFX_MSG(CMainFrame)
+        afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+        afx_msg void OnTimer(UINT nIDEvent);
         //}}AFX_MSG
+        afx_msg LRESULT OnCopyData(WPARAM wParam, LPARAM lParam);
+        afx_msg LRESULT OnTrayNotification(WPARAM uID, LPARAM lEvent);
+        afx_msg LRESULT OnSending(WPARAM uID, LPARAM lEvent);
+        afx_msg LRESULT OnReceiving(WPARAM uID, LPARAM lEvent);
+        afx_msg void OnProtocolDiagnostics();
+        afx_msg LRESULT OnMsgReceived(WPARAM uID, LPARAM lEvent);
+        afx_msg LRESULT OnMsgTimeout(WPARAM uID, LPARAM lEvent);
         DECLARE_MESSAGE_MAP()
 };
 

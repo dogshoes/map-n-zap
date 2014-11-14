@@ -25,12 +25,12 @@
    Pittsburgh, PA 15212
    USA
  **********************************************************************/
-// MainFrm.cpp : implementation of the CMainFrame class
+// MainFrame.cpp : implementation of the CMainFrame class
 //
 
 #include "stdafx.h"
 #include "RRRSrv.h"
-#include "MainFrm.h"
+#include "MainFrame.h"
 #include "RRRConst.h"
 
 /////////////////////////////////////////////////////////////////////////////

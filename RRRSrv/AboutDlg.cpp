@@ -27,7 +27,7 @@
  **********************************************************************/
 
 #include "stdafx.h"
-#include "CAboutDlg.h"
+#include "AboutDlg.h"
 
 BEGIN_MESSAGE_MAP(CAboutDlg, CDialog)
     //{{AFX_MSG_MAP(CAboutDlg)

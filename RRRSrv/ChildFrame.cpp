@@ -25,12 +25,12 @@
    Pittsburgh, PA 15212
    USA
  **********************************************************************/
-// ChildFrm.cpp : implementation of the CChildFrame class
+// ChildFrame.cpp : implementation of the CChildFrame class
 //
 
 #include "stdafx.h"
 #include "RRRSrv.h"
-#include "ChildFrm.h"
+#include "ChildFrame.h"
 
 /////////////////////////////////////////////////////////////////////////////
 // CChildFrame
