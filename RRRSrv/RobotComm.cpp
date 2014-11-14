@@ -598,14 +598,14 @@ long CRobotComm::WorldToRobotUnits(long WorldUnit)
     return long(WorldUnit * cRobotEncoderTicksPerInch / cTPI);
 }
 
-double CRobotComm::RobotToWorldUnits(long RobotUnit)
-{
-    return (RobotUnit * cTPI / cRobotEncoderTicksPerInch);
-}
-
 long CRobotComm::WorldToRobotUnits(double WorldUnit)
 {
     return Round(WorldUnit * cRobotEncoderTicksPerInch / cTPI);
+}
+
+double CRobotComm::RobotToWorldUnits(long RobotUnit)
+{
+    return (RobotUnit * cTPI / cRobotEncoderTicksPerInch);
 }
 
 void CRobotComm::SendP1(short RobotAddress, long P1)

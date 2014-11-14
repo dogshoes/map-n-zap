@@ -42,6 +42,9 @@ class RRRSrvCom;                       // forward declaration for serial interfa
 
 #define cCornerWallBackupDistance cRRWidth/2 + 55 + (10.0f/cRobotEncoderTicksPerInch*cTPI) - cRRNoseLength // dummy value!!!! constant is missing
 
+/// <summary>
+/// This class will build and send instructions to the robot.
+/// </summary>
 class CRobotComm : public CObject
 {
     public:
@@ -119,7 +122,7 @@ class CRobotComm : public CObject
         /// <param name="RobotAddress">The address of the robot to send the message to.</param>
         /// <param name="M0Velocity">The velocities the motor 0 should go.</param>
         /// <param name="M1Velocity">The velocities the motor 1 should go.</param>
-        /// <param name="Priority">The priority of this request.  LOW_PRIORITY or HIGH_PRIORITY.
+        /// <param name="Priority">The priority of this request.  LOW_PRIORITY or HIGH_PRIORITY.</param>
         void SendMotorVelocities(short RobotAddress, int M0Velocity, int M1Velocity, short Priority);
 
         /// <summary>
@@ -167,7 +170,7 @@ class CRobotComm : public CObject
         /// This function sends a command to the RugRover to stop the motors.
         /// </summary>
         /// <remarks>
-        /// The function sends a string with the command character to stop the motors.  This string is sent through the COM port by the rcom->SendMsg function.
+        /// This is called Stop in the published API.
         /// </remarks>
         /// <param name="RobotAddress">The address of the robot to send the message to.</param>
         void SendStopMotors(short RobotAddress);
@@ -206,58 +209,375 @@ class CRobotComm : public CObject
         long int* DecodeSerialInput(short RobotAddress, CString* InputString, unsigned char* InputCode);
 #endif
 
+        /// <summary>
+        /// This instruction makes the robot move in a straight line with a given speed.  The direction to move is given by Heading.  The robot first rotates to Heading then moves in a straight line in that direction.
+        /// </summary>
         /// <remarks>
         /// This command can change the value of FlipHandle and MaxSpeed in the robot!
         /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="Velocity">The speed to move forward in 0.1" / s.</param>
+        /// <param name="Heading">The heading to move straight in radians.</param>
         void SendStraightVelocity(short RobotAddress, int Velocity, double Heading);
 
+        /// <summary>
+        /// Set the robot's parameter 1.
+        /// </summary>
+        /// <remarks>
+        /// I have no idea what this does.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="P1">The value to set parameter 1 to.  The default is 1500.</param>
         void SendP1(short RobotAddress, long P1);
+
+        /// <summary>
+        /// Set the robot's parameter 2.
+        /// </summary>
+        /// <remarks>
+        /// I have no idea what this does.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="P2">The value to set parameter 2 to.  The default is 100.</param>
         void SendP2(short RobotAddress, long P2);
+
+        /// <summary>
+        /// Set the robot's parameter 3.
+        /// </summary>
+        /// <remarks>
+        /// I have no idea what this does.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="P3">The value to set parameter 3 to.  The default is 90.</param>
         void SendP3(short RobotAddress, long P3);
+
+        /// <summary>
+        /// Set the robot's parameter 4.
+        /// </summary>
+        /// <remarks>
+        /// I have no idea what this does.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="P4">The value to set parameter 4 to.  The default is 500.</param>
         void SendP4(short RobotAddress, long P4);
+
+        /// <summary>
+        /// Set the robot's parameter 5.
+        /// </summary>
+        /// <remarks>
+        /// I have no idea what this does.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="P5">The value to set parameter 5 to.  The default is 800.</param>
         void SendP5(short RobotAddress, long P5);
+
+        /// <summary>
+        /// Set the robot's parameter 6.
+        /// </summary>
+        /// <remarks>
+        /// I have no idea what this does.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="P6">The value to set parameter 6 to.  The default is 51.</param>
         void SendP6(short RobotAddress, long P6);
+
+        /// <summary>
+        /// Set the robot's parameter 7.
+        /// </summary>
+        /// <remarks>
+        /// I have no idea what this does.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="P7">The value to set parameter 7 to.  The default is 250.</param>
         void SendP7(short RobotAddress, long P7);
+
+        /// <summary>
+        /// Set the robot's parameter 8.
+        /// </summary>
+        /// <remarks>
+        /// I have no idea what this does.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="P8">The value to set parameter 8 to.  The default is 0.</param>
         void SendP8(short RobotAddress, long P8);
 
+        /// <summary>
+        /// This method instructs the robot to purge its ring buffer.
+        /// </summary>
+        /// <remarks>
+        /// I'm unsure of the outcome of this call.  It appears to be used by the manufacturer when testing things.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
         void SendPurgeRingBuffer(short RobotAddress);
+
+        /// <summary>
+        /// This method makes the robot move in a given direction with a given speed at a given priority.
+        /// </summary>
+        /// <remarks>
+        /// The MoveDirection call in the published API uses this with a HIGH_PRIORITY urgency.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="Velocity">The the speed to move with in 0.1" / s units.</param>
+        /// <param name="Heading">The the direction to move (in radians).</param>
+        /// <param name="Priority">The priority of this request.  LOW_PRIORITY or HIGH_PRIORITY.</param>
         void SendVelocityDirection(short RobotAddress, int Velocity, double Heading, short Priority);
+
+        /// <summary>
+        /// This method makes the robot's buzzer buzz at the given frequency.  The range is about 0 – 2.5 KHz.  At higher frequencies, the resolution is very coarse.
+        /// </summary>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="BuzzerFrequency">The buzzer's frequency in Hz.</param>
         void SendBuzzerFrequency(short RobotAddress, short BuzzerFrequency);
+
+        /// <summary>
+        /// This method simply turns the buzzer on or off.  When on, the buzzer's frequency is set to 2 KHz.
+        /// </summary>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="On">A value indicating whether to turn the buzzer on (true) or off (false).</param>
         void SendBuzzerOn(short RobotAddress, BOOL On);
+
+        /// <summary>
+        /// This method sets the values the robot uses to control the PWM to the wheels when moving.
+        /// </summary>
+        /// <remarks>
+        /// Whenever the robot is moving to a destination point or heading, it controls the velocities at each wheel to reach the destination.  The terms Kp, Ki, Kd and KPwm effect how the velocity is controlled at each motor.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="Kp">The proportional term.</param>
+        /// <param name="Ki">The integral term.</param>
+        /// <param name="Kd">The differential term.</param>
+        /// <param name="Kb">The strength of the bungee.</param>
+        /// <param name="KPwm">The averaging term.</param>
         void SendMotorControlConstants(short RobotAddress, char Kp, char Ki, char Kd, char Kb, char KPwm);
+
+        /// <summary>
+        /// This method makes the robot move in a circular path until it reaches the given heading.  The diameter of the circular path is given by Diameter, and the travel speed is given by Speed.
+        /// </summary>
+        /// <remarks>
+        /// This is called MoveCurve in the published API.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="Heading">The heading to turn to in radians.</param>
+        /// <param name="Velocity">The speed to turn with in 0.1" / s.</param>
+        /// <param name="Diameter">The diameter of the curve in 0.1" units.</param>
         void SendTurn(short RobotAddress, double Heading, short Velocity, short Diameter);
+
+        /// <summary>
+        /// This method sets how sensitive the robot is to obstacles.  Lower sensitivity means the robot has to hit an obstacle harder before detecting it.  Setting the robot's obstacle sensitivity to high can cause the robot to detect imaginary obstacles.  If the sensitivity is set to 0 (None), the only time the robot will detect an obstacle is if there is a dangerous amount of current going to either motor.
+        /// </summary>
+        /// <remarks>
+        /// This is called SetObstacleSensitivity in the published API.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="Sensitive">The obstacle detection sensitivity.</param>
         void SendSensitiveObstacleDetection(short RobotAddress, short Sensitive);
+
+        /// <summary>
+        /// This method makes the robot move to the (X, Y) position at the given speed and priority.
+        /// </summary>
+        /// <remarks>
+        /// The MoveTo call in the published API uses this with a HIGH_PRIORITY urgency.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="Destination">The destination position tuple to move to in 0.1" units.</param>
+        /// <param name="Velocity">The speed to move with in 0.1" / s units.</param>
+        /// <param name="Priority">The priority of this request.  LOW_PRIORITY or HIGH_PRIORITY.</param>
         void SendPositionVelocityDestination(short RobotAddress, robPOINT Destination, short Velocity, short Priority);
 
+        /// <summary>
+        /// This method sends the robot an information transmission mask.
+        /// </summary>
+        /// <remarks>
+        /// I'm unsure of the outcome of this call.  It appears to be used by the manufacturer when testing things.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="mask">A bit mask of Velocity || Acceleration || AD || Position.</param>
         void SendInformationToTransmit(short RobotAddress, long mask);
+
+        /// <summary>
+        /// This method instructs the robot to send its current state.  The robot responds with messages reporting its position, heading, wheel velocities, motor currents, battery level, charging state, software revision, the amount of time It has been on and if it is on or off the home base.
+        /// </summary>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
         void SendRequestState(short RobotAddress);
+
+        /// <summary>
+        /// This method instructs the robot to turn itself off.
+        /// </summary>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
         void SendPowerOff(short RobotAddress);
+
+        /// <summary>
+        /// Send a raw message to the robot.
+        /// </summary>
+        /// <remarks>
+        /// This is called SendMessage in the published API.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="Msg">The message to send to the robot.</param>
         void SendRawData(short RobotAddress, RRRMsg &Msg);
 
-        /* new stuff 3/6/99 */
+        /// <summary>
+        /// This method instructs the robot to square up to a wall.
+        /// </summary>
+        /// <remarks>
+        /// The robot turns to the supplied heading then goes straight until it hits an obstacle.  If it finds one, it pushes its bumper against the wall.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="Heading">The direction to the wall in radians.</param>
+        /// <param name="TravelTime">The time to move forward trying to find the wall in seconds.</param>
+        /// <param name="SlipperySurface">A value indicating whether the robot is on a slippery surface (true) or not (false).</param>
         void SquareToWall(short RobotAddress, double Heading, float TravelTime, BOOL SlipperySurface);
+
+        /// <summary>
+        /// This method instructs the robot to move forward with a small PWM on the motors.  This can be used to lightly feel obstacles.
+        /// </summary>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="Motor">The motor to feel with.  0 for the right wheel, 1 for the left, 2 for both.</param>
         void SetFeelingMotor(short RobotAddress, unsigned char Motor);
+
+        /// <summary>
+        /// This method instructs the robot to calibrate against a corner.  The robot should square up to the primary wall before calibrating on the corner.
+        /// </summary>
+        /// <remarks>
+        /// Which direction the robot turns to find the corner is determined by the FeelWheel parameter.  If FeelWheel is 0, the robot turns to the left and uses the right wheel to feel the corner.  If FeelWheel is 1, the robot turns to the right and uses the left wheel to feel the corner.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="X">The X coordinate of the main wall.</param>
+        /// <param name="Y">The Y coordinate of the main wall.</param>
+        /// <param name="H0">The heading of the main wall (in radians).</param>
+        /// <param name="FeelWheel">The wheel to use to feel the corner.</param>
+        /// <param name="TravelTime">The time to travel towards the corner wall (in seconds).</param>
+        /// <param name="SlipperySurface">A value indicating whether the corner is on a slippery surface (true) or not (false).</param>
         void CornerCalibrate(short RobotAddress, long X, long Y, double H0, unsigned char FeelWheel, float TravelTime, BOOL SlipperySurface);
+
+        /// <summary>
+        /// This method instructs the robot to find the home base.  The robot should calibrate at the home base's calibration walls before trying to find the home base.
+        /// </summary>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="CornerHeading">The heading to the corner wall (in radians).</param>
+        /// <param name="WallHeading">The heading to the main wall (in radians).</param>
+        /// <param name="HomeBaseLocationX">The X coordinate of the home base position (in 0.1" units).</param>
+        /// <param name="HomeBaseLocationY">The Y coordinate of the home base position (in 0.1" units).</param>
+        /// <param name="NeedToGetInFrontOfHomeBase">A value indicating whether the robot needs to get in front of the home base (true) or not (false).</param>
         void FindHomeBase(short RobotAddress, double CornerHeading, double WallHeading, long HomeBaseLocationX, long HomeBaseLocationY, BOOL NeedToGetInFrontOfHomeBase);
+        
+        /// <summary>
+        /// This method pauses the robot.  If the robot was executing an instruction, it will pause until given a Resume command or told to Stop.
+        /// </summary>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
         void Pause(short RobotAddress);
+        
+        /// <summary>
+        /// If the robot was paused, this command makes the robot resume execution of its last instruction.
+        /// </summary>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
         void Resume(short RobotAddress);
+
+        /// <summary>
+        /// Use this method to turn the robot.  When given this instruction, the robot moves one wheel forward and one backward until it faces the correct heading.  To control how fast the robot rotates, use the Speed parameter.  If you want the robot to use only one wheel when rotating, set the MotorEnable parameter so the correct wheel turns.
+        /// </summary>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="Heading">The heading to turn to (in radians).</param>
+        /// <param name="Speed">The speed to turn with (in 0.1" / s units).</param>
+        /// <param name="MotorEnable">Which motors to enable while turning.</param>
         void SetHeadingDestination(short RobotAddress, double Heading, short Speed, short MotorEnable);
+
+        /// <summary>
+        /// When obstacle bounce is enabled on the robot, the robot will reverse the motors for a short period whenever it finds an obstacle.  This is meant to reduce the amount of wheel slipping that occurs when the robot runs into something
+        /// </summary>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="Enable">A value indicating whether the robot should reverse motors when it hits an obstacle (true) or not (false).</param>
         void SetEnableObstacleBounce(short RobotAddress, BOOL Enable);
+
+        /// <summary>
+        /// Set data directly in the robot's RAM.
+        /// </summary>
+        /// <remarks>
+        /// Don't use this.  It's for the manufacturer to use when working with the firmware on the robot.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="Address">RAM address of the first memory location to change.</param>
+        /// <param name="NumberBytes">The number of bytes to be written.</param>
+        /// <param name="Data">The data to be stored in RAM.</param>
         void SetRAMData(short RobotAddress, unsigned short Address, unsigned char NumberBytes, unsigned char *Data);
+        
+        /// <summary>
+        /// The robot stores how many seconds it has been on.  Use this method to set that value.  When this method is used, the robot will update its stored value if the new value is greater than the value stored in the robot.  So if the robot thinks it has been on for 100 seconds and you try to set it to 50 seconds, the robot will keep the old 100 seconds value.  If the robot thinks it has been on for 100 seconds and you try to set it to 200 seconds, the robot will update its stored value.
+        /// </summary>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="Seconds">The number of seconds the robot has been on.</param>
         void SetRobotOnSeconds(short RobotAddress, long Seconds);
+
+        /// <summary>
+        /// Using this method, you can make the robot beep intermittently.  When this feature is enabled, the robot will beep at 1000Hz for 1½ seconds then be quiet for 1½ seconds.  This is similar to the beeping one hears when a large truck is backing up.  It can be used to warn people when the robot is near.
+        /// </summary>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="On">A value indicating whether the robot should beep intermittently (true) or not (false).</param>
         void SetIntermittentBeep(short RobotAddress, BOOL On);
+
+        /// <summary>
+        /// This method is used to correct the robot’s position.  When the robot receives this instruction, it will add DeltaX and DeltaY to its X and Y position.
+        /// </summary>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="DeltaX">The amount to add to the robot's X position in 0.1" units.</param>
+        /// <param name="DeltaY">The amount to add to the robot's Y position in 0.1" units.</param>
         void AddToPosition(short RobotAddress, double DeltaX, double DeltaY);
+
+        /// <summary>
+        /// This method is used to correct the robot’s heading.  When the robot receives this instruction, it will add Delta to its heading.
+        /// </summary>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="Delta">The amount to add to the robot's heading in radians.</param>
         void AddToHeading(short RobotAddress, double Delta);
+
+        /// <summary>
+        /// Use this method to turn the robot’s external output on or off.  The robot’s external output is pin 7 on the robot header.  It can sink a maximum of 0.75A, and the pin can have a maximum of +12V on it.
+        /// </summary>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
+        /// <param name="On">A value indicating whether to turn the external output on (true) or off (false).</param>
         void SetExternalOutput(short RobotAddress, BOOL On);
+
+        /// <summary>
+        /// Use this method to request the voltage level at the external input pin on the robot header.  When the robot sends the voltage level, the application will receive an ExternalInput Event containing the voltage at the external input.
+        /// </summary>
+        /// <remarks>
+        /// This is called RequestExternalInput in the published API.
+        /// </remarks>
+        /// <param name="RobotAddress">The address of the robot to send the message to.</param>
         void RequestEX2Value(short RobotAddress);
 
     protected:
-        RRRSrvCom *rcom;                    // common serial interface
+        /// <summary>
+        /// Common serial interface.
+        /// </summary>
+        RRRSrvCom *rcom;
 
     private:
+        /// <summary>
+        /// Convert real-world length units (in 0.1" steps) to units the robot will understand.
+        /// </summary>
+        /// <param name="WorldUnit">Real-world units in 0.1" steps to convert.</param>
+        /// <returns>A converted value for the robot.</returns>
         long WorldToRobotUnits(double WorldUnit);
-        double RobotToWorldUnits(long RobotUnit);
+
+        /// <summary>
+        /// Convert real-world length units (in 0.1" steps) to units the robot will understand.
+        /// </summary>
+        /// <param name="WorldUnit">Real-world units in 0.1" steps to convert.</param>
+        /// <returns>A converted value for the robot.</returns>
         long WorldToRobotUnits(long WorldUnit);
+
+        /// <summary>
+        /// Convert a length value from the robot into real-world units (in 0.1" steps).
+        /// </summary>
+        /// <param name="RobotUnit">A length value from the robot in robot units.</param>
+        /// <returns>A converted value in 0.1" units.</returns>
+        double RobotToWorldUnits(long RobotUnit);
+
+        /// <summary>
+        /// Convert radians used for headings into a value the robot can understand.
+        /// </summary>
+        /// <param name="Heading">The heading in radians.</param>
+        /// <returns>Encoded heading for the robot.</returns>
         int RadianToEncoderHeading(double Heading);
 
         /// <summary>
