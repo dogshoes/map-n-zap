@@ -3,17 +3,15 @@
 // This file will be processed by the Make Type Library (mktyplib) tool to
 // produce the type library (CyeCom.tlb) that will become a resource in
 // CyeCom.ocx.
-
-#include <olectl.h>
-#include <idispids.h>
-
-#include "RRRDispID.h"
-#include "hlp\cyecom.hh"
-
-[ uuid(1BB9C510-657F-11D0-8465-CA281D000000), version(1.0),
-  helpstring("CyeCom OLE Control module"), control, helpfile("CyeCom.hlp")]
+[uuid(1BB9C510-657F-11D0-8465-CA281D000000), version(1.0),
+ helpstring("CyeCom OLE Control module"), control, helpfile("CyeCom.hlp")]
 library CyeCOMLib
 {
+	#include <olectl.h>
+	#include <idispids.h>
+	#include "RRRDispID.h"
+	#include "hlp\cyecom.hh"
+
 	importlib(STDOLE_TLB);
 	importlib(STDTYPE_TLB);
 

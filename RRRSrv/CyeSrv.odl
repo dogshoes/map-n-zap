@@ -3,7 +3,7 @@
 // This file will be processed by the Make Type Library (mktyplib) tool to
 // produce the type library (CyeSrv.tlb).
 
-[ uuid(F300B091-6343-11D0-8461-707D42000000), version(1.0) ]
+[uuid(F300B091-6343-11D0-8461-707D42000000), version(1.0)]
 library CyeSrv
 {
 	importlib("stdole32.tlb");

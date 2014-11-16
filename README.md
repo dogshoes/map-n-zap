@@ -16,8 +16,9 @@ This release is provided under the GNU General Public License, version 2.0.  Ple
 
 This source code was originally developed under Microsoft Visual C++ 6.  It has since been migrated to Visual C++ 2008 Standard Edition.  To compile the project you will need the following:
 
-* Microsoft Visual C++ 2008 Standard Edition (and possibly later)
-* The Microsoft [DirectX Software Development Kit](http://www.microsoft.com/en-us/download/details.aspx?id=6812)
+* [Visual Studio C++ 2013](http://msdn.microsoft.com/en-us/visual-studio-community-vs.aspx)
+* [Multibyte MFC Library for Visual Studio 2013](http://www.microsoft.com/en-us/download/details.aspx?id=40770)
+* The [Microsoft DirectX Software Development Kit](http://www.microsoft.com/en-us/download/details.aspx?id=6812)
 
 ### Contents
 
