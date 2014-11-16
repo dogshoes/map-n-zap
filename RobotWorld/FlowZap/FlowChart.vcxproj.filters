@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7455bdf5-b295-4c88-bf6d-6b8ee7d885d1}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{48c4f6e0-f459-4940-aa23-a25f77acd292}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{14eab859-75ae-4d91-a57c-5b93fcde512c}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Arrow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Beep.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Branch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BranchLoop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Calibrate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DropOff.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Execute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExternalOutput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowChart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowChartDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Goto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Instruction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LeftLoopPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Loop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LoopPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Motion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pallette.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PalletteItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PathFollow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Preferences.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Repeat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RepeatLoop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RightLoopPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Start.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sub.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vacuum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Wait.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Zone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FlowChart.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="FlowZap.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Arrow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Beep.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Branch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BranchLoop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Calibrate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DropOff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Execute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExternalOutput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowChart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowChartDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowChartResource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZapResource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Goto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Instruction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LeftLoopPanel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Loop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LoopPanel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Motion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pallette.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PalletteItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PathFollow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Preferences.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Repeat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RepeatLoop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RightLoopPanel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Start.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vacuum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Wait.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Zone.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\beep_bw.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\beep_dis.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BeepBW.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BeepDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BeepEnabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\beepu.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\branch_b.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\branch_d.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BranchBW.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BranchDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BranchEnabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\branchu.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\cal_bw.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CalDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CalEnabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\calibrateu.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\checkpoi.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\external output disabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\external_output.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\externalu.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\FlowChart.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\FZ_start_.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\FZbracket.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\FZcheck.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\FZclock.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\FZhotpoint.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\FZhotspot.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\FZmusic.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\FZnudge.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\FZon_off.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\FZpath.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\FZrepeat.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\FZrot+go.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\FZstop.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\FZvac.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\goto_bw.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\GotoDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\GotoEnabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\hotpoint.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\iplay_st.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\motion.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\motion_d.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\MotionBW.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\MotionDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\motionu.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\onoff_di.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\path_dis.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\path_dis.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\PathEnabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\pathu.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\PlayPause.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\repeat_d.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\RepeatBW.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\RepeatDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\RepeatEnabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\repeatu.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Start.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Stop.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\stop_bw.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\stop_dis.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\stop_pla.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\StopDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\stopu.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\sub_disa.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SubBW.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SubDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SubEnabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\subu.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\vacuum_b.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\vacuum_d.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\VacuumDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\VacuumEnabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\vacuumu.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\wait bw.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\wait_bw.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\wait_col.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\wait_dis.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\WaitDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\WaitEnabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\waitu.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\zapIDbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\cBeep.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cBranch.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cCal.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cGoto.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cMotion.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cMove.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cRepeat.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cStop.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cSub.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cVac.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cWait.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\external output.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FlowChart.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\grab.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\path.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\x.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="sounds\addInstruction.wav" />
+    <Media Include="sounds\choice.wav" />
+    <Media Include="sounds\condense.wav" />
+    <Media Include="sounds\expand.wav" />
+    <Media Include="sounds\removeInstruction.wav" />
+    <Media Include="sounds\select.wav" />
+  </ItemGroup>
+</Project>

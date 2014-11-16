@@ -1,0 +1,1413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{96621e20-b32d-4d8b-9fcc-2c591ee8e9ae}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{f58755b5-c3b4-47cc-b320-d9698faa4215}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{06885a74-d451-4b87-8e6b-025683de152f}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Help Files">
+      <UniqueIdentifier>{195b379d-d810-4039-a9fc-a135fc3b272f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sounds">
+      <UniqueIdentifier>{b58248a6-00ad-4227-8b14-dfd97e6cc66b}</UniqueIdentifier>
+      <Extensions>*.wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FlowZap\Arrow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Beep.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Branch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\BranchLoop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Calibrate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Calibration Zone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="canibuton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CharMatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="check.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CTDPath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Cue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cyecom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CyePersona.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DbrFlowZapControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DbrRobotExternals.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vendor\ddutil2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgAddHomeBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgAddRobot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgCalibrateSurface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgCalibrationSuccessful.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgCreateCalibrationWall1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgCreateCheckPointSlipperySurface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgCreateHomeOnWood.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgCreateVacuumPatch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgCyeSample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgEditCalibrationZone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgErrorCheckingWoodWithVacuum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgEStop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgExecutableObjectGeneralProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgFindHomebaseCorner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgHomeBaseFloorType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgJoystickControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgLabelName.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgLinePathProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgMotorControls.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dlgmousecontrols.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgOrientHomebase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgPropFloor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgRelocateRobot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dlgroboterror.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgSetDisplayResolution.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgTestRobot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgVelocityTorqueDisplay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgVideo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\DropOff.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExecutableRWGraphicObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Execute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\ExternalOutput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FindPathThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FinishLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\FlowZap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="font.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gauge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GoalSet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Goto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HomeBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Instruction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IPathPlanner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Laygo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\LeftLoopPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LinePath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LineRectTracker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Loop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\LoopPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Motion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="oleobject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="oleobjects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Pallette.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="flowzap\PalletteItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Path.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PathDisplay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\PathFollow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PathList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PBehavior.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="picture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PMotion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PositionLabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Preferences.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Probability Grid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PropGeneral.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PropRobotColor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PSong.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Red Zone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Repeat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\RepeatLoop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="richtext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\RightLoopPanel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Robot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotCom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotInstruction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotStatus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotWorld.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotWorldDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotWorldView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RothMath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RothString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RothTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RothUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rover.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RulerGrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RWGraphicObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SplashWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Start.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StartLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Stop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Sub.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Tool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Vacuum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VacuumPatch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Wait.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowZap\Zone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FlowZap\FlowZap.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="RobotWorld.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MakeHelp.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="FlowZap\res\cBeep.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FlowZap\res\cBranch.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FlowZap\res\cCal.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FlowZap\res\cGoto.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FlowZap\res\cMotion.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FlowZap\res\cMove.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FlowZap\res\cRepeat.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FlowZap\res\cStop.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FlowZap\res\cSub.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FlowZap\res\cVac.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FlowZap\res\cWait.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mm_block.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mm_clear.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mm_draw_freehand.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mm_draw_line.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mm_draw_rectangle.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mm_hand.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mm_move_robot.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mm_place finish line.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mm_place_start.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mm_search.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mm_unkno.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mmedit.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mmerase.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mmplace_.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mmplacelinepath.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mmPlacePositionLabel.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mmplacevacuum.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="FlowZap\res\path.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\RobotWorld.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="hlp\AfxCore.rtf">
+      <Filter>Help Files</Filter>
+    </None>
+    <None Include="hlp\AfxPrint.rtf">
+      <Filter>Help Files</Filter>
+    </None>
+    <None Include="hlp\FlowZap.rtf">
+      <Filter>Help Files</Filter>
+    </None>
+    <None Include="hlp\howto.rtf">
+      <Filter>Help Files</Filter>
+    </None>
+    <None Include="hlp\Map-N-Zap.cnt">
+      <Filter>Help Files</Filter>
+    </None>
+    <None Include="hlp\RobotWorld.rtf">
+      <Filter>Help Files</Filter>
+    </None>
+    <None Include="RobotWorld.reg" />
+    <None Include="rover.dat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="RobotWorld.odl">
+      <Filter>Source Files</Filter>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FlowZap\Arrow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Beep.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Branch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\BranchLoop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Calibrate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Calibration Zone.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="canibuton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CharMatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CTDPath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Cue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cyecom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CyePersona.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DbrFlowZapControl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DbrRobotExternals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\ddutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vendor\ddutil2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgAddHomebase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgAddRobot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgCalibrateSurface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgCalibrationSuccessful.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgCreateCalibrationWall1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgCreateCheckPointSlipperySurface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgCreateHomeOnWood.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgCreateVacuumPatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgCyeSample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgEditCalibrationZone.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgErrorCheckingWoodWithVacuum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgEStop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgExecutableObjectGeneralProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgFindHomebaseCorner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgHomeBaseFloorType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgJoystickControl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgLabelName.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgLinePathProperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgMotorControls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dlgmousecontrols.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgOrientHomebase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgPropFloor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgRelocateRobot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dlgroboterror.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgSetDisplayResolution.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgTestRobot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgVelocityTorqueDisplay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgVideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\DropOff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExecutableRWGraphicObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Execute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\ExternalOutput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FindPathThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FinishLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\FlowZap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gauge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GoalSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Goto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HomeBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Instruction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IPathPlanner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Laygo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\LeftLoopPanel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LinePath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LineRectTracker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Loop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\LoopPanel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mhcomm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Motion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="oleobject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="oleobjects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Pallette.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Path.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PathDisplay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\PathFollow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PathList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PBehavior.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="picture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PMotion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PositionLabel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Preferences.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Probability Grid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PropGeneral.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PropRobotColor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PSong.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Red Zone.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Repeat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\RepeatLoop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="richtext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\RightLoopPanel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Robot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotCom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotInstruction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotStatus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotWorld Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotWorld.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotWorldDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RobotWorldView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RothMath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RothString.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RothTime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RothUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rover.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RRDim.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RulerGrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWGraphicObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SerialCommEvents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SplashWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Start.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StartLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Stop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Sub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Tool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Vacuum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VacuumPatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Wait.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldGridConsts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowZap\Zone.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\000tn.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\011tn.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\022tn.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\033tn.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\044tn.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\200tn.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\300tn.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\arrow_l.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\arrow_m.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\arrow_s.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\battery charged.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\battery charging.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\battery not charging.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\battery_low.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\beep_bw.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\BeepBW.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\BeepDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\BeepEnabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\branch_b.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\BranchBW.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\BranchDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\BranchEnabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\cal_bw.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\CalDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\CalEnabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CalZone.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Chrometn.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ClearPenActive.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\draw freehand.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\draw line.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\draw rectgle.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\drawing_.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\EStop.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\EStopD.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line10.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line11.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line12.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line13.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line14.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line15.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line16.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line17.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line20.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line21.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line22.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line23.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line24.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line25.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line26.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line27.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line30.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line31.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line32.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line33.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line34.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line35.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line36.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\finish line37.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\fz_execute.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\fzPlay Disabled.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\fzShowFZ Disabled.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\fzShowFZ Enabled.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\fzShowFZ Pushed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\fzStop Disabled.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\goto_bw.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\GotoDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\GotoEnabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\inactivelines.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\inactivepens.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\iplay_st.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\joystick1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\joystick2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\joystick3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\joystick4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\large black arrow.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\large grey arrow.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\large.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\LargeLineActive.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\LaygoDefault.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\MainFrmTbr.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Map And Zap.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\map_tools.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\mapIDbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\medium black arrow.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\medium grey arrow.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\medium.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\MediumLineActive.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\motion.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\MotionBW.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\MotionDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ObstaclePenActive.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\path_dis.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\PathEnabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Pause Disabled.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Pause Enabled.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Pause Pushed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Play Enabled.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Play Pushed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\PlayPause.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label10.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label11.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label12.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label13.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label14.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label15.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label20.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label21.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label22.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label23.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label24.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label25.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label30.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label31.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label32.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label33.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label34.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position label35.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\practice toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\RedZone.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\RepeatBW.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\RepeatDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\RepeatEnabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\robot tools.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\robot_status_charged.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\robot_status_charging.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\robot_status_not_charging.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\RobotControlTbr.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\RobotExternalsOff.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\RobotExternalsOn.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\RobotWorld.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\RobotWorldDoc.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\small black arrow.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\small grey arrow.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\small.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SmallLineActive.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\speedball.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\splash.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\start line1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\start line2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\start line3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\Start.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Stop Enabled.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Stop Pushed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\Stop.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\stop_bw.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\stop_pla.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\StopDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\SubBW.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\SubDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\SubEnabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\timer bottom.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\timer left.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\timer right.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\timer top.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\toolbar1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\UnknownPenActive.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\untitled.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\vacuum_b.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\VacuumDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\VacuumEnabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\velocity_torque.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\wait bw.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\wait_bw.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\wait_col.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\WaitDisabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="FlowZap\res\WaitEnabled.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\XLargeLineActive.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="flowzap\sounds\addInstruction.wav">
+      <Filter>Sounds</Filter>
+    </Media>
+    <Media Include="flowzap\sounds\choice.wav">
+      <Filter>Sounds</Filter>
+    </Media>
+    <Media Include="flowzap\sounds\condense.wav">
+      <Filter>Sounds</Filter>
+    </Media>
+    <Media Include="flowzap\sounds\expand.wav">
+      <Filter>Sounds</Filter>
+    </Media>
+    <Media Include="flowzap\sounds\removeInstruction.wav">
+      <Filter>Sounds</Filter>
+    </Media>
+    <Media Include="flowzap\sounds\select.wav">
+      <Filter>Sounds</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\vendor\ddraw.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="hlp\Map-N-Zap.hpj">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

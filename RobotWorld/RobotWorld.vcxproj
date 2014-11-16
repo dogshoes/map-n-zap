@@ -1,0 +1,725 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0A0C5D2D-E174-4A97-8930-EC0FDC8F89F2}</ProjectGuid>
+    <RootNamespace>RobotWorld</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/RobotWorld.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\;.\FlowZap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;ROBOT_WORLD_PROJECT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\Debug/RobotWorld.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.\FlowZap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ddraw.lib;dxguid.lib;vfw32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Debug/Map-N-Zap.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)\vendor\;$(DXSDK_DIR)\Lib\x86\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/Map-N-Zap.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/RobotWorld.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/RobotWorld.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.\FlowZap;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;ROBOT_WORLD_PROJECT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>.\Release/RobotWorld.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>.\FlowZap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ddraw.lib;dxguid.lib;vfw32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Release/Map-N-Zap.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(SolutionDir)\vendor\;$(DXSDK_DIR)\Lib\x86\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/RobotWorld.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vendor\ddutil2.cpp" />
+    <ClCompile Include="Calibration Zone.cpp" />
+    <ClCompile Include="canibuton.cpp" />
+    <ClCompile Include="CharMatrix.cpp" />
+    <ClCompile Include="check.cpp" />
+    <ClCompile Include="CTDPath.cpp" />
+    <ClCompile Include="cyecom.cpp" />
+    <ClCompile Include="CyePersona.cpp" />
+    <ClCompile Include="DbrFlowZapControl.cpp" />
+    <ClCompile Include="DbrRobotExternals.cpp" />
+    <ClCompile Include="DlgAddHomeBase.cpp" />
+    <ClCompile Include="DlgAddRobot.cpp" />
+    <ClCompile Include="DlgCalibrateSurface.cpp" />
+    <ClCompile Include="DlgCalibrationSuccessful.cpp" />
+    <ClCompile Include="DlgCreateCalibrationWall1.cpp" />
+    <ClCompile Include="DlgCreateCheckPointSlipperySurface.cpp" />
+    <ClCompile Include="DlgCreateHomeOnWood.cpp" />
+    <ClCompile Include="DlgCreateVacuumPatch.cpp" />
+    <ClCompile Include="DlgCyeSample.cpp" />
+    <ClCompile Include="DlgEditCalibrationZone.cpp" />
+    <ClCompile Include="DlgErrorCheckingWoodWithVacuum.cpp" />
+    <ClCompile Include="DlgEStop.cpp" />
+    <ClCompile Include="DlgExecutableObjectGeneralProperties.cpp" />
+    <ClCompile Include="DlgFindHomebaseCorner.cpp" />
+    <ClCompile Include="DlgHomeBaseFloorType.cpp" />
+    <ClCompile Include="DlgJoystickControl.cpp" />
+    <ClCompile Include="DlgLabelName.cpp" />
+    <ClCompile Include="DlgLinePathProperties.cpp" />
+    <ClCompile Include="DlgMotorControls.cpp" />
+    <ClCompile Include="dlgmousecontrols.cpp" />
+    <ClCompile Include="DlgOrientHomebase.cpp" />
+    <ClCompile Include="DlgPropFloor.cpp" />
+    <ClCompile Include="DlgRelocateRobot.cpp" />
+    <ClCompile Include="dlgroboterror.cpp" />
+    <ClCompile Include="DlgSetDisplayResolution.cpp" />
+    <ClCompile Include="DlgTestRobot.cpp" />
+    <ClCompile Include="DlgVelocityTorqueDisplay.cpp" />
+    <ClCompile Include="DlgVideo.cpp" />
+    <ClCompile Include="ExecutableRWGraphicObject.cpp" />
+    <ClCompile Include="FindPathThread.cpp" />
+    <ClCompile Include="FinishLine.cpp" />
+    <ClCompile Include="FlowZap\Arrow.cpp" />
+    <ClCompile Include="FlowZap\Beep.cpp" />
+    <ClCompile Include="FlowZap\Branch.cpp" />
+    <ClCompile Include="FlowZap\BranchLoop.cpp" />
+    <ClCompile Include="FlowZap\Calibrate.cpp" />
+    <ClCompile Include="FlowZap\Cue.cpp" />
+    <ClCompile Include="FlowZap\DropOff.cpp" />
+    <ClCompile Include="FlowZap\Execute.cpp" />
+    <ClCompile Include="FlowZap\ExternalOutput.cpp" />
+    <ClCompile Include="FlowZap\FlowZap.cpp" />
+    <ClCompile Include="FlowZap\Goto.cpp" />
+    <ClCompile Include="FlowZap\Instruction.cpp" />
+    <ClCompile Include="FlowZap\LeftLoopPanel.cpp" />
+    <ClCompile Include="FlowZap\Loop.cpp" />
+    <ClCompile Include="FlowZap\LoopPanel.cpp" />
+    <ClCompile Include="FlowZap\Motion.cpp" />
+    <ClCompile Include="FlowZap\Pallette.cpp" />
+    <ClCompile Include="flowzap\PalletteItem.cpp" />
+    <ClCompile Include="FlowZap\PathFollow.cpp" />
+    <ClCompile Include="FlowZap\Preferences.cpp" />
+    <ClCompile Include="FlowZap\Repeat.cpp" />
+    <ClCompile Include="FlowZap\RepeatLoop.cpp" />
+    <ClCompile Include="FlowZap\RightLoopPanel.cpp" />
+    <ClCompile Include="FlowZap\Start.cpp" />
+    <ClCompile Include="FlowZap\Stop.cpp" />
+    <ClCompile Include="FlowZap\Sub.cpp" />
+    <ClCompile Include="FlowZap\Tool.cpp" />
+    <ClCompile Include="FlowZap\Util.cpp" />
+    <ClCompile Include="FlowZap\Vacuum.cpp" />
+    <ClCompile Include="FlowZap\Wait.cpp" />
+    <ClCompile Include="FlowZap\Zone.cpp" />
+    <ClCompile Include="font.cpp" />
+    <ClCompile Include="gauge.cpp" />
+    <ClCompile Include="GoalSet.cpp" />
+    <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="HomeBase.cpp" />
+    <ClCompile Include="IPathPlanner.cpp" />
+    <ClCompile Include="Laygo.cpp" />
+    <ClCompile Include="LinePath.cpp" />
+    <ClCompile Include="LineRectTracker.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="oleobject.cpp" />
+    <ClCompile Include="oleobjects.cpp" />
+    <ClCompile Include="Path.cpp" />
+    <ClCompile Include="PathDisplay.cpp" />
+    <ClCompile Include="PathList.cpp" />
+    <ClCompile Include="PBehavior.cpp" />
+    <ClCompile Include="picture.cpp" />
+    <ClCompile Include="PMotion.cpp" />
+    <ClCompile Include="PositionLabel.cpp" />
+    <ClCompile Include="Probability Grid.cpp" />
+    <ClCompile Include="PropGeneral.cpp" />
+    <ClCompile Include="PropRobotColor.cpp" />
+    <ClCompile Include="PSong.cpp" />
+    <ClCompile Include="Red Zone.cpp" />
+    <ClCompile Include="richtext.cpp" />
+    <ClCompile Include="Robot.cpp" />
+    <ClCompile Include="RobotCom.cpp" />
+    <ClCompile Include="RobotInstruction.cpp" />
+    <ClCompile Include="RobotStatus.cpp" />
+    <ClCompile Include="RobotWorld.cpp" />
+    <ClCompile Include="RobotWorldDoc.cpp" />
+    <ClCompile Include="RobotWorldView.cpp" />
+    <ClCompile Include="RothMath.cpp" />
+    <ClCompile Include="RothString.cpp" />
+    <ClCompile Include="RothTime.cpp" />
+    <ClCompile Include="RothUtil.cpp" />
+    <ClCompile Include="Rover.cpp" />
+    <ClCompile Include="RulerGrid.cpp" />
+    <ClCompile Include="RWGraphicObject.cpp" />
+    <ClCompile Include="SplashWnd.cpp" />
+    <ClCompile Include="StartLine.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="VacuumPatch.cpp" />
+    <ClCompile Include="World.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FlowZap\FlowZap.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">FlowZap;$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">FlowZap;$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <ResourceCompile Include="RobotWorld.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OUTDIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FlowZap\res\cBeep.cur" />
+    <None Include="FlowZap\res\cBranch.cur" />
+    <None Include="FlowZap\res\cCal.cur" />
+    <None Include="FlowZap\res\cGoto.cur" />
+    <None Include="FlowZap\res\cMotion.cur" />
+    <None Include="FlowZap\res\cMove.cur" />
+    <None Include="FlowZap\res\cRepeat.cur" />
+    <None Include="FlowZap\res\cStop.cur" />
+    <None Include="FlowZap\res\cSub.cur" />
+    <None Include="FlowZap\res\cVac.cur" />
+    <None Include="FlowZap\res\cWait.cur" />
+    <None Include="FlowZap\res\path.cur" />
+    <None Include="hlp\AfxCore.rtf" />
+    <None Include="hlp\AfxPrint.rtf" />
+    <None Include="hlp\FlowZap.rtf" />
+    <None Include="hlp\howto.rtf" />
+    <None Include="hlp\Map-N-Zap.cnt" />
+    <CustomBuild Include="hlp\Map-N-Zap.hpj">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">del hlp\RobotWorld.hm
+REM -- First make map file from Microsoft Visual C++ generated resource.h
+echo. &gt;&gt;"hlp\RobotWorld.hm"
+echo // Commands (ID_* and IDM_*) &gt;&gt;"hlp\RobotWorld.hm"
+makehm ID_,HID_,0x10000 IDM_,HIDM_,0x10000 "RobotWorld Resource.h" &gt;&gt;"hlp\RobotWorld.hm"
+echo. &gt;&gt;"hlp\RobotWorld.hm"
+echo // Prompts (IDP_*) &gt;&gt;"hlp\RobotWorld.hm"
+makehm IDP_,HIDP_,0x30000 "RobotWorld Resource.h" &gt;&gt;"hlp\RobotWorld.hm"
+echo. &gt;&gt;"hlp\RobotWorld.hm"
+echo // Resources (IDR_*) &gt;&gt;"hlp\RobotWorld.hm"
+makehm IDR_,HIDR_,0x20000 "RobotWorld Resource.h" &gt;&gt;"hlp\RobotWorld.hm"
+echo. &gt;&gt;"hlp\RobotWorld.hm"
+echo // Dialogs (IDD_*) &gt;&gt;"hlp\RobotWorld.hm"
+makehm IDD_,HIDD_,0x20000 "RobotWorld Resource.h" &gt;&gt;"hlp\RobotWorld.hm"
+echo. &gt;&gt;"hlp\RobotWorld.hm"
+echo // Frame Controls (IDW_*) &gt;&gt;"hlp\RobotWorld.hm"
+makehm IDW_,HIDW_,0x50000 "RobotWorld Resource.h" &gt;&gt;"hlp\RobotWorld.hm"
+REM -- Run rtffix.exe on rtf files to fix autonumbering problem
+rem echo hlp\rtffix.exe hlp\*.rtf
+rem hlp\rtffix.exe hlp\*.rtf
+REM -- Make help for Project RobotWorld
+rem echo Building Win32 Help files
+rem start /wait hcw /C /E /M "hlp\Map-N-Zap.hpj"
+rem if errorlevel 1 goto :Error
+rem if not exist "hlp\Map-N-Zap.hlp" goto :Error
+rem if not exist "hlp\Map-N-Zap.cnt" goto :Error
+rem echo.
+rem copy "hlp\Map-N-Zap.hlp" $(OutDir)
+rem copy "hlp\Map-N-Zap.cnt" $(OutDir)
+rem copy "hlp\Map-N-Zap.hlp"
+rem copy "hlp\Map-N-Zap.cnt"
+rem echo.
+rem goto :done
+rem :Error
+rem echo hlp\RobotWorld.hpj(1) : error: Problem encountered creating help file
+rem :done
+rem echo.
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">hlp\RobotWorld.hm;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">del hlp\RobotWorld.hm
+REM -- First make map file from Microsoft Visual C++ generated resource.h
+echo. &gt;&gt;"hlp\RobotWorld.hm"
+echo // Commands (ID_* and IDM_*) &gt;&gt;"hlp\RobotWorld.hm"
+makehm ID_,HID_,0x10000 IDM_,HIDM_,0x10000 "RobotWorld Resource.h" &gt;&gt;"hlp\RobotWorld.hm"
+echo. &gt;&gt;"hlp\RobotWorld.hm"
+echo // Prompts (IDP_*) &gt;&gt;"hlp\RobotWorld.hm"
+makehm IDP_,HIDP_,0x30000 "RobotWorld Resource.h" &gt;&gt;"hlp\RobotWorld.hm"
+echo. &gt;&gt;"hlp\RobotWorld.hm"
+echo // Resources (IDR_*) &gt;&gt;"hlp\RobotWorld.hm"
+makehm IDR_,HIDR_,0x20000 "RobotWorld Resource.h" &gt;&gt;"hlp\RobotWorld.hm"
+echo. &gt;&gt;"hlp\RobotWorld.hm"
+echo // Dialogs (IDD_*) &gt;&gt;"hlp\RobotWorld.hm"
+makehm IDD_,HIDD_,0x20000 "RobotWorld Resource.h" &gt;&gt;"hlp\RobotWorld.hm"
+echo. &gt;&gt;"hlp\RobotWorld.hm"
+echo // Frame Controls (IDW_*) &gt;&gt;"hlp\RobotWorld.hm"
+makehm IDW_,HIDW_,0x50000 "RobotWorld Resource.h" &gt;&gt;"hlp\RobotWorld.hm"
+REM -- Run rtffix.exe on rtf files to fix autonumbering problem
+rem echo hlp\rtffix.exe hlp\*.rtf
+rem hlp\rtffix.exe hlp\*.rtf
+REM -- Make help for Project RobotWorld
+rem echo Building Win32 Help files
+rem start /wait hcw /C /E /M "hlp\Map-N-Zap.hpj"
+rem if errorlevel 1 goto :Error
+rem if not exist "hlp\Map-N-Zap.hlp" goto :Error
+rem if not exist "hlp\Map-N-Zap.cnt" goto :Error
+rem echo.
+rem copy "hlp\Map-N-Zap.hlp" $(OutDir)
+rem copy "hlp\Map-N-Zap.cnt" $(OutDir)
+rem copy "hlp\Map-N-Zap.hlp"
+rem copy "hlp\Map-N-Zap.cnt"
+rem echo.
+rem goto :done
+rem :Error
+rem echo hlp\RobotWorld.hpj(1) : error: Problem encountered creating help file
+rem :done
+rem echo.
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">hlp\RobotWorld.hm;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="hlp\RobotWorld.rtf" />
+    <None Include="MakeHelp.bat" />
+    <None Include="res\mmedit.cur" />
+    <None Include="res\mmerase.cur" />
+    <None Include="res\mmplacelinepath.cur" />
+    <None Include="res\mmPlacePositionLabel.cur" />
+    <None Include="res\mmplacevacuum.cur" />
+    <None Include="res\mmplace_.cur" />
+    <None Include="res\mm_block.cur" />
+    <None Include="res\mm_clear.cur" />
+    <None Include="res\mm_draw_freehand.cur" />
+    <None Include="res\mm_draw_line.cur" />
+    <None Include="res\mm_draw_rectangle.cur" />
+    <None Include="res\mm_hand.cur" />
+    <None Include="res\mm_move_robot.cur" />
+    <None Include="res\mm_place finish line.cur" />
+    <None Include="res\mm_place_start.cur" />
+    <None Include="res\mm_search.cur" />
+    <None Include="res\mm_unkno.cur" />
+    <None Include="res\RobotWorld.rc2" />
+    <None Include="RobotWorld.reg" />
+    <None Include="rover.dat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="RobotWorld.odl">
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Win32</TargetEnvironment>
+      <TargetEnvironment Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Win32</TargetEnvironment>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\vendor\ddutil.h" />
+    <ClInclude Include="..\vendor\ddutil2.h" />
+    <ClInclude Include="Calibration Zone.h" />
+    <ClInclude Include="canibuton.h" />
+    <ClInclude Include="CharMatrix.h" />
+    <ClInclude Include="CTDPath.h" />
+    <ClInclude Include="cyecom.h" />
+    <ClInclude Include="CyePersona.h" />
+    <ClInclude Include="DbrFlowZapControl.h" />
+    <ClInclude Include="DbrRobotExternals.h" />
+    <ClInclude Include="DlgAddHomebase.h" />
+    <ClInclude Include="DlgAddRobot.h" />
+    <ClInclude Include="DlgCalibrateSurface.h" />
+    <ClInclude Include="DlgCalibrationSuccessful.h" />
+    <ClInclude Include="DlgCreateCalibrationWall1.h" />
+    <ClInclude Include="DlgCreateCheckPointSlipperySurface.h" />
+    <ClInclude Include="DlgCreateHomeOnWood.h" />
+    <ClInclude Include="DlgCreateVacuumPatch.h" />
+    <ClInclude Include="DlgCyeSample.h" />
+    <ClInclude Include="DlgEditCalibrationZone.h" />
+    <ClInclude Include="DlgErrorCheckingWoodWithVacuum.h" />
+    <ClInclude Include="DlgEStop.h" />
+    <ClInclude Include="DlgExecutableObjectGeneralProperties.h" />
+    <ClInclude Include="DlgFindHomebaseCorner.h" />
+    <ClInclude Include="DlgHomeBaseFloorType.h" />
+    <ClInclude Include="DlgJoystickControl.h" />
+    <ClInclude Include="DlgLabelName.h" />
+    <ClInclude Include="DlgLinePathProperties.h" />
+    <ClInclude Include="DlgMotorControls.h" />
+    <ClInclude Include="dlgmousecontrols.h" />
+    <ClInclude Include="DlgOrientHomebase.h" />
+    <ClInclude Include="DlgPropFloor.h" />
+    <ClInclude Include="DlgRelocateRobot.h" />
+    <ClInclude Include="dlgroboterror.h" />
+    <ClInclude Include="DlgSetDisplayResolution.h" />
+    <ClInclude Include="DlgTestRobot.h" />
+    <ClInclude Include="DlgVelocityTorqueDisplay.h" />
+    <ClInclude Include="DlgVideo.h" />
+    <ClInclude Include="ExecutableRWGraphicObject.h" />
+    <ClInclude Include="FindPathThread.h" />
+    <ClInclude Include="FinishLine.h" />
+    <ClInclude Include="FlowZap\Arrow.h" />
+    <ClInclude Include="FlowZap\Beep.h" />
+    <ClInclude Include="FlowZap\Branch.h" />
+    <ClInclude Include="FlowZap\BranchLoop.h" />
+    <ClInclude Include="FlowZap\Calibrate.h" />
+    <ClInclude Include="FlowZap\Cue.h" />
+    <ClInclude Include="FlowZap\DropOff.h" />
+    <ClInclude Include="FlowZap\Execute.h" />
+    <ClInclude Include="FlowZap\ExternalOutput.h" />
+    <ClInclude Include="FlowZap\FlowZap.h" />
+    <ClInclude Include="FlowZap\Goto.h" />
+    <ClInclude Include="FlowZap\Instruction.h" />
+    <ClInclude Include="FlowZap\LeftLoopPanel.h" />
+    <ClInclude Include="FlowZap\Loop.h" />
+    <ClInclude Include="FlowZap\LoopPanel.h" />
+    <ClInclude Include="FlowZap\Motion.h" />
+    <ClInclude Include="FlowZap\Pallette.h" />
+    <ClInclude Include="FlowZap\PathFollow.h" />
+    <ClInclude Include="FlowZap\Preferences.h" />
+    <ClInclude Include="FlowZap\Repeat.h" />
+    <ClInclude Include="FlowZap\RepeatLoop.h" />
+    <ClInclude Include="FlowZap\RightLoopPanel.h" />
+    <ClInclude Include="FlowZap\Start.h" />
+    <ClInclude Include="FlowZap\Stop.h" />
+    <ClInclude Include="FlowZap\Sub.h" />
+    <ClInclude Include="FlowZap\Tool.h" />
+    <ClInclude Include="FlowZap\Vacuum.h" />
+    <ClInclude Include="FlowZap\Wait.h" />
+    <ClInclude Include="FlowZap\Zone.h" />
+    <ClInclude Include="font.h" />
+    <ClInclude Include="gauge.h" />
+    <ClInclude Include="global.h" />
+    <ClInclude Include="GoalSet.h" />
+    <ClInclude Include="Grid.h" />
+    <ClInclude Include="HomeBase.h" />
+    <ClInclude Include="IPathPlanner.h" />
+    <ClInclude Include="Laygo.h" />
+    <ClInclude Include="LinePath.h" />
+    <ClInclude Include="LineRectTracker.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="mhcomm.h" />
+    <ClInclude Include="oleobject.h" />
+    <ClInclude Include="oleobjects.h" />
+    <ClInclude Include="Path.h" />
+    <ClInclude Include="PathDisplay.h" />
+    <ClInclude Include="PathList.h" />
+    <ClInclude Include="PBehavior.h" />
+    <ClInclude Include="picture.h" />
+    <ClInclude Include="PMotion.h" />
+    <ClInclude Include="PositionLabel.h" />
+    <ClInclude Include="Probability Grid.h" />
+    <ClInclude Include="PropGeneral.h" />
+    <ClInclude Include="PropRobotColor.h" />
+    <ClInclude Include="PSong.h" />
+    <ClInclude Include="Red Zone.h" />
+    <ClInclude Include="richtext.h" />
+    <ClInclude Include="Robot.h" />
+    <ClInclude Include="RobotCom.h" />
+    <ClInclude Include="RobotInstruction.h" />
+    <ClInclude Include="RobotStatus.h" />
+    <ClInclude Include="RobotWorld Resource.h" />
+    <ClInclude Include="RobotWorld.h" />
+    <ClInclude Include="RobotWorldDoc.h" />
+    <ClInclude Include="RobotWorldView.h" />
+    <ClInclude Include="RothMath.h" />
+    <ClInclude Include="RothString.h" />
+    <ClInclude Include="RothTime.h" />
+    <ClInclude Include="RothUtil.h" />
+    <ClInclude Include="Rover.h" />
+    <ClInclude Include="RRDim.h" />
+    <ClInclude Include="RulerGrid.h" />
+    <ClInclude Include="RWGraphicObject.h" />
+    <ClInclude Include="SerialCommEvents.h" />
+    <ClInclude Include="SplashWnd.h" />
+    <ClInclude Include="StartLine.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="VacuumPatch.h" />
+    <ClInclude Include="World.h" />
+    <ClInclude Include="WorldGridConsts.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="FlowZap\res\BeepBW.ico" />
+    <Image Include="FlowZap\res\BeepDisabled.ico" />
+    <Image Include="FlowZap\res\BeepEnabled.ico" />
+    <Image Include="FlowZap\res\beep_bw.ico" />
+    <Image Include="FlowZap\res\BranchBW.ico" />
+    <Image Include="FlowZap\res\BranchDisabled.ico" />
+    <Image Include="FlowZap\res\BranchEnabled.ico" />
+    <Image Include="FlowZap\res\branch_b.ico" />
+    <Image Include="FlowZap\res\CalDisabled.ico" />
+    <Image Include="FlowZap\res\CalEnabled.ico" />
+    <Image Include="FlowZap\res\cal_bw.ico" />
+    <Image Include="FlowZap\res\GotoDisabled.ico" />
+    <Image Include="FlowZap\res\GotoEnabled.ico" />
+    <Image Include="FlowZap\res\goto_bw.ico" />
+    <Image Include="FlowZap\res\iplay_st.ico" />
+    <Image Include="FlowZap\res\motion.ico" />
+    <Image Include="FlowZap\res\MotionBW.ico" />
+    <Image Include="FlowZap\res\MotionDisabled.ico" />
+    <Image Include="FlowZap\res\PathEnabled.ico" />
+    <Image Include="FlowZap\res\path_dis.ico" />
+    <Image Include="FlowZap\res\PlayPause.ico" />
+    <Image Include="FlowZap\res\RepeatBW.ico" />
+    <Image Include="FlowZap\res\RepeatDisabled.ico" />
+    <Image Include="FlowZap\res\RepeatEnabled.ico" />
+    <Image Include="FlowZap\res\Start.ico" />
+    <Image Include="FlowZap\res\Stop.ico" />
+    <Image Include="FlowZap\res\StopDisabled.ico" />
+    <Image Include="FlowZap\res\stop_bw.ico" />
+    <Image Include="FlowZap\res\stop_pla.ico" />
+    <Image Include="FlowZap\res\SubBW.ico" />
+    <Image Include="FlowZap\res\SubDisabled.ico" />
+    <Image Include="FlowZap\res\SubEnabled.ico" />
+    <Image Include="FlowZap\res\VacuumDisabled.ico" />
+    <Image Include="FlowZap\res\VacuumEnabled.ico" />
+    <Image Include="FlowZap\res\vacuum_b.ico" />
+    <Image Include="FlowZap\res\wait bw.bmp" />
+    <Image Include="FlowZap\res\WaitDisabled.ico" />
+    <Image Include="FlowZap\res\WaitEnabled.ico" />
+    <Image Include="FlowZap\res\wait_bw.ico" />
+    <Image Include="FlowZap\res\wait_col.bmp" />
+    <Image Include="res\000tn.bmp" />
+    <Image Include="res\011tn.BMP" />
+    <Image Include="res\022tn.BMP" />
+    <Image Include="res\033tn.BMP" />
+    <Image Include="res\044tn.BMP" />
+    <Image Include="res\200tn.BMP" />
+    <Image Include="res\300tn.BMP" />
+    <Image Include="res\arrow_l.bmp" />
+    <Image Include="res\arrow_m.bmp" />
+    <Image Include="res\arrow_s.bmp" />
+    <Image Include="res\battery charged.bmp" />
+    <Image Include="res\battery charging.bmp" />
+    <Image Include="res\battery not charging.bmp" />
+    <Image Include="res\battery_low.ico" />
+    <Image Include="res\CalZone.bmp" />
+    <Image Include="res\Chrometn.bmp" />
+    <Image Include="res\ClearPenActive.bmp" />
+    <Image Include="res\draw freehand.bmp" />
+    <Image Include="res\draw line.bmp" />
+    <Image Include="res\draw rectgle.bmp" />
+    <Image Include="res\drawing_.bmp" />
+    <Image Include="res\EStop.bmp" />
+    <Image Include="res\EStopD.bmp" />
+    <Image Include="res\finish line1.bmp" />
+    <Image Include="res\finish line10.bmp" />
+    <Image Include="res\finish line11.bmp" />
+    <Image Include="res\finish line12.bmp" />
+    <Image Include="res\finish line13.bmp" />
+    <Image Include="res\finish line14.bmp" />
+    <Image Include="res\finish line15.bmp" />
+    <Image Include="res\finish line16.bmp" />
+    <Image Include="res\finish line17.bmp" />
+    <Image Include="res\finish line2.bmp" />
+    <Image Include="res\finish line20.bmp" />
+    <Image Include="res\finish line21.bmp" />
+    <Image Include="res\finish line22.bmp" />
+    <Image Include="res\finish line23.bmp" />
+    <Image Include="res\finish line24.bmp" />
+    <Image Include="res\finish line25.bmp" />
+    <Image Include="res\finish line26.bmp" />
+    <Image Include="res\finish line27.bmp" />
+    <Image Include="res\finish line3.bmp" />
+    <Image Include="res\finish line30.bmp" />
+    <Image Include="res\finish line31.bmp" />
+    <Image Include="res\finish line32.bmp" />
+    <Image Include="res\finish line33.bmp" />
+    <Image Include="res\finish line34.bmp" />
+    <Image Include="res\finish line35.bmp" />
+    <Image Include="res\finish line36.bmp" />
+    <Image Include="res\finish line37.bmp" />
+    <Image Include="res\fzPlay Disabled.bmp" />
+    <Image Include="res\fzShowFZ Disabled.bmp" />
+    <Image Include="res\fzShowFZ Enabled.bmp" />
+    <Image Include="res\fzShowFZ Pushed.bmp" />
+    <Image Include="res\fzStop Disabled.bmp" />
+    <Image Include="res\fz_execute.bmp" />
+    <Image Include="res\inactivelines.bmp" />
+    <Image Include="res\inactivepens.bmp" />
+    <Image Include="res\joystick1.bmp" />
+    <Image Include="res\joystick2.bmp" />
+    <Image Include="res\joystick3.bmp" />
+    <Image Include="res\joystick4.bmp" />
+    <Image Include="res\large black arrow.bmp" />
+    <Image Include="res\large grey arrow.bmp" />
+    <Image Include="res\large.bmp" />
+    <Image Include="res\LargeLineActive.bmp" />
+    <Image Include="res\LaygoDefault.bmp" />
+    <Image Include="res\MainFrmTbr.bmp" />
+    <Image Include="res\Map And Zap.ico" />
+    <Image Include="res\mapIDbar.bmp" />
+    <Image Include="res\map_tools.bmp" />
+    <Image Include="res\medium black arrow.bmp" />
+    <Image Include="res\medium grey arrow.bmp" />
+    <Image Include="res\medium.bmp" />
+    <Image Include="res\MediumLineActive.bmp" />
+    <Image Include="res\ObstaclePenActive.bmp" />
+    <Image Include="res\Pause Disabled.bmp" />
+    <Image Include="res\Pause Enabled.bmp" />
+    <Image Include="res\Pause Pushed.bmp" />
+    <Image Include="res\Play Enabled.bmp" />
+    <Image Include="res\Play Pushed.bmp" />
+    <Image Include="res\position label1.bmp" />
+    <Image Include="res\position label10.bmp" />
+    <Image Include="res\position label11.bmp" />
+    <Image Include="res\position label12.bmp" />
+    <Image Include="res\position label13.bmp" />
+    <Image Include="res\position label14.bmp" />
+    <Image Include="res\position label15.bmp" />
+    <Image Include="res\position label2.bmp" />
+    <Image Include="res\position label20.bmp" />
+    <Image Include="res\position label21.bmp" />
+    <Image Include="res\position label22.bmp" />
+    <Image Include="res\position label23.bmp" />
+    <Image Include="res\position label24.bmp" />
+    <Image Include="res\position label25.bmp" />
+    <Image Include="res\position label3.bmp" />
+    <Image Include="res\position label30.bmp" />
+    <Image Include="res\position label31.bmp" />
+    <Image Include="res\position label32.bmp" />
+    <Image Include="res\position label33.bmp" />
+    <Image Include="res\position label34.bmp" />
+    <Image Include="res\position label35.bmp" />
+    <Image Include="res\practice toolbar.bmp" />
+    <Image Include="res\RedZone.bmp" />
+    <Image Include="res\robot tools.bmp" />
+    <Image Include="res\RobotControlTbr.bmp" />
+    <Image Include="res\RobotExternalsOff.bmp" />
+    <Image Include="res\RobotExternalsOn.bmp" />
+    <Image Include="res\RobotWorld.ico" />
+    <Image Include="res\RobotWorldDoc.ico" />
+    <Image Include="res\robot_status_charged.bmp" />
+    <Image Include="res\robot_status_charging.bmp" />
+    <Image Include="res\robot_status_not_charging.bmp" />
+    <Image Include="res\small black arrow.bmp" />
+    <Image Include="res\small grey arrow.bmp" />
+    <Image Include="res\small.bmp" />
+    <Image Include="res\SmallLineActive.bmp" />
+    <Image Include="res\speedball.bmp" />
+    <Image Include="res\splash.bmp" />
+    <Image Include="res\start line1.bmp" />
+    <Image Include="res\start line2.bmp" />
+    <Image Include="res\start line3.bmp" />
+    <Image Include="res\Stop Enabled.bmp" />
+    <Image Include="res\Stop Pushed.bmp" />
+    <Image Include="res\timer bottom.bmp" />
+    <Image Include="res\timer left.bmp" />
+    <Image Include="res\timer right.bmp" />
+    <Image Include="res\timer top.bmp" />
+    <Image Include="res\toolbar1.bmp" />
+    <Image Include="res\UnknownPenActive.bmp" />
+    <Image Include="res\untitled.bmp" />
+    <Image Include="res\velocity_torque.bmp" />
+    <Image Include="res\XLargeLineActive.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="flowzap\sounds\addInstruction.wav" />
+    <Media Include="flowzap\sounds\choice.wav" />
+    <Media Include="flowzap\sounds\condense.wav" />
+    <Media Include="flowzap\sounds\expand.wav" />
+    <Media Include="flowzap\sounds\removeInstruction.wav" />
+    <Media Include="flowzap\sounds\select.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\vendor\ddraw.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RRRCom\RRRCom.vcxproj">
+      <Project>{2a959934-474c-4e89-b54a-0efed33c3606}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

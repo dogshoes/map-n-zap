@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{66BFAE45-713A-441B-B01E-FA9BCD3F0F15}</ProjectGuid>
+    <RootNamespace>FlowChart</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/FlowChart.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/FlowChart.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>.\Release/FlowChart.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\Release/FlowChart.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/FlowChart.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/FlowChart.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/FlowChart.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Debug/FlowChart.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/FlowChart.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/FlowChart.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Arrow.cpp" />
+    <ClCompile Include="Beep.cpp" />
+    <ClCompile Include="Branch.cpp" />
+    <ClCompile Include="BranchLoop.cpp" />
+    <ClCompile Include="Calibrate.cpp" />
+    <ClCompile Include="Cue.cpp" />
+    <ClCompile Include="DropOff.cpp" />
+    <ClCompile Include="Execute.cpp" />
+    <ClCompile Include="ExternalOutput.cpp" />
+    <ClCompile Include="FlowChart.cpp" />
+    <ClCompile Include="FlowChartDlg.cpp" />
+    <ClCompile Include="FlowZap.cpp" />
+    <ClCompile Include="Goto.cpp" />
+    <ClCompile Include="Instruction.cpp" />
+    <ClCompile Include="LeftLoopPanel.cpp" />
+    <ClCompile Include="Loop.cpp" />
+    <ClCompile Include="LoopPanel.cpp" />
+    <ClCompile Include="Motion.cpp" />
+    <ClCompile Include="Pallette.cpp" />
+    <ClCompile Include="PalletteItem.cpp" />
+    <ClCompile Include="PathFollow.cpp" />
+    <ClCompile Include="Preferences.cpp" />
+    <ClCompile Include="Repeat.cpp" />
+    <ClCompile Include="RepeatLoop.cpp" />
+    <ClCompile Include="RightLoopPanel.cpp" />
+    <ClCompile Include="Start.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Stop.cpp" />
+    <ClCompile Include="Sub.cpp" />
+    <ClCompile Include="Tool.cpp" />
+    <ClCompile Include="Util.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Vacuum.cpp" />
+    <ClCompile Include="Wait.cpp" />
+    <ClCompile Include="Zone.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FlowChart.rc" />
+    <ResourceCompile Include="FlowZap.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Arrow.h" />
+    <ClInclude Include="Beep.h" />
+    <ClInclude Include="Branch.h" />
+    <ClInclude Include="BranchLoop.h" />
+    <ClInclude Include="Calibrate.h" />
+    <ClInclude Include="Cue.h" />
+    <ClInclude Include="DropOff.h" />
+    <ClInclude Include="Execute.h" />
+    <ClInclude Include="ExternalOutput.h" />
+    <ClInclude Include="FlowChart.h" />
+    <ClInclude Include="FlowChartDlg.h" />
+    <ClInclude Include="FlowChartResource.h" />
+    <ClInclude Include="FlowZap.h" />
+    <ClInclude Include="FlowZapResource.h" />
+    <ClInclude Include="Goto.h" />
+    <ClInclude Include="Instruction.h" />
+    <ClInclude Include="LeftLoopPanel.h" />
+    <ClInclude Include="Loop.h" />
+    <ClInclude Include="LoopPanel.h" />
+    <ClInclude Include="Motion.h" />
+    <ClInclude Include="Pallette.h" />
+    <ClInclude Include="PalletteItem.h" />
+    <ClInclude Include="PathFollow.h" />
+    <ClInclude Include="Preferences.h" />
+    <ClInclude Include="Repeat.h" />
+    <ClInclude Include="RepeatLoop.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RightLoopPanel.h" />
+    <ClInclude Include="Start.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="Stop.h" />
+    <ClInclude Include="Sub.h" />
+    <ClInclude Include="Tool.h" />
+    <ClInclude Include="Util.h" />
+    <ClInclude Include="Vacuum.h" />
+    <ClInclude Include="Wait.h" />
+    <ClInclude Include="Zone.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\BeepBW.ico" />
+    <Image Include="res\BeepDisabled.ico" />
+    <Image Include="res\BeepEnabled.ico" />
+    <Image Include="res\beepu.bmp" />
+    <Image Include="res\beep_bw.ico" />
+    <Image Include="res\beep_dis.bmp" />
+    <Image Include="res\BranchBW.ico" />
+    <Image Include="res\BranchDisabled.ico" />
+    <Image Include="res\BranchEnabled.ico" />
+    <Image Include="res\branchu.bmp" />
+    <Image Include="res\branch_b.ico" />
+    <Image Include="res\branch_d.bmp" />
+    <Image Include="res\CalDisabled.ico" />
+    <Image Include="res\CalEnabled.ico" />
+    <Image Include="res\calibrateu.bmp" />
+    <Image Include="res\cal_bw.ico" />
+    <Image Include="res\checkpoi.bmp" />
+    <Image Include="res\external output disabled.ico" />
+    <Image Include="res\externalu.bmp" />
+    <Image Include="res\external_output.ico" />
+    <Image Include="res\FlowChart.ico" />
+    <Image Include="res\FZbracket.bmp" />
+    <Image Include="res\FZcheck.bmp" />
+    <Image Include="res\FZclock.bmp" />
+    <Image Include="res\FZhotpoint.bmp" />
+    <Image Include="res\FZhotspot.bmp" />
+    <Image Include="res\FZmusic.bmp" />
+    <Image Include="res\FZnudge.bmp" />
+    <Image Include="res\FZon_off.bmp" />
+    <Image Include="res\FZpath.bmp" />
+    <Image Include="res\FZrepeat.bmp" />
+    <Image Include="res\FZrot+go.bmp" />
+    <Image Include="res\FZstop.bmp" />
+    <Image Include="res\FZvac.bmp" />
+    <Image Include="res\FZ_start_.bmp" />
+    <Image Include="res\GotoDisabled.ico" />
+    <Image Include="res\GotoEnabled.ico" />
+    <Image Include="res\goto_bw.ico" />
+    <Image Include="res\hotpoint.bmp" />
+    <Image Include="res\iplay_st.ico" />
+    <Image Include="res\motion.ico" />
+    <Image Include="res\MotionBW.ico" />
+    <Image Include="res\MotionDisabled.ico" />
+    <Image Include="res\motionu.bmp" />
+    <Image Include="res\motion_d.bmp" />
+    <Image Include="res\onoff_di.bmp" />
+    <Image Include="res\PathEnabled.ico" />
+    <Image Include="res\pathu.bmp" />
+    <Image Include="res\path_dis.bmp" />
+    <Image Include="res\path_dis.ico" />
+    <Image Include="res\PlayPause.ico" />
+    <Image Include="res\RepeatBW.ico" />
+    <Image Include="res\RepeatDisabled.ico" />
+    <Image Include="res\RepeatEnabled.ico" />
+    <Image Include="res\repeatu.bmp" />
+    <Image Include="res\repeat_d.bmp" />
+    <Image Include="res\Start.ico" />
+    <Image Include="res\Stop.ico" />
+    <Image Include="res\StopDisabled.ico" />
+    <Image Include="res\stopu.bmp" />
+    <Image Include="res\stop_bw.ico" />
+    <Image Include="res\stop_dis.bmp" />
+    <Image Include="res\stop_pla.ico" />
+    <Image Include="res\SubBW.ico" />
+    <Image Include="res\SubDisabled.ico" />
+    <Image Include="res\SubEnabled.ico" />
+    <Image Include="res\subu.bmp" />
+    <Image Include="res\sub_disa.bmp" />
+    <Image Include="res\VacuumDisabled.ico" />
+    <Image Include="res\VacuumEnabled.ico" />
+    <Image Include="res\vacuumu.bmp" />
+    <Image Include="res\vacuum_b.ico" />
+    <Image Include="res\vacuum_d.bmp" />
+    <Image Include="res\wait bw.bmp" />
+    <Image Include="res\WaitDisabled.ico" />
+    <Image Include="res\WaitEnabled.ico" />
+    <Image Include="res\waitu.bmp" />
+    <Image Include="res\wait_bw.ico" />
+    <Image Include="res\wait_col.bmp" />
+    <Image Include="res\wait_dis.bmp" />
+    <Image Include="res\zapIDbar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\cBeep.cur" />
+    <None Include="res\cBranch.cur" />
+    <None Include="res\cCal.cur" />
+    <None Include="res\cGoto.cur" />
+    <None Include="res\cMotion.cur" />
+    <None Include="res\cMove.cur" />
+    <None Include="res\cRepeat.cur" />
+    <None Include="res\cStop.cur" />
+    <None Include="res\cSub.cur" />
+    <None Include="res\cVac.cur" />
+    <None Include="res\cWait.cur" />
+    <None Include="res\external output.cur" />
+    <None Include="res\FlowChart.rc2" />
+    <None Include="res\grab.cur" />
+    <None Include="res\path.cur" />
+    <None Include="res\x.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="sounds\addInstruction.wav" />
+    <Media Include="sounds\choice.wav" />
+    <Media Include="sounds\condense.wav" />
+    <Media Include="sounds\expand.wav" />
+    <Media Include="sounds\removeInstruction.wav" />
+    <Media Include="sounds\select.wav" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
