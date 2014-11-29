@@ -1,4 +1,4 @@
-## CyeSrv.exe
+## Map-N-Zap.exe
 
 This project compiles Map-N-Zap.exe, the program which is responsible for controlling the Cye robot.
 
