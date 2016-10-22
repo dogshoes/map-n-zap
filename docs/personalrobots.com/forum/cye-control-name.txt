@@ -1,0 +1,46 @@
+Subject: cye control name 
+From: mark
+Date: Thu Oct 12 13:43:47 EDT 2000 
+
+	i dont know if anyone else has tried mucking about with the communications at the cyesrv project level but I have been trying to use that project to make a kind of simpler control to the cye. however I can't figure out what the controlname parameter on teh connect method for an rrrcommsrv is. the other parameters are fairly evident, and get set up by themselves but i cannot find an initialization of this anywhere. I know that this was all coded by one person and there is no official documentation but I was hoping someone knew about this, or just had some general notes on the software. any help would be appreciated.
+	
+	--mark
+
+Subject: RE: cye control name 
+From: Stephan Roth
+Date: Fri Oct 13 11:45:32 EDT 2000 
+In Reference To: 1239
+
+	I don't think it does anything. Every time I run Map-N-Zap, that parameter is always an empty string "". I think you can just safely ignore it.
+
+Subject: RE: cye control name 
+From: Jim
+Date: Fri Oct 13 21:11:26 EDT 2000 
+In Reference To: 1239
+
+	The control name parameter is just used to identify the component connecting to the server. The CyeCom control passes the AmbientDisplayName property value (hence "ControlName") for this parameter when it connects to the server. It was used during debugging just to identify the source of the request in a human readable form.
+	
+	Have you considered using the CyeCom control in the control you're creating. It might be easier when it comes to wiring the events. The CyeServe using a window message based event mechanism. You might have a difficult time getting this to work (unless of course you just steal the code from the CyeCom project.)
+
+Subject: RE: RE: cye control name 
+From: mark
+Date: Tue Oct 17 11:04:51 EDT 2000 
+In Reference To: 1245
+
+	the problem is i am trying not to use activex for any of this project. Eventually we want to be able to have the cyesrv class running in background with the larger nt app for control and such running seperately. Also i dont know enough of activex
+
+Subject: RE: RE: RE: cye control name 
+From: Jim
+Date: Wed Oct 18 01:10:51 EDT 2000 
+In Reference To: 1250
+
+	You've gotta bite the bullet on the AtiveX stuff. It's really not that big a deal once you get into it. If you can actually learn to communication with the server in the background you've already done 90% of the work required to understand and use an ActiveX component. You can't really do serious Windows work without understanding this stuff...
+
+Subject: RE: RE: RE: RE: cye control name 
+From: mark
+Date: Tue Oct 24 12:52:33 EDT 2000 
+In Reference To: 1255
+
+	yeah, but you cant do serious work using the windows stuff
+	
+	--mark

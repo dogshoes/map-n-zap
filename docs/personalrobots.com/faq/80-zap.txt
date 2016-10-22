@@ -1,0 +1,9 @@
+Section 8: Questions about Zap 
+
+8.0 What is the "Zap" component of Map-N-Zap?
+
+Zap is a graphical flow-charting tool used to create lists of tasks for Cye to execute. You can set all of the parameters for each task to totally customize it to your preferences. 
+
+8.1 What does nudged mean?
+
+When Cye is stationary, if you give it the slightest push, it detects this and considers itself "nudged." This forms the basis for conditional branching in the Zap lists. For example, Cye can be instructed to do one thing if nudged within 15 seconds and another if not nudged within the set time. The simpler form of this command is "Wait Until Nudged."

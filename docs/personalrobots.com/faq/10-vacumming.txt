@@ -1,0 +1,13 @@
+Section 3: Questions about using Cye to vacuum 
+
+3.0 How can Cye turn on a vacuum?
+
+A corded vacuum must be turned on and off manually by the user, but the cordless vacuum attachment can be controlled through Map-N-Zap. 
+
+3.1 How does Cye know where on the floor to vacuum?
+
+Cye vacuums the floor according to vacuum paths that are created by dragging and dropping in Map-N-Zap. No complex calculations are required. 
+
+3.2 When using Cye to control a vacuum, does the robot bump into furniture or do sensors detect obstacles before it hits them?
+
+Since Cye does not have any on board sensors, it would bump into any furniture accidentally placed in its path and then would calculate a path around the obstacle. However, Cye's soft urethane bumper protects both the furniture and robot from damage should a collision occur. Ideally, the vacuum paths created by Map-N-Zap would account for any known obstacles on the floor plan to eliminate the chance of a collision in the first place. 

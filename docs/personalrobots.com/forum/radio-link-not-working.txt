@@ -1,0 +1,137 @@
+Subject: radio link not working 
+From: Nick
+Date: Thu Jan 3 01:12:30 EST 2002 
+
+	Hi,
+	
+	I recently purchased a secoundhand cye s/n 148 and I'm unable to get the radio link working. I've tried 3 different pcs( 2 running win2000 and one running win98) I'm using the latest s/w and have picked the correct color cye during setup. The cye just sits there with green led on but not flashing. I also have another problem where the battery dosent seem to hold a charge, its been sitting on the charger for 5hrs but as soon as I take it off the relay clicks and led goes off.
+	
+	Any help or advice would be really appreciated. I'm form Australia so sending it back for repairs might not be practical.
+
+Subject: RE: radio link not working 
+From: Nick
+Date: Fri Jan 4 03:20:15 EST 2002 
+In Reference To: 2072
+
+	just an update to my problem
+	
+	I changed the baudrate from 19000 to 9600 in the cyserv.ini file and now when I start the mapnzap program, the led flashes while the program starts up then stops. My problem now apperas to be identical to Eds problem in message 1706 http://www.personalrobots.com/community/forum/forum.cgi?ID=1706
+	
+	Henry or Ed could either of you reply and let me know how this problem was resolved.
+
+
+Subject: RE: RE: radio link not working 
+From: Ed
+Date: Fri Jan 4 13:16:24 EST 2002 
+In Reference To: 2073
+
+	Nick,
+	
+	Please send me an email "Off-line" and I will explain how I solved my communications problem.
+	
+	xxxxxxxxx@aol.com
+	
+	Ed
+
+Subject: RE: RE: RE: radio link not working 
+From: Henry Thorne
+Date: Mon Jan 7 10:24:53 EST 2002 
+In Reference To: 2074
+
+	Nick,
+	
+	You are using a new rev of software with an old rev of hardware. You were right to change the baud rate but there were other changes required as well. If you don't the answers you need from Ed please e-mail customersupport@personalrobots.com.
+	
+	Henry
+
+Subject: RE: RE: RE: RE: radio link not working 
+From: Nick
+Date: Tue Jan 8 03:25:46 EST 2002 
+In Reference To: 2078
+
+	Hi Henry,
+	
+	I emailed customer support before I placed a message here but never received a reply, could someone email me the instructions (Ed was unable to help).
+	
+	Nick
+
+Subject: RE: RE: RE: RE: RE: radio link not working 
+From: Nick
+Date: Wed Jan 9 08:43:14 EST 2002 
+In Reference To: 2084
+
+	tried emailing customer service again still no reply, could someone please email me instructions on how to get the older ver of cye working with the new ver of software, please. I've had the cye for 2 weeks now and its driving me nuts not being able to get it to work.
+
+Subject: RE: RE: RE: RE: RE: RE: radio link not working 
+From: Long Dang
+Date: Wed Jan 9 11:02:46 EST 2002 
+In Reference To: 2087
+
+	in the file cyeserv.ini or cyesrv.ini
+	
+	You should have it as shown:
+	
+	[GENERAL]
+	PORT=COM1
+	BAUDRATE=9600
+	DTRENABLE=ON
+	DTRONDELAY=3
+	DTROFFDELAY=10
+	ENCODE=1
+	FULLDUPLEX=OFF
+	LOCALADDRESS=2
+	ROBOTADDRESS=0
+	INVERTDTR=ON
+	PRE_FLAG=2
+	POST_FLAG=1
+	
+	Good Luck, Long Dang
+
+Subject: RE: radio link not working 
+From: Nick
+Date: Wed Jan 9 19:09:43 EST 2002 
+In Reference To: 2088
+
+	thanks long, I tried those settings but I still get the same problem. Its seems to be a problem with the color coding address not being recognised ( I have a yellow and green one ). Any other ideas on how to fix this, I dont seem to be having much luck in getting customer support to reply to my emails.
+	
+	Henry could you help me out here ?
+ 
+Subject: RE: RE: radio link not working 
+From: Long Dang
+Date: Thu Jan 10 14:09:05 EST 2002 
+In Reference To: 2089
+
+	RobotAddresses are (based on the main body of the robot's color):
+	
+	0 - Original (Cye ?)
+	1 - Black (Cye-SR)
+	2 - ..Radio Pod...
+	3 - Orange
+	4 - Yellow
+	5 - Chrome
+	
+	You can try changing that value.
+	
+	Good luck, Long Dang.
+	
+	PS: I do not think that is your problem thought...
+
+Subject: RE: RE: RE: radio link not working 
+From: Nick
+Date: Thu Jan 10 18:51:13 EST 2002 
+In Reference To: 2090
+
+	I did try changing the id value in the cyesvr.ini file but it didnt make a difference. The reason I think its a color address problem is that when the s/w starts up the color address is initially 0 (looking at the radio server applet) and the led on the cye flashes. Then when I go through the setup and select the color of my cye ( black with yellow/ green bumper) the color id changes to 1 and the cye stops flashing and the s/w fails to find it. If I then go through and add another cye usung the menus on the mapnzap s/w and select the same color but make it non color addresable the led starts flashing again but I still can't comunicate with cye.
+
+Subject: RE: RE: RE: RE: radio link not working 
+From: Henry Thorne
+Date: Fri Jan 11 08:42:12 EST 2002 
+In Reference To: 2091
+
+	Nick,
+	
+	You can e-mail me at henry@personalrobots.com if you can't through to customer support. Sorry about that, he's only part time now.
+	
+	But you need to change ENCODE=1 to ENCODE=0 so it will not encode the robot address as those older bots didn't have addresses.
+	
+	Henry

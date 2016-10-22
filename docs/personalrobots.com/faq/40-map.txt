@@ -1,0 +1,9 @@
+Section 7: Questions about Map 
+
+7.0 What is the "Map" component of Map-N-Zap?
+
+Map is the software interface used to control Cye. The main window of Map displays the floor plan of whatever area Cye is navigating.
+
+7.1 Is there a DLL I can use to send commands to the robot and obtain sensor information from it?
+
+Yes. It is an OCX. The entire command set to and from the robot is exposed from VB or VC++. Commands include everything from "set wheel A velocity to X," to "go to position X, Y on the floor".

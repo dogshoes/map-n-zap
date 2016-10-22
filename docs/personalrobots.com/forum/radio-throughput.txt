@@ -1,0 +1,20 @@
+Subject: Radio throughput 
+From: Andy Martin
+Date: Mon Oct 9 09:07:07 EDT 2000 
+
+	Right. Hi. So i don't own a Cye (yet!), and i'm sure that the answer to my question is floating around here somewhere, but i couldn't find it. What's the radio throughput (bits per sec.) for cye-sr?
+	
+	I must say, Cye looks madly impressive. As soon as i have enough disposible cash laying around, i WILL have one. oh, sweet baby jesus yes. *droooooool*
+
+Subject: RE: Radio throughput 
+From: Henry Thorne
+Date: Tue Oct 10 16:45:51 EDT 2000 
+In Reference To: 1218
+
+	Andy Martin asks: "What's the radio throughput (bits per sec.) for cye-sr?"
+	
+	HENRY> The baud rate is 19,200 bps half duplex and there is a switching dead time taking approximately 30% of the line so it's 70% of 9600 =~ 6800 bps.
+	
+	Henry
+	
+	PS There are 12 packets sent each way per second. I had three robots running off one PC yesterday and the degradation wasn't bad at all, I could still drag any robot around with complete control.

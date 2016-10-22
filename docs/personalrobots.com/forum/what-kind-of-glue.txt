@@ -1,0 +1,44 @@
+Subject: What kind of glue ? 
+From: Dan Long
+Date: Fri Oct 6 11:33:27 EDT 2000 
+
+	My Cye's right wheel felt off. I do not know what happened but it got lost in another room and when I went to check I saw Cye still banging in the wall and the right wheel laying beside it. Come to think of it, is that why Cye could not come back to the home base without re-calibrating itself? I tried using the Goop glue but it came off again. Goop claimed to be many time stronger than super glue. I searched the BB and found 2 solutions: cyanoacrylate and JB Weld. What is cyanoacrylate ? Is that super glue ? JB Well for metal ? If I use that 2-part epoxy glue can I still remove the wheel later when I have to change for a new set of wheels ? Mine are half worn already.
+	
+	I can not find any information on Cye's web cam information... Has it been released yet?
+	
+	Also I saw on this board talks about adding proximity sensors (Sharp IR distance sensors) has it been done by anyone ? 
+	
+	What is the progress on Handy Board interface ?
+	
+	Thank you very much and I have to say Cye Team has been doing a great job!
+
+Subject: RE: What kind of glue ? HELP 
+From: Dan Long
+Date: Sun Oct 8 01:16:43 EDT 2000 
+In Reference To: 1209
+
+	Even JB Weld did not hold. It works for 2 hours and the wheel came off again. I did drill the air hole so I can push the wheel all the way onto the shaft. Help Please!
+	
+	Thanks, Dan;
+
+Subject: RE: What kind of glue ? 
+From: Henry Thorne
+Date: Mon Oct 9 08:39:48 EDT 2000 
+In Reference To: 1209
+
+	Dan, on the wheel, please send an e-mail to our manufacturing engineer: larry@personalrobots.com with your address and he'll send you a new pair of wheels and the proper glue for putting them back on. I'm sorry you had this problem. Did anyone else have this problem? It's worrying me that this happened.
+	
+	Dan Long asks: "I can not find any information on Cye's web cam information... Has it been released yet?"
+	
+	HENRY> Nope. Probably November 1st, slipped from October 24th. We've actually got the software working across the internet at this point but it's got a ways to go.
+	
+	Dan again: "Also I saw on this board talks about adding proximity sensors (Sharp IR distance sensors) has it been done by anyone ?"
+	
+	HENRY> We did one as a test and frankly they are perfect for Cye. Unfortunately, it begets a whole new design which means it won't happen soon.
+	
+	Dan again: "What is the progress on Handy Board interface ?"
+	
+	HENRY> 0 for 2 on volunteers getting it done.
+	
+	Henry Thorne
+	Probotics.

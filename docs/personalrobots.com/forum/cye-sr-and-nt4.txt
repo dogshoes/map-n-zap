@@ -1,0 +1,84 @@
+Subject: cye sr and nt4.0 
+From: mark
+Date: Tue Oct 10 11:47:11 EDT 2000 
+
+	Hi, I'm trying to get a cye sr to run on an nt4.0 box. I downloaded and compiled soshi's nt software but I can't get it to connect to the cye sr. The protocol window for cyesrv indicates that chars are being received but nothing else, so i assume that somthing isnt getting the messages out of the input. Is this because the sr is supposed to have double the thoughput? Or is there some weird NT serial port behavior I shold be watching out for?
+
+Subject: RE: cye sr and nt4.0 
+From: Henry Thorne
+Date: Tue Oct 10 17:59:41 EDT 2000 
+In Reference To: 1227
+
+Mark,
+
+	Is the light on the robot blinking? It turns on during the period it is sending a message back to the PC. It also only responds if it gets a valid packet with its address (color coded). So if it is blinking then you know the baud rate is right and the color selection is right. Getting chars back across the link doesn't tell you much cause it could be just white noise from the radio (even with the robot off this can happen). There is a good troubleshooting description on the customer support page.
+	
+	Henry
+	
+	PS I impressed you compiled Soshi's code. Wow, open source actually working.
+
+Subject: RE: RE: cye sr and nt4.0 
+From: mark
+Date: Thu Oct 12 11:21:48 EDT 2000 
+In Reference To: 1233
+
+	the light isnt blinking so i am assuming that the connection to the serial port is not being made. From what I understand NT has some strange kind of setup with serial drivers and thought someone might know what drivers this is written for.
+	
+	PS it's not exactyl working, it just compiled
+
+Subject: RE: RE: RE: cye sr and nt4.0 
+From: soshi
+Date: Tue Oct 24 14:08:53 EDT 2000 
+In Reference To: 1238
+
+	Sorry for the late reply,
+	
+	I haven't checked this bboard for quite a while.
+	
+	The code I submitted for NT4.0 (mnzV2.0) was intended for the 1st version of the radio pod (one with 2 wires sticking up). It had a different serial setting than the current version (with a single black pole standing up).
+	
+	# I've been a cye user for a long time :)
+	
+	To make it work on the 2nd version, make few changes in the CRRRSrvApp::InitInstance() method. It is in the file; GPLVersionNT\RRRSrv\RRRSrv.cpp
+	
+	There are 5 places to change:
+	
+	1) line 199
+	m_BaudRate = GetProfileInt(GENERAL_SECTION, BAUDRATE, 9600);
+	---> change 9600 to 19200
+	m_BaudRate = GetProfileInt(GENERAL_SECTION, BAUDRATE, 19200);
+	
+	2) line 210
+	m_BaudRate = 9600;
+	---> change 9600 to 19200
+	m_BaudRate = 19200;
+	
+	3) line 215
+	CString DTREnable = GetProfileString(GENERAL_SECTION, DTRENABLE, "ON");
+	---> change ON to OFF
+	CString DTREnable = GetProfileString(GENERAL_SECTION, DTRENABLE, "OFF");
+	
+	4) line 227
+	m_DTROnDelay = GetProfileInt(GENERAL_SECTION, DTRONDELAY, 3);
+	---> change 3 to 0
+	m_DTROnDelay = GetProfileInt(GENERAL_SECTION, DTRONDELAY, 0);
+	
+	5) line 229
+	m_DTROffDelay = GetProfileInt(GENERAL_SECTION, DTROFFDELAY, 10);
+	---> change 10 to 0
+	m_DTROffDelay = GetProfileInt(GENERAL_SECTION, DTROFFDELAY, 0);
+	
+	That should fix the serial difference from the 1st to the 2nd version. Don't forget to erase your c:\winnt\cyesrv.ini, which stores your previous settings.
+	
+	BTW, serial setting with NT is no different from w95/98. The reason mnzV2.0 did not work on the NT was the buggy mnz serial init code. It simply did not re-initialize the settings after the port reset. Strangely, w95/98 keeps those setting even after the port destruction, and the previous code took advantage of that.
+	
+	I would really love to hear that the code works on your machine too :)
+
+Subject: RE: RE: RE: RE: cye sr and nt4.0 
+From: mark
+Date: Wed Oct 25 10:45:39 EDT 2000 
+In Reference To: 1273
+
+	Since I was informed that each of the robots in the project I am working on will have its own dedicated notebook I just asked for that notebook to have win95 (much to our it guy's chagrin). Also, I'm not using radio at all anymore but am trying (semi-successfully) to write a dll for using a direct serial port connection to the robot. I may try running it on NT just to see it go latyer in the week though.
+	
+	--mark

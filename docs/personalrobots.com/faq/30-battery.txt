@@ -1,0 +1,33 @@
+Section 6: Questions about Cye's energy system
+
+6.0 How long does it take to recharge Cye completely?
+
+5 hours.
+
+6.1 Is it necessary to leave the computer on to have Cye charge itself properly?
+
+No, the charging sequence is internal to the robot.
+
+6.2 What voltage should Cye reach when charging?
+
+When fully discharged, Cye will go through a charging sequence that holds the voltage at 14.5 volts for 5 hours then settles to a 13.7 volt holding voltage. When not fully discharged, this cycle is shortened.
+
+6.3 How long can Cye run before he runs out of juice?
+
+Cye can run for 2 hours on normal carpet, 1 hour on thick carpet, and 24 hours just standing there.
+
+6.4 Does Cye suffer a "loss" of power like a Ni-Cad battery unless you let it discharge fully?
+
+No. The battery is not Ni-Cad for that reason. It's sealed lead acid, like in your car. It has no "memory" and suffers no loss of capacity when discharged only slightly and returned to the home base charging station.
+
+6.5 Can Cye be programmed to recharge himself when his batteries are getting low?
+
+Cye already goes back to the charger when his batteries are getting low. If he can't calculate a path or can't get home for some other reason, he shuts himself down.
+
+6.6 How can I turn Cye off?
+
+Cye attempts to return to the charger when his batteries are getting low. If he can't calculate a path or can't get home for some other reason, he shuts himself down. If you want to turn him off, on serial #'s 65 and greater, you can manually rotate him clockwise on the floor for 2 seconds and he will shut himself down.
+
+6.7 Does the unit have a battery voltage sensor? If so, how many bits?
+
+Cye has a voltage sensor and it's a 10 bit ADC.

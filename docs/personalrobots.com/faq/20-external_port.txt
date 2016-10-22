@@ -1,0 +1,23 @@
+Section 4: Questions about Cye's external port 
+
+4.0 If I were to buy the latest version of Cye now, and you later devise a way for me to interface my own devices with the remote serial port, will that future system be compatible with my model I buy now?
+
+Yes. The radio link protocol is fixed and the radio link is what is exposed on the remote port on Cye. Keep in mind that this protocol is fairly complex, each packet going to the robot has an address, an identification tag, some data, a response byte, a checksum, and a couple bracketing characters. In addition, there is some complexity in handling the speak when spoken to slave relationship with the PC. We will publish the C code that is used to form and decode the packets and handle the relationship to the PC. You might want to wait until we do that to make your own interface.
+
+4.1 Is there a serial feed through at a Cye remote port?
+
+It's not actually a feed through. The entire radio communication is exposed at the remote port on Cye. Thus everything on the radio Rx and Tx lines is available. The protocol includes addresses for each packet. Currently all data from the PC is addressed to the robot. Packets addressed to another device plugged into this remote port could receive messages and send them. We will create a black box that handles this protocol and provides what looks like a feed through and back some time in 2000.
+
+4.2 What is the pinout for the expansion port on Cye?
+
+The pinout for the expansion port is:
+* pin 1: ground
+* pin 2: 5 volts (up to 200 mA)
+* pin 3: 12 volts (up to 0.5 amp)
+* pin 4: radio TX
+* pin 5: radio RX
+* pin 6: radio TX power up
+* pin 7: robot output, npn transistor #MMBT3904LT1
+* pin 8: robot input (digital and analog, do not exceed 5 volts)
+
+The mating connector is: AMP 5-554739-3, Digikey part #A9094-ND

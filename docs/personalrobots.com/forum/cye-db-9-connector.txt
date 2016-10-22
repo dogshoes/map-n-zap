@@ -1,0 +1,19 @@
+Subject: Cye DB-9 connector 
+From: Troy Lehman
+Date: Tue Aug 10 17:01:09 EDT 2004 
+
+	I have an older Cye that has the cat3 (phone line) to DB-9 adapter from the antenna pod. Two of the sockets on the DB-9 connector pulled out. Can anyone tell me what the proper pin out is for that connector? It has three leads; black, yellow, and green.
+
+	Thanks,
+	Troy
+
+Subject: RE: Cye DB-9 connector 
+From: support
+Date: Mon Aug 16 09:44:14 EDT 2004 
+In Reference To: 2292
+
+	Troy,
+
+	Hello. Yellow is pin#2, Green is pin#3, & Black is pin#5.  Yellow is receive. Green is transmit and black is ground.
+
+	Good luck.

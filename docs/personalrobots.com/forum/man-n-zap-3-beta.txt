@@ -1,0 +1,11 @@
+Subject: Map-N-Zap 3.0 beta 
+From: Henry Thorne
+Date: Fri Sep 29 15:43:26 EDT 2000 
+
+	For those wishing to try out a beta version of Map-N-Zap 3.0, you can download it on our Customer Support/Download page.
+	The graphic work isn't in this version so it's a bit ugly but most changes are under the hood anyway. Primarily, the software was re-arranged to have two layers where there was one. The two layers are the "Cye-Engine" which controls everything to do with the robot, and the "Graphic User Interface" which is the interface to you. There are many benefits to this new arrangement, the best being that high level commands like "go to hot spot X" which involves calculating paths, handling the motion and errors and eventually getting the robot to the destination can now be called without having to run Map-N-Zap. The ocx for doing this will be called the CyeEngine.ocx and not only will you be able to load this into Visual C++ or VB but we can use these commands to control the robot through the internet as we intend to do with Spy Cye.
+	
+	The second change is the addition of the "Video" button which will (when you have the X10 camera and receiver attached) display live video and sound from the robot mounted camera.
+	
+	Henry Thorne
+	Probotics

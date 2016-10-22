@@ -1,0 +1,27 @@
+We'd appreciate it if you'd try to troubleshoot the robot before e-mailing or calling us. Here's the troubleshooting guide we use…
+
+(Attention customers! Be sure you choose the right color for Cye during "set up" as this determines the robot address and communications will never be established if you do not select it properly.)
+
+Turning on the Robot
+
+1. Make sure the robot is off. If you move one of the robot's wheels, the robot should not beep.
+1.1. If the robot is not off, rotate the robot clockwise for 2 seconds. The robot's left wheel must move forward, and the robot's right wheel must move backwards continuously for 2 seconds. After rotating for 2 seconds, you should hear a soft click.
+1.1.1. Make sure the robot is off by moving one of the robot's wheels. If the robot beeps, try step 1.2 again. If you still cannot turn off the robot, the robot's encoders may be damaged.
+2. Place the home base charging unit against the wall, and plug it in. Make sure the home base is not backwards. The hole where the cord comes out of the home base should be near the wall.
+3. Place the robot on the home base. The robot should start beeping, and then make a soft click. If it does not start beeping, make sure the home base is set up properly. Also make sure the metal contacts underneath the front of the robot touched the metal tabs on the home base.
+3.1. If the robot does not turn on there is something wrong with the home base or robot.
+
+Starting the Software
+
+1. Start the Map-N-Zap software by clicking on the Start button and opening the Programs \ Map-N-Zap \ Map-N-Zap application.
+1.1. If this directory does not exist either the software was not installed or the user placed Map-N-Zap in a different location. Make sure the software is installed.
+2. If the software fails to start...
+2.1. Make sure you are not running Windows NT. The software only runs on Windows 95, 98.
+2.2. If you are running Win 95 or 98, set the computer's display to 16, 24 or 32 bit color mode. Right click on the desktop, and choose properties. Select the Settings tab, and set the Colors setting to a setting higher than 256 colors.
+2.2.1. If the software still fails to start there is something else wrong.
+3. When the software starts, a LAYGO window will appear with a welcome message. Click on the next button to start searching for the radio base's COM port. If the next Laygo window is for setting up the home base, then the software found the right COM port.
+3.1. If the next Laygo Window is not for setting up the home base, then there is a radio contact problem. In this case a window will be showing that says "Trying to establish communications with the robot." If the software can't find the robot using the default COM port, a window will come up that says "Communications could not be established with the robot..." Click on the "yes" button to find the correct COM port.
+3.2. While the software searches for the radio base's COM port, watch for the robot's LED to flash. When the LED flashes, that means the PC has contacted the robot.
+3.2.1. If the software searches for the radio base's COM port and the robot's LED flashes, but the PC doesn't think it has found the correct COM port then the robot's transmitter or the radio pod's receiver is damaged or there is radio interference. Try moving the radio pod to another location.
+3.2.2. If the software searches for the radio base's COM port, and the robot's LED never flashes then there is something wrong with the radio pod or the robot's receiver. Make sure the radio pod is plugged into the computer's COM port and the wall socket. Also make sure the robot is turned on by moving the robot and listening for the robot to beep. Also try moving the radio pod to another location. There could be radio interference. Tell the software to search again.
+3.2.2.1. If the software still fails to find the radio pod then there is something wrong with the robot or radio pod.

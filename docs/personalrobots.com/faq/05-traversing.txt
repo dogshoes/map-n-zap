@@ -1,0 +1,25 @@
+Section 2: Questions about Cye's ability to successfully traverse a given area 
+
+2.0 How do I ensure that Cye reliably navigates his world?
+
+For Cye to navigate successfully, two crucial issues must be addressed: accuracy and repeatability.
+
+<b>REPEATABILITY</b>
+Your robot should spin its wheels nearly the same amount every time it traverses a path, within the resolution of the encoders (0.1" of travel). There are various methods of testing this, but none are simple.
+
+The next issue in repeatability is to determine if the same exact wheel motion generates the same path on the floor each time. It should, but to what degree? The total spread of all the tracks on Henry's thick rug at home is about 6" at the end of a 15' path from the home base. If you do not achieve that kind of repeatability then there is a traction problem of some kind with Cye. 
+
+One condition that could result is a navigation failure due to poor traction is the wearing away of Cye's urethane wheel tips to the point that the robot actually rides on the ABS plastic core. If that is the case, the wheels need to be replaced, a task best accomplished with the assistance of Customer Support.
+
+Another situation that could cause unpredictable shifts in robot position is the existence of a doormat (or similar carpeted area) with a pattern of "little hills" on it somewhere in the robot's world. When traversing this mat, Cye's wheel tips may or may not be shoved in one direction or another for a brief period, depending on the location and orientation of the robot. The result is a Chaos effect, with orientation errors of up to 5 degrees just from traversing this small mat. While that might not sound like a major deviation, the end results is a 1 foot sideways error in 10 feet of travel after Cye leaves the mat!
+
+A third factor that can cause repeatability errors in traversing paths is wheel spin on floor transitions. In Henry's house, there is a floor transition from thick carpet to tile that results in a 3/4" height shift. When navigating this hump, the robot would lurch over the transition and sometimes spin a wheel, thereby losing orientation accuracy. To solve this potential pitfall, visit your local hardware store and procure the rubber product used to smooth these transitions for humans. Install it as an aid for the robot.
+
+<b>ACCURACY</b>
+Just because the robot successfully repeats a path does not mean its position is accurate. Accurate positioning is attained when the actual floor position of the robot corresponds to the indicated on-screen position. This is important because Map-N-Zap depends on knowing where the robot really is on the floor! Accuracy is in large part dependent on floor calibration.
+
+Cye assumes that a certain amount of wheel turn will cause a fixed amount of travel. Cye's wheels were created to ensure this condition, and they largely do. However, on different surfaces, this constant changes. The variation is about 3% from the perfectly flat wood surface to the thickest carpet (i.e. Cye will travel about 3% farther on a wood floor than on a thick carpet). While not a major fault in and of itself, the effects of this condition are magnified when Cye rotates (i.e. Cye will rotate 3% less-disaster!). A 360 rotation would cause an error of 10.8 degrees resulting in a 1.9-foot sideways error after moving forward 10 feet. There is a software solution, however: "floor compensation," the amount of overspin Cye will cause at each wheel to compensate for an assumed slippage on the known surface. In other words, Cye will turn his wheels an extra 2% if he knows he is on a thick carpet.
+
+So how does Cye know if he is on a thick carpet? Every time Cye checks in, he assumes from then on that he is traversing the floor type associated with that checkpoint.
+
+The tricky part for Cye is determining just how thick the carpet is and just how much to compensate. The first time you set up a checkpoint on a given carpet type (thick or thin), Cye measures the carpet to determine the required compensation (floor calibration). He then assumes that all carpets in your house of that thickness will need that particular amount of compensation. Problems could arise, however, if you were to misidentify the carpet-forever more Cye would think that thick is thin and thin is thick. Alternatively, you could have several different carpets of varying thickness throughout your home or office. Slip compensation appropriate for one particular floor might not be the best choice for another. In order to manually override Cye's autonomous slip compensation choice, go to the View/Settings/Floor dialog box. In this dialog, you can manually change the settings or ask Cye to re-measure them. If you are experiencing absolute accuracy problems, tweaking these constants may improve the performance of the robot.

@@ -1,0 +1,9 @@
+Section 5: Questions about Cye's sensors 
+
+5.0 Does Cye have limit switches on its bumper?
+
+No. Cye detects the presence of obstacles by monitoring velocities at each motor 500 times per second and detecting sudden drops (at the moment of impact with an obstacle). This is a more sensitive system, because an obstacle contacting the bumper might not trigger limit switches. The robot does however, have a port on it for attaching any device you desire. The port exposes the radio link which has a fairly heavy protocol. We plan to provide a black box solution which will give you a DB-9 connector serial channel at the remote port sometime in 2000. Then you can hook up anything any sensors you desire. Furthermore, we are currently experimenting with both sonar and infrared obstacle detection systems.
+
+5.1 What sensors does Cye have?
+
+Cye has both encoders and current sensing at each motor. Using these sensors, Cye is able to detect obstacles without cumbersome limit switches or tape switches.

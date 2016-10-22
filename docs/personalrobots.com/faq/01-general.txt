@@ -1,0 +1,102 @@
+Section 1: General questions about Cye 
+
+1.0 What is Cye?
+
+Cye is a personal robot designed for you! Whereas an industrial robot is designed to perform a task or a job in manufacturing, a personal robot is designed to work and perform tasks for its user. Because Cye is controlled through a simple graphic user interface on any PC, its accessible to a whole range of users: people who enjoy the fun offered by remote control devices; the technologically curious with very basic point-and-click PC skills; people searching for inexpensive, cyberage solutions to home or office tasks; hobbyists and developers who can create their own software or hardware accessories.
+
+1.1 How big is Cye?
+
+Cye is about 16 inches wide, 10 inches deep and 5 inches tall, and weighs about 9lbs.
+
+1.2 Do I need to know how to program to use Cye?
+
+No. You control Cye by using the simple point-and-click commands found in Map-N-Zap. Likewise, all it takes to move Cye about the floor is dragging the on-screen icon along the desired path with your mouse.
+
+1.3 Do I need a PC to run Cye?
+
+Yes, because a majority of the operations performed by Cye rely on the computing power of your PC. Cye requires at least a Pentium 133MHz PC with 19mb of free space, running Windows 95 or 98. The software is not yet certified for use on the Windows 2000 operating system.
+
+1.4 Does Cye have any on-board processing?
+
+Yes. Cye has an on-board 16 bit, 16 MHz microcontroller which handles:
+-serial communication to your PC
+-motion control
+-ded-reckoning (keeps track of X, Y, and heading info),
+-obstacle detection,
+-various other tasks like beeping the beeper and charging the battery properly.
+
+1.5 How can I purchase my very own Cye?
+
+Go to the on-line store: <a href="http://www.personalrobots.com/store/">here</a>
+
+1.6 What does Cye come with?
+
+Cye comes with the home base charging unit, the radio pod that attaches to your PC, Map-N-Zap software on a CD-ROM, and an instruction manual. A wagon and vacuum attachment can be purchased separately.
+
+1.7 How fast does Cye move?
+
+3 feet per second
+
+1.8 On what types of floors can Cye operate?
+
+Cye can run on any type of floor. The Urethane used on Cye's wheel tips is the same Urethane used on in line skate wheels. It is very tough, but also sticky. Unfortunately, after being injection molded, it is not as sticky as in-line skate wheel Urethane, so we are developing a cast version of the wheel with increased stickiness. The current wheels do not slip on tile and wood floors except when pressing hard against a wall (as the robot would when checking in), so for now, you should not make or use checkpoints on bare wood or tile floors to reset Cye's position.
+
+1.9 How does Cye handle the transition from a carpet floor to a hard floor?
+
+Cye can transition between different floor types without great difficulty. Not only are the Urethane tips on Cye's wheels somewhat bouncy, but there is also internal suspension capable of absorbing 1/2" steps.
+
+1.10 Will there be an API made available to use commercial programming languages to control the robot and/or low level interface to the robot?
+
+With release 1.1 of Map-N-Zap on 28 April 1999, the low level API was exposed with a well documented help file. To use it, you must add CyeCom.OCX to your VB or VC++ application. This exposes all of the low level commands to Cye such as "Go To X, Y coordinates" which will send Cye straight to this position in the world, and "Turn on external output" along with a bunch of data coming from the robot such as "I am at X, Y coordinates". The high level commands such as "Calculate a path to coordinates X,Y" or "Create a checkpoint" are not yet exposed. We plan to release a larger OCX that includes all the high level commands. Let us know you are looking for it and it will receive higher priority.
+
+1.11 Is there factory tech support with the Cye robot?
+
+Yes, tech support is available from Probotics by either email or by calling our 800 number. Contact information is located on the web page. Alternatively, please feel free to post your observations, questions, or experiences to the Forum section of the website.
+
+1.12 Is Cye available as an unassembled kit?
+
+No, Cye is only available as a pre-assembled product.
+
+1.13 Can Cye climb stairs?
+
+No, Cye does not climb stairs.
+
+1.14 Can I run Cye up or down a flight of stairs by placing a board on the stairs?
+
+Maybe, since Cye weighs 9lbs and has 7 pounds of thrust; it is theoretically possible, but you should carpet the board before attempting multi-floor vertical travel. 
+
+1.15 I would like to use a wireless camera I have with Cye. It transmits in the 902-928 MHz band. Do you think this will interfere with Cye's communications with my PC?
+
+Cye operates at 903.37 MHz and occupies 32 kHz at that frequency. The wireless camera is not likely to interfere because there are so many frequencies available within the 902-928 MHz band.
+
+1.16 Is the robot approved for use in the EU?
+
+No, the robot is not yet approved for use in the EU. However, we are actively pursuing certification in Australia. 
+
+1.17 Can I connect more than one robot to a single PC?
+
+Yes, you can connect more than one robot to a single PC, but only one robot at a time can receive packets.
+
+1.18 Can I operate two different Cye's from two different computers in the same room without interference?
+
+No, the radios will interfere and neither robot will function properly.
+
+1.19 Do you have any plans to support Macintosh computers?
+
+An AppleScriptable version of the software could integrate nicely into the home automation systems of users of XTension from Sand Hill Engineering (www.shed.com). The very first prototype Cye robot, circa 1991, ran on a Mac. However, as the PC platform came to dominate home computing around 1994, we switched to it. We would love to make a Mac version again and will to do so when sales volume justifies the expense.
+
+1.20 How is the robot assembled?
+
+Cye is assembled using a mix of screws, plastic pop rivets, and adhesives. As a result, Cye is very hard to disassemble. Therefore, should you experience technical difficulties with your Cye, please contact Customer Support before attempting to access the robot's internals.
+
+1.21 How many world features can be stored per map?
+
+Storage is limited only by the size of your hard drive.
+
+1.22 What type of motors does Cye use?
+
+12 VDC Servo Motors with a 38.3:1 gear ratio.
+
+1.23 Can outside developers access Cye's source code?
+
+Yes, developers have full access to the Map-N-Zap source code, which Probotics released under the Gnu Public License. See http://www.personalrobots.com/developers/opensource for more information.

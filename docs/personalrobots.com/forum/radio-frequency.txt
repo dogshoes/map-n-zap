@@ -1,0 +1,18 @@
+Subject: radio frequency 
+From: mark
+Date: Thu Oct 12 13:52:50 EDT 2000 
+
+	what frequency does the cye send and receive (recieve?) on? I tried turning the robot off and still am getting characters in. As you may imagine this lab has a lot of radio signals being sent it it and i want to know whose project i should destroy.
+	thanks, 
+	--mark
+
+Subject: RE: radio frequency 
+From: Henry Thorne
+Date: Fri Oct 13 07:53:14 EDT 2000 
+In Reference To: 1241
+
+	mark asks: "what frequency does the cye send and receive (recieve?) on?"
+	
+	HENRY> 903.37. Their is a squelch built in but if there is enough noise from other devices you will get random characters floating in your serial port.
+	
+	Henry
